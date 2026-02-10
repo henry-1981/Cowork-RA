@@ -1,0 +1,16 @@
+# Agent Memory Files - Merge Conflict Resolution
+# Use union merge strategy for JSON memory files to prevent data loss
+
+*.json merge=union
+
+# Regulatory decisions memory
+.claude/agent-memory/aria/regulatory-decisions.json merge=union
+
+# Company preferences memory
+.claude/agent-memory/aria/company-preferences.json merge=union
+
+# Task patterns memory
+.claude/agent-memory/aria/task-patterns.json merge=union
+
+# Learning metrics memory
+.claude/agent-memory/aria/learning-metrics.json merge=union

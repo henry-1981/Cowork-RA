@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.npm/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+*.cache
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+out/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# Python
+*.pyc
+__pycache__/
+
+# MoAI Framework (development tooling - local only)
+.claude/
+.mcp.json
+CLAUDE.md
+.moai/config/
+.moai/cache/
+.moai/logs/
+.moai/memory/
+.moai-backups/
+
+# User local files
+supervise/
