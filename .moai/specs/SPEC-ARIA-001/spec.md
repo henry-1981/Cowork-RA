@@ -5,7 +5,7 @@
 ```yaml
 SPEC_ID: SPEC-ARIA-001
 TITLE: ARIA Cowork Plugin - Full System Refactoring
-VERSION: 3.1.0
+VERSION: 3.2.0
 STATUS: Planned
 PRIORITY: High
 DOMAIN: aria-plugin
@@ -28,6 +28,7 @@ TAGS: [aria, cowork, plugin, regulatory, medical-device, refactoring]
 | 2.0.0 | 2026-02-10 | Review reflection: conversational info extraction, limitation notices, architecture decisions |
 | 3.0.0 | 2026-02-10 | Comprehensive review: (A) Built-in knowledge high-density strategy, document-first input workflow, context simplifier, classification tuning; (B) plugin.json manifest fix, command namespacing with `/aria:` prefix, MCP package name correction; (C) plan.md/acceptance.md creation, complete traceability matrix, concurrent product/data versioning, duplicate requirement merging; (D) SKILL.md 500-line constraint, VALID enforcement clarification, agent contingency measurable criteria, security considerations, English toggle, degradation matrix completion; (E) Minor notes for input length, data cleanup, Q&A session handling, glossary, knowledge date stamping, playbook location, data lookup parallelization |
 | 3.1.0 | 2026-02-10 | 외부 리뷰 반영: Context Simplifier 생성 주체 명확화, Active Product 상태 관리, 등급 최적화 로직 추상화, 대용량 파일 TOC 분석, 데이터 보존 경고, Acceptance Criteria 정량화, 플래그 형식 표준화 |
+| 3.2.0 | 2026-02-10 | 최종 미세 조정: TOC 분석 실패 Fallback 로직, Summary 출력 형식 표준화(Key-Value Markdown), active_product.json 공유 금지 가이드, Negative Test 추가 |
 
 ---
 
@@ -491,6 +492,7 @@ Contents:
 - MCP connector setup guide (Notion API key, Google credentials)
 - Command reference with examples (all commands use `/aria:` prefix)
 - aria.local.md playbook template and configuration guide
+- `.aria/` 데이터 보안 경고 (특히 `active_product.json`은 개인 로컬 상태이므로 공유 금지)
 - Troubleshooting and FAQ
 
 ### S2: Command System (8 Commands)
@@ -883,6 +885,8 @@ The system accepts technical documents as the primary input method for all comma
 3단계: 식별된 핵심 섹션만 선택적 추출하여 분석
 4단계: 추출 불가 시 사용자에게 해당 섹션 직접 입력 요청
 
+TOC 분석 실패 시 Fallback: OCR 스캔본이거나 목차가 없는 초안 형태의 문서일 경우, 문서의 첫 2,000토큰(머리말/서론)과 마지막 2,000토큰(결론/요약)을 우선 분석하고, 핵심 키워드(Intended Use, Device Description, Specification 등)가 포함된 페이지를 검색하여 해당 섹션을 선택적으로 추출한다.
+
 이 접근은 전체 문서를 컨텍스트 윈도우에 로드하는 것보다 토큰 효율적이며, 의료기기 기술문서의 표준 구조(IEC 62366, ISO 14971 등)를 활용한다.
 
 **[S9.2] Gap Detection**
@@ -928,6 +932,16 @@ Each step output is compressed to a structured summary (max ~500 tokens) contain
 
 요약 생성 책임은 각 개별 스킬에 있으며, 별도의 요약 전용 에이전트나 스킬은 사용하지 않는다. 스킬의 SKILL.md 출력 템플릿에 Summary Generation 섹션이 반드시 포함되어야 한다.
 
+Summary 출력 형식 표준: 모든 스킬의 요약본은 반드시 다음 Key-Value Markdown 리스트 형식을 따라야 한다. 이를 통해 다음 단계 커맨드가 컨텍스트를 파싱하는 속도와 정확도를 보장한다:
+```markdown
+- **Decision**: [YES/NO/CONDITIONAL 등 주요 판정 결과]
+- **Class**: [해당 시 분류 등급]
+- **Traffic Light**: [GREEN/YELLOW/RED]
+- **Key Factors**: [핵심 결정 인자 목록]
+- **Escalation**: [에스컬레이션 필요 여부 및 사유]
+- **Sources**: [데이터 출처 요약]
+```
+
 Discarded in compression:
 - Verbose analysis text and reasoning chains
 - Detailed regulatory citations (available in full output)
@@ -954,6 +968,7 @@ Compressed summaries stored alongside full outputs in `.aria/`:
 - Recommend adding `.aria/` to `.gitignore` in project setup instructions
 - Include warning in README.md about sensitive data in `.aria/` directory
 - Each command output header notes data classification level
+- **`active_product.json` 공유 금지**: 이 파일은 개인의 로컬 작업 상태를 저장하므로 Git에 커밋하거나 팀원과 공유해서는 안 된다. 다른 팀원의 로컬 작업 환경과 충돌을 일으킬 수 있다.
 
 **[S11.2] MCP Credential Management**
 
