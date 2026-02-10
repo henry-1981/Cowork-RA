@@ -6,6 +6,5 @@
     "name": "ARIA Team"
   },
   "commands": ["../commands/"],
-  "skills": ["../skills/"],
-  "mcpServers": "../.mcp.json"
+  "skills": ["../skills/"]
 }
