@@ -224,6 +224,13 @@ TAGS: [aria, cowork, plugin, regulatory, medical-device, refactoring]
 - Output: Consistent processing regardless of input format
 - Verification: Test each input format for at least 2 commands
 
+**[ER-013] WHEN a command is executed without prior pipeline data in `.aria/`, THEN the system shall initiate conversational information extraction to collect the minimum required input for that command.**
+
+- Rationale: Each command must deliver baseline quality independently; pipeline data is supplementary, not mandatory
+- Processing: Check .aria/ for prior data; if missing, use interactive Q&A to gather: Intended Use, Product Form, Primary Function, Device Description, plus skill-specific fields
+- Output: Collected information used as command input; optionally saved to .aria/ for future pipeline use
+- Verification: Test each command with empty .aria/ directory; verify Q&A flow collects sufficient information
+
 ### State-Driven Requirements (If-Then)
 
 **[SR-001] IF Notion MCP connection is unavailable, THEN the system shall gracefully degrade to built-in knowledge and Context7.**
@@ -441,6 +448,8 @@ No `tools`, `model`, or `skills` fields in command frontmatter. Commands referen
 - Each command reads from `.aria/` if prior step data exists
 - Upon completion, each command suggests top 1-3 most relevant next steps
 
+Note: Each command operates independently. When prior step data is absent, the command initiates conversational information extraction (interactive Q&A) to collect minimum required input. Common required fields: Intended Use, Product Form, Primary Function, Device Description. Skill-specific fields are defined per skill implementation.
+
 **[S2.4] /aria Command (Hybrid Router)**
 
 The `/aria` command serves as the single entry point for free-form conversation:
@@ -549,6 +558,8 @@ Query received
 | Available | Available | Unavailable | Degraded (no supplementation) | "External document verification unavailable." |
 | Unavailable | Available | Unavailable | Minimal operation | "Operating with built-in knowledge only. Results may be less specific." |
 | Unavailable | Unavailable | Unavailable | Error state | "Unable to access data sources. Please check connections." |
+
+Note: When operating in degraded modes (rows 2-4), each output must include a visible limitation notice indicating which data sources are unavailable and how this affects result reliability. The limitation notice is distinct from the standard disclaimer (S7.2) and appears in the Data Source Attribution section of the output.
 
 ### S5: Output System
 
@@ -692,6 +703,16 @@ and verified against current applicable regulations.
 | Structured Output Templates | Consistent report format across all commands | Output template (S5.3) |
 | Multi-format Input | File upload, URL, pasted text, interactive QA | All commands accept multiple input formats |
 | Tool-agnostic Connectors | Category documentation, not tool-specific | CONNECTORS.md |
+
+**[S8.2] Architecture Decision: Commands + Skills Only**
+
+ARIA intentionally uses no agent definitions, following the Legal plugin benchmark pattern. All domain logic resides in skills, invoked through commands.
+
+- Rationale: Simplicity and alignment with Cowork plugin conventions; skills handle domain logic declaratively
+- Contingency: If commands + skills alone cannot deliver sufficient interaction quality after Phase 2 implementation, the following agents may be introduced:
+  - Device Description Extraction Agent: Interactive Q&A specialist for building complete device profiles
+  - Planning Agent: Complex multi-market regulatory strategy coordination
+- Decision Point: Evaluate after Phase 2 (Foundation Skills) implementation
 
 ---
 
