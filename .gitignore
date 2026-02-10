@@ -48,6 +48,8 @@ CLAUDE.md
 .moai/cache/
 .moai/logs/
 .moai/memory/
+.moai/status_line.sh
+.moai/templates/
 .moai-backups/
 
 # User local files
