@@ -3,7 +3,7 @@
 ```yaml
 SPEC_ID: SPEC-ARIA-001
 TITLE: ARIA Cowork Plugin - Acceptance Criteria
-VERSION: 3.0.0
+VERSION: 3.1.0
 ```
 
 ---
@@ -320,6 +320,24 @@ Then total pipeline context shall be reduced by at least 60%
 And no critical decision information shall be lost in compression
 ```
 
+### ER-016: Stale Data Warning
+
+```gherkin
+Given .aria/products/ contains data directories older than the configured retention period (data_retention_days in aria.local.md)
+When any /aria: command is executed
+Then the system shall display a warning message listing stale data directories
+And the warning shall include the age of each stale directory
+And the system shall NOT automatically delete any data
+
+Given .aria/products/ contains no data older than the configured retention period
+When any /aria: command is executed
+Then no stale data warning shall be displayed
+
+Given aria.local.md does not specify data_retention_days
+When stale data check is performed
+Then the system shall use the default retention period of 365 days
+```
+
 ---
 
 ## State-Driven Requirements
@@ -389,23 +407,38 @@ Then the escalation recommendation shall be prominently displayed
 And the suggested expert type shall be specific to the risk area
 ```
 
-### SR-006: Multi-Product Selection
+### SR-006: Multi-Product Selection (File-Based Persistence)
 
 ```gherkin
-Given .aria/products/ contains 3 product directories (cardiac-monitor-x1, blood-analyzer-b2, infusion-pump-c3)
+Given .aria/products/ contains 3 product directories AND .aria/active_product.json does NOT exist
 When the user invokes any /aria: command
 Then the system shall present a selection menu with all 3 products and most recent dates
+And persist the selection to .aria/active_product.json
 And allow creation of a new product entry
+
+Given .aria/active_product.json exists with valid product reference
+When the user invokes any /aria: command
+Then the system shall load the active product from active_product.json
+And NOT present a selection menu
+And update last_accessed date in active_product.json
+
+Given .aria/active_product.json exists but references a product that no longer exists
+When the user invokes any /aria: command
+Then the system shall treat active_product.json as stale
+And present a product selection menu
+And update active_product.json with the new selection
 
 Given .aria/products/ contains exactly 1 product directory
 When the user invokes any /aria: command
 Then the system shall automatically select the single product
+And persist the selection to .aria/active_product.json
 And NOT present a selection menu
 
 Given .aria/products/ is empty
 When the user invokes any /aria: command
 Then the system shall prompt the user to create a new product entry
 And apply the product naming convention (lowercase, hyphens, alphanumeric)
+And persist the new product to .aria/active_product.json
 ```
 
 ### SR-007: Output Versioning
@@ -547,6 +580,31 @@ And Accurate: Data shall come from Notion DB (primary), built-in (secondary), or
 And Linked: Pipeline outputs shall cross-reference prior step results
 And Inspectable: Decision rationale shall be documented in .aria/ output files
 And Deliverable: Output shall follow the structured template (S5.3)
+```
+
+### Quantitative Quality Targets
+
+```gherkin
+Given /aria:determine is tested with diverse product types
+When results are evaluated
+Then accurate determination results shall be produced for at least 5 product types (active, implantable, IVD, SaMD, non-active)
+
+Given /aria:chat hybrid routing is tested with diverse queries
+When at least 20 queries across all 7 skill domains are tested
+Then routing accuracy shall be 80% or higher
+
+Given any SKILL.md file is reviewed for token budget compliance
+When built-in knowledge token count is measured
+Then each skill's built-in knowledge shall be within 500 lines and approximately 2,500 tokens
+
+Given Context Simplifier generates a compressed summary
+When summary token count is measured
+Then the summary shall be within approximately 500 tokens
+
+Given Notion MCP is NOT connected
+When any /aria: command is executed
+Then all commands shall provide basic functionality (graceful degradation)
+And output shall clearly indicate degraded mode
 ```
 
 ### SKILL.md Compliance

@@ -5,7 +5,7 @@
 ```yaml
 SPEC_ID: SPEC-ARIA-001
 TITLE: ARIA Cowork Plugin - Full System Refactoring
-VERSION: 3.0.0
+VERSION: 3.1.0
 STATUS: Planned
 PRIORITY: High
 DOMAIN: aria-plugin
@@ -27,6 +27,7 @@ TAGS: [aria, cowork, plugin, regulatory, medical-device, refactoring]
 | 1.0.0 | 2026-02-10 | Initial SPEC creation |
 | 2.0.0 | 2026-02-10 | Review reflection: conversational info extraction, limitation notices, architecture decisions |
 | 3.0.0 | 2026-02-10 | Comprehensive review: (A) Built-in knowledge high-density strategy, document-first input workflow, context simplifier, classification tuning; (B) plugin.json manifest fix, command namespacing with `/aria:` prefix, MCP package name correction; (C) plan.md/acceptance.md creation, complete traceability matrix, concurrent product/data versioning, duplicate requirement merging; (D) SKILL.md 500-line constraint, VALID enforcement clarification, agent contingency measurable criteria, security considerations, English toggle, degradation matrix completion; (E) Minor notes for input length, data cleanup, Q&A session handling, glossary, knowledge date stamping, playbook location, data lookup parallelization |
+| 3.1.0 | 2026-02-10 | 외부 리뷰 반영: Context Simplifier 생성 주체 명확화, Active Product 상태 관리, 등급 최적화 로직 추상화, 대용량 파일 TOC 분석, 데이터 보존 경고, Acceptance Criteria 정량화, 플래그 형식 표준화 |
 
 ---
 
@@ -259,6 +260,14 @@ TAGS: [aria, cowork, plugin, regulatory, medical-device, refactoring]
 - Output: Compressed summary (~500 tokens max) containing decision outcome, key data points, traffic light status, source attribution summary, and escalation flags
 - Verification: Compare token usage between compressed and uncompressed pipeline runs; verify no critical information loss
 
+**[ER-016] WHEN a command is executed AND data older than the configured retention period exists in `.aria/products/`, THEN the system shall display a warning message about stale data without automatically deleting it.**
+
+- Rationale: 보존기간 초과 데이터에 대해 사용자에게 인지시키되, 자동 삭제로 인한 데이터 손실을 방지한다
+- Processing: 커맨드 실행 시 `.aria/products/` 내 날짜 디렉토리를 스캔하여 `aria.local.md`의 `data_retention_days` 설정과 비교. 초과 데이터가 있으면 경고 표시.
+- Output: Warning message listing stale data directories with their ages
+- Verification: Test with data directories older/newer than configured retention period
+- Configuration: `aria.local.md`의 `data_retention_days` (default: 365일), `warn_on_stale_data` (default: true)
+
 ### State-Driven Requirements (If-Then)
 
 **[SR-001] IF Notion MCP connection is unavailable, THEN the system shall gracefully degrade to built-in knowledge and Context7.**
@@ -294,12 +303,16 @@ TAGS: [aria, cowork, plugin, regulatory, medical-device, refactoring]
 - Output: Clear escalation message with reasoning and suggested expert type
 - Verification: Test with deliberately ambiguous regulatory scenarios
 
-**[SR-006] IF multiple products exist in `.aria/products/`, THEN the system shall prompt the user to select the active product or create a new product entry.**
+**[SR-006] IF multiple products exist in `.aria/products/`, THEN the system shall check `.aria/active_product.json` for the current active product. If the file does not exist or is stale, the system shall prompt the user to select the active product and persist the selection to `.aria/active_product.json`.**
 
-- Rationale: Multi-product workflows require explicit product selection to prevent data crossover
-- Processing: Scan `.aria/products/` for existing product directories. If more than one exists, present selection menu with product names and most recent dates. Allow creation of new product entry.
-- Output: Active product context set for current session
-- Verification: Test with 0, 1, and 3+ products in `.aria/products/`
+- Rationale: Multi-product workflows require explicit product selection to prevent data crossover. File-based persistence (`active_product.json`)을 통해 Stateless 환경에서도 active product 상태를 유지한다.
+- Processing: 커맨드 실행 시 `.aria/active_product.json`을 읽어 active product를 확인한다. 파일이 없거나 참조 경로가 유효하지 않으면, `.aria/products/`를 스캔하여 선택 메뉴를 표시하고 선택 결과를 `active_product.json`에 기록한다. 제품이 1개이면 자동 선택한다.
+- Format: `active_product.json` 구조:
+  ```json
+  { "product_name": "cardiac-monitor-x1", "last_accessed": "2026-02-10", "path": ".aria/products/cardiac-monitor-x1/2026-02-10/" }
+  ```
+- Output: Active product context set for current and subsequent commands via file-based persistence
+- Verification: Test with 0, 1, and 3+ products in `.aria/products/`; test `active_product.json` presence/absence/stale scenarios
 
 **[SR-007] IF a command is executed for a product on a date where output already exists, THEN the system shall create a versioned output (e.g., `determination-v2.md`) rather than overwriting.**
 
@@ -308,12 +321,13 @@ TAGS: [aria, cowork, plugin, regulatory, medical-device, refactoring]
 - Output: Versioned file (e.g., `determination-v2.md`, `classification-v3.md`)
 - Verification: Test re-execution of same command for same product/date; verify versioning
 
-**[SR-008] IF the user explicitly requests English output (via command flag or playbook setting), THEN the system shall switch all user-facing text to English while maintaining Korean regulatory term translations.**
+**[SR-008] IF the user explicitly requests English output (via `--lang en` command flag or playbook setting), THEN the system shall switch all user-facing text to English while maintaining Korean regulatory term translations.**
 
 - Rationale: Support international team collaboration while preserving regulatory term accuracy
-- Processing: Detect English toggle from command flag or `aria.local.md` language preference field. Switch output language to English. Maintain Korean equivalents for regulatory terms where relevant (e.g., "의료기기 (medical device)").
+- Processing: Detect English toggle from `--lang en` command flag or `aria.local.md` language preference field. Switch output language to English. Maintain Korean equivalents for regulatory terms where relevant (e.g., "의료기기 (medical device)").
+- Flag format: `--lang en` (GNU 스타일 더블 하이픈, value flag)
 - Output: English-language output with bilingual regulatory terms
-- Verification: Test with English toggle enabled; verify language switch and term preservation
+- Verification: Test with `--lang en` flag enabled; verify language switch and term preservation
 
 ### Unwanted Behavior Requirements (Shall Not)
 
@@ -372,7 +386,10 @@ TAGS: [aria, cowork, plugin, regulatory, medical-device, refactoring]
 
 - Feature: Opt-in classification optimization analysis
 - Benefit: Strategic guidance on regulatory class reduction through product design modifications
-- Processing: When invoked with optimization flag, analyze which device characteristics (intended use scope, invasiveness level, active/passive classification, duration of contact) could be modified to achieve a lower regulatory class. Frame suggestions as conditional scenarios (e.g., "if the intended use were narrowed to X, the classification might change to Y").
+- Processing: When invoked with `--optimize` flag, the classification skill shall:
+  1. 등급 결정에 결정적 영향을 미친 핵심 결정 인자(Key Decision Factors)를 추출 (예: Invasiveness, Duration of Contact, Active/Passive, Intended Use Scope)
+  2. 각 핵심 인자에 대한 변경 시나리오를 가이드 (예: "침습 등급을 낮추면 -> Class가 변경될 수 있음")
+  3. 전체 역추론 로직을 빌트인에 포함하지 않고, 핵심 인자 기반 추상화된 가이드만 제공
 - Traffic Light: All optimization suggestions are tagged with YELLOW (requires professional review)
 - Escalation: Mandatory escalation recommendation for any suggested product modification
 - Priority: Low
@@ -488,18 +505,25 @@ No `tools`, `model`, or `skills` fields in command frontmatter. Commands referen
 
 All commands are namespaced under the `aria` plugin prefix and invoked as `/aria:{command-name}`.
 
+**Command Flag Standards**:
+- 형식: `--flag-name` (GNU 스타일 더블 하이픈)
+- 예시: `/aria:classify --optimize`, `/aria:classify --lang en`, `/aria:brief --format notion`
+- `argument-hint`에 플래그 형식 포함: `argument-hint: "제품 설명 [--optimize] [--lang en|ko]"`
+- Boolean 플래그: `--optimize` (값 없이 존재 여부로 판단)
+- Value 플래그: `--lang en`, `--format notion` (키-값 쌍)
+
 **[S2.2] Command-Skill Mapping**
 
-| Command | Skill | Function | Legal Benchmark Pattern |
-|---------|-------|----------|------------------------|
-| `/aria:chat` | (all skills routing) | Free conversation + auto skill selection | (ARIA-unique hybrid router) |
-| `/aria:determine` | determination | Device determination checklist + classification | nda-triage pattern |
-| `/aria:classify` | classification | FDA/EU/MFDS grade classification matrix | legal-risk-assessment |
-| `/aria:pathway` | pathway | Country-specific regulatory pathway comparison | compliance pattern |
-| `/aria:estimate` | estimation | Cost/timeline estimation framework | contract-review pattern |
-| `/aria:plan` | planning | Regulatory milestone planning | meeting-briefing pattern |
-| `/aria:compare` | comparison | Multi-country regulation comparison | compliance pattern |
-| `/aria:brief` | briefing | Regulatory briefing report generation | meeting-briefing pattern |
+| Command | Skill | Function | Flags | Legal Benchmark Pattern |
+|---------|-------|----------|-------|------------------------|
+| `/aria:chat` | (all skills routing) | Free conversation + auto skill selection | `--lang [ko\|en]` (SR-008) | (ARIA-unique hybrid router) |
+| `/aria:determine` | determination | Device determination checklist + classification | `--lang [ko\|en]` (SR-008) | nda-triage pattern |
+| `/aria:classify` | classification | FDA/EU/MFDS grade classification matrix | `--optimize` (OR-004), `--lang [ko\|en]` (SR-008) | legal-risk-assessment |
+| `/aria:pathway` | pathway | Country-specific regulatory pathway comparison | `--lang [ko\|en]` (SR-008) | compliance pattern |
+| `/aria:estimate` | estimation | Cost/timeline estimation framework | `--lang [ko\|en]` (SR-008) | contract-review pattern |
+| `/aria:plan` | planning | Regulatory milestone planning | `--lang [ko\|en]` (SR-008) | meeting-briefing pattern |
+| `/aria:compare` | comparison | Multi-country regulation comparison | `--lang [ko\|en]` (SR-008) | compliance pattern |
+| `/aria:brief` | briefing | Regulatory briefing report generation | `--format [markdown\|notion\|gdocs]`, `--lang [ko\|en]` (SR-008) | meeting-briefing pattern |
 
 **[S2.3] Pipeline Flow**
 
@@ -510,6 +534,8 @@ All commands are namespaced under the `aria` plugin prefix and invoked as `/aria
 - Each step is freely skippable; every command can run independently
 - Each command reads from `.aria/` if prior step data exists
 - Upon completion, each command suggests top 1-3 most relevant next steps
+
+모든 커맨드는 실행 시작 시 `.aria/active_product.json`을 읽어 컨텍스트를 로드한다. 파일이 없으면 사용자에게 제품 선택을 요청한다 (SR-006 참조).
 
 Note: Each command operates independently. When prior step data is absent, the command uses document analysis as the primary input method (if a document is provided), supplemented by targeted Q&A for missing information. Common required fields: Intended Use, Product Form, Primary Function, Device Description. Skill-specific fields are defined per skill implementation.
 
@@ -533,6 +559,7 @@ Skill body contains:
 - Built-in regulatory knowledge summary (~2,000-2,500 tokens)
 - Declarative workflow steps (no tool call instructions)
 - Structured output template
+- Summary Generation 단계 (Context Simplifier용 압축 요약 출력)
 - Escalation path definition ("when expert confirmation is needed")
 - Disclaimer block
 
@@ -555,7 +582,7 @@ Each SKILL.md must not exceed 500 lines (see C12).
 - Knowledge: FDA classification decision rules, EU MDR Annex VIII classification logic tree, MFDS classification evaluation criteria
 - Output: Multi-region classification matrix (FDA I/II/III, EU I/IIa/IIb/III, MFDS 1/2/3/4)
 - Escalation: When classification is ambiguous or spans multiple rules
-- Opt-in Capability (OR-004): When invoked with optimization flag, the classification skill additionally analyzes which device characteristics (intended use scope, invasiveness level, active/passive classification, duration of contact) could be modified to achieve a lower regulatory class. Suggestions are framed as "if the intended use were narrowed to X, the classification might change to Y" with mandatory escalation recommendation.
+- Opt-in Capability (OR-004): `--optimize` 플래그로 호출 시, 등급 결정의 핵심 결정 인자(Key Decision Factors: invasiveness, duration, active/passive, intended use scope)를 추출하고, 각 인자별 변경 시나리오를 가이드하는 방식으로 추상화한다. 전체 역추론 로직은 빌트인 토큰 예산(2,500 tokens) 내 구현이 비현실적이므로, 핵심 인자 기반 추상 가이드로 대체한다. Suggestions are framed as "if the intended use were narrowed to X, the classification might change to Y" with mandatory escalation recommendation.
 
 **pathway** (pathway/SKILL.md)
 - Purpose: Identify and compare regulatory submission pathways per country
@@ -657,6 +684,7 @@ Product naming convention: lowercase, hyphens, alphanumeric only. Example: "Card
 
 ```
 .aria/
++-- active_product.json              # 현재 활성 제품 (Stateless 대응, SR-006)
 +-- products/
     +-- cardiac-monitor-x1/
         +-- 2026-02-10/
@@ -745,6 +773,10 @@ Organization-specific configuration file that customizes ARIA behavior based on 
 - When to involve legal counsel
 - When to engage external consultants
 - Board notification thresholds
+
+## Data Management
+- data_retention_days: 365  # 보존기간 (일)
+- warn_on_stale_data: true  # 보존기간 초과 데이터 경고
 ```
 
 **[S6.3] Loading Behavior**
@@ -845,7 +877,13 @@ The system accepts technical documents as the primary input method for all comma
 - Extraction targets: Device description, intended use, product form, primary function, and all skill-specific fields (e.g., invasiveness level, duration of contact, active/passive status)
 - Processing: Parse document structure, identify key sections, extract relevant fields with confidence indicators
 
-Note: If document input exceeds context limits, the system should process the document in chunks, prioritizing sections most relevant to the active command.
+대용량 문서(의료기기 기술문서 등 수백 페이지 규모) 처리 시:
+1단계: 목차(Table of Contents) 우선 분석
+2단계: 의도된 용도(Intended Use), 제품 사양(Specification), 제품 설명(Device Description) 섹션 식별
+3단계: 식별된 핵심 섹션만 선택적 추출하여 분석
+4단계: 추출 불가 시 사용자에게 해당 섹션 직접 입력 요청
+
+이 접근은 전체 문서를 컨텍스트 윈도우에 로드하는 것보다 토큰 효율적이며, 의료기기 기술문서의 표준 구조(IEC 62366, ISO 14971 등)를 활용한다.
 
 **[S9.2] Gap Detection**
 
@@ -877,6 +915,8 @@ All collected input data (from document analysis + Q&A) is saved to `.aria/`:
 
 Prevent token overconsumption from accumulated pipeline results when passing context between commands. Each pipeline step may generate 2,000-5,000 tokens of output; without compression, a full pipeline would consume 14,000-35,000 tokens of prior context.
 
+각 스킬은 자신의 출력 템플릿 마지막 단계에 'Summary Generation' 단계를 포함한다. 각 스킬이 정규 출력(full output)과 압축 요약(summary)을 동시에 생성한다.
+
 **[S10.2] Compression Rules**
 
 Each step output is compressed to a structured summary (max ~500 tokens) containing:
@@ -885,6 +925,8 @@ Each step output is compressed to a structured summary (max ~500 tokens) contain
 - **Traffic light status**: GREEN/YELLOW/RED assessment
 - **Source attribution summary**: Which sources informed the decision
 - **Escalation flags**: Any escalation recommendations carried forward
+
+요약 생성 책임은 각 개별 스킬에 있으며, 별도의 요약 전용 에이전트나 스킬은 사용하지 않는다. 스킬의 SKILL.md 출력 템플릿에 Summary Generation 섹션이 반드시 포함되어야 한다.
 
 Discarded in compression:
 - Verbose analysis text and reasoning chains
@@ -933,6 +975,8 @@ Note: Regulatory data retention requirements vary by jurisdiction:
 - EU MDR: 10 years (15 years for implantable devices) after last device placed on market
 - MFDS: Per Korean Medical Devices Act retention requirements
 - Users are responsible for implementing appropriate retention policies for `.aria/` data
+
+각 커맨드 실행 시 `.aria/products/` 내 보존기간(`aria.local.md`의 `data_retention_days` 설정) 초과 데이터가 있으면 경고 메시지를 표시한다. 자동 삭제는 수행하지 않으며, 전용 데이터 관리 커맨드는 Phase 6 이후 사용자 피드백에 따라 도입을 검토한다.
 
 ---
 
@@ -1216,6 +1260,7 @@ Phase 5 (router) ------ mandatory --> Phase 6 (data pipeline)
 | ER-013 (Document-first input) | S9.1, S9.2, S9.3 | 2-6 | Document extraction + Q&A test |
 | ER-014 (Document extraction) | S9.1, S9.4 | 2-6 | Extraction accuracy test |
 | ER-015 (Context compression) | S10.1, S10.2, S10.3 | 2-6 | Token reduction test |
+| ER-016 (Stale data warning) | S6.2, S11.4 | 2-6 | Retention period warning test |
 | SR-001 (Graceful degradation) | S4.3 | 6 | Degradation matrix test |
 | SR-002 (Playbook loading) | S6 | 6 | Playbook configuration test |
 | SR-003 (See ER-011) | S5.1, S10 | 2-6 | See ER-011 |

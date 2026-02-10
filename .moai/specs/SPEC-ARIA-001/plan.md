@@ -3,7 +3,7 @@
 ```yaml
 SPEC_ID: SPEC-ARIA-001
 TITLE: ARIA Cowork Plugin - Implementation Plan
-VERSION: 3.0.0
+VERSION: 3.1.0
 ```
 
 ---
@@ -78,7 +78,7 @@ ARIA Cowork Plugin의 전체 구현 계획. 6개 Phase로 나뉘며, 각 Phase�
 **Technical Approach**:
 1. Skills에 decision tree/classification logic 내장 (~2,500 tokens), regulatory text는 MCP에서 runtime retrieval
 2. Document Analysis Pipeline (S9): 기술 문서 입력 -> 필드 추출 -> gap detection -> targeted Q&A
-3. Context Simplifier (S10): 각 command output에 `.summary.md` 압축 파일 동시 생성
+3. Context Simplifier (S10): 각 command output에 `.summary.md` 압축 파일 동시 생성. 각 스킬 구현 시 SKILL.md 출력 템플릿에 Summary Generation 단계를 반드시 포함해야 한다 (요약 생성 책임은 각 개별 스킬에 있음).
 4. Output versioning (SR-007): 기존 파일 존재 시 `-v2.md` suffix 자동 부여
 5. Knowledge base date를 각 skill에 명시
 
