@@ -158,6 +158,12 @@ secret-*.*
 # ===========================================
 # Claude Code Configuration
 # ===========================================
+# Local configuration and user-specific settings
+.claude/
+.moai/
+CLAUDE.md
+
+# Legacy patterns (kept for backward compatibility)
 .claude/settings.local.json
 .claude/settings.local.*.json
 .claude/.env.local*
@@ -195,20 +201,3 @@ dist-ssr/
 .vercel/
 .netlify/
 .firebase/
-
-# ===========================================
-# MoAI-ADK Development Configuration
-# ===========================================
-# Exclude development configuration files
-CLAUDE.md
-.claude/
-
-# Exclude .moai except specs
-.moai/
-!.moai/specs/
-
-# ===========================================
-# Runtime Data & Generated Content
-# ===========================================
-# ARIA regulatory analysis runtime data
-.aria/

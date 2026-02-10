@@ -1,32 +1,13 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "aria-marketplace",
-  "description": "ARIA (AI Regulatory Intelligence Assistant) and medical device regulatory plugins",
   "owner": {
-    "name": "ARIA Team",
-    "email": "henry-1981@users.noreply.github.com"
+    "name": "ARIA Team"
   },
   "plugins": [
     {
       "name": "aria",
-      "description": "AI Regulatory Intelligence Assistant - Medical device regulatory compliance for US FDA, EU MDR, and Korea MFDS. Provides 8 slash commands (/aria:determine, /aria:classify, etc.) and 7 domain skills for regulatory analysis, pathway planning, and compliance documentation.",
-      "version": "2.0.0",
-      "author": {
-        "name": "ARIA Team"
-      },
-      "source": ".",
-      "category": "domain-specific",
-      "homepage": "https://github.com/henry-1981/Cowork-RA",
-      "keywords": [
-        "medical-device",
-        "regulatory",
-        "compliance",
-        "FDA",
-        "EU-MDR",
-        "MFDS",
-        "healthcare",
-        "quality-assurance"
-      ]
+      "source": "/cowork-ra/.claude",
+      "description": "ARIA (AI Regulatory Intelligence Assistant) and medical device regulatory plugins."
     }
   ]
 }
