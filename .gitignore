@@ -1,67 +1,214 @@
-# Dependencies
-node_modules/
-.npm/
+# ============================================
+# MoAI-ADK Package Distribution .gitignore
+# ============================================
+# Version: 0.33.0
+# Updated: 2026-01-10
+# Purpose: Essential patterns for user projects
+# ============================================
 
-# IDE
-.idea/
+# ===========================================
+# Go Build Artifacts
+# ===========================================
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+cover.out
+cover.html
+cpu.prof
+mem.prof
+
+# ===========================================
+# Build Artifacts & Distribution
+# ===========================================
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ===========================================
+# Python Cache & Bytecode
+# ===========================================
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+.ruff_cache/
+*.db
+*.sqlite
+*.sqlite3
+*.rdb
+*.dbm
+
+# ===========================================
+# Virtual Environments
+# ===========================================
+venv/
+.venv/
+env/
+.env/
+.uv_cache/
+.uv-cache/
+
+# ===========================================
+# Test Coverage
+# ===========================================
+.coverage
+coverage.json
+htmlcov/
+
+# ===========================================
+# IDE & Editors
+# ===========================================
 .vscode/
+.idea/
 *.swp
 *.swo
+*.sw?
 *~
+.cursor/
+*.sublime-project
+*.sublime-workspace
+*.njsproj
+*.sln
+*.suo
+.#*
 
-# OS
+# ===========================================
+# OS Files
+# ===========================================
+# Mac
 .DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Windows
+[Dd]esktop.ini
 Thumbs.db
+ehthumbs.db
 
-# Logs
+# Linux
+.directory
+
+# ===========================================
+# Logs & Temporary Files
+# ===========================================
 *.log
-npm-debug.log*
+logs/
+*.tmp
+*.temp
+*.bak
+*.backup
 
-# Cache
-.cache/
-*.cache
+# ===========================================
+# Backups
+# ===========================================
+.moai-backups/
+*.backup/
+*-backup/
+*_backup_*/
 
-# Environment
+# ===========================================
+# Secrets and Credentials (CRITICAL)
+# ===========================================
+# Environment files
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
-# Build
-dist/
-build/
+# Certificate files
+*.pem
+*.p12
+*.pfx
+*.jks
+
+# Private keys (specific patterns to avoid false positives)
+# FIXED: Issue #237 - Replaced overly broad *key* and *secret* patterns
+*-key.*
+*_key.*
+*.key.*
+*-secret-key.*
+*-api-key.*
+api-key-*
+secret-key-*
+private-key*
+*-secret.*
+*_secret.*
+*.secret.*
+secret-*.*
+
+# Credential patterns in environment files
+*_secret=*
+*_token=*
+
+# Cloud provider credentials
+.aws/config
+.aws/credentials
+
+# ===========================================
+# Claude Code Configuration
+# ===========================================
+.claude/settings.local.json
+.claude/settings.local.*.json
+.claude/.env.local*
+.claude/local/
+.claude/plans/
+
+# Skill-specific credentials
+.claude/skills/*/.env*
+.claude/skills/*/secrets/
+.claude/skills/*/*/*secret*
+.claude/skills/*/*/*key*
+.claude/skills/*/*/*token*
+# Re-include legitimate skill module files containing "token" in their name
+!.claude/skills/*/modules/*token*.md
+
+# ===========================================
+# Node.js (for docs/Nextra)
+# ===========================================
+node_modules/
+*.tsbuildinfo
+.tscache/
+.next/
 out/
 
-# Temporary
-tmp/
-temp/
-*.tmp
+# ===========================================
+# Build Tools & Frameworks
+# ===========================================
+.turbo/
+.nuxt/
+dist-ssr/
 
-# Python
-*.pyc
-__pycache__/
+# ===========================================
+# Deployment & CI/CD
+# ===========================================
+.vercel/
+.netlify/
+.firebase/
 
-# MoAI Framework (development tooling - local only)
-.claude/
-.mcp.json
+# ===========================================
+# MoAI-ADK Development Configuration
+# ===========================================
+# Exclude development configuration files
 CLAUDE.md
-.moai/config/
-.moai/cache/
-.moai/logs/
-.moai/memory/
-.moai/status_line.sh
-.moai/templates/
-.moai/plans/
-.moai-backups/
+.claude/
 
-# User local files
-supervise/
+# Exclude .moai except specs
+.moai/
+!.moai/specs/
 
-# ARIA Plugin Data (SPEC S11.1: May contain trade secrets and proprietary device designs)
-.aria/*
-!.aria/.gitkeep
-!.aria/products/
-.aria/products/*
-!.aria/products/.gitkeep
-
-# ARIA Active Product State (SPEC S11.1: Local user state, do not share with team)
-.aria/active_product.json
+# ===========================================
+# Runtime Data & Generated Content
+# ===========================================
+# ARIA regulatory analysis runtime data
+.aria/

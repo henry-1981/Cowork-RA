@@ -1,34 +1,20 @@
 {
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/.mcp.schema.json",
   "mcpServers": {
     "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"],
-      "env": {
-        "CONTEXT7_API_KEY": ""
-      },
-      "description": "Library documentation lookup via Context7"
+      "$comment": "Up-to-date documentation and code examples via Context7",
+      "command": "/bin/bash",
+      "args": ["-l", "-c", "exec npx -y @upstash/context7-mcp@latest"]
     },
     "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-      "description": "Complex problem analysis with sequential reasoning"
-    },
-    "notion": {
-      "command": "npx",
-      "args": ["-y", "@notionhq/notion-mcp-server"],
-      "env": {
-        "NOTION_API_KEY": ""
-      },
-      "description": "Organization regulatory database connectivity"
-    },
-    "gdrive": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/google-drive-mcp"],
-      "env": {
-        "GOOGLE_CREDENTIALS": ""
-      },
-      "description": "Document storage and output export",
-      "_note": "Package verification pending - Phase 6"
+      "$comment": "Step-by-step reasoning for complex problems",
+      "command": "/bin/bash",
+      "args": ["-l", "-c", "exec npx -y @modelcontextprotocol/server-sequential-thinking"]
     }
+  },
+  "staggeredStartup": {
+    "enabled": true,
+    "delayMs": 500,
+    "connectionTimeout": 15000
   }
 }

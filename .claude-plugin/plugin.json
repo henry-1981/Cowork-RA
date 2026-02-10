@@ -5,6 +5,6 @@
   "author": {
     "name": "ARIA Team"
   },
-  "commands": ["../commands/"],
-  "skills": ["../skills/"]
+  "commands": ["commands/"],
+  "skills": ["skills/"]
 }
