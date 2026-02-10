@@ -55,3 +55,13 @@ CLAUDE.md
 
 # User local files
 supervise/
+
+# ARIA Plugin Data (SPEC S11.1: May contain trade secrets and proprietary device designs)
+.aria/*
+!.aria/.gitkeep
+!.aria/products/
+.aria/products/*
+!.aria/products/.gitkeep
+
+# ARIA Active Product State (SPEC S11.1: Local user state, do not share with team)
+.aria/active_product.json
