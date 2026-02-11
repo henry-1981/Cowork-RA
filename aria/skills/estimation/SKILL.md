@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.0.2"
+  version: "0.0.4"
   category: "domain"
   status: "active"
   updated: "2026-02-11"
@@ -368,7 +368,6 @@ Output structure (Korean language):
 
 ---
 **생성 일시**: [Timestamp]
-**ARIA Plugin Version**: 2.0.0
 **데이터 출처**: 규제 컨설팅 업계 평균 비용 (2026-01 기준)
 ```
 
