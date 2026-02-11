@@ -211,3 +211,8 @@ dist-ssr/
 # Root MCP Config (development environment)
 # ===========================================
 /.mcp.json
+
+# ===========================================
+# Git Worktrees (isolated development workspaces)
+# ===========================================
+.worktrees/
