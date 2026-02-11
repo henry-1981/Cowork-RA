@@ -5,6 +5,15 @@ description: >
   Determines regulatory class (FDA I/II/III, EU I/IIa/IIb/III, MFDS 1/2/3/4)
   based on device characteristics. Supports classification optimization analysis
   with --optimize flag. Use for regulatory class determination and pathway planning.
+allowed-tools: Read Grep Glob ToolSearch
+user-invocable: false
+metadata:
+  version: "1.0.1"
+  category: "domain"
+  status: "active"
+  updated: "2026-02-11"
+  tags: "medical-device, classification, FDA, EU-MDR, MFDS, regulatory, notion-mcp"
+  knowledge-base-date: "2026-01"
 ---
 
 # Medical Device Classification Skill
@@ -152,6 +161,30 @@ description: >
 ---
 
 ## Declarative Workflow
+
+### Step 0: Load Notion MCP (Supplementary Data Source)
+
+**Purpose**: Retrieve organization-specific classification data from Notion database.
+
+**Workflow**:
+1. Use ToolSearch to load Notion MCP tools (mcp__notion__*)
+2. If Notion tools available:
+   - Query organization database for region-specific classification rules
+   - Query for device-specific historical classifications
+   - Cross-reference with built-in knowledge
+3. If Notion tools unavailable or query fails:
+   - Gracefully degrade to built-in knowledge
+   - Continue without interruption
+   - No error shown to user
+
+**Data Attribution**:
+- Always include "Data Source Attribution" section in output
+- Format: "Built-in Knowledge: [used]" + "Notion DB: [used/not available]" + "Context7: [used/not needed]"
+
+**Graceful Degradation**:
+- Notion MCP is supplementary, not required
+- If unavailable: Use built-in knowledge without notification
+- If query fails: Log internally, proceed with built-in classification logic
 
 ### Step 1: Extract Device Characteristics
 - Device type and intended use
@@ -308,6 +341,64 @@ Knowledge Base Date: 2026-01 기준
 - **필수 에스컬레이션**: Regulatory affairs + R&D 전문가 협의 필수
 - **규제 전략 영향**: 설계 변경이 규제 전략에 미치는 영향 사전 평가 필요
 - **임상 데이터**: 설계 변경 시 추가 임상 시험 필요 여부 검토 필수
+
+---
+
+## Data Source Strategy
+
+1. **Built-in Knowledge** (Primary): Embedded classification rules from FDA, EU MDR Annex VIII, MFDS regulations
+2. **Module Files** (On-demand): Detailed classification rules and decision trees (future)
+3. **Notion MCP** (Supplementary): Organization-specific classification precedents
+4. **Context7 MCP** (Verification): External regulatory document verification
+
+### Notion MCP Integration
+
+**Purpose**: Retrieve organization-specific classification precedents and historical decisions.
+
+**Workflow**:
+1. Use ToolSearch to load Notion MCP tools: `ToolSearch("notion")`
+2. If Notion tools available:
+   - Query organization database for similar device classifications
+   - Cross-reference with built-in classification rules
+   - Attribute Notion as source when used
+3. If Notion unavailable or query fails:
+   - Gracefully degrade to built-in knowledge
+   - Continue without interruption
+
+**Source Attribution**:
+- When Notion used: "Sources: Built-in Knowledge + Notion DB (organization precedents)"
+- When Notion unavailable: "Sources: Built-in Knowledge"
+
+### Context7 MCP Integration
+
+**Purpose**: Verify and supplement regulatory classification rule references (FDA CFR, EU MDR Annex VIII, MFDS 의료기기법).
+
+**Workflow**:
+1. Use ToolSearch to load Context7 MCP tools: `ToolSearch("context7")`
+2. Expected tools: `mcp__context7__resolve-library-id`, `mcp__context7__get-library-docs`
+3. If Context7 tools available:
+   - Resolve regulatory library IDs for FDA/EU MDR/MFDS classification rules
+   - Retrieve latest regulatory document versions
+   - Verify classification rule citations are current
+   - Cross-reference with built-in classification logic
+   - Attribute Context7 as supplementary source in output
+4. If Context7 unavailable or query fails:
+   - Gracefully degrade to built-in knowledge
+   - Continue without interruption
+
+**Data Priority**:
+- Notion DB (Priority 1): Organization-specific classification precedents
+- Built-in Knowledge (Priority 2): Embedded classification frameworks
+- Context7 (Priority 3): External regulatory rule verification
+
+**Source Attribution**:
+- When Context7 used: "Sources: Built-in Knowledge + Context7 (regulatory verification)"
+- When Context7 unavailable: "Sources: Built-in Knowledge (Context7 unavailable)"
+
+**Graceful Degradation**:
+- Context7 is supplementary, not required
+- If unavailable: Use built-in knowledge without error message
+- Classification output remains fully functional
 
 ---
 

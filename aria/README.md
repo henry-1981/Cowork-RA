@@ -71,7 +71,6 @@ https://github.com/henry-1981/Cowork-RA.git
 ```
 aria/
 ├── .claude-plugin/plugin.json    # 플러그인 매니페스트
-├── .mcp.json                     # MCP 커넥터 설정
 ├── CONNECTORS.md                 # MCP 커넥터 문서
 ├── README.md                     # 본 파일
 ├── commands/                     # 8개 슬래시 커맨드
@@ -99,62 +98,38 @@ aria/
 
 ARIA는 세 가지 MCP(Model Context Protocol) 커넥터를 사용하여 데이터를 가져오고 출력합니다.
 
+**중요**: ARIA 플러그인은 Claude Code 전역 MCP 설정을 참조합니다. 플러그인 디렉토리에는 `.mcp.json` 파일이 없으며, 사용자가 Claude Code 전역 설정에서 MCP 서버를 구성합니다. 스킬은 런타임에 `ToolSearch`를 사용하여 필요한 MCP 도구를 로드합니다.
+
+### MCP 설정 방법
+
+Claude Code의 전역 설정 파일 `~/.claude/settings.json`에 MCP 서버를 추가합니다:
+
+**macOS/Linux 설정 위치**:
+```
+~/.claude/settings.json
+```
+
+**Windows 설정 위치**:
+```
+%USERPROFILE%\.claude\settings.json
+```
+
 ### 1. Notion 커넥터 (필수 - 주요 데이터 소스)
 
 조직의 규제 데이터베이스에 연결합니다.
 
-**설정 방법**:
+**설정 단계**:
 
 1. Notion API 키 생성:
    - https://www.notion.so/my-integrations 에서 새 통합 생성
    - API 키 복사
 
-2. 환경 변수 설정:
-
-```bash
-export NOTION_API_KEY="your-notion-api-key-here"
-```
-
-3. Notion 데이터베이스 공유:
+2. Notion 데이터베이스 공유:
    - ARIA가 접근할 데이터베이스를 통합에 공유
 
-**패키지 정보**:
-- 패키지명: `@notionhq/notion-mcp-server` (npm 레지스트리 확인 필요)
-- 실행: `npx -y @notionhq/notion-mcp-server`
+3. Claude Code 전역 설정에 MCP 추가:
 
-### 2. Google Drive 커넥터 (선택 - 문서 내보내기용)
-
-규제 보고서를 Google Docs로 내보낼 수 있습니다.
-
-**설정 방법**:
-
-1. Google Cloud 프로젝트 생성 및 인증 정보 생성
-2. OAuth 2.0 클라이언트 ID 생성 또는 서비스 계정 키 다운로드
-3. 환경 변수 설정:
-
-```bash
-export GOOGLE_CREDENTIALS="path-to-credentials.json"
-```
-
-**패키지 정보**:
-- 패키지명: `@anthropic/google-drive-mcp` (npm 레지스트리 확인 필요)
-- 실행: `npx -y @anthropic/google-drive-mcp`
-
-### 3. Context7 커넥터 (선택 - 규제 문서 보완용)
-
-외부 규제 문서 및 라이브러리 정보를 검색합니다.
-
-**설정 방법**:
-
-별도 인증 불필요. 자동으로 작동합니다.
-
-**패키지 정보**:
-- 패키지명: `@upstash/context7-mcp` (검증됨)
-- 실행: `npx -y @upstash/context7-mcp`
-
-### MCP 설정 파일 (.mcp.json)
-
-플러그인 루트의 `.mcp.json` 파일에서 MCP 커넥터를 설정합니다:
+   `~/.claude/settings.json` 파일을 열고 다음을 추가합니다:
 
 ```json
 {
@@ -163,14 +138,89 @@ export GOOGLE_CREDENTIALS="path-to-credentials.json"
       "command": "npx",
       "args": ["-y", "@notionhq/notion-mcp-server"],
       "env": {
-        "NOTION_API_KEY": ""
+        "NOTION_API_KEY": "your-notion-api-key-here"
+      }
+    }
+  }
+}
+```
+
+**패키지 정보**:
+- 패키지명: `@notionhq/notion-mcp-server`
+- 실행: `npx -y @notionhq/notion-mcp-server`
+
+### 2. Google Drive 커넥터 (선택 - 문서 내보내기용)
+
+규제 보고서를 Google Docs로 내보낼 수 있습니다.
+
+**설정 단계**:
+
+1. Google Cloud 프로젝트 생성 및 인증 정보 생성
+2. OAuth 2.0 클라이언트 ID 생성 또는 서비스 계정 키 다운로드
+3. 인증 정보 JSON 파일을 안전한 위치에 저장
+
+4. Claude Code 전역 설정에 MCP 추가:
+
+```json
+{
+  "mcpServers": {
+    "gdrive": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/google-drive-mcp"],
+      "env": {
+        "GOOGLE_CREDENTIALS": "/path/to/credentials.json"
+      }
+    }
+  }
+}
+```
+
+**패키지 정보**:
+- 패키지명: `@anthropic/google-drive-mcp`
+- 실행: `npx -y @anthropic/google-drive-mcp`
+
+### 3. Context7 커넥터 (선택 - 규제 문서 보완용)
+
+외부 규제 문서 및 라이브러리 정보를 검색합니다.
+
+**설정 단계**:
+
+별도 인증이 필요하지 않습니다. Claude Code 전역 설정에 추가하기만 하면 됩니다:
+
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
+```
+
+**패키지 정보**:
+- 패키지명: `@upstash/context7-mcp` (검증됨)
+- 실행: `npx -y @upstash/context7-mcp`
+
+### 통합 MCP 설정 예시
+
+세 개의 MCP 커넥터를 모두 사용하려면 `~/.claude/settings.json`을 다음과 같이 설정합니다:
+
+```json
+{
+  "mcpServers": {
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "NOTION_API_KEY": "your-notion-api-key-here"
       }
     },
     "gdrive": {
       "command": "npx",
       "args": ["-y", "@anthropic/google-drive-mcp"],
       "env": {
-        "GOOGLE_CREDENTIALS": ""
+        "GOOGLE_CREDENTIALS": "/path/to/credentials.json"
       }
     },
     "context7": {
@@ -181,7 +231,10 @@ export GOOGLE_CREDENTIALS="path-to-credentials.json"
 }
 ```
 
-**참고**: Notion 및 Google Drive 패키지명은 npm 레지스트리에서 확인 후 업데이트 필요합니다.
+**참고**:
+- MCP 설정 변경 후 Claude Code를 재시작해야 합니다
+- 인증 정보는 절대 Git에 커밋하지 마세요
+- 전역 설정은 모든 Claude Code 프로젝트에서 공유됩니다
 
 ### 데이터 소스 우선순위
 
