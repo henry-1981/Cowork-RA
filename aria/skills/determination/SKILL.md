@@ -63,8 +63,11 @@ Core question: Is the product used for disease diagnosis/treatment/prevention or
 
 ## Workflow
 
-### Step 1: Extract Device Information
+### Step 1: Use Provided Device Information
 
+Use the device information already collected by the command. Do NOT re-ask or re-display previously collected answers.
+
+Required fields (already provided):
 - Device description and physical characteristics
 - Intended use statement (medical purpose)
 - Product form (hardware, software, IVD, combination)
@@ -89,6 +92,8 @@ Core question: Is the product used for disease diagnosis/treatment/prevention or
 - Consolidate multi-region determination
 - Identify applicable regulations
 - Flag escalation scenarios if borderline
+- Output the determination result ONLY — do NOT repeat the original question or user input
+- After output, STOP. Do not loop back to Step 1
 
 ---
 

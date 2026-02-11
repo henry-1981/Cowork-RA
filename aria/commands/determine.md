@@ -27,6 +27,8 @@ Evaluate whether your product qualifies as a medical device under US FDA, EU MDR
 **If no document provided**:
 - Conversational Q&A: device description, intended use, product form, primary function
 
+**IMPORTANT**: Once all required fields are collected, proceed directly to Step 3. Do NOT repeat or re-display the Q&A conversation.
+
 ### 3. Prior Context Check
 
 - Check `.aria/products/{product-name}/{date}/` for existing data
@@ -34,7 +36,8 @@ Evaluate whether your product qualifies as a medical device under US FDA, EU MDR
 
 ### 4. Determination Analysis
 
-- Activate determination skill
+- Activate determination skill with collected device information
+- Pass all collected fields as context — do NOT re-collect or re-display them
 - Evaluate against FDA, EU MDR, MFDS criteria
 - Apply traffic light system and identify escalation scenarios
 
