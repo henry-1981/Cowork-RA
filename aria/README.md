@@ -41,20 +41,22 @@ ARIA는 의료기기 규제 업무 담당자를 위한 AI 기반 규제 인텔�
 
 ### 플러그인 설치
 
-1. ARIA 플러그인을 Cowork 플랫폼에 설치합니다:
+다음 두 가지 방법 중 하나로 ARIA 플러그인을 Cowork 플랫폼에 설치할 수 있습니다:
 
-```bash
-# GitHub에서 플러그인 다운로드
-git clone https://github.com/your-org/aria-plugin.git
+**방법 1: GitHub URL로 설치**
 
-# 플러그인 디렉토리로 이동
-cd aria-plugin
+Cowork 플랫폼의 플러그인 설치 화면에서 다음 GitHub URL을 입력합니다:
 
-# Cowork에 플러그인 등록
-# (Cowork 플랫폼별 설치 방법 따름)
+```
+https://github.com/henry-1981/Cowork-RA.git
 ```
 
-2. 설치 확인:
+**방법 2: .zip 파일 업로드**
+
+1. [Cowork-RA 레포지토리](https://github.com/henry-1981/Cowork-RA)에서 `.zip` 파일을 다운로드합니다.
+2. Cowork 플랫폼의 플러그인 설치 화면에서 다운로드한 `.zip` 파일을 업로드합니다.
+
+### 설치 확인
 
 플러그인이 정상적으로 설치되면 다음 디렉토리 구조가 생성됩니다:
 
