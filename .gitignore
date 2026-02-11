@@ -201,3 +201,13 @@ dist-ssr/
 .vercel/
 .netlify/
 .firebase/
+
+# ===========================================
+# ARIA Working Data (sensitive product info)
+# ===========================================
+.aria/
+
+# ===========================================
+# Root MCP Config (development environment)
+# ===========================================
+/.mcp.json

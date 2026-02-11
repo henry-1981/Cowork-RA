@@ -1,13 +1,13 @@
 {
-  "name": "aria-marketplace",
+  "name": "cowork-ra",
   "owner": {
     "name": "ARIA Team"
   },
   "plugins": [
     {
       "name": "aria",
-      "source": "/cowork-ra/.claude",
-      "description": "ARIA (AI Regulatory Intelligence Assistant) and medical device regulatory plugins."
+      "source": "./aria",
+      "description": "AI Regulatory Intelligence Assistant - Medical device regulatory compliance for US FDA, EU MDR, and Korea MFDS"
     }
   ]
 }
