@@ -4,9 +4,9 @@ Regulatory Affairs 도메인을 위한 Anthropic Cowork 플러그인 마켓플�
 
 ## 플러그인
 
-| 플러그인 | 설명 |
-|----------|------|
-| [aria](./aria/) | AI Regulatory Intelligence Assistant - 의료기기 규제 준수 (FDA, EU MDR, MFDS) |
+| 플러그인 | 설명 | 주요 기능 |
+|----------|------|----------|
+| [aria](./aria/) | AI Regulatory Intelligence Assistant - 의료기기 규제 준수 (FDA, EU MDR, MFDS) | 의료기기 판정, 등급 분류, 규제 경로 선택, 비용/일정 추정, 규제 계획 수립, 다국가 비교, 규제 브리핑 |
 
 ## 설치
 
