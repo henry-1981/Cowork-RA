@@ -16,6 +16,14 @@ ARIA는 의료기기 규제 업무 담당자를 위한 AI 기반 규제 인텔�
 - **다국가 비교**: 규제 요구사항 국가 간 비교 분석
 - **규제 브리핑**: 종합 규제 브리핑 보고서 생성
 
+### Phase 6 Core 기능 (최신 업데이트)
+
+- **PDF 출력**: 모든 보고서를 PDF 형식으로 내보내기 (`--format pdf`)
+- **다중 출력 형식**: Markdown (기본), Notion, Google Docs, PDF 지원
+- **영어 출력 토글**: 모든 명령어에서 영어 출력 지원 (`--lang en`)
+- **플레이북 설정**: `aria.local.md`를 통한 조직별 선호 설정 및 언어 기본값 구성
+- **MCP 통합**: Notion (조직 데이터), Google Drive (문서 출력), Context7 (문서 보완) 지원
+
 ### 대상 사용자
 
 - 규제 업무(RA) 담당자
@@ -179,11 +187,13 @@ export GOOGLE_CREDENTIALS="path-to-credentials.json"
 
 ARIA는 다음 순서로 데이터를 검색합니다:
 
-1. **Notion DB** (최우선) - 조직 특화 규제 데이터
-2. **내장 지식** (두 번째) - 스킬에 포함된 의사결정 프레임워크
-3. **Context7** (세 번째) - 외부 규제 문서 보완 및 검증
+1. **내장 지식** (최우선) - 스킬에 포함된 의사결정 프레임워크 (항상 사용 가능)
+2. **모듈 파일** (두 번째) - 상세한 규제 기준 (필요시 로드)
+3. **외부 MCP 소스** (세 번째, 선택) - 조직 데이터 보완
+   - **Notion DB**: 조직 특화 규제 데이터 (구성 시)
+   - **Context7**: 외부 규제 문서 보완 및 검증 (구성 시)
 
-Notion 연결이 불가능한 경우, 시스템은 내장 지식으로 대체하며 사용자에게 알림을 표시합니다.
+**중요**: 외부 MCP 소스가 구성되지 않은 상태가 기본 동작 모드입니다. ARIA는 내장 지식만으로 완전히 작동하며, 외부 소스는 추가 기능을 제공합니다.
 
 ---
 
@@ -528,6 +538,103 @@ ARIA는 8개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사�
 - **Markdown** (기본): `.aria/products/{제품명}/{날짜}/briefing.md`
 - **Notion**: Notion 페이지 생성 (Notion MCP 필요)
 - **Google Docs**: Google Docs 문서 생성 (Google Drive MCP 필요)
+- **PDF**: PDF 문서 생성 (Phase 6 Core)
+
+---
+
+## Phase 6 Core 기능
+
+### PDF 출력
+
+ARIA는 모든 보고서 생성 명령어에서 PDF 형식 출력을 지원합니다.
+
+**지원 명령어**:
+- `/aria:brief` - 종합 브리핑 보고서
+- `/aria:pathway` - 규제 경로 분석
+- `/aria:estimate` - 비용/일정 추정
+- `/aria:plan` - 규제 계획
+- `/aria:compare` - 다국가 비교
+
+**사용 방법**:
+```
+/aria:brief --format pdf
+/aria:pathway --format pdf --lang en
+/aria:estimate --format pdf
+```
+
+**출력 형식 옵션**:
+- `markdown` (기본값): Markdown 파일
+- `pdf`: PDF 문서
+- `notion`: Notion 페이지 (Notion MCP 필요)
+- `gdocs`: Google Docs (Google Drive MCP 필요)
+
+### 영어 출력 토글 (SR-008)
+
+모든 명령어에서 `--lang en|ko` 플래그를 사용하여 출력 언어를 선택할 수 있습니다.
+
+**사용 방법**:
+```
+/aria:determine --lang en
+/aria:classify --optimize --lang en
+/aria:brief --format pdf --lang en
+```
+
+**언어 옵션**:
+- `ko` (기본값): 한국어 출력
+- `en`: 영어 출력
+
+**플레이북 기본값**:
+`aria.local.md` 파일에서 기본 언어를 설정할 수 있습니다:
+```yaml
+## Language Preference
+output_language: en  # 또는 ko
+```
+
+**우선순위**:
+1. 명령어 플래그 (`--lang en`)가 최우선
+2. `aria.local.md`의 `output_language` 설정이 두 번째
+3. 시스템 기본값 (`ko`)
+
+### 플레이북 파싱 (aria.local.md)
+
+조직별 규제 전략, 선호 경로, 언어 설정 등을 `aria.local.md` 파일에 구성할 수 있습니다.
+
+**핵심 기능**:
+- 조직 프로필 및 주요 의료기기 유형 정의
+- 언어 기본값 설정 (`output_language`)
+- 규제 경로 선호 설정 (FDA, EU MDR, MFDS)
+- 비용/일정 벤치마크 커스터마이징
+- 위험 선호도 및 에스컬레이션 기준 정의
+- 데이터 보존 정책 설정 (`data_retention_days`)
+
+**로딩 동작**:
+- ARIA는 명령어 시작 시 프로젝트 루트의 `aria.local.md`를 자동 로드
+- 파일이 존재하면 설정 적용
+- 파일이 없으면 기본 설정 사용
+
+**템플릿 위치**: 프로젝트 루트의 `aria.local.md` 파일 참조
+
+### 다중 출력 형식 지원
+
+모든 보고서 생성 명령어는 여러 출력 형식을 지원합니다.
+
+**출력 형식별 요구사항**:
+
+| 형식 | MCP 커넥터 필요 | 설명 |
+|------|----------------|------|
+| `markdown` | 없음 (기본) | `.aria/products/` 디렉토리에 .md 파일 저장 |
+| `pdf` | 없음 | PDF 문서 생성 |
+| `notion` | Notion MCP | Notion 페이지 생성 |
+| `gdocs` | Google Drive MCP | Google Docs 문서 생성 |
+
+**사용 예시**:
+```
+/aria:brief --format markdown        # 기본 Markdown
+/aria:brief --format pdf             # PDF 문서
+/aria:brief --format notion          # Notion 페이지 (Notion MCP 필요)
+/aria:brief --format gdocs           # Google Docs (Google Drive MCP 필요)
+/aria:brief --format pdf --lang en   # 영어 PDF
+```
 
 ---
 

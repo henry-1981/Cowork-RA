@@ -142,24 +142,73 @@ Medical devices are instruments, machines, apparatus, materials, software or sim
 
 ### Risk-Based Classification (등급 지정)
 
-#### Risk Matrix (Guideline Annex 4)
+**Classification Process**: Medical Impact (1차) → Patient Condition (2차) → Malfunction Risk Adjustment (최종)
 
-| Patient Condition | Medical Impact | Base Grade |
-|-------------------|----------------|------------|
-| **Critical** (24hr death risk) | Treatment/Rehab/Diagnosis/Drug Support | 4 |
-| | Clinical Management (Prediction/Prevention) | 3 |
-| | Information/Monitoring | 2 |
-| **Serious** (Severe Disease) | Treatment/Rehab/Diagnosis/Drug Support | 3 |
-| | Clinical Management (Prediction/Prevention) | 2 |
-| | Information/Monitoring | 1 |
-| **Non-Serious** (Other Conditions) | Treatment/Rehab/Diagnosis/Drug Support | 2 |
-| | Clinical Management (Prediction/Prevention) | 1 |
-| | Information/Monitoring | 1 |
+---
+
+#### Step 1: Medical Impact Classification (제품 기능 기반)
+
+**Primary Intended Use 코드와 매핑**:
+
+| 제품 코드 | 사용 목적 | Medical Impact |
+|----------|----------|----------------|
+| A(검사) | 검사·측정 | **Treatment/Diagnosis** |
+| B(진단) | 진단 보조 | **Treatment/Diagnosis** |
+| C(치료) | 치료·재활 | **Treatment/Diagnosis** |
+| D(임상관리) | 예측·예방·관리 유도 | **Clinical Management** |
+| E(장애보조) | 재활·보조 | **Treatment/Diagnosis** or **Clinical Management** (사례별 판단) |
+| F(정보제공) | 정보 제공·모니터링 | **Information/Monitoring** |
+| G(의약품보조) | 복약·투약 지원 | **Treatment/Diagnosis** |
+| H(기타) | - | 개별 평가 |
+| I(융합제품) | 복수 목적 | 최고 위험도 목적 기준 |
+
+---
+
+#### Step 2: Patient Condition Identification (적응증 기반)
+
+**제품 IFU/적응증에서 확인**:
+
+| Patient Condition | 판단 기준 | 키워드 |
+|-------------------|----------|--------|
+| **Critical** (위독·치명적) | 24시간 내 사망 위험이 있는 환자 | 중환자, 응급, 생명 위협, ICU, 인공호흡기, 혈액투석, 심정지 |
+| **Serious** (중증 질환) | 중증 질환으로 적절한 치료 없으면 악화 가능 | 중증, 만성 중증, 악화 시 입원, 암, 심부전, 뇌졸중 |
+| **Non-Serious** (기타 질환) | 경증 또는 일반 질환 | 경증, 일반, 외래 관리, 건강관리 |
+
+---
+
+#### Step 3: Risk Matrix Application (Guideline Annex 4)
+
+| Medical Impact | Critical<br>(위독·치명적) | Serious<br>(중증 질환) | Non-Serious<br>(기타 질환) |
+|----------------|----------------------|---------------------|----------------------|
+| **Treatment/Diagnosis/Drug Support**<br>(치료·진단·검사·의약품 보조) | **4등급** | **3등급** | **2등급** |
+| **Clinical Management**<br>(임상적 관리 유도 - 예측·예방) | **3등급** | **2등급** | **1등급** |
+| **Information/Monitoring**<br>(정보 제공·모니터링 및 기타) | **2등급** | **1등급** | **1등급** |
+
+---
+
+#### Step 4: Malfunction Risk Adjustment (성능저하·오작동 시 피해 기준)
+
+**Base Grade에서 최종 등급 조정**:
+
+| 오작동 시 피해 | 등급 조정 | 비고 |
+|--------------|----------|------|
+| **사망 가능성** | **+1 등급** | 4등급 초과 불가 (최대 4등급) |
+| **부상/악화** | **조정 없음** | Base Grade 유지 |
+| **피해 없음** | **-1 등급** | **단, 2등급 → 1등급 하향 조정 금지** |
+
+**조정 제한 규칙**:
+- 상향: 최대 4등급까지만 가능 (예: 3등급 + 사망 = 4등급)
+- 하향: 2등급에서 1등급으로 하향 조정 절대 불가 (Ground Truth)
+
+---
 
 #### Final Grade Selection Rules
 
+**복합 기능 제품**:
 - **Embedded SW**: `Max(HW grade, SW function grade)`
 - **Multi-function SW**: `Max(grade of each function)`
+
+**최종 등급**: Base Grade + Malfunction Adjustment (조정 제한 규칙 적용)
 
 ### Step 2 Output Format
 
@@ -171,7 +220,12 @@ Medical devices are instruments, machines, apparatus, materials, software or sim
 
 2. 제품 코드: [예: B1BXXA2]
 
-3. 최종 위해도 등급: 제 [1/2/3/4] 등급
+3. 위해도 등급 분석:
+   - Medical Impact: [Treatment/Diagnosis / Clinical Management / Information/Monitoring]
+   - Patient Condition: [Critical / Serious / Non-Serious]
+   - Base Grade: 제 [ ] 등급
+   - Malfunction Risk: [사망(+1) / 부상(0) / 피해없음(-1)]
+   - 최종 등급: 제 [1/2/3/4] 등급
 
 4. 법적 근거: 「디지털의료제품법」 제3조 및 가이드라인(2025.11) 별표 3, 4
 ```
