@@ -7,7 +7,10 @@
     {
       "name": "aria",
       "source": "./aria",
-      "description": "AI Regulatory Intelligence Assistant - Medical device regulatory compliance for US FDA, EU MDR, and Korea MFDS"
+      "description": "AI Regulatory Intelligence Assistant - Medical device regulatory compliance for US FDA, EU MDR, and Korea MFDS",
+      "version": "2.0.0",
+      "category": "life-sciences",
+      "keywords": ["medical-device", "regulatory", "FDA", "EU-MDR", "MFDS"]
     }
   ]
 }
