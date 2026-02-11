@@ -71,7 +71,8 @@ https://github.com/henry-1981/Cowork-RA.git
 ```
 aria/
 ├── .claude-plugin/plugin.json    # 플러그인 매니페스트
-├── CONNECTORS.md                 # MCP 커넥터 문서
+├── .mcp.json                     # HTTP MCP 서버 구성 (플러그인 레벨)
+├── CONNECTORS.md                 # MCP 커넥터 문서 (표준 형식)
 ├── README.md                     # 본 파일
 ├── commands/                     # 8개 슬래시 커맨드
 │   ├── chat.md                  # /aria:chat
@@ -83,7 +84,7 @@ aria/
 │   ├── compare.md               # /aria:compare
 │   └── brief.md                 # /aria:brief
 └── skills/                       # 7개 도메인 스킬 + 1개 커넥터 스킬
-    ├── connectors/SKILL.md
+    ├── connectors/SKILL.md      # 카테고리 기반 커넥터 패턴
     ├── determination/SKILL.md
     ├── classification/SKILL.md
     ├── pathway/SKILL.md
@@ -97,13 +98,57 @@ aria/
 
 ## MCP 커넥터 설정
 
-ARIA는 세 가지 MCP(Model Context Protocol) 커넥터를 사용하여 데이터를 가져오고 출력합니다.
+ARIA는 5가지 카테고리의 MCP(Model Context Protocol) 커넥터를 통해 외부 도구와 통합됩니다.
 
-**중요**: ARIA 플러그인은 Claude Code 전역 MCP 설정을 참조합니다. 플러그인 디렉토리에는 `.mcp.json` 파일이 없으며, 사용자가 Claude Code 전역 설정에서 MCP 서버를 구성합니다. 스킬은 런타임에 `ToolSearch`를 사용하여 필요한 MCP 도구를 로드합니다.
+### 커넥터 아키텍처
 
-### MCP 설정 방법
+**플러그인 레벨 `.mcp.json`**: ARIA 플러그인은 `aria/.mcp.json` 파일에 HTTP MCP 서버를 사전 구성합니다. 이 서버들은 플러그인 설치 시 자동으로 Claude Code에서 사용 가능합니다.
 
-Claude Code의 전역 설정 파일 `~/.claude/settings.json`에 MCP 서버를 추가합니다:
+**시스템 레벨 `.mcp.json`**: Context7과 같은 로컬 npx 기반 MCP 서버는 시스템 레벨 설정(`~/.claude/settings.json`)에서 별도로 구성해야 합니다.
+
+### 카테고리 기반 설계
+
+ARIA는 **도구 독립적(tool-agnostic)** 설계를 사용합니다. 워크플로우는 특정 제품 이름 대신 **카테고리 플레이스홀더**로 설명됩니다:
+
+- `~~knowledge base`: 조직 특화 규제 데이터 (Notion, Confluence)
+- `~~project tracker`: 규제 프로젝트 마일스톤 추적 (Jira, Linear)
+- `~~chat`: 팀 커뮤니케이션 및 알림 (Slack, Teams)
+- `~~cloud storage`: 문서 내보내기 및 저장 (Microsoft 365, Google Drive)
+- `~~regulatory docs`: 외부 규제 문서 검증 (Context7)
+
+자세한 커넥터 정보는 `CONNECTORS.md`를 참조하세요.
+
+### HTTP MCP 서버 (플러그인 사전 구성)
+
+다음 HTTP MCP 서버는 `aria/.mcp.json`에 사전 구성되어 있습니다:
+
+| 서버 | 카테고리 | URL | 설명 |
+|-----|---------|-----|------|
+| **notion** | ~~knowledge base | https://mcp.notion.com/mcp | 조직 규제 데이터베이스 |
+| **atlassian** | ~~knowledge base / ~~project tracker | https://mcp.atlassian.com/v1/mcp | Confluence, Jira |
+| **slack** | ~~chat | https://mcp.slack.com/mcp | 팀 알림 및 공유 |
+| **ms365** | ~~cloud storage | https://microsoft365.mcp.claude.com/mcp | OneDrive, SharePoint |
+
+이 서버들은 **추가 구성 없이** 사용할 수 있습니다. ARIA 스킬은 런타임에 `ToolSearch`를 통해 필요한 MCP 도구를 자동으로 로드합니다.
+
+### 로컬 MCP 서버 (사용자 구성 필요)
+
+Context7과 같은 로컬 npx 기반 MCP 서버는 시스템 레벨에서 별도로 구성해야 합니다.
+
+**설정 방법 (Context7 예시)**:
+
+`~/.claude/settings.json` 파일에 다음을 추가합니다:
+
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
+```
 
 **macOS/Linux 설정 위치**:
 ```
@@ -115,139 +160,33 @@ Claude Code의 전역 설정 파일 `~/.claude/settings.json`에 MCP 서버를 �
 %USERPROFILE%\.claude\settings.json
 ```
 
-### 1. Notion 커넥터 (필수 - 주요 데이터 소스)
-
-조직의 규제 데이터베이스에 연결합니다.
-
-**설정 단계**:
-
-1. Notion API 키 생성:
-   - https://www.notion.so/my-integrations 에서 새 통합 생성
-   - API 키 복사
-
-2. Notion 데이터베이스 공유:
-   - ARIA가 접근할 데이터베이스를 통합에 공유
-
-3. Claude Code 전역 설정에 MCP 추가:
-
-   `~/.claude/settings.json` 파일을 열고 다음을 추가합니다:
-
-```json
-{
-  "mcpServers": {
-    "notion": {
-      "command": "npx",
-      "args": ["-y", "@notionhq/notion-mcp-server"],
-      "env": {
-        "NOTION_API_KEY": "your-notion-api-key-here"
-      }
-    }
-  }
-}
-```
-
-**패키지 정보**:
-- 패키지명: `@notionhq/notion-mcp-server`
-- 실행: `npx -y @notionhq/notion-mcp-server`
-
-### 2. Google Drive 커넥터 (선택 - 문서 내보내기용)
-
-규제 보고서를 Google Docs로 내보낼 수 있습니다.
-
-**설정 단계**:
-
-1. Google Cloud 프로젝트 생성 및 인증 정보 생성
-2. OAuth 2.0 클라이언트 ID 생성 또는 서비스 계정 키 다운로드
-3. 인증 정보 JSON 파일을 안전한 위치에 저장
-
-4. Claude Code 전역 설정에 MCP 추가:
-
-```json
-{
-  "mcpServers": {
-    "gdrive": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/google-drive-mcp"],
-      "env": {
-        "GOOGLE_CREDENTIALS": "/path/to/credentials.json"
-      }
-    }
-  }
-}
-```
-
-**패키지 정보**:
-- 패키지명: `@anthropic/google-drive-mcp`
-- 실행: `npx -y @anthropic/google-drive-mcp`
-
-### 3. Context7 커넥터 (선택 - 규제 문서 보완용)
-
-외부 규제 문서 및 라이브러리 정보를 검색합니다.
-
-**설정 단계**:
-
-별도 인증이 필요하지 않습니다. Claude Code 전역 설정에 추가하기만 하면 됩니다:
-
-```json
-{
-  "mcpServers": {
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
-    }
-  }
-}
-```
-
-**패키지 정보**:
-- 패키지명: `@upstash/context7-mcp` (검증됨)
-- 실행: `npx -y @upstash/context7-mcp`
-
-### 통합 MCP 설정 예시
-
-세 개의 MCP 커넥터를 모두 사용하려면 `~/.claude/settings.json`을 다음과 같이 설정합니다:
-
-```json
-{
-  "mcpServers": {
-    "notion": {
-      "command": "npx",
-      "args": ["-y", "@notionhq/notion-mcp-server"],
-      "env": {
-        "NOTION_API_KEY": "your-notion-api-key-here"
-      }
-    },
-    "gdrive": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/google-drive-mcp"],
-      "env": {
-        "GOOGLE_CREDENTIALS": "/path/to/credentials.json"
-      }
-    },
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
-    }
-  }
-}
-```
-
 **참고**:
 - MCP 설정 변경 후 Claude Code를 재시작해야 합니다
-- 인증 정보는 절대 Git에 커밋하지 마세요
-- 전역 설정은 모든 Claude Code 프로젝트에서 공유됩니다
+- Context7은 별도 인증이 필요하지 않습니다
+- 시스템 레벨 설정은 모든 Claude Code 프로젝트에서 공유됩니다
 
 ### 데이터 소스 우선순위
 
 ARIA는 다음 순서로 데이터를 검색합니다:
 
-1. **내장 지식** (최우선) - 스킬에 포함된 의사결정 프레임워크 (항상 사용 가능)
-2. **모듈 파일** (두 번째) - 상세한 규제 기준 (필요시 로드)
-3. **외부 MCP 소스** (세 번째, 선택) - 조직 데이터 보완
-   - **Notion DB**: 조직 특화 규제 데이터 (구성 시)
-   - **Context7**: 외부 규제 문서 보완 및 검증 (구성 시)
+1. **내장 지식** (Priority 1) - 스킬에 포함된 의사결정 프레임워크 (항상 사용 가능)
+2. **모듈 파일** (Priority 2) - 상세한 규제 기준 (필요시 로드)
+3. **~~knowledge base** (Priority 3) - 조직 특화 규제 데이터 (선택)
+4. **~~regulatory docs** (Priority 4) - 외부 규제 문서 검증 (선택)
 
-**중요**: 외부 MCP 소스가 구성되지 않은 상태가 기본 동작 모드입니다. ARIA는 내장 지식만으로 완전히 작동하며, 외부 소스는 추가 기능을 제공합니다.
+**중요**: 외부 MCP 소스가 구성되지 않은 상태가 기본 동작 모드입니다. ARIA는 내장 지식만으로 완전히 작동하며, 외부 소스는 보완 기능을 제공합니다.
+
+### 우아한 저하 (Graceful Degradation)
+
+MCP 커넥터를 사용할 수 없을 경우 ARIA는 자동으로 내장 지식으로 대체하여 계속 작동합니다:
+
+- `~~knowledge base` 불가용 → 내장 규제 지식 사용 (무음 저하)
+- `~~regulatory docs` 불가용 → 내장 규제 지식 사용 (소스 섹션에 표시)
+- `~~cloud storage` 불가용 → Markdown 형식으로 대체
+- `~~project tracker` 불가용 → Markdown 형식으로 대체
+- `~~chat` 불가용 → 로컬 파일로 저장
+
+자세한 우아한 저하 매트릭스는 `skills/connectors/SKILL.md`를 참조하세요.
 
 ---
 
@@ -891,10 +830,11 @@ ARIA는 의사결정 지원 도구이며, 전문가 판단을 대체하지 않�
 
 ## 추가 정보
 
-- **CONNECTORS.md**: MCP 커넥터 카테고리 및 확장성 가이드
+- **CONNECTORS.md**: MCP 커넥터 카테고리 및 확장성 가이드 (표준 Cowork 플러그인 형식)
 - **aria.local.md**: 조직 설정 전체 템플릿 (플러그인 루트)
-- **SPEC-ARIA-001**: 전체 요구사항 명세 (개발자용)
+- **aria/.mcp.json**: HTTP MCP 서버 사전 구성 (플러그인 레벨)
+- **skills/connectors/SKILL.md**: 카테고리 기반 커넥터 통합 패턴
 
-**버전**: 2.0.0
+**버전**: 0.0.4
 **라이선스**: Apache-2.0
 **지원**: GitHub Issues에서 문제 보고 및 기능 요청

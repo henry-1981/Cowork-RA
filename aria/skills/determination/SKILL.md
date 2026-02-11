@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob ToolSearch
 user-invocable: false
 metadata:
-  version: "0.0.2"
+  version: "0.0.4"
   category: "domain"
   status: "active"
   updated: "2026-02-11"

@@ -1,153 +1,168 @@
-# MCP 커넥터 (MCP Connectors)
+# Connectors
 
-ARIA 플러그인의 MCP(Model Context Protocol) 커넥터 카테고리 문서
+ARIA plugin connector documentation in standard Cowork plugin format.
 
-## 개요
+## How tool references work
 
-ARIA는 MCP를 통해 외부 데이터 소스 및 출력 대상과 통합됩니다. 커넥터는 기능별 카테고리로 구성되며, 각 카테고리는 특정 역할을 수행합니다.
+ARIA plugin uses **tool-agnostic design** with category placeholders. Instead of hardcoding specific product names (like "Notion" or "Slack"), workflows are described in terms of **categories** (like `~~knowledge base` or `~~chat`).
 
-### Connector Skill Reference
+This approach allows users to choose their preferred tools within each category. The plugin's `.mcp.json` file pre-configures HTTP MCP servers for each category, but users can substitute alternative tools with similar capabilities.
 
-ARIA는 MCP 통합 로직을 `aria/skills/connectors/SKILL.md`에 중앙 집중화하여 관리합니다. 이 커넥터 스킬은 도메인 스킬(determination, classification, pathway, briefing)에서 참조되며, 다음 패턴을 제공합니다:
+### Category Placeholder Syntax
 
-- **Tool Discovery**: ToolSearch를 통한 MCP 도구 검색
-- **Graceful Degradation**: MCP 불가용 시 내장 지식으로 자동 전환
-- **Source Attribution**: 데이터 출처 명시 템플릿
-- **Data Priority Framework**: Built-in-first 우선순위 모델
+Throughout ARIA skills and documentation, you'll see references like:
 
-자세한 MCP 통합 패턴은 `aria/skills/connectors/SKILL.md`를 참조하세요.
+- `~~knowledge base` → Refers to any knowledge base tool (e.g., Notion, Confluence, Guru)
+- `~~project tracker` → Refers to any project management tool (e.g., Jira, Linear, Asana)
+- `~~chat` → Refers to any chat platform (e.g., Slack, Microsoft Teams)
+- `~~cloud storage` → Refers to any cloud storage service (e.g., Microsoft 365, Google Drive)
+- `~~regulatory docs` → Refers to regulatory documentation sources (e.g., Context7, FDA APIs)
 
-### MCP 아키텍처
-
-MCP는 AI 모델과 외부 도구 간의 표준화된 통신 프로토콜입니다. ARIA는 다음 카테고리의 커넥터를 사용합니다:
-
-1. **Database Connectors**: 조직 규제 데이터 저장소 접근
-2. **Storage Connectors**: 문서 저장 및 내보내기
-3. **Documentation Connectors**: 외부 규제 문서 및 라이브러리 참조
-
-### 카테고리 기반 접근 방식
-
-각 카테고리는 도구 독립적으로 설계되었습니다. 특정 MCP 도구 구현에 의존하지 않으며, 동일 카테고리 내에서 대체 가능한 커넥터를 사용할 수 있습니다.
+These placeholders make workflows portable across different toolsets while maintaining clear semantic meaning.
 
 ---
 
-## Database Connectors (데이터베이스 커넥터)
+## Connectors for this plugin
 
-### 목적
+ARIA provides the following connector categories:
 
-조직 특화 규제 데이터, 과거 결정 사례, 최신 정보에 접근합니다.
+| Category | Placeholder | Included servers | Other options |
+|----------|-------------|-----------------|---------------|
+| Knowledge base | `~~knowledge base` | Notion, Atlassian (Confluence) | Guru, Coda |
+| Project tracker | `~~project tracker` | Atlassian (Jira) | Linear, Asana |
+| Chat | `~~chat` | Slack | Microsoft Teams |
+| Cloud storage | `~~cloud storage` | Microsoft 365 | Google Drive |
+| Regulatory docs | `~~regulatory docs` | Context7* | -- |
 
-### Notion Connector
-
-**역할**: 주요 데이터 소스 (최우선 순위)
-
-**사용 사례**:
-- 조직 규제 데이터베이스 조회
-- 과거 분류 결정 검색
-- 내부 선례 참조
-- 조직 표준 포지션 확인
-
-**데이터 우선순위**:
-ARIA는 내장 지식을 최우선으로 사용하며, Notion DB는 조직 특화 데이터로 보완합니다 (Priority 3).
-
-**설정 방법**:
-README.md의 "MCP 커넥터 설정" 섹션 참조
-
-**우아한 저하(Graceful Degradation)**:
-Notion 연결 불가 시 ARIA는 내장 지식으로 대체하며, 사용자에게 저하 모드임을 알립니다.
-
-### 확장 가능성
-
-향후 다른 데이터베이스 커넥터 추가 가능:
-- Airtable
-- PostgreSQL
-- MongoDB
-- 조직 내부 데이터베이스 시스템
-
-새 데이터베이스 커넥터는 동일한 데이터 우선순위 체계에 통합될 수 있습니다.
+**Note**: Context7 is a local MCP server (npx-based) and is NOT included in the plugin's `.mcp.json`. Configure Context7 separately in your system-level `.mcp.json` file.
 
 ---
 
-## Storage Connectors (저장소 커넥터)
+## Knowledge base (`~~knowledge base`)
 
-### 목적
+**Purpose**: Access organization-specific regulatory data, past classification decisions, and internal precedents.
 
-규제 보고서 및 산출물을 다양한 형식과 플랫폼으로 내보냅니다.
+**Included servers**:
+- **Notion**: Primary knowledge base connector for regulatory databases
+- **Atlassian Confluence**: Alternative knowledge base option
 
-### Google Drive Connector
+**ARIA-specific usage**:
+- Query organization regulatory database
+- Search historical classification decisions
+- Reference internal regulatory standards
+- Cross-reference with built-in regulatory knowledge
 
-**역할**: 문서 저장 및 내보내기
+**Data priority**: Knowledge base sources are **supplementary** (Priority 3). ARIA uses built-in knowledge first and supplements with organization-specific data from `~~knowledge base`.
 
-**사용 사례**:
-- 규제 브리핑을 Google Docs로 내보내기
-- 조직 문서 관리 워크플로 통합
-- 팀 공유 문서 생성
-
-**지원 형식**:
-- Google Docs (규제 보고서)
-- Google Sheets (데이터 매트릭스 - 향후 지원)
-
-**설정 방법**:
-README.md의 "MCP 커넥터 설정" 섹션 참조
-
-**선택 사항**:
-Google Drive 커넥터는 필수가 아닙니다. 기본 Markdown 출력만으로도 ARIA의 모든 기능을 사용할 수 있습니다.
-
-### 대체 저장소 옵션
-
-향후 지원 가능한 저장소 커넥터:
-- Microsoft OneDrive
-- Dropbox
-- SharePoint
-- 조직 내부 문서 관리 시스템
-
-각 저장소 커넥터는 동일한 출력 인터페이스를 통해 통합될 수 있습니다.
+**Graceful degradation**: If `~~knowledge base` is unavailable, ARIA continues using built-in regulatory knowledge (FDA, EU MDR, MFDS regulations) without interruption.
 
 ---
 
-## Documentation Connectors (문서 커넥터)
+## Project tracker (`~~project tracker`)
 
-### 목적
+**Purpose**: Track regulatory project milestones, submission deadlines, and compliance activities.
 
-외부 규제 문서, 라이브러리, 표준 참조를 보완 및 검증합니다.
+**Included servers**:
+- **Atlassian Jira**: Primary project tracking connector
 
-### Context7 Connector
+**ARIA-specific usage**:
+- Track regulatory submission milestones
+- Monitor compliance activities
+- Link regulatory decisions to project tasks
+- Export regulatory plans to project tracking systems
 
-**역할**: 외부 문서 보완 및 검증
+**Data priority**: Project tracker integration is optional. ARIA generates regulatory plans in Markdown format by default, with optional export to `~~project tracker`.
 
-**사용 사례**:
-- 규제 문서 참조 (FDA, EU MDR, MFDS 최신 규정)
-- 라이브러리 및 표준 문서 조회
-- Notion 및 내장 지식 정보 검증
-- 최신 규제 변경사항 확인
-
-**데이터 우선순위**:
-Context7은 세 번째 우선순위로, Notion DB 및 내장 지식을 보완하는 역할입니다.
-
-**설정 방법**:
-별도 인증 불필요. 자동으로 작동합니다. README.md 참조.
-
-**우아한 저하**:
-Context7 연결 불가 시에도 ARIA는 Notion 및 내장 지식으로 작동하며, 보완 정보 부족만 알립니다.
-
-### 확장 가능성
-
-향후 추가 가능한 문서 커넥터:
-- 규제 기관 공식 API (FDA, EMA, MFDS)
-- 조직 내부 규제 문서 저장소
-- 국제 표준 데이터베이스 (ISO, IEC)
+**Graceful degradation**: ARIA regulatory planning works fully without `~~project tracker` integration. Plans are output as structured Markdown.
 
 ---
 
-## 커넥터 확장 가이드
+## Chat (`~~chat`)
 
-### 새 커넥터 추가 방법
+**Purpose**: Notify stakeholders about regulatory updates and share regulatory intelligence.
 
-ARIA에 새로운 MCP 커넥터를 추가하려면:
+**Included servers**:
+- **Slack**: Primary chat platform connector
 
-1. **카테고리 식별**: 커넥터가 Database, Storage, Documentation 중 어느 카테고리에 속하는지 결정
+**ARIA-specific usage**:
+- Share regulatory briefings with team channels
+- Notify stakeholders of classification decisions
+- Distribute regulatory pathway recommendations
+- Collaborate on multi-regional regulatory strategies
 
-2. **MCP 서버 구성**: `.mcp.json`에 새 MCP 서버 추가
+**Data priority**: Chat integration is optional. ARIA generates all outputs in Markdown format first, with optional sharing to `~~chat`.
+
+**Graceful degradation**: All ARIA outputs work independently of `~~chat` availability. Chat integration only adds distribution capabilities.
+
+---
+
+## Cloud storage (`~~cloud storage`)
+
+**Purpose**: Export regulatory reports and documentation to cloud storage platforms.
+
+**Included servers**:
+- **Microsoft 365**: Primary cloud storage connector (OneDrive, SharePoint)
+
+**ARIA-specific usage**:
+- Export regulatory briefings as Google Docs or Word documents
+- Store regulatory reports in organization document repositories
+- Integrate with existing document management workflows
+- Share regulatory deliverables with external auditors
+
+**Supported formats**:
+- Google Docs (regulatory reports)
+- Microsoft Word (regulatory briefings)
+- PDF (via conversion - future enhancement)
+
+**Data priority**: Cloud storage is optional. ARIA outputs to `.aria/` local Markdown directory by default, with optional export to `~~cloud storage`.
+
+**Graceful degradation**: ARIA works fully without `~~cloud storage`. All features remain functional with local Markdown outputs.
+
+---
+
+## Regulatory docs (`~~regulatory docs`)
+
+**Purpose**: Verify and supplement built-in regulatory knowledge with latest external regulatory documents.
+
+**Included servers**:
+- **Context7***: External regulatory document verification
+
+**ARIA-specific usage**:
+- Reference latest FDA guidance documents
+- Verify EU MDR regulation updates
+- Check Korea MFDS regulatory changes
+- Supplement built-in knowledge with current regulatory sources
+
+**Data priority**: Regulatory docs sources are **supplementary** (Priority 4). Used only to verify and supplement Notion and built-in knowledge.
+
+**Graceful degradation**: ARIA remains fully functional without `~~regulatory docs`. Built-in regulatory knowledge (FDA, EU MDR, MFDS) is comprehensive and kept up-to-date.
+
+**Special note**: Context7 is a local npx-based MCP server and is NOT included in `aria/.mcp.json`. Configure Context7 separately in your system-level `.mcp.json` file (`~/.claude/settings.json`).
+
+---
+
+## Connector Extension Guide
+
+### Adding New Connectors
+
+To add a new connector to ARIA:
+
+1. **Identify the category**: Determine which category the connector belongs to (Knowledge base, Project tracker, Chat, Cloud storage, Regulatory docs)
+
+2. **Configure HTTP MCP server**: If the connector is an HTTP MCP server, add it to `aria/.mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "your-connector": {
+      "type": "http",
+      "url": "https://your-connector.com/mcp"
+    }
+  }
+}
+```
+
+3. **Configure local MCP server**: If the connector is a local npx-based server (like Context7), add it to your system-level `.mcp.json` (`~/.claude/settings.json`):
 
 ```json
 {
@@ -163,90 +178,83 @@ ARIA에 새로운 MCP 커넥터를 추가하려면:
 }
 ```
 
-3. **환경 변수 설정**: 필요한 인증 정보를 환경 변수로 관리
+4. **Update CONNECTORS.md**: Document the new connector in the appropriate category section
 
-```bash
-export YOUR_API_KEY="your-api-key-here"
-```
+5. **Update skills**: Use `~~category` placeholders in skills to reference the new connector capability
 
-4. **데이터 우선순위 결정**: Database 커넥터의 경우, Notion과의 우선순위 관계 정의
+### Connector Category Classification
 
-5. **문서 업데이트**:
-   - 본 CONNECTORS.md에 커넥터 설명 추가
-   - README.md의 MCP 설정 섹션에 설치 방법 추가
+**Knowledge base connectors**:
+- Organization-internal data repositories
+- Read-focused (regulatory data queries)
+- Structured data (databases, wikis)
 
-### 커넥터 카테고리 분류 기준
+**Project tracker connectors**:
+- Project management platforms
+- Read/write (milestone tracking)
+- Task and timeline oriented
 
-**Database Connector로 분류되는 경우**:
-- 조직 내부 데이터 저장소
-- 읽기 중심 (규제 데이터 조회)
-- 구조화된 데이터 (데이터베이스, 스프레드시트)
+**Chat connectors**:
+- Team communication platforms
+- Write-focused (notifications, sharing)
+- Real-time collaboration
 
-**Storage Connector로 분류되는 경우**:
-- 문서 저장 및 공유 플랫폼
-- 쓰기 중심 (보고서 내보내기)
-- 파일 기반 저장소
+**Cloud storage connectors**:
+- Document storage and sharing platforms
+- Write-focused (report export)
+- File-based repositories
 
-**Documentation Connector로 분류되는 경우**:
-- 외부 참조 문서 소스
-- 읽기 전용
-- 공개 또는 구독 기반 정보 소스
-
-### 설정 패턴 참조
-
-모든 MCP 커넥터는 다음 표준 패턴을 따릅니다:
-
-**인증 정보**: 환경 변수 사용 (파일에 직접 저장 금지)
-**패키지 실행**: `npx -y` 플래그 사용 (자동 설치)
-**구성 파일**: `.mcp.json`에 중앙 집중 관리
-
-자세한 구성 예시는 README.md의 "MCP 커넥터 설정" 섹션 및 `.mcp.json` 파일을 참조하세요.
+**Regulatory docs connectors**:
+- External reference document sources
+- Read-only
+- Public or subscription-based information
 
 ---
 
-## 데이터 흐름 다이어그램
+## Data Flow Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        ARIA 스킬                             │
+│                        ARIA Skills                           │
 └─────────────────────────────────────────────────────────────┘
                             │
                             ├─────────────────┬──────────────┐
                             ▼                 ▼              ▼
-                    ┌──────────────┐  ┌──────────────┐ ┌─────────────┐
-                    │   Notion DB  │  │ 내장 지식     │ │  Context7   │
-                    │  (우선순위 1)│  │ (우선순위 2)  │ │(우선순위 3) │
-                    └──────────────┘  └──────────────┘ └─────────────┘
-                         Database         Built-in       Documentation
-                        Connector                         Connector
+                ┌──────────────────┐  ┌─────────────┐ ┌────────────────┐
+                │ ~~knowledge base │  │   Built-in  │ │ ~~regulatory   │
+                │   (Priority 3)   │  │  Knowledge  │ │     docs       │
+                │                  │  │ (Priority 1)│ │  (Priority 4)  │
+                │ Notion/Confluence│  │  FDA/MDR/   │ │   Context7     │
+                │                  │  │    MFDS     │ │                │
+                └──────────────────┘  └─────────────┘ └────────────────┘
                             │
                             ▼
                     ┌──────────────┐
-                    │  .aria/ 로컬 │
+                    │  .aria/ Local│
                     │   Markdown   │
                     └──────────────┘
                             │
-                            ├─────────────────┬──────────────┐
-                            ▼                 ▼              ▼
-                    ┌──────────────┐  ┌──────────────┐ ┌─────────────┐
-                    │   Markdown   │  │ Google Docs  │ │  Notion     │
-                    │   (기본)     │  │  (선택)      │ │ Page (선택) │
-                    └──────────────┘  └──────────────┘ └─────────────┘
-                                         Storage         Storage
-                                        Connector        Connector
+                            ├─────────────────┬──────────────┬─────────────┐
+                            ▼                 ▼              ▼             ▼
+                    ┌──────────────┐  ┌─────────────┐ ┌──────────┐ ┌──────────────┐
+                    │   Markdown   │  │ ~~cloud     │ │ ~~chat   │ │ ~~project    │
+                    │   (default)  │  │  storage    │ │          │ │   tracker    │
+                    │              │  │             │ │  Slack   │ │              │
+                    │              │  │   MS365     │ │          │ │ Jira/Linear  │
+                    └──────────────┘  └─────────────┘ └──────────┘ └──────────────┘
 ```
 
 ---
 
-## 참조
+## Reference
 
-- **README.md**: 전체 설치 가이드 및 MCP 설정
-- **.mcp.json**: MCP 서버 구성 파일
-- **SPEC-ARIA-001 S1.3**: MCP 구성 명세 (개발자용)
-- **SPEC-ARIA-001 S4**: 데이터 전략 및 우선순위 (개발자용)
+- **README.md**: Complete installation guide and MCP setup instructions
+- **aria/.mcp.json**: HTTP MCP server configuration for this plugin
+- **System .mcp.json**: `~/.claude/settings.json` for local MCP servers (Context7)
+- **aria/skills/connectors/SKILL.md**: Centralized connector integration patterns
 
 ---
 
-**버전**: 2.1.0
-**최종 업데이트**: 2026-02-11
-**유지보수**: ARIA 팀
+**Version**: 0.0.4
+**Last Updated**: 2026-02-11
+**Maintained by**: ARIA Team
