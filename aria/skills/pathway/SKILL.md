@@ -309,55 +309,7 @@ This summary is consumed by `/aria:estimate` and `/aria:plan` commands.
 3. **Notion MCP** (Supplementary): Organization-specific pathway precedents and timeline data
 4. **Context7 MCP** (Verification): External regulatory pathway document verification
 
-### Notion MCP Integration
-
-**Purpose**: Retrieve organization-specific pathway precedents and historical submission timelines.
-
-**Workflow**:
-1. Use ToolSearch to load Notion MCP tools: `ToolSearch("notion")`
-2. If Notion tools available:
-   - Query organization database for similar device pathway histories
-   - Cross-reference with built-in pathway frameworks
-   - Attribute Notion as source when used
-3. If Notion unavailable or query fails:
-   - Gracefully degrade to built-in knowledge
-   - Continue without interruption
-
-**Source Attribution**:
-- When Notion used: "Sources: Built-in Knowledge + Notion DB (organization precedents)"
-- When Notion unavailable: "Sources: Built-in Knowledge"
-
-### Context7 MCP Integration
-
-**Purpose**: Verify and supplement regulatory pathway references (FDA 21 CFR 814, EU MDR Article 52, MFDS 의료기기법).
-
-**Workflow**:
-1. Use ToolSearch to load Context7 MCP tools: `ToolSearch("context7")`
-2. Expected tools: `mcp__context7__resolve-library-id`, `mcp__context7__get-library-docs`
-3. If Context7 tools available:
-   - Resolve regulatory library IDs for FDA/EU MDR/MFDS pathway regulations
-   - Retrieve latest regulatory pathway requirements
-   - Verify pathway citations and submission requirements are current
-   - Cross-reference with built-in pathway logic
-   - Attribute Context7 as supplementary source in output
-4. If Context7 unavailable or query fails:
-   - Gracefully degrade to built-in knowledge
-   - Continue without interruption
-
-**Data Priority**:
-- Built-in Knowledge (Priority 1): Embedded pathway frameworks
-- Loaded Classification Data (Priority 2): Input from classification step
-- Notion DB (Priority 3): Organization-specific pathway precedents
-- Context7 (Priority 4): External regulatory pathway verification
-
-**Source Attribution**:
-- When Context7 used: "Sources: Built-in Knowledge + Context7 (regulatory verification)"
-- When Context7 unavailable: "Sources: Built-in Knowledge (Context7 unavailable)"
-
-**Graceful Degradation**:
-- Context7 is supplementary, not required
-- If unavailable: Use built-in knowledge without error message
-- Pathway output remains fully functional
+For MCP integration patterns (tool discovery, graceful degradation, source attribution), see `skills/connectors/SKILL.md`.
 
 ---
 

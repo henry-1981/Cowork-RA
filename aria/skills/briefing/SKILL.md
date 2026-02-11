@@ -379,36 +379,10 @@ This summary captures the briefing report for audit trail.
 
 1. **Pipeline Data** (Primary): `.summary.md` for executive summary, full `.md` for detailed analysis
 2. **Built-in Knowledge** (Supplementary): Briefing structure rules, executive summary framework
-3. **External Tools** (Optional): Only when explicitly configured
+3. **Context7 MCP** (Verification): External regulatory document verification
+4. **Google Drive MCP** (Export): Document export when `--format gdocs` specified
 
-### Context7 Integration for Regulatory Document Supplementation
-
-**Purpose**: Supplement regulatory citations and verify latest regulatory requirements
-
-**Workflow**:
-
-1. **Tool Discovery**:
-   - Use ToolSearch to load Context7 MCP tools: `ToolSearch("context7")`
-   - Expected tools: `mcp__context7__resolve-library-id`, `mcp__context7__get-library-docs`
-
-2. **Regulatory Document Supplementation**:
-   - When regulatory citations are referenced (FDA CFR, EU MDR, MFDS):
-     - Resolve library ID via `mcp__context7__resolve-library-id`
-     - Retrieve latest documentation via `mcp__context7__get-library-docs`
-     - Cross-reference with built-in knowledge to verify accuracy
-     - Attribute Context7 as supplementary source in Appendix B (Data Sources)
-
-3. **Graceful Degradation**:
-   - If Context7 unavailable → Use built-in knowledge only
-   - Display in Data Source Attribution: "(built-in knowledge, Context7 unavailable)"
-   - Briefing remains fully functional without Context7
-
-4. **Source Attribution**:
-   - When Context7 used successfully:
-     - Appendix B: "External sources: Context7 (regulatory document verification)"
-     - Each citation: Add "(verified via Context7 YYYY-MM-DD)" when applicable
-   - When Context7 unavailable:
-     - Appendix B: "External sources: Context7 (unavailable, built-in knowledge used)"
+For MCP integration patterns (tool discovery, graceful degradation, source attribution), see `skills/connectors/SKILL.md`.
 
 ---
 
@@ -454,31 +428,9 @@ Escalate to regulatory expert when:
 
 **Google Docs Export Workflow**:
 
-When `--format gdocs` is specified:
+When `--format gdocs` is specified, ARIA uses Google Drive MCP connector to export the briefing report.
 
-1. **Tool Discovery**:
-   - Use ToolSearch to load Google Drive MCP tools: `ToolSearch("google drive")`
-   - Expected tools: `mcp__gdrive__create_file`, `mcp__gdrive__upload_content`
-
-2. **Graceful Degradation**:
-   - If ToolSearch returns no Google Drive tools → Fallback to Markdown
-   - Display: "Google Drive MCP가 설정되지 않았습니다. Markdown 형식으로 보고서를 생성합니다."
-   - Save to `.aria/products/{product-name}/{date}/briefing.md`
-   - Include limitation notice in Data Source Attribution
-
-3. **Google Docs Creation** (if tools available):
-   - Generate briefing content in Markdown format first
-   - Convert Markdown to Google Docs-compatible format
-   - Create document via `mcp__gdrive__create_file`:
-     - Title: "{Product Name} - Regulatory Briefing Report ({YYYY-MM-DD})"
-     - MimeType: `application/vnd.google-apps.document`
-     - Content: Converted briefing content
-   - Display Google Docs link to user
-   - Save Markdown backup to `.aria/products/{product-name}/{date}/briefing.md`
-
-4. **Error Recovery**:
-   - If MCP tool call fails → Fallback to Markdown with error message
-   - Error: "Google Drive에 연결할 수 없습니다. Markdown 형식으로 보고서를 생성합니다."
+Workflow details (tool discovery, graceful degradation, error recovery) are defined in `skills/connectors/SKILL.md`.
 
 **User confirmation required before full report generation** (ER-017).
 

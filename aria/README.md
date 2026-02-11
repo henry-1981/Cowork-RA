@@ -82,7 +82,8 @@ aria/
 │   ├── plan.md                  # /aria:plan
 │   ├── compare.md               # /aria:compare
 │   └── brief.md                 # /aria:brief
-└── skills/                       # 7개 도메인 스킬
+└── skills/                       # 7개 도메인 스킬 + 1개 커넥터 스킬
+    ├── connectors/SKILL.md
     ├── determination/SKILL.md
     ├── classification/SKILL.md
     ├── pathway/SKILL.md

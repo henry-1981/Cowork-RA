@@ -6,6 +6,17 @@ ARIA 플러그인의 MCP(Model Context Protocol) 커넥터 카테고리 문서
 
 ARIA는 MCP를 통해 외부 데이터 소스 및 출력 대상과 통합됩니다. 커넥터는 기능별 카테고리로 구성되며, 각 카테고리는 특정 역할을 수행합니다.
 
+### Connector Skill Reference
+
+ARIA는 MCP 통합 로직을 `aria/skills/connectors/SKILL.md`에 중앙 집중화하여 관리합니다. 이 커넥터 스킬은 도메인 스킬(determination, classification, pathway, briefing)에서 참조되며, 다음 패턴을 제공합니다:
+
+- **Tool Discovery**: ToolSearch를 통한 MCP 도구 검색
+- **Graceful Degradation**: MCP 불가용 시 내장 지식으로 자동 전환
+- **Source Attribution**: 데이터 출처 명시 템플릿
+- **Data Priority Framework**: Built-in-first 우선순위 모델
+
+자세한 MCP 통합 패턴은 `aria/skills/connectors/SKILL.md`를 참조하세요.
+
 ### MCP 아키텍처
 
 MCP는 AI 모델과 외부 도구 간의 표준화된 통신 프로토콜입니다. ARIA는 다음 카테고리의 커넥터를 사용합니다:
@@ -37,7 +48,7 @@ MCP는 AI 모델과 외부 도구 간의 표준화된 통신 프로토콜입니�
 - 조직 표준 포지션 확인
 
 **데이터 우선순위**:
-Notion DB는 내장 지식 및 Context7보다 우선순위가 높습니다. ARIA는 데이터 검색 시 Notion을 먼저 조회합니다.
+ARIA는 내장 지식을 최우선으로 사용하며, Notion DB는 조직 특화 데이터로 보완합니다 (Priority 3).
 
 **설정 방법**:
 README.md의 "MCP 커넥터 설정" 섹션 참조
@@ -236,6 +247,6 @@ export YOUR_API_KEY="your-api-key-here"
 
 ---
 
-**버전**: 2.0.0
-**최종 업데이트**: 2026-02-10
+**버전**: 2.1.0
+**최종 업데이트**: 2026-02-11
 **유지보수**: ARIA 팀
