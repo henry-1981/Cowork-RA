@@ -8,6 +8,7 @@ All notable changes to ARIA Cowork Plugin will be documented in this file.
 
 - **`/aria:brief` renamed to `/aria:report`**: Cowork 기본 `legal` 플러그인의 `brief` 커맨드와 이름 충돌 해결
 - **marketplace.json 버전 동기화**: `0.0.4` → `0.1.0`으로 업데이트하여 플러그인 업데이트 감지 정상화
+- **plugin.json `commands` 필드 형식 수정**: object 형식(`{"chat": "commands/chat.md"}`)을 제거하고 `commands/` 디렉토리 자동 탐색에 의존하도록 변경. 공식 스키마에서 `commands`는 `string|array` 타입만 지원
 
 ---
 
