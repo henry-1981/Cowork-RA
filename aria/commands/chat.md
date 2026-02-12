@@ -128,6 +128,15 @@ When conversation context is sufficient, invoke skills transparently:
 - Invoke: Skill("aria-planning") with estimation data
 - Present results naturally: "Here's a 4-phase plan starting with..."
 
+**Compliance Triggers** (no prerequisite):
+- User asks about marketing compliance, fair competition code, or anti-kickback regulations
+- User asks about permissible HCP interactions or economic benefits
+- User asks about specific marketing activity legality (gifts, samples, donations, conferences, presentations, education, lectures, clinical trials, market research, post-market surveillance, exhibitions)
+- Keywords: 공정경쟁규약, 리베이트, 마케팅 컴플라이언스, KMDIA, Sunshine, 보건의료인, 경제적 이익, 자율규약, 사전심의, 사후신고, 기증, 학술대회, 제품설명회, 교육훈련, 강연, 임상시험, 시장조사, 시판후조사, 전시회, 광고, 샘플, fair competition, anti-kickback, compliance
+- Invoke: Skill("aria-compliance") with activity description
+- Present results naturally: "Based on Article 9 of the Fair Competition Code, conference attendance support requires..."
+- Note: Compliance questions are profile-independent (no product profile prerequisite)
+
 **General Regulatory Q&A** (no specific skill trigger):
 - User asks general regulatory knowledge questions
 - Provide direct conversational answers from built-in knowledge
@@ -290,6 +299,7 @@ Skills are routed based on conversation context, not keyword matching. The follo
 | pathway | Classification known, submission route needed |
 | estimation | Pathway selected, cost/timeline requested |
 | planning | Estimation done, roadmap/milestones requested |
+| compliance | Marketing compliance question, fair competition code inquiry, HCP interaction legality check (profile-independent) |
 
 ## Disclaimer
 
