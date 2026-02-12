@@ -8,11 +8,5 @@
   "homepage": "https://github.com/henry-1981/Cowork-RA",
   "repository": "https://github.com/henry-1981/Cowork-RA.git",
   "license": "Apache-2.0",
-  "keywords": ["medical-device", "regulatory", "FDA", "EU-MDR", "MFDS"],
-  "commands": {
-    "chat": "commands/chat.md",
-    "assess": "commands/assess.md",
-    "project": "commands/project.md",
-    "report": "commands/report.md"
-  }
+  "keywords": ["medical-device", "regulatory", "FDA", "EU-MDR", "MFDS"]
 }
