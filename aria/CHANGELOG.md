@@ -5,6 +5,19 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-02-12
+
+### Added
+- New `aria-compliance` skill: Korean medical device marketing compliance advisor based on KMDIA Fair Competition Code (공정경쟁규약)
+- Compliance skill references: regulation.md (Code full text), activity-guide.md (checklist + Committee Guidance 2024), faq.md (70+ FAQs + violation cases)
+- Compliance keyword routing in `/aria:chat` for transparent skill invocation
+
+### Changed
+- Updated `/aria:chat` Conversational Skill Routing with Compliance Triggers block
+- Updated Keyword Reference table with compliance routing context
+- Updated plugin.json keywords with compliance, fair-competition, KMDIA
+- Updated README.md with 6th skill documentation and directory structure
+
 ## [0.0.4] - 2026-02-11
 
 ### Added
