@@ -244,7 +244,7 @@ User
 +-- briefing.md + briefing.summary.md
 ```
 
-### After (New - 3 integrated reports + 1 profile):
+### After (New - 3 integrated reports + 3 summaries + 1 profile):
 ```
 .aria/products/{product}/{date}/
 +-- profile.json          # Product profile (managed by chat)
@@ -253,6 +253,7 @@ User
 +-- project.md            # Integrated project plan
 +-- project.summary.md    # Compressed summary
 +-- briefing.md           # Comprehensive briefing report
++-- briefing.summary.md   # Compressed summary
 ```
 
 ---
@@ -314,6 +315,6 @@ User
 |--------|--------|-------|
 | Commands | 8 | 4 |
 | Skills | 8 (incl. connectors) | 5 |
-| Output files per product | 14 (7 pairs) | 6 (3 reports + 3 summaries) |
+| Output files per product | 14 (7 pairs) | 7 (1 profile + 3 reports + 3 summaries) |
 | Command-Skill redundancy | High (1:1 mapping) | None (clear separation) |
 | Pipeline orchestration | Manual (user chains commands) | Automatic (commands chain skills) |

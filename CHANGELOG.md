@@ -2,6 +2,70 @@
 
 All notable changes to ARIA Cowork Plugin will be documented in this file.
 
+## [0.1.0] - 2026-02-12
+
+### BREAKING CHANGES
+
+- **6 commands removed**: `/aria:determine`, `/aria:classify`, `/aria:pathway`, `/aria:estimate`, `/aria:plan`, `/aria:compare` are no longer available
+- **Output file format changed**: Individual per-skill files (determination.md, classification.md, etc.) replaced by integrated reports (assess.md, project.md)
+
+### Added
+
+- **`/aria:assess` command**: Integrated regulatory assessment pipeline
+  - Combines determination + classification + pathway into single orchestrated workflow
+  - Multi-region comparison logic (inline, for 2+ target markets)
+  - Decision gate: Stops workflow on NO determination
+  - Output: `assess.md` + `assess.summary.md`
+
+- **`/aria:project` command**: Integrated project planning pipeline
+  - Combines estimation + planning into single orchestrated workflow
+  - Multi-region optimization with parallel submission analysis
+  - Loads assessment data from `/aria:assess` automatically
+  - Output: `project.md` + `project.summary.md`
+
+### Changed
+
+- **`/aria:chat` rewritten**: Conversational regulatory advisor redesign
+  - Progressive product profiling via natural dialogue (profile.json)
+  - Transparent skill routing (invisible to user)
+  - Auto-suggestion logic for pipeline commands
+  - Document upload with auto-extraction and gap analysis
+
+- **`/aria:brief` rewritten**: Comprehensive report generator
+  - Absorbs briefing skill logic (no separate briefing skill)
+  - Two-phase output (ER-017 report issuance policy)
+  - Supports focus area selection (Clinical Strategy, Cost Control, Timeline Acceleration, Multi-Market Entry)
+  - Backward compatibility with legacy pipeline data
+
+- **5 skills refactored**: Pure analysis logic only
+  - determination, classification, pathway, estimation, planning
+  - Removed: product context loading, flag handling, file storage, pipeline connections
+  - Retained: regulatory decision frameworks, module references, traffic light logic
+
+- **Plugin manifest updated**: Version bumped to 0.1.0, command registry updated to 4 commands
+
+### Removed
+
+- **Briefing skill** (`aria/skills/briefing/`): Logic absorbed by `/aria:brief` command
+- **Comparison skill** (`aria/skills/comparison/`): Logic absorbed inline by assess and project commands
+- **Connectors skill** (`aria/skills/connectors/`): Merged into `CONNECTORS.md` infrastructure document
+
+### Migration Notes
+
+- Existing `.aria/products/` data is preserved and backward compatible
+- `/aria:brief` and `/aria:project` can read legacy format files (determination.summary.md, etc.)
+- New format files are preferred over legacy when both exist
+- No manual data migration required
+
+### Quality
+
+- **Architecture**: 8 commands -> 4 commands, 8 skills -> 5 skills
+- **Output files**: 14 files per product -> 7 files per product
+- **Command-Skill redundancy**: Eliminated (clear separation of concerns)
+- **Test scenarios**: 150+ Gherkin test cases across 5 test scenario documents
+
+---
+
 ## [Phase 3] - 2026-02-11
 
 ### Added

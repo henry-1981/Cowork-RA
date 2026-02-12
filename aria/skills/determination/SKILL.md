@@ -4,13 +4,13 @@ description: >
   Medical device determination skill for FDA, EU MDR, and MFDS regulations.
   Evaluates whether a product qualifies as a medical device. Use for device
   status evaluation and regulatory scope determination.
-allowed-tools: Read Grep Glob ToolSearch
+allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.0.4"
+  version: "0.1.0"
   category: "domain"
   status: "active"
-  updated: "2026-02-11"
+  updated: "2026-02-12"
   modularized: "true"
   tags: "medical-device, determination, FDA, EU-MDR, MFDS, regulatory"
   knowledge-base-date: "2026-01"
@@ -29,9 +29,9 @@ triggers:
 
 # Medical Device Determination Skill
 
-## Quick Reference
+## Purpose
 
-**Purpose**: Evaluate whether a product qualifies as a medical device under FDA, EU MDR, and MFDS regulations.
+Evaluate whether a product qualifies as a medical device under FDA, EU MDR, and MFDS regulations. This is a pure analysis unit that receives device information and returns a structured determination result.
 
 **Input**: Device description, intended use, product form, primary function
 **Output**: Determination (YES/NO/CONDITIONAL), traffic light (GREEN/YELLOW/RED), applicable regulations
@@ -43,7 +43,7 @@ triggers:
 
 ### FDA (21 CFR 201(h))
 
-Core question: Is the product intended for diagnosis, treatment, cure, mitigation, or prevention of disease — without achieving its primary purpose through chemical action or metabolism?
+Core question: Is the product intended for diagnosis, treatment, cure, mitigation, or prevention of disease -- without achieving its primary purpose through chemical action or metabolism?
 
 > Detail: See `modules/fda-criteria.md`
 
@@ -61,13 +61,11 @@ Core question: Is the product used for disease diagnosis/treatment/prevention or
 
 ---
 
-## Workflow
+## Analysis Workflow
 
 ### Step 1: Use Provided Device Information
 
-Use the device information already collected by the command. Do NOT re-ask or re-display previously collected answers.
-
-Required fields (already provided):
+Use the device information provided as input. Required fields:
 - Device description and physical characteristics
 - Intended use statement (medical purpose)
 - Product form (hardware, software, IVD, combination)
@@ -82,18 +80,18 @@ Required fields (already provided):
 ### Step 3: Assign Traffic Light & Escalation
 
 - GREEN: All regions agree on device status
-- YELLOW: Borderline or conditional — escalate to expert
+- YELLOW: Borderline or conditional -- escalate to expert
 - RED: Not a medical device in any region
 
 > Detail: See `modules/escalation-traffic-light.md`
 
-### Step 4: Generate Result
+### Step 4: Return Structured Result
 
-- Consolidate multi-region determination
-- Identify applicable regulations
-- Flag escalation scenarios if borderline
-- Output the determination result ONLY — do NOT repeat the original question or user input
-- After output, STOP. Do not loop back to Step 1
+Return the determination result containing:
+- Multi-region determination (YES/NO/CONDITIONAL per region)
+- Applicable regulations per region
+- Traffic light assessment
+- Escalation flags if borderline
 
 ---
 
@@ -101,7 +99,6 @@ Required fields (already provided):
 
 1. **Built-in Knowledge** (Primary): Embedded decision frameworks from FDA, EU MDR, MFDS regulations
 2. **Module Files** (On-demand): Detailed criteria in `modules/` loaded when deep analysis needed
-3. **Notion MCP** (Supplementary): Organization-specific regulatory data
-4. **Context7 MCP** (Verification): External regulatory document verification
+3. **MCP Connectors** (Supplementary): Organization-specific regulatory data and verification
 
-For MCP integration patterns (tool discovery, graceful degradation, source attribution), see `skills/connectors/SKILL.md`.
+For MCP integration patterns (tool discovery, graceful degradation, source attribution), see `CONNECTORS.md`.
