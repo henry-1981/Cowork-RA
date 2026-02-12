@@ -213,6 +213,12 @@ dist-ssr/
 /.mcp.json
 
 # ===========================================
+# Development Artifacts (test scenarios, design docs)
+# ===========================================
+tests/
+docs/
+
+# ===========================================
 # Git Worktrees (isolated development workspaces)
 # ===========================================
 .worktrees/
