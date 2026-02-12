@@ -267,7 +267,7 @@ Then summary shall include:
   - Critical path (region, duration, bottleneck)
   - Submission strategy (parallel/sequential)
   - Overall traffic light
-And summary shall note it is consumed by /aria:brief
+And summary shall note it is consumed by /aria:report
 ```
 
 ### PJ-006.3: Storage path convention

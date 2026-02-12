@@ -74,7 +74,7 @@ aria/
 │   ├── chat.md                  # /aria:chat - 대화형 규제 자문
 │   ├── assess.md                # /aria:assess - 규제 평가 파이프라인
 │   ├── project.md               # /aria:project - 프로젝트 계획 파이프라인
-│   └── brief.md                 # /aria:brief - 종합 브리핑 보고서
+│   └── report.md                # /aria:report - 종합 브리핑 보고서
 └── skills/                       # 5개 도메인 스킬 (순수 분석 로직)
     ├── determination/SKILL.md    # 의료기기 판정
     ├── classification/SKILL.md   # 다지역 등급 분류
@@ -192,7 +192,7 @@ ARIA는 4개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사�
                                                   │
 /aria:project ──(비용/일정 추정 → 마일스톤 계획)──> project.md
                                                   │
-/aria:brief ──(전체 파이프라인 데이터 통합)──> briefing.md
+/aria:report ──(전체 파이프라인 데이터 통합)──> briefing.md
 ```
 
 각 명령어는 독립적으로 실행 가능하며, 이전 단계 데이터가 있을 경우 자동으로 불러옵니다.
@@ -294,13 +294,13 @@ ARIA는 4개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사�
 
 ---
 
-### /aria:brief
+### /aria:report
 
 **설명**: 종합 규제 브리핑 보고서 생성 (모든 파이프라인 데이터 통합)
 
 **사용법**:
 ```
-/aria:brief [초점 영역]
+/aria:report [초점 영역]
 ```
 
 **플래그**:
@@ -309,10 +309,10 @@ ARIA는 4개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사�
 
 **예시**:
 ```
-/aria:brief
-/aria:brief Clinical Strategy
-/aria:brief --format notion
-/aria:brief 임원 보고용 --format pdf --lang en
+/aria:report
+/aria:report Clinical Strategy
+/aria:report --format notion
+/aria:report 임원 보고용 --format pdf --lang en
 ```
 
 **실행 흐름**:
@@ -352,7 +352,7 @@ ARIA는 4개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사�
 
 ### 이전 버전 호환성
 
-기존 `.aria/products/` 데이터(determination.md, classification.md 등)는 `/aria:brief` 명령어에서 레거시 형식으로 자동 인식합니다.
+기존 `.aria/products/` 데이터(determination.md, classification.md 등)는 `/aria:report` 명령어에서 레거시 형식으로 자동 인식합니다.
 
 ---
 
@@ -505,11 +505,11 @@ ARIA는 모든 작업 데이터를 `.aria/products/{제품명}/{날짜}/` 경로
 - 처음 사용: `/aria:chat`으로 자연스러운 대화 시작
 - 규제 평가: `/aria:assess`로 통합 규제 평가 실행
 - 프로젝트 계획: `/aria:project`로 비용/일정 추정 (assess 데이터 권장)
-- 종합 보고서: `/aria:brief`로 전체 결과 통합 보고서 생성
+- 종합 보고서: `/aria:report`로 전체 결과 통합 보고서 생성
 
 **Q: 반드시 순서대로 실행해야 하나요?**
 - 아니요. 각 명령어는 독립적으로 실행 가능합니다
-- 권장 순서: chat -> assess -> project -> brief
+- 권장 순서: chat -> assess -> project -> report
 - 이전 단계 데이터가 있으면 자동으로 활용합니다
 - 없어도 수동 입력으로 진행 가능합니다
 
@@ -567,6 +567,6 @@ ARIA는 의사결정 지원 도구이며, 전문가 판단을 대체하지 않�
 - **aria.local.md**: 조직 설정 전체 템플릿 (플러그인 루트)
 - **aria/.mcp.json**: HTTP MCP 서버 사전 구성 (플러그인 레벨)
 
-**버전**: 0.1.0
+**버전**: 0.1.1
 **라이선스**: Apache-2.0
 **지원**: GitHub Issues에서 문제 보고 및 기능 요청

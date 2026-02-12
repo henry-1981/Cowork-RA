@@ -3,7 +3,7 @@ description: Comprehensive regulatory briefing report - Synthesizes all pipeline
 argument-hint: "[Focus area] [--format markdown|pdf|notion|gdocs] [--lang ko|en]"
 ---
 
-# /aria:brief - Comprehensive Report Generator
+# /aria:report - Comprehensive Report Generator
 
 ## Purpose
 
@@ -373,7 +373,7 @@ The overall traffic light is the most conservative (highest caution) across all 
 ## Example
 
 ```
-/aria:brief
+/aria:report
 ```
 > System loads all available pipeline data
 > Presents analysis summary (Phase A)
@@ -381,7 +381,7 @@ The overall traffic light is the most conservative (highest caution) across all 
 > Generates comprehensive briefing report (Phase B, Markdown format)
 
 ```
-/aria:brief --format gdocs --lang en
+/aria:report --format gdocs --lang en
 ```
 > English output, Google Docs format
 > Loads all pipeline data
@@ -390,13 +390,13 @@ The overall traffic light is the most conservative (highest caution) across all 
 > Generates Google Docs briefing via Google Drive MCP
 
 ```
-/aria:brief Clinical Strategy
+/aria:report Clinical Strategy
 ```
 > Focus area: Clinical Strategy
 > Emphasizes clinical evidence requirements and trial planning in recommendations
 
 ```
-/aria:brief --format pdf
+/aria:report --format pdf
 ```
 > Loads all pipeline data
 > Presents analysis summary (Phase A)

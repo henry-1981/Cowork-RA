@@ -1,7 +1,7 @@
-# Test Scenarios for SPEC-ARIA-003: /aria:brief
+# Test Scenarios for SPEC-ARIA-003: /aria:report
 
 **SPEC**: SPEC-ARIA-003 - Command & Skill Architecture Restructure
-**Scope**: /aria:brief comprehensive report generator
+**Scope**: /aria:report comprehensive report generator
 **Status**: Test scenarios documented
 **Coverage Target**: 85%+ of brief command requirements
 
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This document defines comprehensive test scenarios for the `/aria:brief` command, the comprehensive report generator that absorbs the former briefing skill. Tests cover pipeline data loading, data completeness assessment, two-phase output (ER-017 report issuance policy), focus area selection, backward compatibility with legacy data, and multi-format output generation.
+This document defines comprehensive test scenarios for the `/aria:report` command, the comprehensive report generator that absorbs the former briefing skill. Tests cover pipeline data loading, data completeness assessment, two-phase output (ER-017 report issuance policy), focus area selection, backward compatibility with legacy data, and multi-format output generation.
 
 ---
 
@@ -44,7 +44,7 @@ This document defines comprehensive test scenarios for the `/aria:brief` command
 ```gherkin
 Given .aria/active_product.json exists with valid product
 And .aria/products/{product}/{date}/ contains assess.md and project.md
-When /aria:brief is executed
+When /aria:report is executed
 Then active product shall be loaded
 And pipeline data scan shall proceed
 ```
@@ -52,7 +52,7 @@ And pipeline data scan shall proceed
 ### BR-001.2: No products exist
 ```gherkin
 Given .aria/products/ directory is empty
-When /aria:brief is executed
+When /aria:report is executed
 Then user shall be warned that briefing requires pipeline data
 And suggestion to run /aria:assess first shall be provided
 ```
@@ -70,7 +70,7 @@ Given .aria/products/{product}/{date}/ contains:
   - profile.json (from /aria:chat)
   - assess.md + assess.summary.md (from /aria:assess)
   - project.md + project.summary.md (from /aria:project)
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then all new format files shall be loaded
 And .summary.md files shall be used for executive summary
 And full .md files shall be used for detailed analysis sections
@@ -85,7 +85,7 @@ Given .aria/products/{product}/{date}/ contains:
   - estimation.summary.md + estimation.md
   - plan.summary.md + plan.md
 And NO new format files exist
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then legacy format files shall be loaded
 And briefing shall be generated from legacy data
 ```
@@ -93,7 +93,7 @@ And briefing shall be generated from legacy data
 ### BR-002.3: Mixed format - new preferred over legacy
 ```gherkin
 Given both assess.md and determination.md exist in the same directory
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then new format files (assess.md) shall be preferred
 And legacy format files shall be ignored when new format exists
 ```
@@ -156,7 +156,7 @@ And no briefing report shall be generated
 ### BR-004.1: Phase A - Analysis summary presented first
 ```gherkin
 Given sufficient pipeline data exists
-When /aria:brief is executed
+When /aria:report is executed
 Then Phase A analysis summary shall be presented:
   - Product Overview (name, device status, classification)
   - Key Findings (pathways, critical path, budget range, risks)
@@ -192,7 +192,7 @@ And user must explicitly confirm before Phase B generation
 
 ### BR-005.1: Clinical Strategy focus
 ```gherkin
-Given user specifies: /aria:brief Clinical Strategy
+Given user specifies: /aria:report Clinical Strategy
 When briefing is generated
 Then recommendations section shall emphasize:
   - Clinical evidence requirements
@@ -266,7 +266,7 @@ Then all of the following shall be present:
 
 ### BR-006.3: Disclaimer present
 ```gherkin
-Given any /aria:brief execution
+Given any /aria:report execution
 When briefing.md is generated
 Then disclaimer shall state: "This briefing is an AI-based regulatory intelligence synthesis, not official regulatory advice."
 And knowledge base date shall be included
@@ -331,7 +331,7 @@ And briefing.md shall also be generated as base
 ### BR-009.1: Markdown output (default)
 ```gherkin
 Given no --format flag is specified
-When /aria:brief generates output
+When /aria:report generates output
 Then briefing.md shall be saved as Markdown
 And no format conversion shall occur
 ```
@@ -340,7 +340,7 @@ And no format conversion shall occur
 ```gherkin
 Given --format pdf flag is specified
 And pandoc is available on the system
-When /aria:brief generates output
+When /aria:report generates output
 Then Markdown shall be generated first
 And PDF shall be converted using pandoc
 And briefing.pdf shall be saved alongside briefing.md
@@ -350,7 +350,7 @@ And briefing.pdf shall be saved alongside briefing.md
 ```gherkin
 Given --format pdf flag is specified
 And no PDF conversion tool is available
-When /aria:brief generates output
+When /aria:report generates output
 Then Markdown shall be preserved
 And notice shall explain PDF tool is unavailable
 And installation guidance for pandoc/wkhtmltopdf/weasyprint shall be provided
@@ -360,7 +360,7 @@ And installation guidance for pandoc/wkhtmltopdf/weasyprint shall be provided
 ```gherkin
 Given --format notion flag is specified
 And Notion MCP connector is configured
-When /aria:brief generates output
+When /aria:report generates output
 Then Notion page shall be created
 And Markdown backup shall also be saved
 ```
@@ -369,7 +369,7 @@ And Markdown backup shall also be saved
 ```gherkin
 Given --format gdocs flag is specified
 And Google Drive MCP connector is configured
-When /aria:brief generates output
+When /aria:report generates output
 Then Google Docs document shall be created with title: "{Product Name} - Regulatory Briefing Report ({date})"
 And Markdown backup shall also be saved
 ```
@@ -411,7 +411,7 @@ And recommendation for fundamental approach change shall be included
 ### NT-BR-001: Partial pipeline data - missing sections
 ```gherkin
 Given only assess.summary.md exists (no full assess.md)
-When /aria:brief generates detailed analysis
+When /aria:report generates detailed analysis
 Then summary data shall be used for available sections
 And missing detailed data shall be noted in the report
 ```
@@ -419,7 +419,7 @@ And missing detailed data shall be noted in the report
 ### NT-BR-002: Corrupted or empty summary files
 ```gherkin
 Given assess.summary.md exists but is empty or malformed
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then the corrupted file shall be skipped
 And data completeness shall reflect the missing data
 And user shall be informed of the issue

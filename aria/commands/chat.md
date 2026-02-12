@@ -145,7 +145,7 @@ Based on accumulated data, suggest next steps naturally:
 - "Your regulatory assessment is complete. Ready for cost/timeline estimation? (`/aria:project`)"
 
 **All pipeline data exists**:
-- "All regulatory analysis is complete. Want me to generate a comprehensive briefing? (`/aria:brief`)"
+- "All regulatory analysis is complete. Want me to generate a comprehensive briefing? (`/aria:report`)"
 
 **IMPORTANT**: Always require user approval before executing suggested commands. Never auto-execute pipeline commands from chat.
 

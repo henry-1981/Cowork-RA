@@ -46,11 +46,11 @@ All test scenarios map to acceptance criteria in `acceptance.md`:
 
 **Test Cases**:
 
-**PDF-001.1**: /aria:brief with --format pdf flag generates PDF report
+**PDF-001.1**: /aria:report with --format pdf flag generates PDF report
 ```gherkin
 Given the user has completed the full pipeline for "cardiac-monitor-x1"
 And all .summary.md files exist in .aria/products/cardiac-monitor-x1/2026-02-11/
-When the user invokes /aria:brief --format pdf
+When the user invokes /aria:report --format pdf
 Then the system shall confirm the analysis content with the user first
 And after user confirmation, generate a PDF format report
 And the PDF content shall match the Markdown output structure
@@ -58,20 +58,20 @@ And the PDF shall include all sections: executive summary, detailed analysis, re
 And the PDF shall be stored in .aria/products/cardiac-monitor-x1/2026-02-11/briefing.pdf
 ```
 
-**PDF-001.2**: /aria:brief with no --format flag defaults to Markdown
+**PDF-001.2**: /aria:report with no --format flag defaults to Markdown
 ```gherkin
 Given the user has completed the full pipeline
-When the user invokes /aria:brief (no --format flag)
+When the user invokes /aria:report (no --format flag)
 Then the system shall confirm the analysis content with the user first
 And after user confirmation, generate the default Markdown format report
 And the output shall be written to .aria/products/{product}/briefing.md
 And no format selection prompt shall be displayed
 ```
 
-**PDF-001.3**: /aria:brief with --format gdocs but google-drive-mcp NOT configured
+**PDF-001.3**: /aria:report with --format gdocs but google-drive-mcp NOT configured
 ```gherkin
 Given google-drive-mcp is NOT configured in .mcp.json
-When the user invokes /aria:brief --format gdocs
+When the user invokes /aria:report --format gdocs
 Then the system shall display a limitation notice: "Google Drive MCP가 설정되지 않았습니다"
 And the system shall fallback to Markdown format
 And the output shall be written as briefing.md
@@ -179,7 +179,7 @@ And the PDF shall be stored in .aria/products/{product}/{date}/plan.pdf
 
 **PDF-006.1**: Invalid format flag rejected
 ```gherkin
-Given the user invokes /aria:brief --format invalid
+Given the user invokes /aria:report --format invalid
 When the system validates the format flag
 Then the system shall reject the invalid format value
 And display an error message: "지원되지 않는 형식입니다. 사용 가능한 형식: markdown, pdf, gdocs"
@@ -188,7 +188,7 @@ And the command shall NOT proceed
 
 **PDF-006.2**: Format flag case-insensitive
 ```gherkin
-Given the user invokes /aria:brief --format PDF
+Given the user invokes /aria:report --format PDF
 When the system validates the format flag
 Then the system shall accept the case-insensitive format value
 And treat "PDF" as "pdf"
@@ -197,7 +197,7 @@ And proceed with PDF format generation after user confirmation
 
 **PDF-006.3**: Multiple format flags (last one wins)
 ```gherkin
-Given the user invokes /aria:brief --format markdown --format pdf
+Given the user invokes /aria:report --format markdown --format pdf
 When the system parses the command flags
 Then the system shall use the last format flag value: "pdf"
 And proceed with PDF format generation
@@ -213,7 +213,7 @@ And proceed with PDF format generation
 
 **PDF-007.1**: No report without user confirmation
 ```gherkin
-Given the user invokes /aria:brief --format pdf
+Given the user invokes /aria:report --format pdf
 When the system completes the analysis
 Then the system shall output only decision-relevant information (key findings, traffic light, items for confirmation)
 And a full formatted PDF report shall NOT be generated in the same turn
@@ -479,9 +479,9 @@ And regulatory topics shall be in English
 And similarities/differences shall be in English
 ```
 
-**EN-001.7**: /aria:brief with --lang en switches to English
+**EN-001.7**: /aria:report with --lang en switches to English
 ```gherkin
-Given the user invokes /aria:brief --lang en
+Given the user invokes /aria:report --lang en
 When the briefing skill processes the input
 Then the executive summary shall be in English
 And detailed analysis sections shall be in English
@@ -627,7 +627,7 @@ And no external database lookup shall be required for core pathway recommendatio
 **GD-001.5**: Built-in knowledge sufficient for full pipeline execution
 ```gherkin
 Given no external MCPs are configured
-When the user executes the full pipeline from /aria:determine through /aria:brief
+When the user executes the full pipeline from /aria:determine through /aria:report
 Then all commands shall operate normally using built-in knowledge
 And each command shall produce fully usable outputs
 And the final briefing shall synthesize all pipeline data accurately
@@ -714,7 +714,7 @@ And no critical features shall be blocked due to MCP unavailability
 **GD-005.1**: --format gdocs requested but google-drive-mcp NOT configured
 ```gherkin
 Given google-drive-mcp is NOT configured in .mcp.json
-When the user invokes /aria:brief --format gdocs
+When the user invokes /aria:report --format gdocs
 Then the system shall display a limitation notice:
   "Google Drive MCP가 설정되지 않았습니다. Markdown 형식으로 보고서를 생성합니다."
 And the system shall fallback to Markdown format
@@ -725,7 +725,7 @@ And the limitation notice shall appear in the Data Source Attribution section
 **GD-005.2**: --format gdocs requested but google-drive-mcp configured and unavailable
 ```gherkin
 Given google-drive-mcp is configured but unavailable at runtime
-When the user invokes /aria:brief --format gdocs
+When the user invokes /aria:report --format gdocs
 Then the system shall display a limitation notice:
   "Google Drive에 연결할 수 없습니다. Markdown 형식으로 보고서를 생성합니다."
 And fallback to Markdown format
@@ -833,7 +833,7 @@ And the output shall be functional with reduced detail
 **INT-001.1**: PDF report in English
 ```gherkin
 Given the user has completed the full pipeline
-When the user invokes /aria:brief --format pdf --lang en
+When the user invokes /aria:report --format pdf --lang en
 Then the system shall confirm the analysis in English
 And after user confirmation, generate a PDF format report in English
 And all sections (executive summary, detailed analysis, recommendations, appendices) shall be in English
@@ -878,7 +878,7 @@ And the playbook English setting shall be ignored
 **INT-003.1**: PDF report generated with built-in knowledge only
 ```gherkin
 Given no external MCPs are configured (Notion, Context7, Google Drive all absent)
-When the user invokes /aria:brief --format pdf
+When the user invokes /aria:report --format pdf
 Then the system shall confirm the analysis with the user
 And after user confirmation, generate a PDF format report using built-in knowledge only
 And the Data Source Attribution section shall show "(built-in knowledge)"
@@ -917,7 +917,7 @@ And display attribution: "(조직 playbook 적용, 빌트인 지식 사용)"
 
 **NEG-001.1**: Unsupported format value
 ```gherkin
-Given the user invokes /aria:brief --format xml
+Given the user invokes /aria:report --format xml
 When the system validates the format flag
 Then the system shall reject the invalid format value
 And display an error message: "지원되지 않는 형식입니다. 사용 가능한 형식: markdown, pdf, gdocs"

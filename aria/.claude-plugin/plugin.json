@@ -1,6 +1,6 @@
 {
   "name": "aria",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI Regulatory Intelligence Assistant - Medical device regulatory compliance for US FDA, EU MDR, and Korea MFDS",
   "author": {
     "name": "ARIA Team"
@@ -13,6 +13,6 @@
     "chat": "commands/chat.md",
     "assess": "commands/assess.md",
     "project": "commands/project.md",
-    "brief": "commands/brief.md"
+    "report": "commands/report.md"
   }
 }
