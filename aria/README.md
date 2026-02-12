@@ -8,21 +8,17 @@ ARIA는 의료기기 규제 업무 담당자를 위한 AI 기반 규제 인텔�
 
 ### 주요 기능
 
-- **의료기기 판정**: 제품이 의료기기에 해당하는지 평가
-- **등급 분류**: FDA, EU MDR, MFDS 기준 다지역 등급 결정
-- **규제 경로 분석**: 국가별 규제 제출 경로 비교 및 추천
-- **비용/일정 추정**: 규제 프로젝트 비용 및 일정 프레임워크 제공
-- **규제 계획 수립**: 마일스톤 기반 규제 계획 생성
-- **다국가 비교**: 규제 요구사항 국가 간 비교 분석
-- **규제 브리핑**: 종합 규제 브리핑 보고서 생성
+- **규제 평가 파이프라인**: 의료기기 판정, 등급 분류, 규제 경로를 통합 분석
+- **프로젝트 계획 파이프라인**: 비용/일정 추정, 마일스톤 계획을 통합 생성
+- **대화형 규제 자문**: 자연스러운 대화를 통한 규제 질의응답 및 제품 프로파일링
+- **종합 브리핑 보고서**: 모든 파이프라인 데이터를 통합한 임원 보고서 생성
+- **다국가 비교 분석**: 2개 이상 시장 진출 시 자동 비교 및 전략 제안
 
-### Phase 6 Core 기능 (최신 업데이트)
+### v0.1.0 아키텍처 (SPEC-ARIA-003)
 
-- **PDF 출력**: 모든 보고서를 PDF 형식으로 내보내기 (`--format pdf`)
-- **다중 출력 형식**: Markdown (기본), Notion, Google Docs, PDF 지원
-- **영어 출력 토글**: 모든 명령어에서 영어 출력 지원 (`--lang en`)
-- **플레이북 설정**: `aria.local.md`를 통한 조직별 선호 설정 및 언어 기본값 구성
-- **MCP 통합**: Notion (조직 데이터), Google Drive (문서 출력), Context7 (문서 보완) 지원
+- **4개 명령어**: 복잡한 비즈니스 워크플로우를 오케스트레이션하는 명령어
+- **5개 스킬**: 순수 분석 로직 단위 (I/O 없음, 파일 관리 없음)
+- **명령어-스킬 분리**: 명확한 역할 분리로 유지보수성 향상
 
 ### 대상 사용자
 
@@ -34,9 +30,9 @@ ARIA는 의료기기 규제 업무 담당자를 위한 AI 기반 규제 인텔�
 
 ### 지원 규제 지역
 
-- 🇺🇸 **미국 FDA** (Food and Drug Administration)
-- 🇪🇺 **EU MDR** (Medical Device Regulation 2017/745)
-- 🇰🇷 **한국 MFDS** (식품의약품안전처)
+- **미국 FDA** (Food and Drug Administration)
+- **EU MDR** (Medical Device Regulation 2017/745)
+- **한국 MFDS** (식품의약품안전처)
 
 ---
 
@@ -74,24 +70,17 @@ aria/
 ├── .mcp.json                     # HTTP MCP 서버 구성 (플러그인 레벨)
 ├── CONNECTORS.md                 # MCP 커넥터 문서 (표준 형식)
 ├── README.md                     # 본 파일
-├── commands/                     # 8개 슬래시 커맨드
-│   ├── chat.md                  # /aria:chat
-│   ├── determine.md             # /aria:determine
-│   ├── classify.md              # /aria:classify
-│   ├── pathway.md               # /aria:pathway
-│   ├── estimate.md              # /aria:estimate
-│   ├── plan.md                  # /aria:plan
-│   ├── compare.md               # /aria:compare
-│   └── brief.md                 # /aria:brief
-└── skills/                       # 7개 도메인 스킬 + 1개 커넥터 스킬
-    ├── connectors/SKILL.md      # 카테고리 기반 커넥터 패턴
-    ├── determination/SKILL.md
-    ├── classification/SKILL.md
-    ├── pathway/SKILL.md
-    ├── estimation/SKILL.md
-    ├── planning/SKILL.md
-    ├── comparison/SKILL.md
-    └── briefing/SKILL.md
+├── commands/                     # 4개 슬래시 커맨드
+│   ├── chat.md                  # /aria:chat - 대화형 규제 자문
+│   ├── assess.md                # /aria:assess - 규제 평가 파이프라인
+│   ├── project.md               # /aria:project - 프로젝트 계획 파이프라인
+│   └── brief.md                 # /aria:brief - 종합 브리핑 보고서
+└── skills/                       # 5개 도메인 스킬 (순수 분석 로직)
+    ├── determination/SKILL.md    # 의료기기 판정
+    ├── classification/SKILL.md   # 다지역 등급 분류
+    ├── pathway/SKILL.md          # 규제 제출 경로
+    ├── estimation/SKILL.md       # 비용/일정 추정
+    └── planning/SKILL.md         # 마일스톤 계획
 ```
 
 ---
@@ -186,27 +175,33 @@ MCP 커넥터를 사용할 수 없을 경우 ARIA는 자동으로 내장 지식�
 - `~~project tracker` 불가용 → Markdown 형식으로 대체
 - `~~chat` 불가용 → 로컬 파일로 저장
 
-자세한 우아한 저하 매트릭스는 `skills/connectors/SKILL.md`를 참조하세요.
+자세한 우아한 저하 매트릭스는 `CONNECTORS.md`를 참조하세요.
 
 ---
 
 ## 명령어 참조
 
-ARIA는 8개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사를 사용합니다.
+ARIA는 4개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사를 사용합니다.
 
 ### 파이프라인 흐름
 
 ```
-/aria:determine → /aria:classify → /aria:pathway → /aria:estimate → /aria:plan → /aria:compare → /aria:brief
+/aria:chat ──(대화를 통한 제품 프로파일링)──> profile.json
+                                                  │
+/aria:assess ──(판정 → 분류 → 경로 통합 평가)──> assess.md
+                                                  │
+/aria:project ──(비용/일정 추정 → 마일스톤 계획)──> project.md
+                                                  │
+/aria:brief ──(전체 파이프라인 데이터 통합)──> briefing.md
 ```
 
-각 단계는 독립적으로 실행 가능하며, 이전 단계 데이터가 있을 경우 자동으로 불러옵니다.
+각 명령어는 독립적으로 실행 가능하며, 이전 단계 데이터가 있을 경우 자동으로 불러옵니다.
 
 ---
 
 ### /aria:chat
 
-**설명**: 자유 대화를 통한 규제 질의응답 및 자동 스킬 라우팅
+**설명**: 자연스러운 대화를 통한 규제 자문, 제품 프로파일 구축, 스킬 자동 라우팅
 
 **사용법**:
 ```
@@ -220,283 +215,82 @@ ARIA는 8개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사�
 ```
 /aria:chat 심장 모니터링 장치가 의료기기인가요?
 /aria:chat What is the FDA classification for a glucose meter?
+/aria:chat [기술문서 PDF 업로드]
 ```
 
 **기능**:
-- 명확한 질문: 자동으로 적절한 스킬 실행
-- 모호한 질문: 관련 스킬 제안 메뉴 표시
-- 일반 규제 질문: 대화형 응답
+- 대화를 통한 점진적 제품 프로파일 구축 (profile.json)
+- 프로파일 충분도에 따른 투명한 스킬 자동 실행
+- 일반 규제 지식 질의응답
+- 파이프라인 명령어 자동 추천 (사용자 승인 필요)
 
 ---
 
-### /aria:determine
+### /aria:assess
 
-**설명**: 제품이 의료기기에 해당하는지 판정 및 초기 분류
+**설명**: 규제 평가 파이프라인 - 판정, 분류, 경로 분석을 통합 실행
 
 **사용법**:
 ```
-/aria:determine [제품 설명 또는 문서]
+/aria:assess [제품 설명 또는 문서]
 ```
 
 **플래그**:
 - `--lang ko|en`: 출력 언어 선택 (기본값: ko)
+- `--format markdown|pdf|notion|gdocs`: 출력 형식 선택 (기본값: markdown)
 
 **예시**:
 ```
-/aria:determine 심장 박동을 측정하고 부정맥을 감지하는 웨어러블 장치
-/aria:determine [기술문서 업로드]
+/aria:assess
+/aria:assess 심장 박동을 측정하고 부정맥을 감지하는 웨어러블 장치
+/aria:assess --lang en --format pdf
+/aria:assess [기술문서 PDF 업로드]
 ```
 
-**출력**:
-- 의료기기 해당 여부 (YES/NO/CONDITIONAL)
-- 적용 규제 (FDA, EU MDR, MFDS)
-- 판정 근거 및 참조 규정
-- 신호등 평가 (GREEN/YELLOW/RED)
+**실행 흐름**:
+1. 제품 컨텍스트 로드 (기존 프로파일 또는 신규 입력)
+2. 의료기기 판정 (YES/NO/CONDITIONAL)
+3. 다지역 등급 분류 (FDA/EU MDR/MFDS)
+4. 규제 제출 경로 선택
+5. 다국가 비교 분석 (2개 이상 시장)
+6. 통합 보고서 생성
 
-**다음 단계**: `/aria:classify`로 등급 분류 진행
+**출력**: `assess.md` + `assess.summary.md`
+
+**대체 명령어**: `/aria:determine`, `/aria:classify`, `/aria:pathway`, `/aria:compare` (평가 문맥)
 
 ---
 
-### /aria:classify
+### /aria:project
 
-**설명**: FDA, EU MDR, MFDS 기준 다지역 등급 분류 매트릭스 생성
-
-**사용법**:
-```
-/aria:classify [제품 설명 또는 문서]
-```
-
-**플래그**:
-- `--optimize`: 등급 최적화 제안 활성화 (선택 사항)
-- `--lang ko|en`: 출력 언어 선택 (기본값: ko)
-
-**예시**:
-```
-/aria:classify 심장 모니터링 장치
-/aria:classify 심장 모니터링 장치 --optimize --lang ko
-```
-
-**출력**:
-- 다지역 분류 매트릭스:
-  - FDA: Class I / II / III
-  - EU MDR: Class I / IIa / IIb / III
-  - MFDS: 1등급 / 2등급 / 3등급 / 4등급
-- 분류 근거 및 규칙 참조
-- 지역별 신호등 평가
-
-**최적화 모드** (`--optimize` 플래그):
-- 등급 결정 핵심 인자 추출
-- 등급 하향 가능성 시나리오 제안
-- 전문가 검토 필수 권고 (YELLOW 표시)
-
-**다음 단계**: `/aria:pathway`로 규제 제출 경로 확인
-
----
-
-### /aria:pathway
-
-**설명**: FDA/EU MDR/MFDS 규제 경로 선택 로직 및 국가별 비교
+**설명**: 프로젝트 계획 파이프라인 - 비용/일정 추정과 마일스톤 계획을 통합 실행
 
 **사용법**:
 ```
-/aria:pathway [대상 시장]
+/aria:project [옵션]
 ```
 
 **플래그**:
 - `--lang ko|en`: 출력 언어 선택 (기본값: ko)
+- `--format markdown|pdf|notion|gdocs`: 출력 형식 선택 (기본값: markdown)
 
 **예시**:
 ```
-/aria:pathway 미국, EU, 한국
-/aria:pathway FDA만
+/aria:project
+/aria:project --lang en --format gdocs
+/aria:project --format pdf
 ```
 
-**출력**:
-- 국가별 경로 비교 테이블 (510(k)/PMA/De Novo, CE 마킹, MFDS 인증/허가)
-- 경로별 요구사항 및 일정
-- 추천 경로 및 근거
+**실행 흐름**:
+1. 평가 데이터 로드 (assess.summary.md 또는 수동 입력)
+2. 비용/일정 3점 추정 (낙관/예상/비관)
+3. 마일스톤 계획 생성
+4. 다국가 최적화 (2개 이상 시장)
+5. 통합 프로젝트 계획 생성
 
-**다음 단계**: `/aria:estimate`로 비용/일정 추정
+**출력**: `project.md` + `project.summary.md`
 
----
-
-### /aria:estimate
-
-**설명**: 비용 및 일정 추정 (3-point 방식: 낙관/예상/비관)
-
-**사용법**:
-```
-/aria:estimate [경로 및 제품 복잡도]
-```
-
-**플래그**:
-- `--lang ko|en`: 출력 언어 선택 (기본값: ko)
-
-**예시**:
-```
-/aria:estimate FDA 510(k) Class II
-/aria:estimate EU MDR Class IIb
-```
-
-**출력**:
-- 비용 추정 (낙관/예상/비관):
-  - 컨설팅 비용
-  - 시험 비용
-  - 규제 수수료
-  - Notified Body 비용 (EU)
-  - 임상 비용
-- 일정 추정 및 마일스톤
-- 비용 카테고리별 세부 내역
-
-**다음 단계**: `/aria:plan`으로 규제 계획 수립
-
----
-
-### /aria:plan
-
-**설명**: 규제 이정표 계획 생성 (단계, 산출물, 의존성 매핑)
-
-**사용법**:
-```
-/aria:plan [경로 및 일정 정보]
-```
-
-**플래그**:
-- `--lang ko|en`: 출력 언어 선택 (기본값: ko)
-
-**예시**:
-```
-/aria:plan FDA 510(k) 12개월
-/aria:plan 다국가 동시 진행
-```
-
-**출력**:
-- 단계별 규제 계획 (4-6 마일스톤)
-- 주요 단계 및 산출물
-- 의존성 맵핑 및 임계 경로 식별
-- 체크포인트 및 검토 지점
-- 책임 주체 정의
-
-**다음 단계**: `/aria:compare`로 규제 비교 또는 `/aria:brief`로 브리핑 생성
-
----
-
-### /aria:pathway
-
-**설명**: 국가별 규제 제출 경로 비교 및 추천
-
-**사용법**:
-```
-/aria:pathway [대상 시장]
-```
-
-**플래그**:
-- `--lang ko|en`: 출력 언어 선택 (기본값: ko)
-
-**예시**:
-```
-/aria:pathway 미국, EU, 한국
-/aria:pathway FDA만
-```
-
-**출력**:
-- 국가별 경로 비교 테이블:
-  - FDA: 510(k) / PMA / De Novo / Exempt
-  - EU MDR: CE 마킹 경로 (Notified Body 선택)
-  - MFDS: 인증/허가 유형
-- 경로별 요구사항 및 일정
-- 추천 경로 및 근거
-
-**다음 단계**: `/aria:estimate`로 비용/일정 추정
-
----
-
-### /aria:estimate
-
-**설명**: 규제 프로젝트 비용 및 일정 추정 프레임워크 제공
-
-**사용법**:
-```
-/aria:estimate [경로 및 제품 복잡도]
-```
-
-**플래그**:
-- `--lang ko|en`: 출력 언어 선택 (기본값: ko)
-
-**예시**:
-```
-/aria:estimate FDA 510(k) Class II
-/aria:estimate EU MDR Class IIb
-```
-
-**출력**:
-- 비용 추정 (낙관/예상/비관):
-  - 컨설팅 비용
-  - 시험 비용
-  - 규제 수수료
-  - Notified Body 비용 (EU)
-- 일정 추정 및 마일스톤
-- 비용 카테고리별 세부 내역
-
-**다음 단계**: `/aria:plan`으로 규제 계획 수립
-
----
-
-### /aria:plan
-
-**설명**: 규제 마일스톤 계획 생성 (단계, 산출물, 의존성)
-
-**사용법**:
-```
-/aria:plan [경로 및 일정 정보]
-```
-
-**플래그**:
-- `--lang ko|en`: 출력 언어 선택 (기본값: ko)
-
-**예시**:
-```
-/aria:plan FDA 510(k) 12개월
-/aria:plan 다국가 동시 진행
-```
-
-**출력**:
-- 단계별 규제 계획:
-  - 주요 단계 및 산출물
-  - 의존성 맵핑
-  - 임계 경로 식별
-  - 체크포인트 및 검토 지점
-- 책임 주체 정의
-
-**다음 단계**: `/aria:compare`로 규제 비교 또는 `/aria:brief`로 브리핑 생성
-
----
-
-### /aria:compare
-
-**설명**: 다국가 규제 요구사항 비교 분석
-
-**사용법**:
-```
-/aria:compare [비교 주제 및 대상 국가]
-```
-
-**플래그**:
-- `--lang ko|en`: 출력 언어 선택 (기본값: ko)
-
-**예시**:
-```
-/aria:compare 임상시험 요구사항 FDA vs EU MDR
-/aria:compare QMS 요구사항 미국, EU, 한국
-```
-
-**출력**:
-- 국가 간 비교 매트릭스
-- 유사점 및 차이점
-- 조화 표준 (Harmonized Standards)
-- 전략적 권고사항
-
-**다음 단계**: `/aria:brief`로 종합 브리핑 생성
+**대체 명령어**: `/aria:estimate`, `/aria:plan`, `/aria:compare` (프로젝트 문맥)
 
 ---
 
@@ -510,124 +304,55 @@ ARIA는 8개의 슬래시 커맨드를 제공하며, 모두 `/aria:` 접두사�
 ```
 
 **플래그**:
-- `--format markdown|notion|gdocs`: 출력 형식 선택 (기본값: markdown)
+- `--format markdown|notion|gdocs|pdf`: 출력 형식 선택 (기본값: markdown)
 - `--lang ko|en`: 출력 언어 선택 (기본값: ko)
 
 **예시**:
 ```
-/aria:brief 전체 파이프라인 종합
+/aria:brief
+/aria:brief Clinical Strategy
 /aria:brief --format notion
-/aria:brief 임원 보고용 --format gdocs --lang en
+/aria:brief 임원 보고용 --format pdf --lang en
 ```
 
-**출력**:
-- 종합 규제 브리핑 보고서:
-  - 요약 (Executive Summary)
-  - 상세 분석 (파이프라인 모든 단계 통합)
-  - 권고사항 및 다음 단계
-  - 부록 (참조 규정, 데이터 출처)
+**실행 흐름**:
+1. 파이프라인 데이터 수집 (assess + project 결과)
+2. 데이터 충분도 평가
+3. Phase A: 핵심 분석 요약 제시 (사용자 확인 필요)
+4. Phase B: 사용자 확인 후 전체 보고서 생성
+
+**출력**: `briefing.md` + `briefing.summary.md`
 
 **출력 형식**:
 - **Markdown** (기본): `.aria/products/{제품명}/{날짜}/briefing.md`
 - **Notion**: Notion 페이지 생성 (Notion MCP 필요)
 - **Google Docs**: Google Docs 문서 생성 (Google Drive MCP 필요)
-- **PDF**: PDF 문서 생성 (Phase 6 Core)
+- **PDF**: PDF 문서 생성
 
 ---
 
-## Phase 6 Core 기능
+## 출력 파일 구조
 
-### PDF 출력
+### .aria/ 디렉토리 구조
 
-ARIA는 모든 보고서 생성 명령어에서 PDF 형식 출력을 지원합니다.
-
-**지원 명령어**:
-- `/aria:brief` - 종합 브리핑 보고서
-- `/aria:pathway` - 규제 경로 분석
-- `/aria:estimate` - 비용/일정 추정
-- `/aria:plan` - 규제 계획
-- `/aria:compare` - 다국가 비교
-
-**사용 방법**:
 ```
-/aria:brief --format pdf
-/aria:pathway --format pdf --lang en
-/aria:estimate --format pdf
-```
-
-**출력 형식 옵션**:
-- `markdown` (기본값): Markdown 파일
-- `pdf`: PDF 문서
-- `notion`: Notion 페이지 (Notion MCP 필요)
-- `gdocs`: Google Docs (Google Drive MCP 필요)
-
-### 영어 출력 토글 (SR-008)
-
-모든 명령어에서 `--lang en|ko` 플래그를 사용하여 출력 언어를 선택할 수 있습니다.
-
-**사용 방법**:
-```
-/aria:determine --lang en
-/aria:classify --optimize --lang en
-/aria:brief --format pdf --lang en
+.aria/
+├── active_product.json              # 현재 활성 제품 (로컬, 공유 금지)
+└── products/
+    └── {제품명}/
+        └── {날짜}/
+            ├── profile.json         # 제품 프로파일 (/aria:chat)
+            ├── assess.md            # 통합 규제 평가 보고서
+            ├── assess.summary.md    # 평가 요약 (하위 명령어용)
+            ├── project.md           # 통합 프로젝트 계획
+            ├── project.summary.md   # 프로젝트 요약 (하위 명령어용)
+            ├── briefing.md          # 종합 브리핑 보고서
+            └── briefing.summary.md  # 브리핑 요약 (감사 추적용)
 ```
 
-**언어 옵션**:
-- `ko` (기본값): 한국어 출력
-- `en`: 영어 출력
+### 이전 버전 호환성
 
-**플레이북 기본값**:
-`aria.local.md` 파일에서 기본 언어를 설정할 수 있습니다:
-```yaml
-## Language Preference
-output_language: en  # 또는 ko
-```
-
-**우선순위**:
-1. 명령어 플래그 (`--lang en`)가 최우선
-2. `aria.local.md`의 `output_language` 설정이 두 번째
-3. 시스템 기본값 (`ko`)
-
-### 플레이북 파싱 (aria.local.md)
-
-조직별 규제 전략, 선호 경로, 언어 설정 등을 `aria.local.md` 파일에 구성할 수 있습니다.
-
-**핵심 기능**:
-- 조직 프로필 및 주요 의료기기 유형 정의
-- 언어 기본값 설정 (`output_language`)
-- 규제 경로 선호 설정 (FDA, EU MDR, MFDS)
-- 비용/일정 벤치마크 커스터마이징
-- 위험 선호도 및 에스컬레이션 기준 정의
-- 데이터 보존 정책 설정 (`data_retention_days`)
-
-**로딩 동작**:
-- ARIA는 명령어 시작 시 프로젝트 루트의 `aria.local.md`를 자동 로드
-- 파일이 존재하면 설정 적용
-- 파일이 없으면 기본 설정 사용
-
-**템플릿 위치**: 프로젝트 루트의 `aria.local.md` 파일 참조
-
-### 다중 출력 형식 지원
-
-모든 보고서 생성 명령어는 여러 출력 형식을 지원합니다.
-
-**출력 형식별 요구사항**:
-
-| 형식 | MCP 커넥터 필요 | 설명 |
-|------|----------------|------|
-| `markdown` | 없음 (기본) | `.aria/products/` 디렉토리에 .md 파일 저장 |
-| `pdf` | 없음 | PDF 문서 생성 |
-| `notion` | Notion MCP | Notion 페이지 생성 |
-| `gdocs` | Google Drive MCP | Google Docs 문서 생성 |
-
-**사용 예시**:
-```
-/aria:brief --format markdown        # 기본 Markdown
-/aria:brief --format pdf             # PDF 문서
-/aria:brief --format notion          # Notion 페이지 (Notion MCP 필요)
-/aria:brief --format gdocs           # Google Docs (Google Drive MCP 필요)
-/aria:brief --format pdf --lang en   # 영어 PDF
-```
+기존 `.aria/products/` 데이터(determination.md, classification.md 등)는 `/aria:brief` 명령어에서 레거시 형식으로 자동 인식합니다.
 
 ---
 
@@ -667,7 +392,7 @@ fda_class_ii_preferred: "510(k)"
 fda_class_iii_preferred: "PMA"
 
 # EU MDR 선호 Notified Body
-eu_preferred_notified_body: "TÜV SÜD"
+eu_preferred_notified_body: "TUV SUD"
 
 # MFDS 선호 경로
 mfds_preferred_pathway: "인증"
@@ -689,9 +414,9 @@ warn_on_stale_data: true
 
 ## 보안 경고
 
-### ⚠️ .aria/ 디렉토리 민감성
+### .aria/ 디렉토리 민감성
 
-ARIA는 모든 작업 데이터를 `.aria/products/{제품명}/{날짜}/` 경로에 Markdown 파일로 저장합니다.
+ARIA는 모든 작업 데이터를 `.aria/products/{제품명}/{날짜}/` 경로에 저장합니다.
 
 **주의사항**:
 - `.aria/` 디렉토리는 **영업 비밀 및 독점 설계 정보**를 포함할 수 있습니다
@@ -700,14 +425,14 @@ ARIA는 모든 작업 데이터를 `.aria/products/{제품명}/{날짜}/` 경로
 
 **데이터 분류**: `.aria/` 내 모든 파일은 조직 기밀로 취급하세요.
 
-### 🚨 active_product.json 공유 금지
+### active_product.json 공유 금지
 
 **중요**: `.aria/active_product.json` 파일은 **개인 로컬 작업 상태**를 저장합니다.
 
 **절대 금지사항**:
-- ❌ Git에 커밋하지 마세요
-- ❌ 팀원과 공유하지 마세요
-- ❌ 버전 관리에 포함하지 마세요
+- Git에 커밋하지 마세요
+- 팀원과 공유하지 마세요
+- 버전 관리에 포함하지 마세요
 
 **이유**: 이 파일은 개인의 현재 작업 중인 제품을 추적하며, 다른 팀원의 로컬 환경과 충돌을 일으킬 수 있습니다.
 
@@ -716,12 +441,12 @@ ARIA는 모든 작업 데이터를 `.aria/products/{제품명}/{날짜}/` 경로
 .aria/
 ```
 
-### 🔐 MCP 인증 정보 관리
+### MCP 인증 정보 관리
 
 **모든 MCP 인증 정보는 환경 변수로 관리**:
-- ✅ 환경 변수 사용: `export NOTION_API_KEY="..."`
-- ❌ 파일에 직접 저장 금지
-- ❌ Git에 커밋 금지
+- 환경 변수 사용: `export NOTION_API_KEY="..."`
+- 파일에 직접 저장 금지
+- Git에 커밋 금지
 
 `.mcp.json` 파일은 환경 변수 플레이스홀더만 포함하며, 실제 값은 포함하지 않습니다.
 
@@ -738,7 +463,7 @@ ARIA는 모든 작업 데이터를 `.aria/products/{제품명}/{날짜}/` 경로
 
 **Q: 명령어가 작동하지 않습니다**
 - `/aria:` 접두사를 올바르게 입력했는지 확인
-- 명령어 이름 철자 확인 (예: `/aria:classify`)
+- 명령어 이름 철자 확인 (예: `/aria:assess`, `/aria:project`)
 - Cowork 플랫폼 로그 확인
 
 ### MCP 연결 문제
@@ -777,14 +502,22 @@ ARIA는 모든 작업 데이터를 `.aria/products/{제품명}/{날짜}/` 경로
 ### 명령어 선택 가이드
 
 **Q: 어떤 명령어부터 시작해야 하나요?**
-- 신규 제품: `/aria:determine`부터 시작 (의료기기 판정)
-- 등급만 확인: `/aria:classify` 직접 실행
-- 특정 질문: `/aria:chat`로 자유롭게 질문
+- 처음 사용: `/aria:chat`으로 자연스러운 대화 시작
+- 규제 평가: `/aria:assess`로 통합 규제 평가 실행
+- 프로젝트 계획: `/aria:project`로 비용/일정 추정 (assess 데이터 권장)
+- 종합 보고서: `/aria:brief`로 전체 결과 통합 보고서 생성
 
-**Q: 파이프라인을 반드시 순서대로 진행해야 하나요?**
+**Q: 반드시 순서대로 실행해야 하나요?**
 - 아니요. 각 명령어는 독립적으로 실행 가능합니다
-- 이전 단계 데이터가 있으면 자동으로 불러오지만, 없어도 작동합니다
-- 자유롭게 필요한 단계만 실행하세요
+- 권장 순서: chat -> assess -> project -> brief
+- 이전 단계 데이터가 있으면 자동으로 활용합니다
+- 없어도 수동 입력으로 진행 가능합니다
+
+**Q: 이전 버전의 `/aria:determine`, `/aria:classify` 등은 어디 갔나요?**
+- v0.1.0에서 4개 통합 명령어로 재구조화되었습니다
+- `/aria:assess`가 determine + classify + pathway + compare(평가 문맥)를 대체합니다
+- `/aria:project`가 estimate + plan + compare(프로젝트 문맥)를 대체합니다
+- 기존 `.aria/` 데이터는 호환성이 유지됩니다
 
 ### 조직별 커스터마이징
 
@@ -833,8 +566,7 @@ ARIA는 의사결정 지원 도구이며, 전문가 판단을 대체하지 않�
 - **CONNECTORS.md**: MCP 커넥터 카테고리 및 확장성 가이드 (표준 Cowork 플러그인 형식)
 - **aria.local.md**: 조직 설정 전체 템플릿 (플러그인 루트)
 - **aria/.mcp.json**: HTTP MCP 서버 사전 구성 (플러그인 레벨)
-- **skills/connectors/SKILL.md**: 카테고리 기반 커넥터 통합 패턴
 
-**버전**: 0.0.4
+**버전**: 0.1.0
 **라이선스**: Apache-2.0
 **지원**: GitHub Issues에서 문제 보고 및 기능 요청

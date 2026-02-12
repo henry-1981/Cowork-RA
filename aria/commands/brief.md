@@ -1,54 +1,92 @@
 ---
-description: Comprehensive regulatory briefing report generation - Synthesizes all pipeline data into executive-ready documents
-argument-hint: "특정 포커스 영역 (선택 사항) [--format markdown|notion|gdocs|pdf] [--lang ko|en]"
+description: Comprehensive regulatory briefing report - Synthesizes all pipeline data (assess + project) into a single executive-ready document
+argument-hint: "[Focus area] [--format markdown|pdf|notion|gdocs] [--lang ko|en]"
 ---
 
-# /aria:brief - Comprehensive Regulatory Briefing
+# /aria:brief - Comprehensive Report Generator
 
 ## Purpose
 
-Generate comprehensive regulatory briefing reports synthesizing all available pipeline data. Integrates determination, classification, pathway, estimates, plan, and comparison into executive-ready documents with recommendations.
+Generate comprehensive regulatory briefing reports synthesizing all available pipeline data into executive-ready documents. Collects assessment and project plan results from `.aria/products/` and produces an integrated briefing with executive summary, detailed analysis, recommendations, and appendices.
+
+**Absorbs**: briefing skill logic (no separate briefing skill needed)
 
 ## Workflow
 
 ### 1. Product Context Loading
 
-- Load active product from `.aria/active_product.json`
-- If multiple products exist, prompt for selection
-- If no products exist, warn that briefing requires pipeline data
+Check `.aria/products/` directory structure and `.aria/active_product.json`:
+
+**Case 1: active_product.json exists with valid product reference**
+- Load active product from file
+- Update last_accessed date
+- Skip selection menu
+
+**Case 2: Multiple products exist AND active_product.json does NOT exist**
+- Scan `.aria/products/` for all product directories
+- Present selection menu with product names and most recent dates
+- Allow creation of new product entry
+- Persist user selection to `.aria/active_product.json`:
+  ```json
+  { "product_name": "cardiac-monitor-x1", "last_accessed": "2026-02-12", "path": ".aria/products/cardiac-monitor-x1/2026-02-12/" }
+  ```
+
+**Case 3: active_product.json exists but references invalid/deleted product**
+- Treat file as stale
+- Present product selection menu
+- Update active_product.json with new selection
+
+**Case 4: Exactly 1 product exists**
+- Auto-select single product
+- Persist to active_product.json
+- Skip selection menu
+
+**Case 5: No products exist**
+- Warn that briefing requires pipeline data
+- Suggest running `/aria:assess` first
 
 ### 2. Pipeline Data Loading
 
 Scan `.aria/products/{product-name}/{date}/` for all available pipeline data:
 
-**Core Pipeline Steps** (5 required for full briefing):
+**New format** (from restructured commands):
+- `profile.json` (product profile from /aria:chat)
+- `assess.md` + `assess.summary.md` (from /aria:assess)
+- `project.md` + `project.summary.md` (from /aria:project)
+
+**Legacy format** (backward compatibility):
 - `determination.summary.md` + `determination.md`
 - `classification.summary.md` + `classification.md`
 - `pathway.summary.md` + `pathway.md`
 - `estimation.summary.md` + `estimation.md`
 - `plan.summary.md` + `plan.md`
-
-**Optional Steps**:
 - `comparison.summary.md` + `comparison.md`
 
 **Loading Priority**:
 - Use `.summary.md` files for executive summary (compressed context)
 - Use full `.md` files for detailed analysis sections (complete information)
+- Prefer new format files over legacy format when both exist
 
 ### 3. Data Completeness Assessment
 
-**Full Pipeline** (all 5 core steps available):
+**Full Pipeline** (assess + project data available):
 - Generate comprehensive briefing with all sections
 - Executive summary + detailed analysis + recommendations + appendices
 
-**Partial Pipeline** (some steps available):
-- Generate briefing covering available data
-- Indicate missing steps with strong recommendations to complete
-- Example: Only determination + classification → focused briefing on device status and class
+**Assessment Only** (assess data available, no project data):
+- Generate focused briefing covering regulatory assessment
+- Include: device status, classification, pathways, multi-region comparison
+- Indicate missing project data with recommendation to run `/aria:project`
 
-**Minimal Data** (only 1-2 steps):
-- Warn user that comprehensive briefing requires more pipeline data
-- Suggest completing `/aria:determine` → `/aria:classify` → `/aria:pathway` → `/aria:estimate` → `/aria:plan` pipeline
+**Project Only** (project data available, no assess data):
+- Generate focused briefing covering project plan
+- Include: cost/timeline estimates, milestone plan
+- Indicate missing assessment data with recommendation to run `/aria:assess`
+
+**No Pipeline Data**:
+- Warn user that briefing requires pipeline data
+- Suggest: "Run `/aria:assess` first, then `/aria:project` for a complete briefing."
+- STOP workflow
 
 ### 4. Focus Area Identification (Optional)
 
@@ -65,153 +103,238 @@ Default: Balanced coverage of all aspects
 **Phase A - Analysis Turn** (Present key findings for user confirmation):
 
 Display concise analysis summary:
-- Product overview (name, device status, classification)
-- Key findings (regulatory pathways, timeline, budget, risks)
-- Top 3 recommendations
-- Overall traffic light assessment
+
+```markdown
+# Regulatory Briefing Analysis (Summary)
+
+## Product Overview
+- **Product**: {product-name}
+- **Device Status**: {YES/NO/CONDITIONAL}
+- **Classification**: FDA Class {X}, EU MDR Class {X}, MFDS Grade {X}
+
+## Key Findings
+1. **Regulatory Pathways**: {FDA pathway} / {EU pathway} / {MFDS pathway}
+2. **Critical Path Timeline**: {region} - {timeline}
+3. **Budget Range**: {optimistic} ~ {expected} ~ {pessimistic}
+4. **Key Risks**: {top risks with traffic light}
+
+## Top 3 Recommendations
+1. {Recommendation 1}
+2. {Recommendation 2}
+3. {Recommendation 3}
+
+## Overall Traffic Light
+- **Assessment**: {GREEN/YELLOW/RED}
+
+---
+**User confirmation required**: Please review the above analysis. Proceed with full report generation?
+```
 
 Ask user to confirm before generating full report.
 
 **Phase B - Full Report Generation** (After user confirmation):
 
-Generate complete briefing report:
-- **Executive Summary** (1-2 pages): Product overview, regulatory status, pathways, timeline/cost, key risks, recommendations
-- **Detailed Analysis** (per pipeline step): Full analysis from each `.md` file
-- **Recommendations**: Immediate actions (30 days), critical dependencies, resource requirements, risk mitigation
-- **Appendices**: Regulatory citations, data sources, escalation items, glossary
+Generate complete briefing report (see Output Template below).
 
-**Format Selection** (via `--format` flag):
-- `markdown` (default): Markdown report to `.aria/products/`
-- `notion`: Notion page via Notion MCP connector (requires notion-mcp configuration)
-- `gdocs`: Google Docs via Google Drive MCP connector (requires google-drive-mcp configuration)
-- `pdf`: PDF conversion from Markdown (requires pdf-converter tool)
+### 6. Output Template
 
-**Google Docs Format Implementation**:
+```markdown
+# Regulatory Briefing Report
 
-When `--format gdocs` is specified:
+## Table of Contents
+1. Executive Summary
+2. Detailed Analysis
+3. Recommendations
+4. Appendices
 
-1. **MCP Tool Loading**:
-   - Use ToolSearch to load Google Drive MCP tools: `ToolSearch("google drive mcp")`
-   - Expected tools: `mcp__gdrive__*` (e.g., `mcp__gdrive__create_file`, `mcp__gdrive__upload_content`)
+---
 
-2. **Graceful Degradation** (if Google Drive MCP unavailable):
-   - Display limitation notice: "Google Drive MCP가 설정되지 않았습니다. Markdown 형식으로 보고서를 생성합니다."
-   - Fallback to Markdown format
-   - Save to `.aria/products/{product-name}/{date}/briefing.md`
-   - Include limitation notice in Data Source Attribution section
+## 1. Executive Summary
 
-3. **Google Docs Creation** (if MCP available):
-   - Generate full briefing report content in Markdown format first
-   - Convert Markdown to Google Docs-compatible rich text format
-   - Create Google Doc via `mcp__gdrive__create_file` with:
-     - Title: "{Product Name} - Regulatory Briefing Report ({date})"
-     - Content: Converted briefing content
-     - MimeType: `application/vnd.google-apps.document`
-   - Display success message with Google Docs link to user
-   - Also save Markdown backup to `.aria/products/{product-name}/{date}/briefing.md`
+### Product Overview
+- **Product**: {product-name}
+- **Intended Use**: {intended use}
+- **Regulatory Scope**: FDA (US), EU MDR (Europe), MFDS (Korea)
 
-4. **Output Files**:
-   - Google Docs document (via MCP, link provided to user)
-   - `.aria/products/{product-name}/{date}/briefing.md` (Markdown backup)
-   - `.aria/products/{product-name}/{date}/briefing.summary.md` (summary)
+### Regulatory Status
+- **Medical Device Status**: {YES/NO/CONDITIONAL} ({traffic light})
+- **Classification**:
+  - FDA: Class {I/II/III}
+  - EU MDR: Class {I/IIa/IIb/III}
+  - MFDS: Grade {1/2/3/4}
 
-5. **Error Handling**:
-   - If MCP tools not found: Fallback to Markdown with limitation notice
-   - If Google Docs creation fails: Display error, save Markdown version
-   - Specific error: "Google Drive에 연결할 수 없습니다. Markdown 형식으로 보고서를 생성합니다."
+### Recommended Pathways
+- **FDA**: {pathway} (timeline: {range})
+- **EU MDR**: {pathway} (timeline: {range})
+- **MFDS**: {pathway} (timeline: {range})
+- **Critical Path**: {region} ({longest timeline})
 
-**PDF Format Implementation**:
+### Cost & Timeline
+- **Total Budget**: {optimistic} ~ {expected} ~ {pessimistic}
+- **Total Timeline**: {end-to-end timeline}
+- **Key Milestones**: {milestone summary}
 
-When `--format pdf` is specified:
+### Key Risks
+1. {Risk 1 with traffic light}
+2. {Risk 2 with traffic light}
+3. {Risk 3 with traffic light}
 
-1. **Tool Availability Check** (in priority order):
-   - Check for `pandoc` (recommended): `which pandoc`
-   - Check for `wkhtmltopdf`: `which wkhtmltopdf`
-   - Check for Python with `markdown` + `weasyprint`: `python3 -c "import markdown, weasyprint"`
+### Strategic Recommendations
+1. {Top recommendation 1}
+2. {Top recommendation 2}
+3. {Top recommendation 3}
 
-2. **Markdown Generation**:
-   - Generate full briefing report in Markdown format first
-   - Save to `.aria/products/{product-name}/{date}/briefing.md`
+---
 
-3. **PDF Conversion** (based on available tool):
+## 2. Detailed Analysis
 
-   **Option A - Pandoc (recommended)**:
-   ```bash
-   pandoc briefing.md -o briefing.pdf \
-     --pdf-engine=xelatex \
-     --variable=geometry:margin=1in \
-     --variable=fontsize:11pt \
-     --toc \
-     --highlight-style=tango
-   ```
+### 2.1 Device Determination
+{Full determination analysis from assess.md}
 
-   **Option B - wkhtmltopdf**:
-   ```bash
-   # First convert MD to HTML with basic styling
-   python3 -c "import markdown; open('briefing.html', 'w').write(markdown.markdown(open('briefing.md').read()))"
+### 2.2 Classification
+{Full classification analysis from assess.md}
 
-   # Then convert HTML to PDF
-   wkhtmltopdf --page-size A4 --margin-top 20mm --margin-bottom 20mm briefing.html briefing.pdf
-   ```
+### 2.3 Regulatory Pathways
+{Full pathway analysis from assess.md}
 
-   **Option C - Python weasyprint**:
-   ```bash
-   python3 -c "
-   import markdown
-   from weasyprint import HTML
+### 2.4 Multi-Region Comparison
+{Comparison analysis from assess.md, if available}
 
-   # Convert MD to HTML
-   md_content = open('briefing.md', 'r').read()
-   html_content = markdown.markdown(md_content, extensions=['tables', 'fenced_code'])
+### 2.5 Cost & Timeline Estimation
+{Full estimation analysis from project.md}
 
-   # Add basic styling
-   styled_html = f'''
-   <html>
-   <head>
-       <style>
-           body {{ font-family: Arial, sans-serif; margin: 2cm; }}
-           h1 {{ color: #2c3e50; border-bottom: 2px solid #3498db; }}
-           h2 {{ color: #34495e; margin-top: 1.5em; }}
-           table {{ border-collapse: collapse; width: 100%; }}
-           th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
-           th {{ background-color: #f2f2f2; }}
-           code {{ background-color: #f5f5f5; padding: 2px 4px; border-radius: 3px; }}
-       </style>
-   </head>
-   <body>{html_content}</body>
-   </html>
-   '''
+### 2.6 Milestone Plan
+{Full planning analysis from project.md}
 
-   # Generate PDF
-   HTML(string=styled_html).write_pdf('briefing.pdf')
-   "
-   ```
+---
 
-4. **Tool Installation Guidance** (if no tool available):
-   - Display error message with installation instructions
-   - Recommend installing pandoc via Homebrew: `brew install pandoc`
-   - Fallback to Markdown format with warning
+## 3. Recommendations
 
-5. **Output Files**:
-   - `.aria/products/{product-name}/{date}/briefing.pdf` (PDF output)
-   - `.aria/products/{product-name}/{date}/briefing.md` (Markdown source)
-   - `.aria/products/{product-name}/{date}/briefing.summary.md` (summary)
+### Immediate Actions (30 Days)
+1. {Action with rationale}
+2. {Action with rationale}
+3. {Action with rationale}
 
-6. **Error Handling**:
-   - If PDF conversion fails, report error but keep Markdown file
-   - Provide specific error message about missing dependencies
-   - Suggest alternative: "PDF conversion requires pandoc. Install with: brew install pandoc"
+### Critical Dependencies
+- {Dependency 1}
+- {Dependency 2}
+- {Dependency 3}
 
-### 6. Summary Generation
+### Resource Requirements
+- **Regulatory Consultants**: FDA/EU MDR/MFDS expertise
+- **Testing Facilities**: {per pathway requirements}
+- **Clinical Trial Sites**: {if applicable}
+- **Notified Body**: {if EU Class IIa+}
+
+### Risk Mitigation Strategies
+- {Strategy 1}
+- {Strategy 2}
+- {Strategy 3}
+
+---
+
+## 4. Appendices
+
+### A. Regulatory Citations
+- **FDA**: {citations from all analysis steps}
+- **EU MDR**: {article citations from all steps}
+- **MFDS**: {regulation citations from all steps}
+
+### B. Data Sources
+- {Attribution summary from all pipeline steps}
+- Built-in knowledge: FDA, EU MDR, MFDS decision frameworks (2026-01)
+- External sources: {Notion DB / Context7 if used}
+
+### C. Escalation Items
+{All escalation items from pipeline steps with rationale}
+
+### D. Glossary
+- **510(k)**: FDA Premarket Notification
+- **PMA**: FDA Premarket Approval
+- **CE Marking**: EU conformity marking
+- **Notified Body**: EU conformity assessment body
+- **PMCF**: Post-Market Clinical Follow-up
+- **QMS**: Quality Management System
+{Additional terms as needed}
+
+---
+
+## Disclaimer
+
+**Important Notice**
+
+This briefing is an AI-based regulatory intelligence synthesis, not official regulatory advice.
+
+- **No legal effect**: Briefing is for reference only and has no legal binding force
+- **Expert review required**: All findings and recommendations require validation by qualified regulatory affairs professionals
+- **Regulatory authority confirmation**: Final regulatory decisions must follow official guidance from FDA, Notified Bodies, MFDS, etc.
+- **Limitation of liability**: Users are responsible for regulatory non-compliance resulting from use of this tool
+
+Knowledge Base Date: 2026-01
+
+---
+
+This is reference information for professional review, not regulatory advice.
+```
+
+### 7. Summary Generation
 
 **Compressed summary** (`briefing.summary.md`):
-- Product, date, pipeline steps covered, traffic light, critical path, budget, key risks, top recommendations
 
-### 7. Next Steps
+```markdown
+# Briefing Summary
+
+**Product**: {product-name}
+**Date**: {YYYY-MM-DD}
+
+- **Pipeline Steps Covered**: {list of available data}
+- **Traffic Light**: {GREEN/YELLOW/RED}
+- **Critical Path**: {region} ({timeline})
+- **Total Budget**: {expected range}
+- **Key Risks**: {top 3 risks}
+- **Top Recommendations**: {top 3 actions}
+- **Escalation Items**: {yes/no with count}
+- **Sources**: FDA, EU MDR, MFDS regulations + all pipeline data
+
+---
+This summary captures the briefing report for audit trail.
+```
+
+### 8. File Storage
+
+Save results to `.aria/products/{product-name}/{date}/`:
+- `briefing.md` - Full comprehensive briefing report
+- `briefing.summary.md` - Compressed summary for audit trail
+
+### 9. Next Steps
 
 - **Primary**: Review report with stakeholders (executive team, regulatory experts)
 - **Alternative**: Execute immediate actions from recommendations
 - **Optional**: Complete missing pipeline steps if partial data
+
+## Format Output
+
+**Format Selection** (via `--format` flag):
+
+- `markdown` (default): Markdown report to `.aria/products/`
+
+- `notion`: Notion page via Notion MCP connector (requires notion-mcp configuration)
+  - Use `ToolSearch("notion mcp")` to find MCP tools
+  - Graceful degradation: Fall back to Markdown if unavailable
+
+- `gdocs`: Google Docs via Google Drive MCP connector (requires google-drive-mcp configuration)
+  - Use `ToolSearch("google drive mcp")` to find MCP tools
+  - Create document with title: "{Product Name} - Regulatory Briefing Report ({date})"
+  - Also save Markdown backup to `.aria/products/`
+  - Graceful degradation: Fall back to Markdown if unavailable
+
+- `pdf`: PDF conversion from Markdown
+  - Check for tools in order: `pandoc`, `wkhtmltopdf`, Python `weasyprint`
+  - Generate Markdown first, then convert
+  - Pandoc command: `pandoc briefing.md -o briefing.pdf --pdf-engine=xelatex --variable=geometry:margin=1in --toc`
+  - Graceful degradation: Keep Markdown if no PDF tool available, display installation guidance
+
+**Graceful Degradation**: If selected format's tool/MCP connector is unavailable, fall back to Markdown format with a notice explaining the limitation and how to install the required tool.
 
 ## Flags
 
@@ -220,49 +343,14 @@ When `--format pdf` is specified:
 
 ## Output Location
 
-- `.aria/products/{product-name}/{date}/briefing.md` (Markdown format or PDF source)
-- `.aria/products/{product-name}/{date}/briefing.pdf` (when `--format pdf`)
+- `.aria/products/{product-name}/{date}/briefing.md` (always generated)
 - `.aria/products/{product-name}/{date}/briefing.summary.md` (always generated)
-- Notion page or Google Docs if alternative format selected
+- `.aria/products/{product-name}/{date}/briefing.pdf` (when `--format pdf`)
+- Notion page or Google Docs (when alternative format selected, link provided to user)
 
 ## Data Sources
 
 All pipeline data from `.aria/` directory is the primary source. Built-in knowledge supplements briefing structure and executive summary framework. External data connectors (Notion, Context7) are reflected via pipeline data already generated.
-
-## Example
-
-```
-/aria:brief
-```
-> System loads all available pipeline data
-> System presents analysis summary (Phase A)
-> User confirms
-> System generates comprehensive briefing report (Phase B, Markdown format)
-
-```
-/aria:brief --format gdocs --lang en
-```
-> English output, Google Docs format
-> System loads all pipeline data
-> System presents analysis summary
-> User confirms
-> System generates Google Docs briefing via Google Drive MCP
-
-```
-/aria:brief Clinical Strategy
-```
-> Focus area: Clinical Strategy
-> Emphasizes clinical evidence requirements and trial planning in recommendations
-
-```
-/aria:brief --format pdf
-```
-> System loads all pipeline data
-> System presents analysis summary (Phase A)
-> User confirms
-> System generates Markdown briefing
-> System converts to PDF using available tool (pandoc/wkhtmltopdf/weasyprint)
-> Output: briefing.pdf + briefing.md + briefing.summary.md
 
 ## Report Issuance Policy (ER-017)
 
@@ -273,6 +361,48 @@ All pipeline data from `.aria/` directory is the primary source. Built-in knowle
 2. **Report Phase**: After user reviews and confirms, generate full formatted report
 
 **User confirmation required before full report generation.**
+
+## Traffic Light Interpretation
+
+- **GREEN**: All pipeline steps GREEN, low-risk regulatory path
+- **YELLOW**: Any step YELLOW, moderate-high risk, expert review recommended
+- **RED**: Multiple RED flags, significant regulatory barriers, fundamental approach change needed
+
+The overall traffic light is the most conservative (highest caution) across all pipeline steps.
+
+## Example
+
+```
+/aria:brief
+```
+> System loads all available pipeline data
+> Presents analysis summary (Phase A)
+> User confirms
+> Generates comprehensive briefing report (Phase B, Markdown format)
+
+```
+/aria:brief --format gdocs --lang en
+```
+> English output, Google Docs format
+> Loads all pipeline data
+> Presents analysis summary
+> User confirms
+> Generates Google Docs briefing via Google Drive MCP
+
+```
+/aria:brief Clinical Strategy
+```
+> Focus area: Clinical Strategy
+> Emphasizes clinical evidence requirements and trial planning in recommendations
+
+```
+/aria:brief --format pdf
+```
+> Loads all pipeline data
+> Presents analysis summary (Phase A)
+> User confirms
+> Generates Markdown briefing
+> Converts to PDF using available tool (pandoc/wkhtmltopdf/weasyprint)
 
 ## Disclaimer
 
