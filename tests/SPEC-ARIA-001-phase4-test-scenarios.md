@@ -12,7 +12,7 @@
 This document defines comprehensive test scenarios for ARIA Cowork Plugin Phase 4, covering:
 - **Comparison Skill**: Multi-country regulatory comparison with side-by-side matrices
 - **Briefing Skill**: Executive briefing report synthesis from full pipeline data
-- **Commands**: /aria:compare, /aria:brief
+- **Commands**: /aria:compare, /aria:report
 
 Test design follows TDD methodology with 85%+ coverage target for all Phase 4 acceptance criteria.
 
@@ -311,7 +311,7 @@ Given the user has completed the full pipeline:
   - /aria:estimate (estimation.md exists)
   - /aria:plan (plan.md exists)
   - /aria:compare (comparison.md exists)
-When /aria:brief is executed
+When /aria:report is executed
 Then the briefing shall synthesize all six data sources
 And the output shall include sections:
   - Executive Summary (1-page overview)
@@ -353,7 +353,7 @@ Given the user has completed only:
   - /aria:determine (determination.md exists)
   - /aria:classify (classification.md exists)
 And other pipeline steps have NOT been completed
-When /aria:brief is executed
+When /aria:report is executed
 Then the briefing shall cover available data (determination + classification)
 And sections for pathway, estimation, and plan shall display:
   - "데이터 없음 - /aria:pathway를 실행하여 경로 선택 데이터를 생성하세요"
@@ -364,7 +364,7 @@ And next step suggestions shall recommend completing the missing pipeline steps
 **BR-002.2**: Briefing with missing comparison data
 ```gherkin
 Given the pipeline is complete except for /aria:compare
-When /aria:brief is executed
+When /aria:report is executed
 Then the Multi-Country Comparison section shall display:
   - "비교 데이터 없음 - /aria:compare를 실행하여 다국가 비교 분석을 생성하세요"
 And the briefing shall remain functional with the available data
@@ -382,7 +382,7 @@ And the briefing shall remain functional with the available data
 ```gherkin
 Given all pipeline steps have completed
 And each step has generated a .summary.md file (compressed context)
-When /aria:brief is executed with default settings
+When /aria:report is executed with default settings
 Then the skill shall load compressed summaries (.summary.md) by default
 And the total token consumption shall be reduced by at least 60%
 And the briefing shall be complete without loading full outputs
@@ -399,7 +399,7 @@ And full context loading shall be selective (only for sections requiring detail)
 
 **BR-003.3**: User-triggered full context mode
 ```gherkin
-Given the user invokes /aria:brief with a --full-context flag
+Given the user invokes /aria:report with a --full-context flag
 When the briefing skill processes the input
 Then all full output files shall be loaded (not summaries)
 And the briefing shall include maximum detail from all pipeline steps
@@ -524,7 +524,7 @@ Then it shall include:
 
 **BR-007.1**: Briefing output meets VALID checklist
 ```gherkin
-Given /aria:brief produces output
+Given /aria:report produces output
 When the VALID checklist is applied
 Then V (Verified): All pipeline data sources shall be cited
 And A (Accurate): Synthesized data shall match source files
@@ -543,7 +543,7 @@ And D (Deliverable): Output shall be stored in .aria/products/ with proper namin
 
 **BR-008.1**: All briefing sections in Korean
 ```gherkin
-Given any /aria:brief execution
+Given any /aria:report execution
 When the output is generated
 Then all section headers shall be in Korean:
   - "경영진 요약" (Executive Summary)
@@ -568,7 +568,7 @@ And only regulation codes may appear in English
 
 **BR-009.1**: Standard disclaimer in briefing
 ```gherkin
-Given any /aria:brief execution
+Given any /aria:report execution
 When the output is generated
 Then the standard disclaimer shall appear: "본 자료는 참고 정보이며, 규제 자문이 아닙니다"
 And the disclaimer shall be prominently placed at the top of the briefing
@@ -625,7 +625,7 @@ And the legend shall explain the traffic light meaning
 ```gherkin
 Given a product named "Cardiac Monitor X1"
 And the command is executed on 2026-02-11
-When /aria:brief generates output
+When /aria:report generates output
 Then the output file shall be stored at:
   .aria/products/cardiac-monitor-x1/2026-02-11/briefing.md
 And the .summary.md file shall be at:
@@ -642,7 +642,7 @@ And the .summary.md file shall be at:
 
 **BR-012.1**: Analysis turn outputs decision-relevant information only
 ```gherkin
-Given /aria:brief is executed
+Given /aria:report is executed
 When the analysis turn completes
 Then the output shall include only:
   - Key findings summary
@@ -732,7 +732,7 @@ And the system shall return the Notion page URL
 **BR-014.1**: English toggle via command flag
 ```gherkin
 Given the user enables English output via --lang en flag
-When /aria:brief is executed
+When /aria:report is executed
 Then all user-facing text shall be in English
 And Korean regulatory terms shall include English translations (e.g., "medical device (의료기기)")
 And section headers shall be in English
@@ -741,7 +741,7 @@ And section headers shall be in English
 **BR-014.2**: English toggle via aria.local.md playbook
 ```gherkin
 Given aria.local.md contains language preference set to "en"
-When /aria:brief is executed
+When /aria:report is executed
 Then the behavior shall be identical to explicit --lang en flag
 And all output shall be in English
 ```
@@ -765,7 +765,7 @@ Given the user has executed the full pipeline:
   - /aria:estimate → estimation.md + estimation.summary.md
   - /aria:plan → plan.md + plan.summary.md
   - /aria:compare → comparison.md + comparison.summary.md
-When /aria:brief is executed as the final step
+When /aria:report is executed as the final step
 Then the briefing shall synthesize all six prior steps
 And no data shall be re-requested from the user
 And the final briefing shall accurately reflect the full pipeline data flow
@@ -801,7 +801,7 @@ And the output shall include context-aware recommendations
 **NT-001.1**: Briefing invoked with empty .aria/ directory
 ```gherkin
 Given NO pipeline data exists in .aria/products/
-When /aria:brief is executed
+When /aria:report is executed
 Then a warning message shall appear: "파이프라인 데이터가 없습니다. /aria:determine부터 시작하세요."
 And the user shall be prompted to complete at least the determination step
 And the traffic light shall be YELLOW
@@ -834,7 +834,7 @@ And suggested valid topics shall be listed (e.g., "clinical evidence", "labeling
 **NT-003.1**: Google Docs format requested without Google Drive MCP
 ```gherkin
 Given Google Drive MCP is NOT configured
-When /aria:brief --format gdocs is executed
+When /aria:report --format gdocs is executed
 Then a limitation notice shall appear: "Google Drive MCP가 설정되지 않았습니다. Markdown 형식으로 출력합니다."
 And the output shall fall back to default Markdown format
 And the report shall be stored as briefing.md
@@ -843,7 +843,7 @@ And the report shall be stored as briefing.md
 **NT-003.2**: Notion format requested without Notion MCP
 ```gherkin
 Given Notion MCP is NOT configured
-When /aria:brief --format notion is executed
+When /aria:report --format notion is executed
 Then a limitation notice shall appear: "Notion MCP가 설정되지 않았습니다. Markdown 형식으로 출력합니다."
 And the output shall fall back to default Markdown format
 ```

@@ -2,11 +2,21 @@
 
 All notable changes to ARIA Cowork Plugin will be documented in this file.
 
+## [0.1.1] - 2026-02-12
+
+### Fixed
+
+- **`/aria:brief` renamed to `/aria:report`**: Cowork 기본 `legal` 플러그인의 `brief` 커맨드와 이름 충돌 해결
+- **marketplace.json 버전 동기화**: `0.0.4` → `0.1.0`으로 업데이트하여 플러그인 업데이트 감지 정상화
+
+---
+
 ## [0.1.0] - 2026-02-12
 
 ### BREAKING CHANGES
 
 - **6 commands removed**: `/aria:determine`, `/aria:classify`, `/aria:pathway`, `/aria:estimate`, `/aria:plan`, `/aria:compare` are no longer available
+- **`/aria:brief` renamed to `/aria:report`**: Renamed to avoid command name collision with Cowork built-in `legal` plugin
 - **Output file format changed**: Individual per-skill files (determination.md, classification.md, etc.) replaced by integrated reports (assess.md, project.md)
 
 ### Added
@@ -31,7 +41,7 @@ All notable changes to ARIA Cowork Plugin will be documented in this file.
   - Auto-suggestion logic for pipeline commands
   - Document upload with auto-extraction and gap analysis
 
-- **`/aria:brief` rewritten**: Comprehensive report generator
+- **`/aria:report` rewritten**: Comprehensive report generator
   - Absorbs briefing skill logic (no separate briefing skill)
   - Two-phase output (ER-017 report issuance policy)
   - Supports focus area selection (Clinical Strategy, Cost Control, Timeline Acceleration, Multi-Market Entry)
@@ -46,14 +56,14 @@ All notable changes to ARIA Cowork Plugin will be documented in this file.
 
 ### Removed
 
-- **Briefing skill** (`aria/skills/briefing/`): Logic absorbed by `/aria:brief` command
+- **Briefing skill** (`aria/skills/briefing/`): Logic absorbed by `/aria:report` command
 - **Comparison skill** (`aria/skills/comparison/`): Logic absorbed inline by assess and project commands
 - **Connectors skill** (`aria/skills/connectors/`): Merged into `CONNECTORS.md` infrastructure document
 
 ### Migration Notes
 
 - Existing `.aria/products/` data is preserved and backward compatible
-- `/aria:brief` and `/aria:project` can read legacy format files (determination.summary.md, etc.)
+- `/aria:report` and `/aria:project` can read legacy format files (determination.summary.md, etc.)
 - New format files are preferred over legacy when both exist
 - No manual data migration required
 

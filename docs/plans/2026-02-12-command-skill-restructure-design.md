@@ -31,7 +31,7 @@ Current ARIA architecture has significant redundancy between commands (8) and sk
 | `/aria:chat` | Conversational entry, product profile builder, skill router | Any (on-demand) |
 | `/aria:assess` | Regulatory assessment pipeline | determination + classification + pathway + comparison logic |
 | `/aria:project` | Project planning pipeline | estimation + planning + comparison logic |
-| `/aria:brief` | Comprehensive integrated report | All results synthesis (absorbs briefing skill) |
+| `/aria:report` | Comprehensive integrated report | All results synthesis (absorbs briefing skill) |
 
 ### Skills (5 - Pure Analysis Logic)
 
@@ -87,7 +87,7 @@ Current ARIA architecture has significant redundancy between commands (8) and sk
 **Auto-suggestion Logic**:
 - Profile sufficient + no assess data -> Suggest `/aria:assess`
 - Assess data exists -> Suggest `/aria:project`
-- All data exists -> Suggest `/aria:brief`
+- All data exists -> Suggest `/aria:report`
 - User approval required before execution
 
 **Conversation Example**:
@@ -159,7 +159,7 @@ ARIA: [classification skill runs]
 
 **Flags**: `--lang en|ko`, `--format markdown|pdf|notion|gdocs`
 
-### /aria:brief - Comprehensive Report Generator
+### /aria:report - Comprehensive Report Generator
 
 **Purpose**: All pipeline data into single executive-ready document
 
@@ -218,7 +218,7 @@ User
   |                  +-- planning -------+ -> project.md
   |                  (+ comparison logic)     |
   |                                           |
-  +-- /aria:brief -- all results --------- -> briefing.md
+  +-- /aria:report -- all results --------- -> briefing.md
                                               |
   Product Context (.aria/) <------------------+
 ```
@@ -226,7 +226,7 @@ User
 ### Context Passing:
 - **chat -> assess**: `profile.json` product info
 - **assess -> project**: `assess.summary.md` routes/classes
-- **all -> brief**: `.summary.md` files collected and synthesized
+- **all -> report**: `.summary.md` files collected and synthesized
 
 ---
 
@@ -274,7 +274,7 @@ User
 
 ### Files to REWRITE (2 commands):
 - `aria/commands/chat.md` (conversational advisor redesign)
-- `aria/commands/brief.md` (absorb briefing skill, new file structure)
+- `aria/commands/report.md` (absorb briefing skill, new file structure)
 
 ### Skills to REFACTOR (5 - remove I/O, keep pure logic):
 - `aria/skills/determination/SKILL.md`
@@ -284,7 +284,7 @@ User
 - `aria/skills/planning/SKILL.md`
 
 ### Skills to DELETE (2):
-- `aria/skills/briefing/SKILL.md` -> absorbed by `/aria:brief` command
+- `aria/skills/briefing/SKILL.md` -> absorbed by `/aria:report` command
 - `aria/skills/comparison/SKILL.md` -> absorbed by assess/project commands
 
 ### Skills to MOVE (1):

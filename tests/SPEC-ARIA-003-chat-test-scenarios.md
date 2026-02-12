@@ -260,7 +260,7 @@ And user approval shall be required before execution
 ```gherkin
 Given assess.summary.md and project.summary.md both exist
 When auto-suggestion logic evaluates
-Then ARIA shall suggest: "Want me to generate a comprehensive briefing? (/aria:brief)"
+Then ARIA shall suggest: "Want me to generate a comprehensive briefing? (/aria:report)"
 And user approval shall be required before execution
 ```
 

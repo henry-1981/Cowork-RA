@@ -95,7 +95,7 @@ Then exactly 4 command files shall exist:
   - chat.md
   - assess.md
   - project.md
-  - brief.md
+  - report.md
 And no other .md files shall be present in the commands directory
 ```
 
@@ -111,7 +111,7 @@ And no other .md files shall be present in the commands directory
 Given the SPEC-ARIA-003 restructure is complete
 When the skills directory is inspected
 Then aria/skills/briefing/SKILL.md shall NOT exist
-And briefing logic shall be absorbed by /aria:brief command
+And briefing logic shall be absorbed by /aria:report command
 ```
 
 ### MG-002.2: Comparison skill removed
@@ -209,45 +209,45 @@ And knowledge base date references shall be preserved
 **Requirement**: Existing .aria/ data handling
 **Priority**: Critical
 
-### MG-004.1: /aria:brief reads legacy determination data
+### MG-004.1: /aria:report reads legacy determination data
 ```gherkin
 Given .aria/products/{product}/{date}/ contains:
   - determination.md + determination.summary.md (legacy format)
 And no assess.md exists
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then legacy determination data shall be loaded successfully
 And briefing shall include determination findings from legacy file
 ```
 
-### MG-004.2: /aria:brief reads legacy classification data
+### MG-004.2: /aria:report reads legacy classification data
 ```gherkin
 Given .aria/products/{product}/{date}/ contains:
   - classification.md + classification.summary.md (legacy format)
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then legacy classification data shall be loaded successfully
 ```
 
-### MG-004.3: /aria:brief reads legacy pathway data
+### MG-004.3: /aria:report reads legacy pathway data
 ```gherkin
 Given .aria/products/{product}/{date}/ contains:
   - pathway.md + pathway.summary.md (legacy format)
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then legacy pathway data shall be loaded successfully
 ```
 
-### MG-004.4: /aria:brief reads legacy estimation data
+### MG-004.4: /aria:report reads legacy estimation data
 ```gherkin
 Given .aria/products/{product}/{date}/ contains:
   - estimation.md + estimation.summary.md (legacy format)
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then legacy estimation data shall be loaded successfully
 ```
 
-### MG-004.5: /aria:brief reads legacy plan data
+### MG-004.5: /aria:report reads legacy plan data
 ```gherkin
 Given .aria/products/{product}/{date}/ contains:
   - plan.md + plan.summary.md (legacy format)
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then legacy plan data shall be loaded successfully
 ```
 
@@ -268,7 +268,7 @@ And user shall be informed about legacy data usage
 Given .aria/products/{product}/{date}/ contains both:
   - assess.md (new format)
   - determination.md + classification.md + pathway.md (legacy format)
-When /aria:brief loads pipeline data
+When /aria:report loads pipeline data
 Then new format (assess.md) shall be preferred
 And legacy files shall be ignored for overlapping data
 ```
@@ -316,7 +316,7 @@ And no other files shall be created by chat (unless user requests)
 
 ### MG-005.4: Brief command output format
 ```gherkin
-Given /aria:brief completes successfully
+Given /aria:report completes successfully
 When output directory is inspected
 Then the following files shall exist:
   - briefing.md (comprehensive briefing report)
@@ -358,7 +358,7 @@ Then exactly 4 commands shall be listed:
   - /aria:chat
   - /aria:assess
   - /aria:project
-  - /aria:brief
+  - /aria:report
 And no deprecated commands shall be listed
 ```
 

@@ -317,7 +317,7 @@ This is reference information for professional review, not regulatory advice.
 - **Assessment**: {GREEN/YELLOW}
 
 ---
-This summary is consumed by `/aria:brief` command.
+This summary is consumed by `/aria:report` command.
 ```
 
 ### 7. File Storage
@@ -328,7 +328,7 @@ Save results to `.aria/products/{product-name}/{date}/`:
 
 ### 8. Next Steps
 
-- **Primary**: `/aria:brief` to generate comprehensive executive briefing
+- **Primary**: `/aria:report` to generate comprehensive executive briefing
 - **Alternative**: Internal budget approval and resource allocation
 - **Optional**: Vendor contract negotiations and testing lab engagement
 

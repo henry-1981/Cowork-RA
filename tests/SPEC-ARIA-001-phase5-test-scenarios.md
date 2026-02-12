@@ -292,7 +292,7 @@ Given the user invokes /aria:chat with query "종합 보고서 생성"
 When the hybrid router processes the query
 Then the keyword "보고서" shall be detected
 And the system shall route directly to the briefing skill
-And execute /aria:brief without disambiguation
+And execute /aria:report without disambiguation
 ```
 
 **HR-007.2**: "executive summary" routes to briefing
@@ -667,7 +667,7 @@ Given the user executes the full pipeline for product "cardiac-monitor-x1":
   - /aria:estimate (loads pathway.summary.md automatically) → estimation.md + estimation.summary.md
   - /aria:plan (loads estimation.summary.md automatically) → plan.md + plan.summary.md
   - /aria:compare (loads classification.summary.md for context) → comparison.md + comparison.summary.md
-  - /aria:brief (loads all .summary.md files) → briefing.md + briefing.summary.md
+  - /aria:report (loads all .summary.md files) → briefing.md + briefing.summary.md
 When each command is executed
 Then the system shall auto-load prior step context from .summary.md files
 And no data shall be re-requested from the user
@@ -694,7 +694,7 @@ And display a warning: "이전 단계 데이터를 찾을 수 없습니다. 수�
 
 **PI-002.1**: Full pipeline with compression vs without compression
 ```gherkin
-Given a full pipeline run from /aria:determine through /aria:brief
+Given a full pipeline run from /aria:determine through /aria:report
 When comparing token usage with compressed summaries vs full outputs
 Then total pipeline context token usage shall be reduced by at least 60%
 And no critical decision information shall be lost in compression
@@ -746,7 +746,7 @@ And NOT re-ask for classification information
 ```gherkin
 Given all 6 prior pipeline steps completed for "insulin-pump-z2"
 And all .summary.md files exist
-When /aria:brief is executed
+When /aria:report is executed
 Then the briefing skill shall load all 6 .summary.md files
 And synthesize all data into a comprehensive briefing
 And NOT re-request any information from the user
@@ -779,7 +779,7 @@ And the user proceeds through the full pipeline:
   - /aria:chat → suggests planning
   - /aria:plan → plan.md created (auto-loads estimation context)
   - /aria:chat → suggests comparison or briefing
-  - /aria:brief → briefing.md created (auto-loads all context)
+  - /aria:report → briefing.md created (auto-loads all context)
 And the entire workflow completes without re-requesting user data
 And the final briefing synthesizes all pipeline data accurately
 ```
