@@ -5,6 +5,20 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2026-02-13
+
+### Added
+- Reorganized root onboarding docs into bilingual single-file `README.md` (Korean + English)
+- Rewrote `aria/README.md` as a power-user guide focused on command/skill usage patterns
+- Moved version policy document to developer docs: `docs/development/versioning.md`
+
+### Changed
+- Removed version-policy references from user-facing READMEs
+- Synchronized plugin version between:
+  - `aria/.claude-plugin/plugin.json`
+  - `.claude-plugin/marketplace.json`
+  - Version updated to `0.1.4`
+
 ## [0.1.3] - 2026-02-13
 
 ### Added

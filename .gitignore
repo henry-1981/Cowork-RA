@@ -217,6 +217,11 @@ dist-ssr/
 # ===========================================
 tests/
 docs/
+!docs/
+!docs/plans/
+!docs/plans/**
+!docs/development/
+!docs/development/**
 
 # ===========================================
 # Git Worktrees (isolated development workspaces)

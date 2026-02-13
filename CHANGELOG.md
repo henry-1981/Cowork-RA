@@ -2,6 +2,20 @@
 
 All notable changes to ARIA Cowork Plugin will be documented in this file.
 
+## [0.1.4] - 2026-02-13
+
+### Added
+
+- 다국어 온보딩 루트 문서 재구성 (KO/EN 단일 `README.md`, 언어 선택 링크)
+- ARIA 파워 유저 가이드 재구성 (`aria/README.md`)
+- 개발자 버전 정책 문서 위치 신설: `docs/development/versioning.md`
+
+### Changed
+
+- 배포 문서에서 버전 정책 링크 제거 (온보딩 문서/활용 문서 역할 분리)
+- 플러그인 버전 동기화: `aria/.claude-plugin/plugin.json` 및 `.claude-plugin/marketplace.json`를 `0.1.4`로 일치
+- `.gitignore` 업데이트: `docs/development/**` 추적 가능하도록 예외 규칙 추가
+
 ## [0.1.3] - 2026-02-13
 
 ### Added
