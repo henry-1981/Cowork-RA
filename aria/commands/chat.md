@@ -99,11 +99,34 @@ Maintain product profile at `.aria/products/{product-name}/{date}/profile.json`:
 
 ### 4. Conversational Skill Routing
 
-When conversation context is sufficient, invoke skills transparently:
+Use the following gate order before any internal skill is invoked:
+
+1. **Profile Completeness Gate**
+   - Check profile completeness threshold (`>= 70%`) as a coarse readiness signal.
+   - Completeness is necessary but not sufficient for determination/classification decisions.
+
+2. **Mandatory Confidence Gate (before any skill invocation)**
+   - Evaluate semantic sufficiency of current evidence with confidence state:
+     - `sufficient`: critical inputs are explicit and consistent
+     - `partial`: some critical inputs exist, but at least one remains ambiguous
+     - `insufficient`: critical inputs are missing or contradictory
+   - For determination-related turns, confidence must be based on at least:
+     - explicit intended medical claim
+     - software role (display-only vs analysis/decision/control)
+     - measured parameters and data source
+     - target patient condition and use context
+   - If confidence is `insufficient`:
+     - DO NOT invoke determination/classification/pathway/estimation/planning skills
+     - force `depth=express`
+     - explain why more data is required
+     - ask only `1-3` minimum follow-up questions
+
+3. **Skill Trigger Evaluation**
+   - Only after Gate 1 and Gate 2 pass, evaluate specific skill triggers below.
 
 **Determination Triggers** (profile completeness >= 70%):
 - User asks about medical device status
-- Sufficient device information to evaluate
+- Confidence gate passed with sufficient determination inputs
 - Invoke: Skill("aria-determination") with profile data
 - Present results naturally: "With arrhythmia detection and physician alerting, this qualifies as a medical device..."
 
