@@ -344,6 +344,7 @@ Before rendering output, `/aria:project` resolves:
   - `preserve_regulatory_facts=true`
   - `preserve_numeric_values=true`
   - `preserve_disclaimer_strength=true`
+- `graceful fallback`: if requested export is unavailable, fall back to `markdown` with an explicit notice.
 
 ## Format Output
 

@@ -26,6 +26,17 @@ class OutputContractDocTests(unittest.TestCase):
         self.assertIn("skill_invoked", text)
         self.assertIn("general_qa", text)
 
+    def test_export_commands_define_format_fallback(self):
+        for name in ["assess.md", "project.md", "report.md"]:
+            text = (ROOT / "aria/commands" / name).read_text(encoding="utf-8")
+            self.assertIn("graceful fallback", text.lower(), name)
+            self.assertIn("markdown", text.lower(), name)
+
+    def test_all_commands_preserve_regulatory_facts_flag(self):
+        for name in ["chat.md", "assess.md", "project.md", "report.md"]:
+            text = (ROOT / "aria/commands" / name).read_text(encoding="utf-8")
+            self.assertIn("preserve_regulatory_facts", text, name)
+
 
 if __name__ == "__main__":
     unittest.main()
