@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   category: "domain"
   status: "active"
   updated: "2026-02-12"
@@ -70,6 +70,21 @@ Use the device information provided as input. Required fields:
 - Intended use statement (medical purpose)
 - Product form (hardware, software, IVD, combination)
 - Primary function and mechanism of action
+
+## Minimum Determination Input Contract
+
+Before issuing deterministic multi-region determination output (YES/NO/CONDITIONAL), the following minimum inputs must be explicit:
+
+1. Intended medical claim (what disease/condition is being diagnosed, treated, monitored, or prevented)
+2. Product mechanism and software role (display-only vs analysis/decision logic vs hardware control)
+3. Measured parameters and data source (e.g., FEV1/FVC/PEF and how those values are derived)
+4. Target patient condition and care context (including target patient condition: critical/serious/non-serious where applicable)
+5. Target market scope (FDA / EU MDR / MFDS, or subset)
+
+If any critical input above is missing or contradictory:
+- do not output deterministic determination/classification/pathway conclusions
+- return an insufficiency rationale
+- ask 1-3 minimum follow-up questions that directly resolve missing inputs
 
 ### Step 2: Apply Multi-Region Criteria
 
