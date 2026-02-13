@@ -110,6 +110,28 @@ Recommended flow:
 - Connector details: [`aria/CONNECTORS.md`](./aria/CONNECTORS.md)
 - Changelogs: [`CHANGELOG.md`](./CHANGELOG.md), [`aria/CHANGELOG.md`](./aria/CHANGELOG.md)
 
+## Repository Tracking Policy
+
+This repository tracks deployment/release essentials only.
+
+**Tracked in remote (deployment/release required):**
+- `aria/`
+- `.claude-plugin/`
+- `.github/workflows/`
+- `scripts/versioning/`
+- `README.md`, `CHANGELOG.md`, `aria/CHANGELOG.md`
+
+**Local-only (not tracked in remote):**
+- `docs/`
+- `tests/`
+- `scripts/spec/`
+- `aria.local.md`
+- `aria/.mcp.json`
+
+**Rule for new files:**
+- Track only if it is required for deployment/release operation.
+- Keep local if it is personal workflow data, design notes, or local validation artifacts.
+
 ### License
 
 [Apache-2.0](./aria/LICENSE)
