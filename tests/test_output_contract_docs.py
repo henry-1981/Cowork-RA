@@ -57,6 +57,16 @@ class OutputContractDocTests(unittest.TestCase):
         self.assertIn("insufficient", text)
         self.assertIn("1-3", text)
 
+    def test_spec_aria_005_scenario_files_exist(self):
+        required = [
+            ROOT / "tests/SPEC-ARIA-005-chat-test-scenarios.md",
+            ROOT / "tests/SPEC-ARIA-005-assess-test-scenarios.md",
+            ROOT / "tests/SPEC-ARIA-005-project-test-scenarios.md",
+            ROOT / "tests/SPEC-ARIA-005-report-test-scenarios.md",
+        ]
+        for path in required:
+            self.assertTrue(path.exists(), path.name)
+
 
 if __name__ == "__main__":
     unittest.main()
