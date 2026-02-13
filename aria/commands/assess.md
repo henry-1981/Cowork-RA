@@ -1,6 +1,6 @@
 ---
 description: Regulatory assessment pipeline - Combines determination, classification, and pathway analysis into a single integrated assessment
-argument-hint: "[Product description or document] [--lang en|ko] [--format markdown|pdf|notion|gdocs]"
+argument-hint: "[Product description or document] [--lang en|ko] [--format markdown|pdf|notion|gdocs] [--depth express|standard|deep]"
 ---
 
 # /aria:assess - Regulatory Assessment Orchestrator
@@ -276,6 +276,21 @@ Save results to `.aria/products/{product-name}/{date}/`:
 - **Alternative**: Expert review consultation (if YELLOW or RED traffic light)
 - **Optional**: `/aria:chat` for follow-up questions about the assessment
 
+## Output Contract
+
+Before rendering output, `/aria:assess` resolves:
+
+- `output_type`: `full_report_md` (`assess.md`) and `summary_md` (`assess.summary.md`)
+- `format`: `markdown | pdf | notion | gdocs`
+- `language`: `ko | en`
+- `audience`: `mixed` (`summary_md` leans executive; `full_report_md` supports operator + executive)
+- `depth`: `express | standard | deep` (default: `summary_md=express`, `full_report_md=deep`)
+- `safety_flags`:
+  - `preserve_regulatory_facts=true`
+  - `preserve_numeric_values=true`
+  - `preserve_disclaimer_strength=true`
+- `graceful fallback`: if requested export is unavailable, fall back to `markdown` with an explicit notice.
+
 ## Format Output
 
 **Format Selection** (via `--format` flag):
@@ -290,6 +305,7 @@ Save results to `.aria/products/{product-name}/{date}/`:
 
 - `--lang en|ko`: Output language (default: `ko`)
 - `--format markdown|pdf|notion|gdocs`: Output format (default: `markdown`)
+- `--depth express|standard|deep`: Narrative depth override (optional)
 
 ## Output Location
 
