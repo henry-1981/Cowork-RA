@@ -332,6 +332,19 @@ Save results to `.aria/products/{product-name}/{date}/`:
 - **Alternative**: Internal budget approval and resource allocation
 - **Optional**: Vendor contract negotiations and testing lab engagement
 
+## Output Contract
+
+Before rendering output, `/aria:project` resolves:
+
+- `output_type`: `full_report_md` (`project.md`) and `summary_md` (`project.summary.md`)
+- `format`: `markdown | pdf | notion | gdocs`
+- `language`: `ko | en`
+- `audience`: `mixed` (`summary_md` leans executive; `full_report_md` supports operator + executive)
+- `safety_flags`:
+  - `preserve_regulatory_facts=true`
+  - `preserve_numeric_values=true`
+  - `preserve_disclaimer_strength=true`
+
 ## Format Output
 
 **Format Selection** (via `--format` flag):

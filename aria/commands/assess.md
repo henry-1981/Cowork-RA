@@ -276,6 +276,19 @@ Save results to `.aria/products/{product-name}/{date}/`:
 - **Alternative**: Expert review consultation (if YELLOW or RED traffic light)
 - **Optional**: `/aria:chat` for follow-up questions about the assessment
 
+## Output Contract
+
+Before rendering output, `/aria:assess` resolves:
+
+- `output_type`: `full_report_md` (`assess.md`) and `summary_md` (`assess.summary.md`)
+- `format`: `markdown | pdf | notion | gdocs`
+- `language`: `ko | en`
+- `audience`: `mixed` (`summary_md` leans executive; `full_report_md` supports operator + executive)
+- `safety_flags`:
+  - `preserve_regulatory_facts=true`
+  - `preserve_numeric_values=true`
+  - `preserve_disclaimer_strength=true`
+
 ## Format Output
 
 **Format Selection** (via `--format` flag):

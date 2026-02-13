@@ -275,6 +275,23 @@ ARIA: 510(k) and PMA are two FDA premarket submission pathways:
       Want to know which pathway applies to your device?
 ```
 
+## Output Contract
+
+All user-visible responses in `/aria:chat` must resolve this contract before render:
+
+- `output_type`: `user_response_body`
+- `response_mode`: `skill_invoked | general_qa`
+- `format`: `markdown` (internal default for chat surface)
+- `language`: `ko | en` (from `--lang`)
+- `audience`: `operator`
+- `safety_flags`:
+  - `preserve_regulatory_facts=true`
+  - `preserve_numeric_values=true`
+  - `preserve_disclaimer_strength=true`
+
+`response_mode=skill_invoked` is used when internal skills are triggered in conversation.
+`response_mode=general_qa` is used for knowledge-first direct Q&A turns.
+
 ## Flags
 
 - `--lang en|ko`: Output language (default: `ko`)

@@ -312,6 +312,19 @@ Save results to `.aria/products/{product-name}/{date}/`:
 - **Alternative**: Execute immediate actions from recommendations
 - **Optional**: Complete missing pipeline steps if partial data
 
+## Output Contract
+
+Before rendering output, `/aria:report` resolves:
+
+- `output_type`: `full_report_md` (`briefing.md`) and `summary_md` (`briefing.summary.md`)
+- `format`: `markdown | pdf | notion | gdocs`
+- `language`: `ko | en`
+- `audience`: `mixed` (executive + operator consumption)
+- `safety_flags`:
+  - `preserve_regulatory_facts=true`
+  - `preserve_numeric_values=true`
+  - `preserve_disclaimer_strength=true`
+
 ## Format Output
 
 **Format Selection** (via `--format` flag):
