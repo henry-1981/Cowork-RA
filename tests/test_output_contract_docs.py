@@ -37,6 +37,15 @@ class OutputContractDocTests(unittest.TestCase):
             text = (ROOT / "aria/commands" / name).read_text(encoding="utf-8")
             self.assertIn("preserve_regulatory_facts", text, name)
 
+    def test_humanized_writing_skill_is_internal_only(self):
+        path = ROOT / "aria/skills/humanized-writing/SKILL.md"
+        text = path.read_text(encoding="utf-8")
+        self.assertIn("name: aria-humanized-writing", text)
+        self.assertIn("user-invocable: false", text)
+        self.assertIn("preserve_regulatory_facts", text)
+        self.assertIn("preserve_numeric_values", text)
+        self.assertIn("preserve_disclaimer_strength", text)
+
 
 if __name__ == "__main__":
     unittest.main()
