@@ -2,6 +2,14 @@
 
 All notable changes to ARIA Cowork Plugin will be documented in this file.
 
+## [0.1.5] - 2026-02-13
+
+### Changed
+
+- `docs/plans/**`를 로컬 전용 스펙 문서로 운영하도록 문서 추적 정책 조정
+- `.gitignore`를 `docs/development/**`만 추적하도록 단순화
+- 플러그인 버전 동기화: `aria/.claude-plugin/plugin.json` 및 `.claude-plugin/marketplace.json`를 `0.1.5`로 일치
+
 ## [0.1.4] - 2026-02-13
 
 ### Added

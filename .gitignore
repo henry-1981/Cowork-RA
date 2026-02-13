@@ -218,8 +218,6 @@ dist-ssr/
 tests/
 docs/
 !docs/
-!docs/plans/
-!docs/plans/**
 !docs/development/
 !docs/development/**
 
