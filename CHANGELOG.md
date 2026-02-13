@@ -2,6 +2,19 @@
 
 All notable changes to ARIA Cowork Plugin will be documented in this file.
 
+## [0.1.3] - 2026-02-13
+
+### Added
+
+- 버전 정책 문서 추가: `aria/VERSIONING.md`
+- 커맨드 버전 레지스트리 추가: `aria/commands/versions.json`
+- 버전 가드 스크립트 추가: `scripts/versioning/check_version_policy.py`
+- GitHub Actions 버전 검증 워크플로 추가: `.github/workflows/version-policy.yml`
+
+### Changed
+
+- 플러그인 버전 동기화: `aria/.claude-plugin/plugin.json` 및 `.claude-plugin/marketplace.json`를 `0.1.3`으로 일치
+
 ## [0.1.1] - 2026-02-12
 
 ### Fixed

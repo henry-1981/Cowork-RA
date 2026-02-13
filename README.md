@@ -12,6 +12,11 @@ Regulatory Affairs 도메인을 위한 Anthropic Cowork 플러그인 마켓플�
 
 Cowork에서 이 마켓플레이스를 등록하면 포함된 플러그인을 사용할 수 있습니다.
 
+## 버전 정책
+
+- ARIA 버전 정책 문서: `aria/VERSIONING.md`
+- 자동 검증 워크플로: `.github/workflows/version-policy.yml`
+
 ## 라이선스
 
 [Apache-2.0](./aria/LICENSE)
