@@ -217,9 +217,9 @@ dist-ssr/
 # ===========================================
 tests/
 docs/
-!docs/
-!docs/development/
-!docs/development/**
+scripts/spec/
+aria.local.md
+aria/.mcp.json
 
 # ===========================================
 # Git Worktrees (isolated development workspaces)
