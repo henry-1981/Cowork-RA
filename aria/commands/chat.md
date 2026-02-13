@@ -1,6 +1,6 @@
 ---
 description: Conversational regulatory advisor - Natural dialogue interface with transparent skill integration and progressive product profiling
-argument-hint: "[Question, request, or document upload] [--lang en|ko]"
+argument-hint: "[Question, request, or document upload] [--lang en|ko] [--depth express|standard|deep]"
 ---
 
 # /aria:chat - Conversational Regulatory Advisor
@@ -284,6 +284,7 @@ All user-visible responses in `/aria:chat` must resolve this contract before ren
 - `format`: `markdown` (internal default for chat surface)
 - `language`: `ko | en` (from `--lang`)
 - `audience`: `operator`
+- `depth`: `express | standard | deep` (default: `standard`)
 - `safety_flags`:
   - `preserve_regulatory_facts=true`
   - `preserve_numeric_values=true`
@@ -292,9 +293,12 @@ All user-visible responses in `/aria:chat` must resolve this contract before ren
 `response_mode=skill_invoked` is used when internal skills are triggered in conversation.
 `response_mode=general_qa` is used for knowledge-first direct Q&A turns.
 
+When confidence is `insufficient`, force `depth=express`, explain why more data is required, and ask only `1-3` minimum follow-up questions.
+
 ## Flags
 
 - `--lang en|ko`: Output language (default: `ko`)
+- `--depth express|standard|deep`: Response depth (default: `standard`)
 
 ## Output Location
 

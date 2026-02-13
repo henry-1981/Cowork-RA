@@ -1,6 +1,6 @@
 ---
 description: Comprehensive regulatory briefing report - Synthesizes all pipeline data (assess + project) into a single executive-ready document
-argument-hint: "[Focus area] [--format markdown|pdf|notion|gdocs] [--lang ko|en]"
+argument-hint: "[Focus area] [--format markdown|pdf|notion|gdocs] [--lang ko|en] [--depth express|standard|deep]"
 ---
 
 # /aria:report - Comprehensive Report Generator
@@ -320,6 +320,7 @@ Before rendering output, `/aria:report` resolves:
 - `format`: `markdown | pdf | notion | gdocs`
 - `language`: `ko | en`
 - `audience`: `mixed` (executive + operator consumption)
+- `depth`: `express | standard | deep` (default: `summary_md=express`, `full_report_md=deep`)
 - `safety_flags`:
   - `preserve_regulatory_facts=true`
   - `preserve_numeric_values=true`
@@ -354,6 +355,7 @@ Before rendering output, `/aria:report` resolves:
 
 - `--format markdown|notion|gdocs|pdf`: Output format (default: `markdown`)
 - `--lang en|ko`: Output language (default: `ko`)
+- `--depth express|standard|deep`: Narrative depth override (optional)
 
 ## Output Location
 

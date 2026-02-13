@@ -46,6 +46,17 @@ class OutputContractDocTests(unittest.TestCase):
         self.assertIn("preserve_numeric_values", text)
         self.assertIn("preserve_disclaimer_strength", text)
 
+    def test_commands_declare_depth_support(self):
+        for name in ["chat.md", "assess.md", "project.md", "report.md"]:
+            text = (ROOT / "aria/commands" / name).read_text(encoding="utf-8")
+            self.assertIn("--depth", text, name)
+            self.assertRegex(text, r"express\\|standard\\|deep")
+
+    def test_chat_has_insufficient_info_short_mode(self):
+        text = (ROOT / "aria/commands/chat.md").read_text(encoding="utf-8").lower()
+        self.assertIn("insufficient", text)
+        self.assertIn("1-3", text)
+
 
 if __name__ == "__main__":
     unittest.main()
