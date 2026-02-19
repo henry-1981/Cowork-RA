@@ -41,11 +41,51 @@ Medical devices are instruments, machines, apparatus, materials, software or sim
 3. Evaluate distinction from pharmaceuticals
 4. Assess mechanism of action (chemical vs non-chemical)
 5. Review local classification nuances
-6. Determine device status: YES (Medical Device / IVD) / NO / CONDITIONAL
+6. **Evaluate 디지털의료제품법 3-tier boundary** (see below)
+7. Determine device status: YES (Medical Device / IVD) / NO / CONDITIONAL
+
+#### 디지털의료제품법 3-Tier Boundary Assessment
+
+**Legal basis**: 디지털의료제품법 (시행 2025.01.24), 디지털의료·건강지원제품 카테고리 (시행 2026.01.24)
+
+```
+Product classification under 디지털의료제품법:
+
+Tier 1: 의료기기 (Medical Device)
+  - Clear medical purpose (진단, 치료, 예방, 모니터링)
+  - Meets 「의료기기법」 definition
+  → Determination: YES → Proceed to Step 2 (4-Gate)
+
+Tier 2: 건강지원제품 (Health Support Product)
+  - Health management purpose but NOT medical device
+  - Manages/tracks health data without medical claims
+  - Does NOT diagnose, treat, or prevent disease
+  - May include: fitness tracking, sleep quality scoring, nutrition management
+  → Determination: CONDITIONAL
+     Uncertainty basis: "Product may qualify as 건강지원제품 under 디지털의료제품법 — separate regulatory pathway from medical device"
+     Resolution: Detailed intended use review by MFDS required
+     If YES (의료기기): Apply 4-Gate → classification → pathway
+     If 건강지원제품: Separate 디지털의료제품법 pathway (not 「의료기기법」)
+
+Tier 3: 비규제 (Non-regulated)
+  - General wellness, lifestyle, entertainment
+  - No health management claims
+  → Determination: NO
+```
+
+**Boundary indicators for Tier 1 vs Tier 2 (의료기기 vs 건강지원제품)**:
+- SpO2/심박/호흡 모니터링 + 이상 감지 알림 → CONDITIONAL (Tier 1/2 경계)
+- 수면 패턴 분석 + 수면 위생 조언만 → Tier 2 (건강지원) or Tier 3 (비규제)
+- 호흡 이상 패턴 + "의사 상담 권유" → CONDITIONAL (likely Tier 1)
+- 생체신호 측정 + 질병 스크리닝/진단 → Tier 1 (의료기기)
+
+**CRITICAL**: When product straddles Tier 1/Tier 2 boundary, determination MUST be CONDITIONAL. Do NOT default to YES (의료기기). The 건강지원제품 category is a legally distinct pathway.
 
 **If Step 1 = NO**: Product is NOT a medical device → STOP (not subject to MFDS regulation)
 
 **If Step 1 = YES**: Proceed to Step 2 for digital medical product assessment
+
+**If Step 1 = CONDITIONAL**: Output CONDITIONAL with 3-tier analysis. Provide both "If 의료기기" and "If 건강지원제품" scenarios with respective classification/pathway.
 
 ---
 
