@@ -35,6 +35,27 @@ Evaluate whether a product qualifies as a medical device under FDA, EU MDR, and 
 
 **Input**: Device description, intended use, product form, primary function
 **Output**: Determination (YES/NO/CONDITIONAL), traffic light (GREEN/YELLOW/RED), applicable regulations
+
+### CONDITIONAL Output Contract
+
+When determination is **CONDITIONAL** for any jurisdiction, the following fields are MANDATORY:
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Uncertainty Basis** | Specific regulatory boundary being straddled | "FDA General Wellness Policy boundary: respiratory monitoring features may exceed wellness scope" |
+| **Resolution Conditions** | What information or decision would resolve to YES or NO | "Intended use claims limited to wellness → NO; Any diagnostic/screening claim → YES" |
+| **If YES Scenario** | Classification and pathway assuming device status | "Class II, De Novo/510(k)" |
+| **If NO Scenario** | Regulatory status assuming non-device | "Not subject to FDA regulation as medical device" |
+
+**CONDITIONAL triggers** (non-exhaustive):
+1. Wellness/medical device boundary (FDA General Wellness Policy, MFDS 건강지원제품)
+2. Borderline products (EU MDR MDCG 2019-11)
+3. Combination products (drug-device, biologic-device) — see Combination Product Detection below
+4. Software boundary (CDS exemption, general purpose computing)
+5. Intended use ambiguity (claims could be interpreted either way)
+
+**CRITICAL**: Do NOT collapse CONDITIONAL to YES or NO. If uncertainty exists, output CONDITIONAL with all mandatory fields. Each jurisdiction is evaluated independently — one jurisdiction may be YES while another is CONDITIONAL.
+
 **Knowledge Base Date**: 2026-01
 
 ---
@@ -88,9 +109,18 @@ If any critical input above is missing or contradictory:
 
 ### Step 2: Apply Multi-Region Criteria
 
-- Evaluate against FDA, EU MDR, and MFDS definitions
-- For each region: determine YES/NO/CONDITIONAL
-- Reference `modules/` for detailed criteria when deep analysis needed
+For each target region (FDA, EU MDR, MFDS):
+
+1. Load the region-specific module (`modules/fda-criteria.md`, `modules/eu-mdr-criteria.md`, `modules/mfds-criteria.md`)
+2. Execute the module's decision tree
+3. At each decision point, evaluate whether the answer is clear (YES/NO) or uncertain (CONDITIONAL)
+4. **CONDITIONAL gate**: If any of the following are true, the determination MUST be CONDITIONAL:
+   - The product straddles a wellness/medical boundary
+   - The intended use could be interpreted as either medical or non-medical
+   - The product is a combination product (drug-device, biologic-device)
+   - Regulatory guidance explicitly identifies the product type as borderline
+   - The product fits a new regulatory category (e.g., MFDS 건강지원제품) that is distinct from both "device" and "non-device"
+5. When CONDITIONAL: populate all CONDITIONAL output contract fields (see above)
 
 ### Step 3: Assign Traffic Light & Escalation
 
@@ -107,6 +137,48 @@ Return the determination result containing:
 - Applicable regulations per region
 - Traffic light assessment
 - Escalation flags if borderline
+
+---
+
+## Combination Product Detection (P5)
+
+### Trigger Conditions
+
+When ANY of the following are detected in the product description:
+- Drug-device combination (drug coating, drug-eluting, drug reservoir)
+- Biologic-device combination (tissue-derived component, cell therapy + device)
+- Device constituent + drug constituent identified separately
+
+### Mandatory Output
+
+Determination MUST be **CONDITIONAL** with additional required fields:
+
+| Field | Description |
+|-------|-------------|
+| **Combination Type** | Drug-device / Biologic-device / Drug-biologic-device |
+| **Device Constituent** | Physical/mechanical component description and function |
+| **Drug/Biologic Constituent** | Pharmacological/biological component and its action |
+| **PMOA (Primary Mode of Action)** | Which constituent provides the primary therapeutic effect |
+| **Lead Center** | CDRH (device PMOA) / CDER (drug PMOA) / CBER (biologic PMOA) |
+| **Consultation** | Which other center(s) must be consulted |
+
+### PMOA Determination Logic
+
+```
+Device PMOA indicators:
+  - Mechanical/physical action is primary therapeutic effect
+  - Drug/biologic action is ancillary (prevents side effects, enhances device function)
+  → Lead: CDRH, Consult: CDER or CBER
+
+Drug PMOA indicators:
+  - Pharmacological action is primary therapeutic effect
+  - Device is delivery mechanism
+  → Lead: CDER, Consult: CDRH
+
+Biologic PMOA indicators:
+  - Biological action is primary therapeutic effect
+  → Lead: CBER, Consult: CDRH
+```
 
 ---
 
