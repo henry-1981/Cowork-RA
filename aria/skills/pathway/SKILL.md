@@ -6,10 +6,10 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   category: "domain"
   status: "active"
-  updated: "2026-02-12"
+  updated: "2026-02-19"
   modularized: "false"
   tags: "pathway, regulatory, FDA, EU-MDR, MFDS, submission, 510(k), PMA, CE-mark"
   knowledge-base-date: "2026-01"
@@ -126,35 +126,43 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
 
 ### MFDS Pathways
 
-#### Grade 1
-- **Product Registration (제품 신고)**
-  - Pathway: Registration with MFDS
-  - Timeline: 1-3 months
-  - Requirements: Product specifications, labeling, manufacturing documentation
-  - Clinical Data: Not required
-  - Traffic Light: GREEN
+#### MFDS Grade→Pathway Mapping (HARDCODED — Override NOT Permitted)
 
-#### Grade 2
-- **Product Approval (제품 허가)**
-  - Pathway: Pre-market approval submission
-  - Timeline: 3-9 months
-  - Requirements: Non-clinical test data, risk analysis, labeling
-  - Clinical Data: Non-clinical testing sufficient for most devices
-  - Traffic Light: GREEN to YELLOW (depending on complexity)
+| Grade | Pathway (Korean) | Pathway (English) | Legal Basis | Timeline | Traffic Light |
+|-------|------------------|--------------------|-------------|----------|---------------|
+| **1등급** | **신고** (제품 신고) | Notification | 「의료기기법」 제12조 | 1-3 months | GREEN |
+| **2등급** | **인증** (제품 인증) | Certification (TPR) | 「의료기기법」 제9조 | 3-9 months | GREEN-YELLOW |
+| **3등급** | **허가** (품목 허가) | Approval (MFDS review) | 「의료기기법」 제6조 | 9-15 months | YELLOW |
+| **4등급** | **허가** (품목 허가 + 임상) | Approval (MFDS review + clinical trial) | 「의료기기법」 제6조 | 12-18+ months | YELLOW |
 
-#### Grade 3
-- **Product Approval with Clinical Data (제품 허가)**
-  - Pathway: Pre-market approval with clinical/non-clinical data
-  - Timeline: 9-15 months
-  - Requirements: Clinical or comprehensive non-clinical data, risk management
-  - Traffic Light: YELLOW (escalate to expert)
+**GROUND TRUTH RULES (absolute, no exceptions)**:
+1. **1등급 = 신고 ONLY** — 1등급 제품은 절대로 인증이나 허가 대상이 아님
+2. **2등급 = 인증 ONLY** — 2등급 제품은 반드시 인증 경로 (「의료기기법」 제9조). 허가(제6조)가 아님
+3. **3-4등급 = 허가 ONLY** — 3등급 이상은 반드시 허가 경로 (「의료기기법」 제6조)
+4. **하향 불가** — 허가 대상 제품을 인증이나 신고로 하향 불가
+5. **상향 불가** — 인증 대상 제품을 불필요하게 허가로 상향 불가
 
-#### Grade 4
-- **Product Approval with Clinical Trial (제품 허가 with 임상시험)**
-  - Pathway: Clinical trial + pre-market approval
-  - Timeline: 12-18+ months
-  - Requirements: IRB-approved clinical trial, comprehensive clinical data
-  - Traffic Light: YELLOW (escalate to expert)
+#### Grade 1 Detail
+- **Pathway**: 신고 (Notification) — 제조/수입 신고
+- Requirements: Product specifications, labeling, manufacturing documentation
+- Clinical Data: Not required
+- MFDS Technical Review: Not required
+
+#### Grade 2 Detail
+- **Pathway**: 인증 (Certification/TPR) — 지정된 인증기관 심사
+- Requirements: Non-clinical test data, risk analysis, labeling, 기술문서
+- Clinical Data: Non-clinical testing sufficient for most devices
+- MFDS Direct Review: Not required (인증기관이 심사)
+
+#### Grade 3 Detail
+- **Pathway**: 허가 (Approval) — MFDS 직접 심사
+- Requirements: Clinical or comprehensive non-clinical data, risk management
+- Clinical Data: Required for most Grade 3 devices
+
+#### Grade 4 Detail
+- **Pathway**: 허가 (Approval) — MFDS 직접 심사 + 임상시험
+- Requirements: IRB-approved clinical trial, comprehensive clinical data
+- Clinical Data: Mandatory clinical trial
 
 ---
 
@@ -186,11 +194,11 @@ If classification data is not provided, return an error indicating classificatio
 - Class IIb -> Notified Body Annex IX/X (YELLOW, 8-14 months)
 - Class III -> Notified Body Annex IX + Clinical Investigation (YELLOW, 12-18+ months)
 
-**MFDS Pathway Selection Logic**:
-- Grade 1 -> Registration (GREEN, 1-3 months)
-- Grade 2 -> Approval (GREEN-YELLOW, 3-9 months)
-- Grade 3 -> Approval with clinical data (YELLOW, 9-15 months)
-- Grade 4 -> Approval with clinical trial (YELLOW, 12-18+ months)
+**MFDS Pathway Selection Logic** (HARDCODED):
+- Grade 1 -> 신고/Notification (GREEN, 1-3 months) — 「의료기기법」 제12조
+- Grade 2 -> 인증/Certification (GREEN-YELLOW, 3-9 months) — 「의료기기법」 제9조
+- Grade 3 -> 허가/Approval (YELLOW, 9-15 months) — 「의료기기법」 제6조
+- Grade 4 -> 허가/Approval + Clinical Trial (YELLOW, 12-18+ months) — 「의료기기법」 제6조
 
 ### Step 3: Multi-Region Comparison
 
