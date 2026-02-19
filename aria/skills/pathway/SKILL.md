@@ -6,10 +6,10 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   category: "domain"
   status: "active"
-  updated: "2026-02-12"
+  updated: "2026-02-19"
   modularized: "false"
   tags: "pathway, regulatory, FDA, EU-MDR, MFDS, submission, 510(k), PMA, CE-mark"
   knowledge-base-date: "2026-01"
