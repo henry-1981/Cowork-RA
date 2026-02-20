@@ -223,6 +223,17 @@ Return the pathway analysis containing:
 - Critical path identification
 - Traffic light assessment
 
+#### Evidence Requirements (per pathway)
+
+Each pathway recommendation MUST include specific regulatory citations:
+
+- **FDA**: Submission type reference (e.g., 21 CFR 807 Subpart E for 510(k)), relevant guidance document(s), DEN/510(k)/PMA precedent (if known)
+  - **CRITICAL**: Do NOT fabricate DEN/510(k)/PMA numbers. These are FDA-assigned identifiers.
+  - If a specific precedent is recalled, prefix with "Believed to be" + recommend verification
+  - If unknown: "Specific precedent number requires FDA database verification"
+- **EU MDR**: Annex reference (IV, IX, X), applicable MDCG guidance (e.g., MDCG 2020-5 for clinical evaluation)
+- **MFDS**: 의료기기법 조항 (제6조 허가/제9조 인증/제12조 신고), 인증기관 요건 (if applicable)
+
 ---
 
 ## Traffic Light Definitions

@@ -87,6 +87,15 @@ Predicate search:
 
 **CRITICAL**: Do NOT default to "no predicate → automatic Class III → PMA." The De Novo pathway exists specifically for novel devices that are NOT high risk. Always evaluate De Novo as the primary option when predicate is absent and risk is low-to-moderate.
 
+### DEN/K/P Number Policy (GROUND TRUTH)
+
+- **DEN numbers** (De Novo), **K numbers** (510(k)), **P numbers** (PMA) are **FDA-assigned** identifiers
+- **NEVER** guess or fabricate these numbers from memory
+- If a specific precedent is recalled, prefix with "Believed to be" + recommend verification
+- If unknown: "Specific precedent number requires FDA database verification"
+- Common error: Citing DEN170073 when the actual number differs — always verify before citing
+- FDA databases (AccessGUDID, 510(k) Premarket Notification Database, De Novo Decision Summaries) are the only authoritative sources
+
 ## Common Boundary Examples
 
 | Product Type | Likely Status | Rationale |

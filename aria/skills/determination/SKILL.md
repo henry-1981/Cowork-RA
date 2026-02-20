@@ -138,6 +138,16 @@ Return the determination result containing:
 - Traffic light assessment
 - Escalation flags if borderline
 
+#### Evidence Requirements (per jurisdiction)
+
+Each determination MUST include specific regulatory citations:
+
+- **FDA**: 21 CFR section (e.g., 21 CFR 201(h)), relevant guidance document(s) (e.g., FDA General Wellness Policy), predicate device (if applicable)
+- **EU MDR**: Article reference (e.g., Article 2(1)), applicable MDCG guidance (e.g., MDCG 2019-11 for borderline products)
+- **MFDS**: 의료기기법 조항 (e.g., 제2조 정의), 품목코드 (Axxxxx.xx if known), 관련 고시/가이드라인 (e.g., 디지털의료제품법 제3조)
+
+**CRITICAL**: Do NOT fabricate regulatory citations. If a specific citation is uncertain, state "requires regulatory database verification."
+
 ---
 
 ## Combination Product Detection (P5)

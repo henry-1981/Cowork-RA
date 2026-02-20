@@ -236,17 +236,88 @@ SaMD function analysis:
 5. Assign EU MDR Class (I, IIa, IIb, or III)
 
 ### Step 4: Apply MFDS Classification Criteria
-1. Assess potential harm level
-2. Evaluate complexity of use
-3. Check for implantable or life-sustaining characteristics
-4. Consider Korean regulatory nuances
-5. Assign MFDS Class (1, 2, 3, or 4)
+
+**Step 4A: Digital Medical Device Check (4-Gate)**
+> Load module: `../determination/modules/mfds-criteria.md` Section "4-Gate Decision Logic"
+
+1. Gate 1: 의료기기 해당 여부 (Step 1에서 이미 확인)
+2. Gate 2: 디지털 기술 적용 여부 (SW, AI, IoT, VR/AR 등)
+3. Gate 3: 핵심 기능 영향 여부
+4. Gate 4: 배제 원칙 확인
+
+- **4-Gate 통과** → Step 4B (Risk Matrix 기반 분류) + 7-digit 코드 생성
+- **Gate 2 EXIT (비디지털)** → Step 4C (전통 품목분류 기반)
+
+**Step 4B: Risk Matrix Classification (디지털 의료기기)**
+> Load module: `../determination/modules/mfds-criteria.md` Section "Risk-Based Classification"
+
+1. Medical Impact 결정 (Primary Intended Use → 매핑 테이블 적용)
+2. Patient Condition 식별 (적응증 → Critical/Serious/Non-Serious)
+3. Risk Matrix 교차 적용 → Base Grade
+4. Malfunction Risk Adjustment → Final Grade
+5. 7-digit 코드 생성 및 Self-Verification
+
+**Step 4C: Traditional Classification (비디지털 의료기기)**
+
+MFDS 품목분류표(「의료기기 품목 및 품목별 등급에 관한 규정」) 기반 등급 결정:
+
+1. 품목코드(Axxxxx.xx) 매핑 가능 시:
+   - 품목분류표의 등급을 **최우선 근거**로 적용
+   - 추론보다 DB 등재 등급을 우선함 (GROUND TRUTH)
+   - 출력: "품목코드 A45020.01 → 1등급 (품목분류표 직접 등재)"
+
+2. 품목코드 불확실 시, 아래 기준으로 판단:
+
+   **1등급 판별 (핵심 기준)**:
+   - 에너지원 없음 (비전원, 수동 작동)
+   - 소프트웨어 없음
+   - 비이식형
+   - 생명유지 기능 없음
+   - 예시: 수동 수술기구(겸자, 가위, 메스, 핀셋), 혀압자, 반창고
+   - **CRITICAL**: 수술 중 사용 = 반드시 2등급 이상이 아님. 수동식 수술 기구는 에너지원/소프트웨어 없으면 1등급 가능
+
+   **2등급 판별 (핵심 기준)**:
+   - 에너지 사용 (전기, 전자, 방사선 등) OR
+   - 체내 일시적 침습 + 능동 기능 OR
+   - 단순 측정/모니터링 기능
+   - 예시: 전동식 수술기구, 초음파기기, MRI, 보청기, 전동 휠체어
+
+   **3등급 판별**: 능동 의료기기 + 중등도~고위험 (예: 인공호흡기, 투석기)
+
+   **4등급 판별**: 이식형 또는 생명유지 장치 (예: 인공심장판막, 스텐트)
+
+#### MFDS 대표 품목코드-등급 참조 (자주 나오는 품목)
+
+| 품목코드 | 품목명 | 등급 | 비고 |
+|----------|--------|------|------|
+| A45020.01 | 의료용 겸자, 수동식 | 1등급 | 비전원 수술기구 |
+| A45010.01 | 의료용 가위 | 1등급 | 비전원 수술기구 |
+| A26010.01 | 혀압자 | 1등급 | 비전원, 비침습 |
+| A09020.02 | 산소포화도측정장치 | 2등급 | 전자 측정기기 |
+| A09030.03 | 심전계 | 2등급 | 전자 측정기기 |
+| A19230.xx | 의료영상분석SW | 3등급 | SaMD |
+| A17010.01 | 뇌영상분석SW | 3등급 | AI SaMD |
+| A04010.02 | 인공호흡기 | 3등급 | 생명유지, 능동 |
+| A11010.01 | 인공심장판막 | 4등급 | 이식형, 생명유지 |
+
+**NOTE**: 이 표는 참조용. 최종 등급은 반드시 MFDS 품목분류표 확인 필요.
+**NOTE**: 품목코드가 확실하지 않은 경우 "MFDS 품목분류표 확인 필요" 명시.
 
 ### Step 5: Generate Classification Matrix
 - Consolidate multi-region classifications
 - Identify classification rationale per region
 - Reference applicable rules and regulations
 - Flag any discrepancies between regions
+
+#### Evidence Requirements (per classification)
+
+Each classification MUST include specific regulatory citations:
+
+- **FDA**: Product code (e.g., QAS), CFR reference (e.g., 21 CFR 892.2050), predicate class basis (if applicable)
+- **EU MDR**: Annex VIII Rule number(s) (e.g., Rule 11), Implementing Rule 3.5 application (if multi-rule)
+- **MFDS**: 품목분류번호 (e.g., A45020.01), 등급 근거 — Risk Matrix 결과 (디지털) 또는 품목분류표 직접 등재 (비디지털)
+
+**CRITICAL**: Do NOT fabricate product codes or CFR references. If uncertain, state "requires regulatory database verification."
 
 ### Step 6: (Optional) Classification Optimization Analysis
 
