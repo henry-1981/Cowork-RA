@@ -87,6 +87,33 @@ Predicate search:
 
 **CRITICAL**: Do NOT default to "no predicate → automatic Class III → PMA." The De Novo pathway exists specifically for novel devices that are NOT high risk. Always evaluate De Novo as the primary option when predicate is absent and risk is low-to-moderate.
 
+### De Novo Trigger Checklist
+
+When evaluating if De Novo is the appropriate pathway, verify ALL of the following:
+- [ ] No substantially equivalent predicate found (510(k) not viable)
+- [ ] Device risk: low-to-moderate (not life-sustaining, not implantable vital organ)
+- [ ] Risk can be mitigated with Special Controls (performance standards, labeling, post-market)
+- [ ] Device type has never been classified (no existing product code for this device type)
+
+→ If ALL checked: **De Novo is PRIMARY pathway** (not PMA)
+→ If risk is HIGH or life-sustaining: **PMA is PRIMARY pathway**
+
+**Special Controls framework** (must be proposed in De Novo submission):
+1. Performance testing standards (bench, animal, clinical)
+2. Labeling requirements (indications, contraindications, warnings)
+3. Post-market surveillance commitments
+4. Design verification and validation requirements
+5. Software validation requirements (if SaMD)
+
+### DEN/K/P Number Policy (GROUND TRUTH)
+
+- **DEN numbers** (De Novo), **K numbers** (510(k)), **P numbers** (PMA) are **FDA-assigned** identifiers
+- **NEVER** guess or fabricate these numbers from memory
+- If a specific precedent is recalled, prefix with "Believed to be" + recommend verification
+- If unknown: "Specific precedent number requires FDA database verification"
+- Common error: Citing DEN170073 when the actual number differs — always verify before citing
+- FDA databases (AccessGUDID, 510(k) Premarket Notification Database, De Novo Decision Summaries) are the only authoritative sources
+
 ## Common Boundary Examples
 
 | Product Type | Likely Status | Rationale |

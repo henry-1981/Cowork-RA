@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   category: "domain"
   status: "active"
   updated: "2026-02-19"
@@ -63,10 +63,20 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
   - Traffic Light: GREEN
 
 - **De Novo Classification Request**
-  - When: No valid predicate exists, low-moderate risk device
-  - Timeline: 6-12 months
-  - Requirements: Special controls, risk mitigation documentation
+  - When: No valid predicate exists AND device is low-moderate risk
+  - Key principle: De Novo creates a NEW classification (Class I or II with Special Controls)
+  - After De Novo grant: the device becomes a predicate for future 510(k) submissions
+  - Timeline: 6-12 months (FDA target: 150 review days)
+  - Requirements:
+    - Risk-benefit analysis (not SE demonstration)
+    - Proposed Special Controls (performance criteria, labeling, post-market)
+    - Non-clinical and/or clinical data supporting safety and effectiveness
+    - Product Code assignment request
+  - Distinguishing from PMA:
+    - De Novo: novel but LOW-MODERATE risk, mitigable with Special Controls
+    - PMA: novel AND HIGH risk (life-sustaining, implantable vital organ, high mortality)
   - Traffic Light: YELLOW (escalate to expert)
+  - NOTE: Specific DEN numbers require FDA database verification. Do NOT fabricate.
 
 #### Class III Devices
 - **PMA (Premarket Approval)**
@@ -222,6 +232,17 @@ Return the pathway analysis containing:
 - Multi-region comparison (if applicable)
 - Critical path identification
 - Traffic light assessment
+
+#### Evidence Requirements (per pathway)
+
+Each pathway recommendation MUST include specific regulatory citations:
+
+- **FDA**: Submission type reference (e.g., 21 CFR 807 Subpart E for 510(k)), relevant guidance document(s), DEN/510(k)/PMA precedent (if known)
+  - **CRITICAL**: Do NOT fabricate DEN/510(k)/PMA numbers. These are FDA-assigned identifiers.
+  - If a specific precedent is recalled, prefix with "Believed to be" + recommend verification
+  - If unknown: "Specific precedent number requires FDA database verification"
+- **EU MDR**: Annex reference (IV, IX, X), applicable MDCG guidance (e.g., MDCG 2020-5 for clinical evaluation)
+- **MFDS**: 의료기기법 조항 (제6조 허가/제9조 인증/제12조 신고), 인증기관 요건 (if applicable)
 
 ---
 

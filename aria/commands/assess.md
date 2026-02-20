@@ -140,25 +140,20 @@ When the product targets 2 or more markets, apply comparison logic inline:
 ## 1. Device Determination
 
 ### Medical Device Status
-| Region | Status | Rationale | Traffic Light |
-|--------|--------|-----------|---------------|
-| FDA | {YES/NO/CONDITIONAL} | {rationale} | {GREEN/YELLOW/RED} |
-| EU MDR | {YES/NO/CONDITIONAL} | {rationale} | {GREEN/YELLOW/RED} |
-| MFDS | {YES/NO/CONDITIONAL} | {rationale} | {GREEN/YELLOW/RED} |
-
-### Applicable Regulations
-- FDA: {applicable sections}
-- EU MDR: {applicable articles}
-- MFDS: {applicable regulations}
+| Region | Status | Rationale | Legal Basis | Traffic Light |
+|--------|--------|-----------|-------------|---------------|
+| FDA | {YES/NO/CONDITIONAL} | {rationale} | {21 CFR section, guidance document} | {GREEN/YELLOW/RED} |
+| EU MDR | {YES/NO/CONDITIONAL} | {rationale} | {Article reference, MDCG guidance} | {GREEN/YELLOW/RED} |
+| MFDS | {YES/NO/CONDITIONAL} | {rationale} | {의료기기법 조항, 품목코드, 관련 고시} | {GREEN/YELLOW/RED} |
 
 ## 2. Classification
 
 ### Multi-Region Classification Matrix
-| Region | Class | Risk Level | Rationale | Traffic Light |
-|--------|-------|------------|-----------|---------------|
-| FDA | {I/II/III} | {Low/Moderate/High} | {rationale} | {GREEN/YELLOW/RED} |
-| EU MDR | {I/IIa/IIb/III} | {Low/Medium-Low/Medium-High/High} | {rationale} | {GREEN/YELLOW/RED} |
-| MFDS | {1/2/3/4} | {risk level} | {rationale} | {GREEN/YELLOW/RED} |
+| Region | Class | Risk Level | Rationale | Legal Basis | Traffic Light |
+|--------|-------|------------|-----------|-------------|---------------|
+| FDA | {I/II/III} | {Low/Moderate/High} | {rationale} | {Product code, 21 CFR 8xx.xxxx, predicate basis} | {GREEN/YELLOW/RED} |
+| EU MDR | {I/IIa/IIb/III} | {Low/Medium-Low/Medium-High/High} | {rationale} | {Annex VIII Rule number(s), Implementing Rule 3.5} | {GREEN/YELLOW/RED} |
+| MFDS | {1/2/3/4} | {risk level} | {rationale} | {품목분류번호, 등급 근거 (Risk Matrix/품목분류표)} | {GREEN/YELLOW/RED} |
 
 ### Key Classification Factors
 - Invasiveness: {level}
@@ -166,14 +161,31 @@ When the product targets 2 or more markets, apply comparison logic inline:
 - Active/Passive: {type}
 - Body System: {system}
 
+### MFDS 4-Gate Analysis (MANDATORY for all MFDS assessments)
+- Gate 1 (의료기기 해당): {PASS/FAIL} — {근거}
+- Gate 2 (디지털 기술): {PASS/EXIT} — {기술 유형 또는 "비디지털 기기"}
+- Gate 3 (핵심 기능 영향): {PASS/FAIL/N/A} — {영향 분석}
+- Gate 4 (배제 원칙): {PASS/EXIT/N/A} — {배제 해당 여부}
+- **Result**: {디지털의료기기 해당 / Gate 2 EXIT (비디지털) / 비해당}
+
+### MFDS Risk Matrix (if 4-Gate PASS)
+- Medical Impact: {level} — 근거: {키워드}
+- Patient Condition: {level} — 근거: {키워드}
+- Risk Matrix: {Medical Impact} × {Patient Condition} = Base Grade {N}등급
+- Malfunction Risk: {사망(+1)/부상(0)/피해없음(-1)} → Final Grade {N}등급
+
+### MFDS 7-Digit Code (if 4-Gate PASS)
+- Code: {XXXXXXX}
+- Breakdown: {digit별 설명}
+
 ## 3. Regulatory Pathways
 
 ### Pathway Recommendations
-| Region | Pathway | Timeline | Key Requirements | Traffic Light |
-|--------|---------|----------|-----------------|---------------|
-| FDA | {pathway} | {timeline} | {requirements} | {GREEN/YELLOW} |
-| EU MDR | {pathway} | {timeline} | {requirements} | {GREEN/YELLOW} |
-| MFDS | {pathway} | {timeline} | {requirements} | {GREEN/YELLOW} |
+| Region | Pathway | Timeline | Key Requirements | Legal Basis | Traffic Light |
+|--------|---------|----------|-----------------|-------------|---------------|
+| FDA | {pathway} | {timeline} | {requirements} | {submission type reference, guidance, DEN/510(k)/PMA precedent} | {GREEN/YELLOW} |
+| EU MDR | {pathway} | {timeline} | {requirements} | {Annex reference (IV, IX, X), MDCG guidance} | {GREEN/YELLOW} |
+| MFDS | {pathway} | {timeline} | {requirements} | {의료기기법 조항 (제6조/제9조/제12조)} | {GREEN/YELLOW} |
 
 ### Critical Path
 - Region: {region with longest timeline}
