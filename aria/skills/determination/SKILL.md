@@ -192,6 +192,37 @@ Biologic PMOA indicators:
 
 ---
 
+## Annex XVI Detection (Non-Medical Purpose Devices)
+
+### Trigger Conditions
+
+When ANY of the following are detected in the product description:
+- Device without intended medical purpose (cosmetic, aesthetic, wellness with no medical claim)
+- Product listed in Annex XVI categories: contact lenses (non-corrective), laser equipment (skin treatment), dermal fillers, liposuction/lipoplasty/lipectomy equipment, intense pulsed light equipment, brain stimulation equipment
+
+### Mandatory Output
+
+When Annex XVI device detected, EU MDR determination MUST include:
+
+```
+### EU MDR Determination — Annex XVI (Non-Medical Purpose)
+- **MDR Article 2(1) Medical Device?**: NO — [reason: no intended medical purpose]
+- **MDR Annex XVI Listed?**: YES — [specific Annex XVI category]
+- **Result**: CONDITIONAL — Device falls under MDR scope via Annex XVI, not Article 2(1)
+- **Common Specifications**: Implementing Regulation (EU) 2022/2346 (IR 2022/2346)
+- **MDCG Guidance**: MDCG 2023-5 (Annex XVI application guidance)
+- **Classification**: Apply MDR Annex VIII rules as if medical device → [resulting Class]
+```
+
+### Key Principle
+
+Annex XVI devices require **dual determination**:
+1. Article 2(1) assessment → typically NO (no medical purpose)
+2. Annex XVI assessment → YES (listed non-medical purpose device)
+3. Result: Device IS within MDR scope despite not being a "medical device" per Article 2(1)
+
+---
+
 ## Data Source Strategy
 
 1. **Built-in Knowledge** (Primary): Embedded decision frameworks from FDA, EU MDR, MFDS regulations
