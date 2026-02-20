@@ -161,11 +161,22 @@ When the product targets 2 or more markets, apply comparison logic inline:
 - Active/Passive: {type}
 - Body System: {system}
 
-### MFDS Digital Medical Device Assessment (if applicable)
-- 4-Gate Result: {통과/EXIT at Gate X}
-- 7-Digit Code: {코드} (if applicable)
-- Risk Matrix: Medical Impact {level} × Patient Condition {level} = Base Grade {N}
-- Malfunction Adjustment: {+1/0/-1} → Final Grade {N}
+### MFDS 4-Gate Analysis (MANDATORY for all MFDS assessments)
+- Gate 1 (의료기기 해당): {PASS/FAIL} — {근거}
+- Gate 2 (디지털 기술): {PASS/EXIT} — {기술 유형 또는 "비디지털 기기"}
+- Gate 3 (핵심 기능 영향): {PASS/FAIL/N/A} — {영향 분석}
+- Gate 4 (배제 원칙): {PASS/EXIT/N/A} — {배제 해당 여부}
+- **Result**: {디지털의료기기 해당 / Gate 2 EXIT (비디지털) / 비해당}
+
+### MFDS Risk Matrix (if 4-Gate PASS)
+- Medical Impact: {level} — 근거: {키워드}
+- Patient Condition: {level} — 근거: {키워드}
+- Risk Matrix: {Medical Impact} × {Patient Condition} = Base Grade {N}등급
+- Malfunction Risk: {사망(+1)/부상(0)/피해없음(-1)} → Final Grade {N}등급
+
+### MFDS 7-Digit Code (if 4-Gate PASS)
+- Code: {XXXXXXX}
+- Breakdown: {digit별 설명}
 
 ## 3. Regulatory Pathways
 

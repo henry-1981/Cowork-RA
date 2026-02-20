@@ -240,10 +240,22 @@ SaMD function analysis:
 **Step 4A: Digital Medical Device Check (4-Gate)**
 > Load module: `../determination/modules/mfds-criteria.md` Section "4-Gate Decision Logic"
 
+Execute each gate and **MANDATORY: output the result of each gate explicitly**:
+
 1. Gate 1: 의료기기 해당 여부 (Step 1에서 이미 확인)
 2. Gate 2: 디지털 기술 적용 여부 (SW, AI, IoT, VR/AR 등)
 3. Gate 3: 핵심 기능 영향 여부
 4. Gate 4: 배제 원칙 확인
+
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### MFDS 4-Gate Analysis
+- Gate 1 (의료기기 해당): [PASS/FAIL] — [근거]
+- Gate 2 (디지털 기술): [PASS/EXIT] — [기술 유형 또는 "비디지털 기기"]
+- Gate 3 (핵심 기능 영향): [PASS/FAIL] — [영향 분석] (Gate 2 EXIT 시 N/A)
+- Gate 4 (배제 원칙): [PASS/EXIT] — [배제 해당 여부] (Gate 2 EXIT 시 N/A)
+- **Result**: [디지털의료기기 해당 / Gate 2 EXIT (비디지털) / 비해당]
+```
 
 - **4-Gate 통과** → Step 4B (Risk Matrix 기반 분류) + 7-digit 코드 생성
 - **Gate 2 EXIT (비디지털)** → Step 4C (전통 품목분류 기반)
@@ -257,7 +269,33 @@ SaMD function analysis:
 4. Malfunction Risk Adjustment → Final Grade
 5. 7-digit 코드 생성 및 Self-Verification
 
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### MFDS Risk Matrix Classification
+- Medical Impact: [Treatment/Diagnosis | Clinical Management | Information/Monitoring] — 근거: [Primary Intended Use 코드 + 키워드]
+- Patient Condition: [Critical | Serious | Non-Serious] — 근거: [적응증 키워드]
+- Risk Matrix: Medical Impact [level] × Patient Condition [level] = **Base Grade [N]등급**
+- Malfunction Risk: [사망(+1) | 부상(0) | 피해없음(-1)] → **Final Grade [N]등급**
+
+### MFDS 7-Digit Product Code
+- Code: [XXXXXXX]
+- Digit 1-2 (사용목적): [코드] = [설명]
+- Digit 3-5 (기술유형): [코드] = [설명]
+- Digit 6 (기기유형): [코드] = [설명]
+- Digit 7 (형태): [코드] = [설명]
+```
+
 **Step 4C: Traditional Classification (비디지털 의료기기)**
+
+**MANDATORY: Gate 2 EXIT를 명시적으로 출력한 후 전통 분류 진행:**
+```
+### MFDS 4-Gate Analysis
+- Gate 1 (의료기기 해당): PASS — [근거]
+- Gate 2 (디지털 기술): **EXIT — 비디지털 기기** (SW/AI/IoT/VR 미적용)
+- Gate 3: N/A (Gate 2 EXIT)
+- Gate 4: N/A (Gate 2 EXIT)
+- **Result**: Gate 2 EXIT → 전통 품목분류 기반 등급 결정
+```
 
 MFDS 품목분류표(「의료기기 품목 및 품목별 등급에 관한 규정」) 기반 등급 결정:
 

@@ -63,10 +63,20 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
   - Traffic Light: GREEN
 
 - **De Novo Classification Request**
-  - When: No valid predicate exists, low-moderate risk device
-  - Timeline: 6-12 months
-  - Requirements: Special controls, risk mitigation documentation
+  - When: No valid predicate exists AND device is low-moderate risk
+  - Key principle: De Novo creates a NEW classification (Class I or II with Special Controls)
+  - After De Novo grant: the device becomes a predicate for future 510(k) submissions
+  - Timeline: 6-12 months (FDA target: 150 review days)
+  - Requirements:
+    - Risk-benefit analysis (not SE demonstration)
+    - Proposed Special Controls (performance criteria, labeling, post-market)
+    - Non-clinical and/or clinical data supporting safety and effectiveness
+    - Product Code assignment request
+  - Distinguishing from PMA:
+    - De Novo: novel but LOW-MODERATE risk, mitigable with Special Controls
+    - PMA: novel AND HIGH risk (life-sustaining, implantable vital organ, high mortality)
   - Traffic Light: YELLOW (escalate to expert)
+  - NOTE: Specific DEN numbers require FDA database verification. Do NOT fabricate.
 
 #### Class III Devices
 - **PMA (Premarket Approval)**
