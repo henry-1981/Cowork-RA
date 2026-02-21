@@ -108,6 +108,9 @@ Execute each gate and output the result explicitly:
 
 ## Analysis Workflow
 
+### Step 0 (pre-analysis)
+Read("references/evidence-catalog.md") to load jurisdiction-specific evidence keywords.
+
 ### Step 1: Use Provided Device Information
 
 Use the device information provided as input. Required fields:
