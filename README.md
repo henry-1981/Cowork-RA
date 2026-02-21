@@ -37,6 +37,20 @@ flowchart LR
     C --> D["/aria:report<br/>의사결정용 브리핑"]
 ```
 
+## 스킬 기반 실무 지원
+
+ARIA는 명령어만 실행하는 도구가 아니라, RA 핵심 업무를 스킬 단위로 처리하도록 설계되어 있습니다.
+
+| 스킬 | 실무에서 다루는 일 | 실무 가치 |
+|------|--------------------|----------|
+| `determination` | 의료기기 해당 여부 판단 | 초기 Go/No-Go 판단 속도 향상 |
+| `classification` | FDA/EU/MFDS 등급 분류 | 시장별 규제 전략 정합성 확보 |
+| `pathway` | 제출/인허가 경로 비교 | 경로 선택 리스크를 조기에 식별 |
+| `estimation` | 비용/일정 3점 추정 | 예산·일정 의사결정 근거 확보 |
+| `planning` | 마일스톤/의존성 계획 | 실행 가능한 규제 로드맵 정리 |
+| `compliance` | **의료기기 공정경쟁규약** 기반 활동 검토 (샘플, 기증, 학술대회, 강연 등) | RA의 핵심 컴플라이언스 업무를 대화형으로 점검 |
+| `humanized-writing` | AI 초안을 사람 중심 문체로 정리 | AI스러운 출력물 보정 부담 감소, 공유 가능한 문안 품질 강화 |
+
 ## Quick Start
 
 | 명령어 | 용도 | 예시 |
@@ -62,6 +76,7 @@ flowchart LR
 ## 문서 링크
 
 - ARIA 파워 유저 가이드: [`aria/README.md`](./aria/README.md)
+- 스킬 상세(공정경쟁규약/문안 개선 포함): [`aria/README.md#skill-deep-dive`](./aria/README.md#skill-deep-dive)
 - 명령 상세 스펙:
   - [`aria/commands/chat.md`](./aria/commands/chat.md)
   - [`aria/commands/assess.md`](./aria/commands/assess.md)

@@ -39,6 +39,20 @@ flowchart LR
     C --> D["/aria:report<br/>Build decision-ready briefing"]
 ```
 
+## Skill-Driven RA Support
+
+ARIA is designed around practical RA skills, not just command wrappers.
+
+| Skill | What it handles in practice | Practical value |
+|------|------------------------------|-----------------|
+| `determination` | Medical device determination | Faster early Go/No-Go decisions |
+| `classification` | FDA/EU/MFDS risk class mapping | Better market-by-market strategy alignment |
+| `pathway` | Submission/pathway comparison | Earlier visibility into pathway tradeoffs |
+| `estimation` | Three-point cost/timeline estimates | Stronger planning assumptions |
+| `planning` | Milestones and dependency planning | Clear execution roadmap |
+| `compliance` | **Medical Device Fair Competition Code** checks (samples, sponsorship, lectures, congress support, etc.) | Covers a core RA compliance workflow in conversational form |
+| `humanized-writing` | Refines AI-first drafts into human-ready business writing | Reduces "AI-sounding" output cleanup effort |
+
 ## Quick Start
 
 | Command | Purpose | Example |
@@ -64,6 +78,7 @@ Recommended flow:
 ## Documentation Links
 
 - ARIA power-user guide: [`aria/README.md`](./aria/README.md)
+- Skill deep dive (including compliance and writing quality): [`aria/README.md#skill-deep-dive`](./aria/README.md#skill-deep-dive)
 - Command specs:
   - [`aria/commands/chat.md`](./aria/commands/chat.md)
   - [`aria/commands/assess.md`](./aria/commands/assess.md)
