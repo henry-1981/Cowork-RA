@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   category: "domain"
   status: "active"
   updated: "2026-02-12"
@@ -253,6 +253,18 @@ Return the estimation result containing:
 - Multi-region cost-saving opportunities
 - Critical path identification
 - Traffic light assessment
+
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### Confidence & Escalation
+- **Confidence Score**: [0-100]% — [basis: e.g., "well-established pathway with industry cost data"]
+- **Escalation Level**: [1-4]
+  - 1 = Automated processing sufficient
+  - 2 = Brief expert review recommended
+  - 3 = Expert review required (high cost variance or clinical trial)
+  - 4 = Regulatory authority consultation required
+- **Next Action**: [recommended next step]
+```
 
 ---
 
