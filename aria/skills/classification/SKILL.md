@@ -266,6 +266,9 @@ SaMD function analysis:
 
 ## Analysis Workflow
 
+### Step 0 (pre-analysis)
+Read("references/evidence-catalog.md") to load product codes, CFR references, and classification rules.
+
 ### Step 1: Extract Device Characteristics
 - Device type and intended use
 - Invasiveness level (non-invasive, invasive, implantable)
