@@ -16,9 +16,3 @@
 - base knowledge로만 규제 질문에 답하지 않는다
 - 각 스킬의 MANDATORY OUTPUT FORMAT 블록을 반드시 출력에 포함한다
 - 정보 부족 시 스킬이 정의한 insufficiency 절차를 따른다
-
-## 근거 제시 규칙
-- 규제 평가 시 `aria/knowledge/precedent-db.md`의 해당 카테고리 코드를 인용
-- ✅ 검증완료 코드: 직접 인용 가능
-- ⚠️ 고신뢰 추정 코드: "~로 추정됨" 접두어 사용
-- 매칭 불가 시: "규제 당국 데이터베이스 검증 필요" 명시
