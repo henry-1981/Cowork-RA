@@ -218,6 +218,7 @@ dist-ssr/
 tests/
 docs/
 scripts/spec/
+scripts/verification/
 aria.local.md
 aria/.mcp.json
 
