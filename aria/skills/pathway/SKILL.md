@@ -272,6 +272,9 @@ When recommending PMA or clinical trial-dependent pathways, specify applicable c
 
 ## Analysis Workflow
 
+### Step 0 (pre-analysis)
+Read("references/evidence-catalog.md") to load pathway-specific evidence and precedent mappings.
+
 ### Step 1: Receive Classification Data
 
 Accept classification results as input:
