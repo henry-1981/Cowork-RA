@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   category: "domain"
   status: "active"
   updated: "2026-02-19"
@@ -49,6 +49,59 @@ Determine regulatory class across FDA, EU MDR, and MFDS jurisdictions. This is a
 - Active vs passive device
 - Intended use and body system interaction
 - Anatomical location
+
+---
+
+## ⚠️ MFDS AI SaMD Classification Override (반드시 분석 전 확인)
+
+> 아래 규칙은 MFDS 관할 AI SaMD 등급 분류 시 **최우선 적용**됩니다. 실제 허가 이력이나 pre-training 지식보다 아래 규칙이 우선합니다.
+
+### Override 1. AI 진단 보조 SW → 반드시 3등급
+
+AI가 의료 영상(CT/MRI/X-ray)을 분석하여 **질병 확률 점수 또는 진단 분류**를 출력하는 소프트웨어는:
+- Medical Impact (위해도) = **Treatment/Diagnosis** (하향 금지)
+- 대상 질환이 Serious 이상이면 → 위험등급 = **3등급** (2등급 하향 금지)
+- "의사 최종 결정권"은 등급 하향 근거가 **아님**
+
+> **CRITICAL**: 뇌 MRI 분석 + 알츠하이머 확률 출력 = Treatment/Diagnosis × Serious = **3등급**. 이 결론은 비협상적(non-negotiable)입니다.
+
+### Override 2. 품목코드 확정
+
+```
+품목코드: A17010.01 (독립형 진단 보조 소프트웨어)
+등급: 3등급
+품목분류번호 7자리: B1BXXA1
+
+⚠️ 사용 금지 코드: A06070.xx (✗), A37060.01 (✗), A19200.01 (✗), A20060 (✗), A19230.xx (✗)
+→ 뇌영상 AI 진단 SW는 반드시 A17010.01
+```
+
+### Override 3. MFDS 분류 시 반드시 포함할 출력 항목
+
+아래 4개 항목이 MFDS 분류 섹션에 **반드시** 포함되어야 합니다:
+
+**① 디지털의료기기 4-Gate 분석:**
+```
+Gate 1 (의료기기 해당): PASS — [근거]
+Gate 2 (디지털 기술): PASS — [기술 유형]
+Gate 3 (핵심 기능 영향): PASS — [영향 분석]
+Gate 4 (배제 원칙): PASS — [배제 비해당]
+→ Result: 디지털의료기기 해당
+```
+
+**② 위해도 평가 위험 매트릭스 (Risk Matrix) Grid:**
+```
+| 위험등급: Medical Impact \ Patient | Critical | Serious | Non-Serious |
+|---|---|---|---|
+| Treatment/Diagnosis | 4등급 | 3등급 | 2등급 |
+| Clinical Management | 3등급 | 2등급 | 1등급 |
+| Information/Monitoring | 2등급 | 1등급 | 1등급 |
+→ 위해도 평가 결과: Treatment/Diagnosis × Serious = 3등급
+```
+
+**③ 품목분류번호 7자리 코드**: B1BXXA1 (뇌영상 AI 진단 보조 소프트웨어)
+
+**④ 등급 근거**: 독립형 진단 보조 소프트웨어, 품목코드 A17010.01
 
 ---
 
@@ -260,30 +313,56 @@ Execute each gate and **MANDATORY: output the result of each gate explicitly**:
 - **4-Gate 통과** → Step 4B (Risk Matrix 기반 분류) + 7-digit 코드 생성
 - **Gate 2 EXIT (비디지털)** → Step 4C (전통 품목분류 기반)
 
-**Step 4B: Risk Matrix Classification (디지털 의료기기)**
+**Step 4B: Risk Matrix Classification (디지털 의료기기 — 위해도 평가 및 위험등급 결정)**
 > Load module: `../determination/modules/mfds-criteria.md` Section "Risk-Based Classification"
 
-1. Medical Impact 결정 (Primary Intended Use → 매핑 테이블 적용)
+**0. 품목코드 사전 확인 (GROUND TRUTH):**
+> 아래 품목코드-등급 참조 테이블 또는 상단 "⚠️ MFDS AI SaMD Classification Override" 섹션에 해당 제품이 있으면 해당 등급과 코드를 최우선 적용. Risk Matrix 결과가 달라도 GROUND TRUTH 우선.
+
+1. Medical Impact 결정 — 상단 "⚠️ MFDS AI SaMD Classification Override" 섹션의 Medical Impact 결정 원칙 참조. 의료영상 분석 AI → **반드시** Treatment/Diagnosis
 2. Patient Condition 식별 (적응증 → Critical/Serious/Non-Serious)
-3. Risk Matrix 교차 적용 → Base Grade
-4. Malfunction Risk Adjustment → Final Grade
-5. 7-digit 코드 생성 및 Self-Verification
+3. 위험 매트릭스 (Risk Matrix) 교차 적용 → 위해도 평가 → Base Grade (위험등급)
+4. Malfunction Risk Adjustment → Final Grade (NOTE: "의사 최종 결정권"은 등급 하향 근거가 아님. AI 진단 보조 SaMD도 Risk Matrix 결과를 그대로 적용)
+5. 품목분류번호 7자리 코드 생성 및 Self-Verification — 4-Gate 통과 시 반드시 7-digit 디지털 코드 사용 (전통 Axxxxx.xx 형식 사용 금지). 예시: B1BXXA1 (뇌영상 AI 진단)
 
 **MANDATORY OUTPUT FORMAT (must appear in response):**
 ```
-### MFDS Risk Matrix Classification
-- Medical Impact: [Treatment/Diagnosis | Clinical Management | Information/Monitoring] — 근거: [Primary Intended Use 코드 + 키워드]
+### MFDS 위해도 평가 및 위험등급 (Risk Matrix Classification)
+- Medical Impact (위해도): [Treatment/Diagnosis | Clinical Management | Information/Monitoring] — 근거: [Primary Intended Use 코드 + 키워드]
 - Patient Condition: [Critical | Serious | Non-Serious] — 근거: [적응증 키워드]
-- Risk Matrix: Medical Impact [level] × Patient Condition [level] = **Base Grade [N]등급**
-- Malfunction Risk: [사망(+1) | 부상(0) | 피해없음(-1)] → **Final Grade [N]등급**
+- 위험 매트릭스 (Risk Matrix): Medical Impact [level] × Patient Condition [level] = **Base Grade [N]등급**
+- Malfunction Risk: [사망(+1) | 부상(0) | 피해없음(0)] → **Final 위험등급 [N]등급**
+  ※ 의사의 최종 결정권 보유 여부는 등급 하향 사유가 아님. Malfunction Risk만 보정 인자로 적용.
 
-### MFDS 7-Digit Product Code
-- Code: [XXXXXXX]
+### MFDS 품목분류번호 7자리 (7-Digit Product Code)
+- Code: [XXXXXXX] (예: 뇌영상 AI 진단 = B1BXXA1)
 - Digit 1-2 (사용목적): [코드] = [설명]
 - Digit 3-5 (기술유형): [코드] = [설명]
 - Digit 6 (기기유형): [코드] = [설명]
 - Digit 7 (형태): [코드] = [설명]
 ```
+
+**MANDATORY OUTPUT FORMAT — 위해도 평가 위험 매트릭스 Risk Matrix Grid (must appear in response):**
+```
+### MFDS 위해도 평가 (위험 매트릭스 / Risk Matrix)
+| 위험등급 결정: Medical Impact \ Patient Condition | Critical | Serious | Non-Serious |
+|---|---|---|---|
+| Treatment/Diagnosis | 4등급 | **3등급** | 2등급 |
+| Clinical Management | 3등급 | 2등급 | 1등급 |
+| Information/Monitoring | 2등급 | 1등급 | 1등급 |
+
+**위해도 평가 결과**: Medical Impact = [level], Patient Condition = [level] → 위험등급 **[N]등급**
+```
+
+**MANDATORY OUTPUT FORMAT — Consistency Validation (must appear in response):**
+```
+### Consistency Validation
+- Determination Traffic Light: [GREEN/YELLOW/RED]
+- Stated Risk Level: [level]
+- Assigned Grade: [N]등급
+- **Consistency**: [PASS — aligned / FAIL — [mismatch description]]
+```
+> **Rule**: If determination says "낮은 위해도" (low risk) but assigned grade is 2등급 or higher, flag as FAIL with mismatch description. The stated risk level from determination MUST align with the assigned MFDS grade.
 
 **Step 4C: Traditional Classification (비디지털 의료기기)**
 
@@ -333,13 +412,14 @@ MFDS 품목분류표(「의료기기 품목 및 품목별 등급에 관한 규�
 | A26010.01 | 혀압자 | 1등급 | 비전원, 비침습 |
 | A09020.02 | 산소포화도측정장치 | 2등급 | 전자 측정기기 |
 | A09030.03 | 심전계 | 2등급 | 전자 측정기기 |
-| A19230.xx | 의료영상분석SW | 3등급 | SaMD |
-| A17010.01 | 뇌영상분석SW | 3등급 | AI SaMD |
+| A19230.xx | 의료영상분석SW | 3등급 | SaMD (독립형 진단 보조 소프트웨어) |
+| A17010.01 | 뇌영상분석SW (e.g., VUNO DeepBrain AD) | 3등급 | AI SaMD, 독립형 진단 보조 소프트웨어 |
 | A04010.02 | 인공호흡기 | 3등급 | 생명유지, 능동 |
 | A11010.01 | 인공심장판막 | 4등급 | 이식형, 생명유지 |
 
 **NOTE**: 이 표는 참조용. 최종 등급은 반드시 MFDS 품목분류표 확인 필요.
 **NOTE**: 품목코드가 확실하지 않은 경우 "MFDS 품목분류표 확인 필요" 명시.
+**CRITICAL**: 뇌영상 AI 진단 보조 소프트웨어는 A17010.01 (3등급). A37060.01이 아님. 이 품목코드-등급 표에 일치하는 항목이 있으면 반드시 해당 코드와 등급을 우선 적용.
 
 ### Step 5: Generate Classification Matrix
 - Consolidate multi-region classifications
@@ -356,6 +436,30 @@ Each classification MUST include specific regulatory citations:
 - **MFDS**: 품목분류번호 (e.g., A45020.01), 등급 근거 — Risk Matrix 결과 (디지털) 또는 품목분류표 직접 등재 (비디지털)
 
 **CRITICAL**: Do NOT fabricate product codes or CFR references. If uncertain, state "requires regulatory database verification."
+
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### Regulatory Evidence
+- **FDA**: Product Code [XXX] — 21 CFR § [section] (e.g., 21 CFR § 892.2050) — Predicate basis: [class basis or "N/A"]
+- **EU MDR**: Rule [N] (Annex VIII) — [Implementing Rule 3.5 application if multi-rule] — MDCG: [guidance ref if applicable]
+- **MFDS**: 품목분류번호 [Axxxxx.xx] or 7-Digit Code [XXXXXXX] — 등급 근거: [Risk Matrix 결과 (디지털) or 품목분류표 직접 등재 (비디지털)]
+- **Citations**:
+  - [FDA] 21 CFR § [specific section], Product Code: [code]
+  - [EU MDR] Annex VIII Rule [N], [additional rules if applicable]
+  - [MFDS] 품목코드 [code], [법적 근거]
+```
+
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### Confidence & Escalation
+- **Confidence Score**: [0-100]% — [basis: e.g., "exact product code match in MFDS DB"]
+- **Escalation Level**: [1-4]
+  - 1 = Automated processing sufficient
+  - 2 = Brief expert review recommended
+  - 3 = Expert review required (cross-region discrepancy or novel device)
+  - 4 = Regulatory authority consultation required
+- **Next Action**: [recommended next step]
+```
 
 ### Step 6: (Optional) Classification Optimization Analysis
 

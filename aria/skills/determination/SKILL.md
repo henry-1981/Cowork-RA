@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
   category: "domain"
   status: "active"
   updated: "2026-02-19"
@@ -80,6 +80,30 @@ Core question: Is the product used for disease diagnosis/treatment/prevention or
 
 > Detail: See `modules/mfds-criteria.md`
 
+#### MFDS 4-Gate Analysis (Mandatory for Digital Products)
+
+When the product involves digital technology (SW, AI, IoT, VR/AR, intelligent robot, HPC), the 4-Gate analysis from `modules/mfds-criteria.md` Section "4-Gate Decision Logic" MUST be executed during determination and its result shown in the output.
+
+Execute each gate and output the result explicitly:
+1. Gate 1: 의료기기 해당 여부 (Step 1 결과 반영)
+2. Gate 2: 디지털 기술 적용 여부 (SW, AI, IoT, VR/AR 등)
+3. Gate 3: 핵심 기능 영향 여부
+4. Gate 4: 배제 원칙 확인
+
+**MANDATORY OUTPUT FORMAT (must appear in response when digital technology is involved):**
+```
+### MFDS 4-Gate Analysis
+- Gate 1 (의료기기 해당): [PASS/FAIL] — [근거]
+- Gate 2 (디지털 기술): [PASS/EXIT] — [기술 유형 또는 "비디지털 기기"]
+- Gate 3 (핵심 기능 영향): [PASS/FAIL] — [영향 분석] (Gate 2 EXIT 시 N/A)
+- Gate 4 (배제 원칙): [PASS/EXIT] — [배제 해당 여부] (Gate 2 EXIT 시 N/A)
+- **Result**: [디지털의료기기 해당 / Gate 2 EXIT (비디지털) / 비해당]
+```
+
+- **4-Gate 통과 (디지털의료기기)**: Include in determination output, classification will use for risk grading
+- **Gate 2 EXIT (비디지털)**: State explicitly — device is medical device but not digital medical device
+- **Gate 1 FAIL**: Device is not a medical device → determination NO
+
 ---
 
 ## Analysis Workflow
@@ -148,6 +172,30 @@ Each determination MUST include specific regulatory citations:
 
 **CRITICAL**: Do NOT fabricate regulatory citations. If a specific citation is uncertain, state "requires regulatory database verification."
 
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### Regulatory Evidence
+- **FDA Legal Basis**: 21 CFR [section] (e.g., 21 CFR 201(h)) — Guidance: [document name if applicable]
+- **EU MDR Legal Basis**: [Article reference] (e.g., Article 2(1)) — MDCG: [guidance number if applicable]
+- **MFDS Legal Basis**: [법률 조항] (e.g., 「의료기기법」 제2조) — 고시/가이드라인: [명칭 if applicable]
+- **Citations**:
+  - [FDA] 21 CFR § [specific section]
+  - [EU MDR] Article/Annex [reference]
+  - [MFDS] [법률/고시 reference]
+```
+
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### Confidence & Escalation
+- **Confidence Score**: [0-100]% — [basis: e.g., "clear medical purpose, well-established device category"]
+- **Escalation Level**: [1-4]
+  - 1 = Automated processing sufficient
+  - 2 = Brief expert review recommended
+  - 3 = Expert review required (borderline/CONDITIONAL)
+  - 4 = Regulatory authority consultation required
+- **Next Action**: [recommended next step]
+```
+
 ---
 
 ## Combination Product Detection (P5)
@@ -206,12 +254,14 @@ When Annex XVI device detected, EU MDR determination MUST include:
 
 ```
 ### EU MDR Determination — Annex XVI (Non-Medical Purpose)
+- **Determination**: SPECIAL — IN SCOPE via Annex XVI (not a medical device per Article 2(1), but regulated under MDR)
 - **MDR Article 2(1) Medical Device?**: NO — [reason: no intended medical purpose]
 - **MDR Annex XVI Listed?**: YES — [specific Annex XVI category]
-- **Result**: CONDITIONAL — Device falls under MDR scope via Annex XVI, not Article 2(1)
+- **Result**: IN SCOPE (SPECIAL) — Device falls under MDR scope via Annex XVI, not Article 2(1)
 - **Common Specifications**: Implementing Regulation (EU) 2022/2346 (IR 2022/2346)
 - **MDCG Guidance**: MDCG 2023-5 (Annex XVI application guidance)
 - **Classification**: Apply MDR Annex VIII rules as if medical device → [resulting Class]
+- **Conformity Assessment**: Notified Body involvement mandatory per Article 52
 ```
 
 ### Key Principle
@@ -219,7 +269,7 @@ When Annex XVI device detected, EU MDR determination MUST include:
 Annex XVI devices require **dual determination**:
 1. Article 2(1) assessment → typically NO (no medical purpose)
 2. Annex XVI assessment → YES (listed non-medical purpose device)
-3. Result: Device IS within MDR scope despite not being a "medical device" per Article 2(1)
+3. Result: Device IS within MDR scope despite not being a "medical device" per Article 2(1) → use **SPECIAL** or **IN SCOPE** determination status (NOT "YES")
 
 ---
 

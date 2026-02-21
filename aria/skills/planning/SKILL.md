@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   category: "domain"
   status: "active"
   updated: "2026-02-12"
@@ -200,6 +200,18 @@ Return the project plan containing:
 - Key milestones with estimated dates
 - Risk factors and mitigation strategies
 - Traffic light assessment
+
+**MANDATORY OUTPUT FORMAT (must appear in response):**
+```
+### Confidence & Escalation
+- **Confidence Score**: [0-100]% — [basis: e.g., "standard pathway with known milestones"]
+- **Escalation Level**: [1-4]
+  - 1 = Automated processing sufficient
+  - 2 = Brief expert review recommended
+  - 3 = Expert review required (complex multi-region or clinical trial planning)
+  - 4 = Regulatory authority consultation required
+- **Next Action**: [recommended next step]
+```
 
 ---
 
