@@ -7,9 +7,10 @@ description: >
 allowed-tools: Skill Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   category: "meta"
   status: "active"
+  updated: "2026-02-22"
 ---
 
 <EXTREMELY-IMPORTANT>
