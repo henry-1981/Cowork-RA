@@ -7,10 +7,10 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
   category: "domain"
   status: "active"
-  updated: "2026-02-19"
+  updated: "2026-02-22"
   tags: "medical-device, classification, FDA, EU-MDR, MFDS, regulatory"
   knowledge-base-date: "2026-01"
 
@@ -265,6 +265,9 @@ SaMD function analysis:
 ---
 
 ## Analysis Workflow
+
+### Step 0 (pre-analysis)
+Read("references/evidence-catalog.md") to load product codes, CFR references, and classification rules.
 
 ### Step 1: Extract Device Characteristics
 - Device type and intended use

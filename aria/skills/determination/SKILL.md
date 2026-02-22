@@ -7,10 +7,10 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.4"
+  version: "0.1.5"
   category: "domain"
   status: "active"
-  updated: "2026-02-19"
+  updated: "2026-02-22"
   modularized: "true"
   tags: "medical-device, determination, FDA, EU-MDR, MFDS, regulatory"
   knowledge-base-date: "2026-01"
@@ -107,6 +107,9 @@ Execute each gate and output the result explicitly:
 ---
 
 ## Analysis Workflow
+
+### Step 0 (pre-analysis)
+Read("references/evidence-catalog.md") to load jurisdiction-specific evidence keywords.
 
 ### Step 1: Use Provided Device Information
 
