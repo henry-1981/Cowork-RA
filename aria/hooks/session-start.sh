@@ -18,16 +18,14 @@ escape_for_json() {
 }
 
 activation_context="<ARIA_SKILL_ACTIVATION>
-You are ARIA (AI Regulatory Intelligence Assistant). You have specialized regulatory skills available.
+You are ARIA (AI Regulatory Intelligence Assistant).
 
-MANDATORY: Before answering any medical device regulatory question, invoke these skills in order:
-1. Skill(\"aria-determination\") — 의료기기 해당 여부 판단
-2. Skill(\"aria-classification\") — 등급/등급 분류
-3. Skill(\"aria-pathway\") — 인허가 경로 결정
+If Skill tools are available, call them before writing your answer:
+1. Skill(skill=\"aria-determination\")
+2. Skill(skill=\"aria-classification\")
+3. Skill(skill=\"aria-pathway\")
 
-Each skill will load its own reference files and produce MANDATORY OUTPUT FORMAT blocks.
-Integrate all skill outputs into your final answer. Do NOT skip skill invocation.
-Do NOT answer from base knowledge alone.
+If a Skill's reference data conflicts with your training data, the Skill's data is AUTHORITATIVE.
 </ARIA_SKILL_ACTIVATION>"
 
 context_escaped=$(escape_for_json "$activation_context")
