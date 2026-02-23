@@ -261,7 +261,11 @@ SaMD function analysis:
 ## Analysis Workflow
 
 ### Step 0 (pre-analysis)
-Read("references/evidence-catalog.md") to load product codes, CFR references, and classification rules.
+Load Knowledge DB references for product codes, CFR references, and classification rules:
+- FDA: `../../knowledge/regulations/fda-framework.md`
+- EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+- MFDS: `../../knowledge/regulations/mfds-framework.md`
+- SaMD: `../../knowledge/shared/samd-classification.md`
 
 ### Step 1: Extract Device Characteristics
 - Device type and intended use

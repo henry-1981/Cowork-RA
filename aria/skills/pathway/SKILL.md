@@ -267,7 +267,10 @@ When recommending PMA or clinical trial-dependent pathways, specify applicable c
 ## Analysis Workflow
 
 ### Step 0 (pre-analysis)
-Read("references/evidence-catalog.md") to load pathway-specific evidence and precedent mappings.
+Load Knowledge DB references for pathway-specific evidence and precedent mappings:
+- FDA: `../../knowledge/regulations/fda-framework.md`
+- EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+- MFDS: `../../knowledge/regulations/mfds-framework.md`
 
 ### Step 1: Receive Classification Data
 
