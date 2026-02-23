@@ -1,5 +1,11 @@
 # Pathway Evidence Catalog
 
+> **Knowledge DB 상세 참조**:
+> - FDA: `../../knowledge/regulations/fda-framework.md`
+> - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+> - MFDS: `../../knowledge/regulations/mfds-framework.md`
+> - SaMD: `../../knowledge/shared/samd-classification.md`
+
 ## FDA Pathway Evidence
 
 | Pathway | 근거 법령 | 대표 사례 | 기간 |

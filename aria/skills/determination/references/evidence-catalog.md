@@ -1,5 +1,11 @@
 # Determination Evidence Catalog
 
+> **Knowledge DB 상세 참조**:
+> - FDA: `../../knowledge/regulations/fda-framework.md`
+> - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+> - MFDS: `../../knowledge/regulations/mfds-framework.md`
+> - SaMD: `../../knowledge/shared/samd-classification.md`
+
 ## FDA — 의료기기 판단 근거
 
 | 제품 유형 | 핵심 법령 | 제품 코드 | 참고 가이던스 |

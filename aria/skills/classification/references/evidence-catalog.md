@@ -1,5 +1,11 @@
 # Classification Evidence Catalog
 
+> **Knowledge DB 상세 참조**:
+> - FDA: `../../knowledge/regulations/fda-framework.md`
+> - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+> - MFDS: `../../knowledge/regulations/mfds-framework.md`
+> - SaMD: `../../knowledge/shared/samd-classification.md`
+
 ## FDA Product Codes & CFR
 
 | 제품 카테고리 | Product Code | CFR | Class | Predicate/De Novo |
