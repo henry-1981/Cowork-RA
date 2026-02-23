@@ -12,6 +12,14 @@
 비용/일정: `aria-estimation` → `aria-planning`
 마케팅 컴플라이언스: `aria-compliance` (독립 호출)
 
+## Knowledge DB
+
+규제 데이터 조회 시 `aria/knowledge/` 디렉토리의 프레임워크 파일을 참조한다:
+- FDA: `knowledge/regulations/fda-framework.md`
+- EU MDR: `knowledge/regulations/eu-mdr-framework.md`
+- MFDS: `knowledge/regulations/mfds-framework.md`
+- SaMD: `knowledge/shared/samd-classification.md`
+
 ## 규칙
 - base knowledge로만 규제 질문에 답하지 않는다
 - 각 스킬의 MANDATORY OUTPUT FORMAT 블록을 반드시 출력에 포함한다

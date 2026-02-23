@@ -5,6 +5,24 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-02-24
+
+### Added
+- `aria/knowledge/` — 규제 프레임워크 레퍼런스 DB (FDA, EU MDR, MFDS, IMDRF)
+- `knowledge-refresh` 스킬 — 월간 Knowledge DB 갱신
+- session-start hook — Knowledge DB 갱신 알림
+
+### Changed
+- classification/SKILL.md — 품목코드/Override 테이블 → Knowledge DB 참조
+- pathway/SKILL.md — Grade→Pathway 테이블 → Knowledge DB 참조
+
+### Removed
+- evidence-catalog.md (3개) — Knowledge DB로 대체
+- aria-reference.md — Knowledge DB로 대체
+
+### Deprecated
+- aria-bench-wrapper.sh — Knowledge DB + 스킬 체인으로 대체
+
 ## [0.1.5] - 2026-02-13
 
 ### Changed
