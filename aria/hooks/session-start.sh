@@ -28,6 +28,23 @@ If Skill tools are available, call them before writing your answer:
 If a Skill's reference data conflicts with your training data, the Skill's data is AUTHORITATIVE.
 </ARIA_SKILL_ACTIVATION>"
 
+# Knowledge DB refresh check
+KNOWLEDGE_DIR="$(dirname "$0")/../knowledge/regulations"
+if [ -d "$KNOWLEDGE_DIR" ]; then
+  TODAY=$(date +%Y-%m-%d)
+  REFRESH_DUE=""
+  for f in "$KNOWLEDGE_DIR"/*.md; do
+    NEXT_REVIEW=$(head -10 "$f" | grep "next_review" | sed 's/.*"\(.*\)".*/\1/')
+    if [ -n "$NEXT_REVIEW" ] && [[ "$TODAY" > "$NEXT_REVIEW" ]]; then
+      REFRESH_DUE="true"
+      break
+    fi
+  done
+  if [ "$REFRESH_DUE" = "true" ]; then
+    activation_context="${activation_context}\n\n⚠️ Knowledge DB 갱신이 필요합니다. /aria-knowledge-refresh를 실행하세요."
+  fi
+fi
+
 context_escaped=$(escape_for_json "$activation_context")
 
 cat <<EOF

@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.4"
+  version: "0.2.0"
   category: "domain"
   status: "active"
   updated: "2026-02-22"
@@ -230,21 +230,15 @@ When recommending PMA or clinical trial-dependent pathways, specify applicable c
 
 ### MFDS Pathways
 
-#### MFDS Grade→Pathway Mapping (HARDCODED — Override NOT Permitted)
+#### MFDS Grade→Pathway Mapping
 
-| Grade | Pathway (Korean) | Pathway (English) | Legal Basis | Timeline | Traffic Light |
-|-------|------------------|--------------------|-------------|----------|---------------|
-| **1등급** | **신고** (제품 신고) | Notification | 「의료기기법」 제12조 | 1-3 months | GREEN |
-| **2등급** | **인증** (제품 인증) | Certification (TPR) | 「의료기기법」 제9조 | 3-9 months | GREEN-YELLOW |
-| **3등급** | **허가** (품목 허가) | Approval (MFDS review) | 「의료기기법」 제6조 | 9-15 months | YELLOW |
-| **4등급** | **허가** (품목 허가 + 임상) | Approval (MFDS review + clinical trial) | 「의료기기법」 제6조 | 12-18+ months | YELLOW |
+> **Knowledge DB 참조**: 상세 인허가 경로는 `../../knowledge/regulations/mfds-framework.md` Section 3 참조
 
-**GROUND TRUTH RULES (absolute, no exceptions)**:
-1. **1등급 = 신고 ONLY** — 1등급 제품은 절대로 인증이나 허가 대상이 아님
-2. **2등급 = 인증 ONLY** — 2등급 제품은 반드시 인증 경로 (「의료기기법」 제9조). 허가(제6조)가 아님
-3. **3-4등급 = 허가 ONLY** — 3등급 이상은 반드시 허가 경로 (「의료기기법」 제6조)
-4. **하향 불가** — 허가 대상 제품을 인증이나 신고로 하향 불가
-5. **상향 불가** — 인증 대상 제품을 불필요하게 허가로 상향 불가
+**GROUND TRUTH (절대 변경 불가):**
+1. 1등급 → 신고
+2. 2등급 → 인증
+3. 3등급 → 허가
+4. 4등급 → 허가
 
 #### Grade 1 Detail
 - **Pathway**: 신고 (Notification) — 제조/수입 신고
@@ -273,7 +267,10 @@ When recommending PMA or clinical trial-dependent pathways, specify applicable c
 ## Analysis Workflow
 
 ### Step 0 (pre-analysis)
-Read("references/evidence-catalog.md") to load pathway-specific evidence and precedent mappings.
+Load Knowledge DB references for pathway-specific evidence and precedent mappings:
+- FDA: `../../knowledge/regulations/fda-framework.md`
+- EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+- MFDS: `../../knowledge/regulations/mfds-framework.md`
 
 ### Step 1: Receive Classification Data
 

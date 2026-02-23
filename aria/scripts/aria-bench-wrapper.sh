@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# ============================================
+# DEPRECATED: v0.2.0 이후 사용 중지
+# Knowledge DB + 스킬 체인으로 대체됨
+# 벤치 히스토리 보존용으로만 유지
+# ============================================
 # ARIA Bench Wrapper
 # Prepends regulatory reference data to the user prompt before passing to claude -p
 # This ensures ARIA has access to its domain knowledge even when Skill tool isn't invoked

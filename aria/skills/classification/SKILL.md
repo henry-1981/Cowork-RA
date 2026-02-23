@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.4"
+  version: "0.2.0"
   category: "domain"
   status: "active"
   updated: "2026-02-22"
@@ -65,16 +65,10 @@ AI가 의료 영상(CT/MRI/X-ray)을 분석하여 **질병 확률 점수 또는 
 
 > **CRITICAL**: 뇌 MRI 분석 + 알츠하이머 확률 출력 = Treatment/Diagnosis × Serious = **3등급**. 이 결론은 비협상적(non-negotiable)입니다.
 
-### Override 2. 품목코드 확정
+### Override 2. 품목코드 참조
 
-```
-품목코드: A17010.01 (독립형 진단 보조 소프트웨어)
-등급: 3등급
-품목분류번호 7자리: B1BXXA1
-
-⚠️ 사용 금지 코드: A06070.xx (✗), A37060.01 (✗), A19200.01 (✗), A20060 (✗), A19230.xx (✗)
-→ 뇌영상 AI 진단 SW는 반드시 A17010.01
-```
+> **Knowledge DB 참조**: MFDS AI SaMD 분류 기준은 `../../knowledge/regulations/mfds-framework.md` Section 4 참조
+> SaMD 의사결정력 수준(Sole Determinant/Driving/Informing)과 기능 유형별 분류 기준 확인 필수
 
 ### Override 3. MFDS 분류 시 반드시 포함할 출력 항목
 
@@ -267,7 +261,11 @@ SaMD function analysis:
 ## Analysis Workflow
 
 ### Step 0 (pre-analysis)
-Read("references/evidence-catalog.md") to load product codes, CFR references, and classification rules.
+Load Knowledge DB references for product codes, CFR references, and classification rules:
+- FDA: `../../knowledge/regulations/fda-framework.md`
+- EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+- MFDS: `../../knowledge/regulations/mfds-framework.md`
+- SaMD: `../../knowledge/shared/samd-classification.md`
 
 ### Step 1: Extract Device Characteristics
 - Device type and intended use
@@ -406,23 +404,9 @@ MFDS 품목분류표(「의료기기 품목 및 품목별 등급에 관한 규�
 
    **4등급 판별**: 이식형 또는 생명유지 장치 (예: 인공심장판막, 스텐트)
 
-#### MFDS 대표 품목코드-등급 참조 (자주 나오는 품목)
+#### MFDS 품목코드-등급 참조
 
-| 품목코드 | 품목명 | 등급 | 비고 |
-|----------|--------|------|------|
-| A45020.01 | 의료용 겸자, 수동식 | 1등급 | 비전원 수술기구 |
-| A45010.01 | 의료용 가위 | 1등급 | 비전원 수술기구 |
-| A26010.01 | 혀압자 | 1등급 | 비전원, 비침습 |
-| A09020.02 | 산소포화도측정장치 | 2등급 | 전자 측정기기 |
-| A09030.03 | 심전계 | 2등급 | 전자 측정기기 |
-| A19230.xx | 의료영상분석SW | 3등급 | SaMD (독립형 진단 보조 소프트웨어) |
-| A17010.01 | 뇌영상분석SW (e.g., VUNO DeepBrain AD) | 3등급 | AI SaMD, 독립형 진단 보조 소프트웨어 |
-| A04010.02 | 인공호흡기 | 3등급 | 생명유지, 능동 |
-| A11010.01 | 인공심장판막 | 4등급 | 이식형, 생명유지 |
-
-**NOTE**: 이 표는 참조용. 최종 등급은 반드시 MFDS 품목분류표 확인 필요.
-**NOTE**: 품목코드가 확실하지 않은 경우 "MFDS 품목분류표 확인 필요" 명시.
-**CRITICAL**: 뇌영상 AI 진단 보조 소프트웨어는 A17010.01 (3등급). A37060.01이 아님. 이 품목코드-등급 표에 일치하는 항목이 있으면 반드시 해당 코드와 등급을 우선 적용.
+> **Knowledge DB 참조**: MFDS 품목코드 체계와 등급 기준은 `../../knowledge/regulations/mfds-framework.md` Section 2 참조
 
 ### Step 5: Generate Classification Matrix
 - Consolidate multi-region classifications
