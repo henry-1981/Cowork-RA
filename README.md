@@ -65,13 +65,13 @@ ARIA는 명령어만 실행하는 도구가 아니라, RA 핵심 업무를 스�
 
 ## Installation
 
-1. Cowork에서 플러그인 설치 화면으로 이동합니다.
-2. 아래 방식 중 하나를 사용합니다.
-
-- GitHub URL 설치
+1. Claude Desktop App을 설치합니다. 
+ - https://claude.com/download
+2. Claud Desktop App에서 Cowork 탭을 선택합니다.
+3. Cowork 에서 플러그인 설치 화면으로 이동합니다.
+- 플러그인 -> + 버튼(플러그인 추가) -> 플러그인 탐색 -> 개인 -> + , GitHub에서 마켓플레이스 추가 
+- 아래 주소 입력 GitHub URL 
   - `https://github.com/henry-1981/Cowork-RA.git`
-- ZIP 업로드 설치
-  - 저장소 ZIP 다운로드 후 업로드
 
 ## 문서 링크
 

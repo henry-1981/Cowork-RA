@@ -67,13 +67,13 @@ Recommended flow:
 
 ## Installation
 
-1. Open the plugin installation page in Cowork.
-2. Use one of the following methods:
-
-- Install via GitHub URL
+1. Install the Claude Desktop App.
+   - https://claude.com/download
+2. Select the Cowork tab in the Claude Desktop App.
+3. Navigate to the plugin installation page in Cowork.
+- Plugins -> + button (Add Plugin) -> Browse Plugins -> Personal -> +, Add marketplace from GitHub
+- Enter the GitHub URL below
   - `https://github.com/henry-1981/Cowork-RA.git`
-- Install via ZIP upload
-  - Download the repository ZIP and upload it
 
 ## Documentation Links
 
