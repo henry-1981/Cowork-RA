@@ -36,4 +36,12 @@ jobs:
           fi
 
       - name: Validate version policy
-        run: python3 scripts/versioning/check_version_policy.py --base-ref "${{ steps.base.outputs.base_ref }}"
+        run: |
+          EXTRA_FLAGS=""
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            LABELS='${{ toJSON(github.event.pull_request.labels.*.name) }}'
+            if echo "$LABELS" | grep -q "allow-major-minor"; then
+              EXTRA_FLAGS="--allow-major-minor"
+            fi
+          fi
+          python3 scripts/versioning/check_version_policy.py --base-ref "${{ steps.base.outputs.base_ref }}" $EXTRA_FLAGS
