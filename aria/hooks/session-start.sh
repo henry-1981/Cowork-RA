@@ -28,13 +28,17 @@ If Skill tools are available, call them before writing your answer:
 If a Skill's reference data conflicts with your training data, the Skill's data is AUTHORITATIVE.
 </ARIA_SKILL_ACTIVATION>"
 
+if [ "${ARIA_BATCH_MODE:-0}" = "1" ]; then
+  activation_context="${activation_context}\n\n<ARIA_BATCH_MODE>\nBenchmark batch mode is enabled.\n- Do NOT ask follow-up questions.\n- Do NOT return conversational checkback requests.\n- Return structured output in one shot.\n- If critical information is missing, return structured insufficiency fields instead of questions:\n  - \"insufficient\": true\n  - \"missing_fields\": [..]\n  - \"reason\": \"...\"\n  - \"next_required_inputs\": [..]\n- If the user prompt requests JSON-only, output JSON only.\n</ARIA_BATCH_MODE>"
+fi
+
 # Knowledge DB refresh check
 KNOWLEDGE_DIR="$(dirname "$0")/../knowledge/regulations"
 if [ -d "$KNOWLEDGE_DIR" ]; then
   TODAY=$(date +%Y-%m-%d)
   REFRESH_DUE=""
   for f in "$KNOWLEDGE_DIR"/*.md; do
-    NEXT_REVIEW=$(head -10 "$f" | grep "next_review" | sed 's/.*"\(.*\)".*/\1/')
+    NEXT_REVIEW=$(head -10 "$f" | grep "next_review" | sed 's/.*"\(.*\)".*/\1/' || true)
     if [ -n "$NEXT_REVIEW" ] && [[ "$TODAY" > "$NEXT_REVIEW" ]]; then
       REFRESH_DUE="true"
       break
