@@ -135,7 +135,20 @@ Before issuing deterministic multi-region determination output (YES/NO/CONDITION
 If any critical input above is missing or contradictory:
 - do not output deterministic determination/classification/pathway conclusions
 - return an insufficiency rationale
+
+**Interactive mode** (conversational context):
 - ask 1-3 minimum follow-up questions that directly resolve missing inputs
+
+**Batch/JSON-output mode** (when prompt requests strict JSON output):
+- do NOT add extra keys to the JSON (e.g., `insufficient`, `missing_fields` are FORBIDDEN)
+- express insufficiency within the allowed schema fields only:
+  ```
+  "determination": "INSUFFICIENT - [reason: e.g., product falls under EU IVDR not EU MDR]",
+  "classification": "INSUFFICIENT - see determination",
+  "pathway": "INSUFFICIENT - see determination",
+  "evidence_urls": []
+  ```
+- the output must remain schema-valid (no keys beyond those defined in the prompt's output format)
 
 ### Step 2: Apply Multi-Region Criteria
 
