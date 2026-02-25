@@ -110,6 +110,7 @@ Use the following gate order before any internal skill is invoked:
      - `sufficient`: critical inputs are explicit and consistent
      - `partial`: some critical inputs exist, but at least one remains ambiguous
      - `insufficient`: critical inputs are missing or contradictory
+   - **Gate 2 is unconditional**: This gate is always evaluated regardless of requested depth level. Even when user requests "상세 분석" or "심화 수준", if confidence is `insufficient` or `partial`, the gate rules apply. Depth hints do NOT bypass Gate 2.
    - For determination-related turns, confidence must be based on at least:
      - explicit intended medical claim
      - software role (display-only vs analysis/decision/control)
@@ -150,6 +151,16 @@ Use the following gate order before any internal skill is invoked:
 - User asks for a plan, roadmap, or milestones
 - Invoke: Skill("aria-planning") with estimation data
 - Present results naturally: "Here's a 4-phase plan starting with..."
+
+**Full Analysis Request in Chat** (user explicitly requests "전체 분석"):
+- User says "전체 분석해줘", "규제 평가 전체", "end-to-end 분석"
+- DO NOT auto-execute all skills. Instead:
+  1. Confirm scope: "전체 규제 평가(determination → classification → pathway)를 순차적으로 실행할까요?"
+  2. On user confirmation: Execute skills one at a time, presenting each result before proceeding
+  3. Between each skill: "다음으로 [classification/pathway] 분석을 진행할까요?"
+  4. User may stop at any point
+- This is NOT a redirect to `/aria:assess`. Chat handles it conversationally with step-by-step confirmation.
+- Gate 2 still applies to each skill invocation within the sequence.
 
 **Compliance Triggers** (no prerequisite):
 - User asks about marketing compliance, fair competition code, or anti-kickback regulations
@@ -307,7 +318,7 @@ All user-visible responses in `/aria:chat` must resolve this contract before ren
 - `format`: `markdown` (internal default for chat surface)
 - `language`: `ko | en` (from `--lang`)
 - `audience`: `operator`
-- `depth`: `express | standard | deep` (default: `standard`)
+- `depth`: `express | standard | deep` (default: `express`)
 - `safety_flags`:
   - `preserve_regulatory_facts=true`
   - `preserve_numeric_values=true`
@@ -318,10 +329,33 @@ All user-visible responses in `/aria:chat` must resolve this contract before ren
 
 When confidence is `insufficient`, force `depth=express`, explain why more data is required, and ask only `1-3` minimum follow-up questions.
 
+## Depth Hint Keywords
+
+사용자 프롬프트의 자연어 표현을 표준 depth 파라미터로 변환한다.
+
+**CRITICAL**: depth는 단일 응답의 상세 수준만 제어한다. 스킬 실행 흐름(체이닝)을 제어하지 않는다.
+
+### Level 1 (express) — 키워드 없음 (기본값)
+- "의료기기인가요?", "등급이 어떻게 되나요?"
+- 결론 1-2문장 + 핵심 근거
+
+### Level 2 (standard) — 아래 키워드 포함 시
+- "상세 분석", "상세하게", "자세히", "구체적으로", "detailed"
+- MANDATORY OUTPUT FORMAT 포함, Knowledge DB 로드
+
+### Level 3 (deep) — 아래 키워드 포함 시
+- "심화 수준", "deep dive", "전문가 수준", "규정 근거 포함", "forensic"
+- modules/ 로드, 4-Gate 분석, Combination Product Detection
+
+### 전체 분석 요청 — 아래 키워드 포함 시
+- "전체 분석", "전체 규제 평가", "end-to-end", "전체 파이프라인"
+- depth가 아닌 **실행 범위** 요청으로 처리
+- 반드시 사용자 확인 후 순차 실행 (→ Step 4 "Full Analysis in Chat" 참조)
+
 ## Flags
 
 - `--lang en|ko`: Output language (default: `ko`)
-- `--depth express|standard|deep`: Response depth (default: `standard`)
+- `--depth express|standard|deep`: Response depth (default: `express`)
 
 ## Output Location
 

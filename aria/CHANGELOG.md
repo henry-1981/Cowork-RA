@@ -5,6 +5,40 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1] - 2026-02-25
+
+### Fixed
+- depth hint("상세 분석", "심화 수준")가 스킬 체이닝을 트리거하지 않도록 분리
+- Gate 2(Mandatory Confidence Gate) 무조건 평가 규칙 명시 — depth와 무관
+- "전체 분석" 요청 시 assess 리다이렉트 대신 chat 내 확인 후 순차 실행으로 변경
+
+### Added
+- chat.md: Depth Hint Keywords 매핑 섹션 (Level 1/2/3 + 전체 분석 분리)
+- chat.md: Full Analysis Request in Chat 규칙 (확인 → 순차 → 중단 가능)
+- CLAUDE.md: Cowork 플랫폼 연동 섹션 (외부 라우팅 ≠ 내부 게이트)
+- using-aria: depth≠chaining 금지 규칙
+- 테스트: CH-010/011/012 시나리오 7개 추가
+
+### Changed
+- chat.md Output Contract default depth: `standard` → `express`
+- using-aria version: 0.2.0 → 0.2.1
+- chat command version: 0.1.2 → 0.1.3
+
+## [0.3.0] - 2026-02-25
+
+### Fixed
+- SPEC-ARIA-003 설계 원칙 복원 — RA-Bench 최적화로 소실된 UX 원칙 재적용
+- 자동 스킬 체인 제거 (determination → classification → pathway 자동 실행 금지)
+- Progressive disclosure 실행 규칙 추가 (Level 1/2/3 단계적 깊이)
+
+### Changed
+- SKILL.md 모듈화 — 입력 토큰 53% 절감
+  - determination: Combination/Annex XVI → modules/
+  - classification: Decision Framework/4-Gate → modules/
+  - pathway: De Novo/Clinical Endpoints → modules/
+- using-aria: 점진적 스킬 호출로 변경 (한 번에 하나, 사용자 확인 후 진행)
+- Level 1 응답에서 Knowledge DB 로드 제거 — 내장 Decision Framework만 사용
+
 ## [0.2.0] - 2026-02-24
 
 ### Added
