@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - chat.md Output Contract default depth: `standard` → `express`
-- using-aria version: 0.2.0 → 0.3.1
+- using-aria version: 0.2.0 → 0.2.1
 - chat command version: 0.1.2 → 0.1.3
 
 ## [0.3.0] - 2026-02-25
