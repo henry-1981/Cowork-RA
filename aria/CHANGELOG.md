@@ -5,6 +5,22 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.2] - 2026-02-26
+
+### Added
+- `knowledge/shared/mfds-digital-classification.md` — 디지털의료제품법 분류 운영 규칙 SSOT
+  - 4-Gate, 7-digit 코드 생성, Risk Matrix, Medical Impact 매핑, Malfunction Adjustment
+
+### Fixed
+- MFDS 분류 규칙 소실 복원 — cross-skill 참조 → 공유 Knowledge DB 참조로 전환
+  - classification 모듈: `determination/modules/` 참조 제거, Knowledge DB 참조로 교체
+  - determination 모듈: 인라인 규칙 → Knowledge DB 참조로 일원화
+
+### Changed
+- classification Step 0 로딩 최적화: 전체 로드 → 관련 jurisdiction만 선택 로드
+- classification version: 0.3.0 → 0.3.1
+- determination version: 0.3.0 → 0.3.1
+
 ## [0.3.1] - 2026-02-25
 
 ### Fixed
