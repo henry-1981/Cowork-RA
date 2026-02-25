@@ -26,6 +26,18 @@ triggers:
   phases: ["run"]
 ---
 
+
+# Progressive Disclosure Enforcement
+
+## Level 1 — 간결 응답 (기본)
+- 경로 결론 1-2문장 + 예상 기간
+- 예시: "510(k) 경로로 약 6-9개월 예상됩니다. 상세 일정/비용 분석이 필요하신가요?"
+
+## Level 2 — 상세 응답 (사용자 요청 시)
+- 전체 pathway 비교 (FDA vs EU vs MFDS)
+- 타임라인, 비용 견적 포함
+- MANDATORY OUTPUT FORMAT 사용
+
 # Regulatory Pathway Analysis Skill
 
 ## Purpose

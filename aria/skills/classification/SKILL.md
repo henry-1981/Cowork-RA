@@ -26,6 +26,19 @@ triggers:
   phases: ["run"]
 ---
 
+
+# Progressive Disclosure Enforcement
+
+## Level 1 — 간결 응답 (기본)
+- 등급 결론 1-2문장 + 핵심 규칙 근거
+- Risk Matrix, 4-Gate 등 MANDATORY 포맷 생략
+- 예시: "FDA Class II (510(k) 대상), MFDS 2등급입니다. 상세 분류 근거가 필요하신가요?"
+
+## Level 2 — 상세 응답 (사용자 요청 시)
+- MANDATORY OUTPUT FORMAT 포함
+- Risk Matrix Grid, 4-Gate Analysis 포함
+- 전체 jurisdiction 비교 테이블
+
 # Medical Device Classification Skill
 
 ## Purpose
