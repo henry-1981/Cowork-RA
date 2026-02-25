@@ -27,6 +27,29 @@ triggers:
   phases: ["run"]
 ---
 
+
+# Progressive Disclosure Enforcement
+
+이 스킬은 응답 깊이를 단계적으로 제공한다:
+
+## Level 1 — 간결 응답 (기본, 첫 질문)
+- 결론 1문장 + 핵심 근거 1-2문장
+- MANDATORY OUTPUT FORMAT 사용하지 않음
+- Knowledge DB 조회: 해당 jurisdiction 1개만
+- 예시: "FDA 기준으로 의료기기에 해당합니다 (21 CFR 201(h), 진단 목적). 등급 분류도 확인할까요?"
+
+## Level 2 — 상세 응답 (사용자가 요청할 때)
+- 전체 multi-region determination 출력
+- MANDATORY OUTPUT FORMAT 포함
+- Knowledge DB: 전체 jurisdiction 로드
+- CONDITIONAL 시 전체 output contract 포함
+
+## Level 3 — 심층 분석 (명시적 요청 시)
+- modules/ 파일 로드 (fda-criteria.md, eu-mdr-criteria.md, mfds-criteria.md)
+- 4-Gate 분석 (MFDS 디지털)
+- Combination Product Detection
+- Annex XVI Detection
+
 # Medical Device Determination Skill
 
 ## Purpose
@@ -109,7 +132,11 @@ Execute each gate and output the result explicitly:
 ## Analysis Workflow
 
 ### Step 0 (pre-analysis)
-Load Knowledge DB references for jurisdiction-specific evidence:
+
+**Level 1 (기본):** 사용자가 명시한 jurisdiction만 로드. 명시 없으면 가장 관련성 높은 1개만.
+**Level 2 이상:** 전체 jurisdiction 로드.
+
+Knowledge DB references:
 - FDA: `../../knowledge/regulations/fda-framework.md`
 - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
 - MFDS: `../../knowledge/regulations/mfds-framework.md`
