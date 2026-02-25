@@ -223,6 +223,11 @@ aria.local.md
 aria/.mcp.json
 
 # ===========================================
+# Legacy Bench Archives (deprecated 2026-02-24)
+# ===========================================
+archive/legacy-bench/
+
+# ===========================================
 # Git Worktrees (isolated development workspaces)
 # ===========================================
 .worktrees/
