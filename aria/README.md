@@ -42,9 +42,17 @@ ARIA는 4개 명령어와 6개 스킬을 조합해 규제 의사결정을 지원
 - 의도된 사용 목적(intended use)과 사용자(환자/의료진)를 먼저 명시
 - 진단/치료/모니터링 여부를 분명히 표현
 
+응답 깊이 조절:
+- 기본: 1-2문장 결론 + 핵심 근거 (express)
+- "상세 분석", "자세히" → 상세 응답 + MANDATORY OUTPUT FORMAT
+- "심화 수준", "deep dive" → 심층 분석 (modules/, 4-Gate 포함)
+- "전체 분석" → ARIA가 확인 후 determination → classification → pathway 순차 실행 (각 단계에서 중단 가능)
+
 예시:
 ```text
 /aria:chat ECG 측정과 부정맥 감지를 제공하는 웨어러블을 개발 중입니다. 미국/한국 진출 기준으로 시작해줘.
+/aria:chat [제품 설명] 상세 분석
+/aria:chat [제품 설명] 전체 분석해줘
 ```
 
 ### 2) `/aria:assess`
