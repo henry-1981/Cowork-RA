@@ -7,10 +7,10 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   category: "domain"
   status: "active"
-  updated: "2026-02-22"
+  updated: "2026-02-25"
   modularized: "true"
   tags: "medical-device, determination, FDA, EU-MDR, MFDS, regulatory"
   knowledge-base-date: "2026-01"
@@ -35,7 +35,7 @@ triggers:
 ## Level 1 — 간결 응답 (기본, 첫 질문)
 - 결론 1문장 + 핵심 근거 1-2문장
 - MANDATORY OUTPUT FORMAT 사용하지 않음
-- Knowledge DB 조회: 해당 jurisdiction 1개만
+- Knowledge DB 로드하지 않음 — 내장 Decision Framework만으로 판단
 - 예시: "FDA 기준으로 의료기기에 해당합니다 (21 CFR 201(h), 진단 목적). 등급 분류도 확인할까요?"
 
 ## Level 2 — 상세 응답 (사용자가 요청할 때)
@@ -113,7 +113,7 @@ Execute each gate and output the result explicitly:
 3. Gate 3: 핵심 기능 영향 여부
 4. Gate 4: 배제 원칙 확인
 
-**MANDATORY OUTPUT FORMAT (must appear in response when digital technology is involved):**
+**MANDATORY OUTPUT FORMAT (Level 2+ only, when digital technology is involved):**
 ```
 ### MFDS 4-Gate Analysis
 - Gate 1 (의료기기 해당): [PASS/FAIL] — [근거]
@@ -133,10 +133,11 @@ Execute each gate and output the result explicitly:
 
 ### Step 0 (pre-analysis)
 
-**Level 1 (기본):** 사용자가 명시한 jurisdiction만 로드. 명시 없으면 가장 관련성 높은 1개만.
-**Level 2 이상:** 전체 jurisdiction 로드.
+**Level 1 (기본):** Knowledge DB 로드하지 않음. 위 Decision Framework (21 CFR 201(h), Article 2(1), 의료기기법 정의)만으로 판단.
+**Level 2:** 사용자가 명시한 jurisdiction의 Knowledge DB만 로드. 명시 없으면 가장 관련성 높은 1개.
+**Level 3:** 전체 jurisdiction 로드 + modules/ 파일 로드.
 
-Knowledge DB references:
+Knowledge DB references (Level 2+):
 - FDA: `../../knowledge/regulations/fda-framework.md`
 - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
 - MFDS: `../../knowledge/regulations/mfds-framework.md`
@@ -181,7 +182,7 @@ If any critical input above is missing or contradictory:
 
 For each target region (FDA, EU MDR, MFDS):
 
-1. Load the region-specific module (`modules/fda-criteria.md`, `modules/eu-mdr-criteria.md`, `modules/mfds-criteria.md`)
+1. **(Level 2+)** Load the region-specific module (`modules/fda-criteria.md`, `modules/eu-mdr-criteria.md`, `modules/mfds-criteria.md`). Level 1에서는 위 Decision Framework만 사용.
 2. Execute the module's decision tree
 3. At each decision point, evaluate whether the answer is clear (YES/NO) or uncertain (CONDITIONAL)
 4. **CONDITIONAL gate**: If any of the following are true, the determination MUST be CONDITIONAL:
@@ -218,7 +219,7 @@ Each determination MUST include specific regulatory citations:
 
 **CRITICAL**: Do NOT fabricate regulatory citations. If a specific citation is uncertain, state "requires regulatory database verification."
 
-**MANDATORY OUTPUT FORMAT (must appear in response):**
+**MANDATORY OUTPUT FORMAT (Level 2+ only):**
 ```
 ### Regulatory Evidence
 - **FDA Legal Basis**: 21 CFR [section] (e.g., 21 CFR 201(h)) — Guidance: [document name if applicable]
@@ -230,7 +231,7 @@ Each determination MUST include specific regulatory citations:
   - [MFDS] [법률/고시 reference]
 ```
 
-**MANDATORY OUTPUT FORMAT (must appear in response):**
+**MANDATORY OUTPUT FORMAT (Level 2+ only):**
 ```
 ### Confidence & Escalation
 - **Confidence Score**: [0-100]% — [basis: e.g., "clear medical purpose, well-established device category"]
@@ -246,76 +247,17 @@ Each determination MUST include specific regulatory citations:
 
 ## Combination Product Detection (P5)
 
-### Trigger Conditions
+Combination product (drug-device, biologic-device) 감지 시 → CONDITIONAL 판정.
 
-When ANY of the following are detected in the product description:
-- Drug-device combination (drug coating, drug-eluting, drug reservoir)
-- Biologic-device combination (tissue-derived component, cell therapy + device)
-- Device constituent + drug constituent identified separately
-
-### Mandatory Output
-
-Determination MUST be **CONDITIONAL** with additional required fields:
-
-| Field | Description |
-|-------|-------------|
-| **Combination Type** | Drug-device / Biologic-device / Drug-biologic-device |
-| **Device Constituent** | Physical/mechanical component description and function |
-| **Drug/Biologic Constituent** | Pharmacological/biological component and its action |
-| **PMOA (Primary Mode of Action)** | Which constituent provides the primary therapeutic effect |
-| **Lead Center** | CDRH (device PMOA) / CDER (drug PMOA) / CBER (biologic PMOA) |
-| **Consultation** | Which other center(s) must be consulted |
-
-### PMOA Determination Logic
-
-```
-Device PMOA indicators:
-  - Mechanical/physical action is primary therapeutic effect
-  - Drug/biologic action is ancillary (prevents side effects, enhances device function)
-  → Lead: CDRH, Consult: CDER or CBER
-
-Drug PMOA indicators:
-  - Pharmacological action is primary therapeutic effect
-  - Device is delivery mechanism
-  → Lead: CDER, Consult: CDRH
-
-Biologic PMOA indicators:
-  - Biological action is primary therapeutic effect
-  → Lead: CBER, Consult: CDRH
-```
+> Detail: See `modules/combination-detection.md`
 
 ---
 
 ## Annex XVI Detection (Non-Medical Purpose Devices)
 
-### Trigger Conditions
+Non-medical purpose device (Annex XVI) 감지 시 → SPECIAL/IN SCOPE 판정.
 
-When ANY of the following are detected in the product description:
-- Device without intended medical purpose (cosmetic, aesthetic, wellness with no medical claim)
-- Product listed in Annex XVI categories: contact lenses (non-corrective), laser equipment (skin treatment), dermal fillers, liposuction/lipoplasty/lipectomy equipment, intense pulsed light equipment, brain stimulation equipment
-
-### Mandatory Output
-
-When Annex XVI device detected, EU MDR determination MUST include:
-
-```
-### EU MDR Determination — Annex XVI (Non-Medical Purpose)
-- **Determination**: SPECIAL — IN SCOPE via Annex XVI (not a medical device per Article 2(1), but regulated under MDR)
-- **MDR Article 2(1) Medical Device?**: NO — [reason: no intended medical purpose]
-- **MDR Annex XVI Listed?**: YES — [specific Annex XVI category]
-- **Result**: IN SCOPE (SPECIAL) — Device falls under MDR scope via Annex XVI, not Article 2(1)
-- **Common Specifications**: Implementing Regulation (EU) 2022/2346 (IR 2022/2346)
-- **MDCG Guidance**: MDCG 2023-5 (Annex XVI application guidance)
-- **Classification**: Apply MDR Annex VIII rules as if medical device → [resulting Class]
-- **Conformity Assessment**: Notified Body involvement mandatory per Article 52
-```
-
-### Key Principle
-
-Annex XVI devices require **dual determination**:
-1. Article 2(1) assessment → typically NO (no medical purpose)
-2. Annex XVI assessment → YES (listed non-medical purpose device)
-3. Result: Device IS within MDR scope despite not being a "medical device" per Article 2(1) → use **SPECIAL** or **IN SCOPE** determination status (NOT "YES")
+> Detail: See `modules/annex-xvi-detection.md`
 
 ---
 
