@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
   category: "domain"
   status: "active"
   updated: "2026-02-25"
@@ -122,13 +122,21 @@ Summary: Classes 1-4. Digital devices: 4-Gate → Risk Matrix. Non-digital: 품�
 ### Step 0 (pre-analysis)
 
 **Level 1 (기본):** Knowledge DB 로드하지 않음. 위 Decision Framework 요약만으로 판단.
-**Level 2:** Knowledge DB + modules/ 로드.
+**Level 2:** 관련 jurisdiction의 Knowledge DB + 해당 modules/ 로드.
 
-Knowledge DB references (Level 2+):
+Knowledge DB references (Level 2+, 해당 jurisdiction만):
 - FDA: `../../knowledge/regulations/fda-framework.md`
 - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
 - MFDS: `../../knowledge/regulations/mfds-framework.md`
-- SaMD: `../../knowledge/shared/samd-classification.md`
+- SaMD: `../../knowledge/shared/samd-classification.md` → SaMD 해당 시
+- MFDS Digital: `../../knowledge/shared/mfds-digital-classification.md` → MFDS + 디지털 기술 시
+
+**MFDS Digital Knowledge 로드 조건** (mfds-digital-classification.md):
+- 키워드: AI, SW, 소프트웨어, software, IoT, 로봇, robot, VR, AR, 가상, HPC, 디지털, digital, SaMD, 앱, app, 알고리즘, 딥러닝, 머신러닝
+- 또는: 이전 Gate 2 PASS 결과가 context에 있을 때
+
+**Knowledge DB 로드 실패 시:**
+MFDS Digital Classification 규칙 참조 불가 시: 기본 등급분류 체계(mfds-framework.md)만으로 판단하고, 정확한 4-Gate/Risk Matrix/7-digit 코드 분석은 Knowledge DB 확인 후 가능하다고 안내.
 
 ### Step 1: Extract Device Characteristics
 - Device type and intended use

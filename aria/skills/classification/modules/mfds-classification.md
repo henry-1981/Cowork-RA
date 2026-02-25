@@ -35,7 +35,7 @@
 
 ## Step 4A: Digital Medical Device Check (4-Gate)
 
-> Load module: `../../determination/modules/mfds-criteria.md` Section "4-Gate Decision Logic"
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 2 적용
 
 Execute each gate and **MANDATORY: output the result of each gate explicitly**:
 
@@ -59,7 +59,7 @@ Execute each gate and **MANDATORY: output the result of each gate explicitly**:
 
 ## Step 4B: Risk Matrix Classification (디지털 의료기기)
 
-> Load module: `../../determination/modules/mfds-criteria.md` Section "Risk-Based Classification"
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 4 적용
 
 **0. 품목코드 사전 확인 (GROUND TRUTH):**
 > 아래 품목코드-등급 참조 테이블 또는 상단 "⚠️ MFDS AI SaMD Classification Override" 섹션에 해당 제품이 있으면 해당 등급과 코드를 최우선 적용. Risk Matrix 결과가 달라도 GROUND TRUTH 우선.
@@ -138,6 +138,9 @@ MFDS 품목분류표(「의료기기 품목 및 품목별 등급에 관한 규�
 
    **4등급 판별**: 이식형 또는 생명유지 장치 (예: 인공심장판막, 스텐트)
 
-### MFDS 품목코드-등급 참조
+### MFDS 전통 품목코드 조회 가이드
 
-> **Knowledge DB 참조**: MFDS 품목코드 체계와 등급 기준은 `../../knowledge/regulations/mfds-framework.md` Section 2 참조
+> **전통 품목코드(Axxxxx.xx)는 MFDS 품목분류표 공식 DB 조회 필수**
+> - 품목코드 생성/추측 금지 — `emedi.mfds.go.kr` 또는 `data.go.kr` 참조
+> - 품목코드 불확실 시 "MFDS 품목분류표 확인 필요" 명시
+> - 7자리 디지털 코드와 전통 Axxxxx.xx 체계는 별개 시스템

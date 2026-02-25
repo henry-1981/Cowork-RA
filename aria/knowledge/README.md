@@ -12,6 +12,7 @@ regulations/
 shared/
   samd-classification.md — IMDRF SaMD 분류 (3관할권 공통)
   combination-products.md — 복합제품 PMOA/MDR Article 1(8-9)
+  mfds-digital-classification.md — MFDS 디지털의료제품법 분류 규칙 (4-Gate, 7-digit, Risk Matrix)
 ```
 
 ## 출처 정책

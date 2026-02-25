@@ -9,10 +9,10 @@ allowed-tools:
   - Bash
 user-invocable: true
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   category: "maintenance"
   status: "active"
-  updated: "2026-02-24"
+  updated: "2026-02-26"
   tags: "knowledge, refresh, regulatory-update"
 ---
 
@@ -39,6 +39,7 @@ knowledge/regulations/eu-mdr-framework.md
 knowledge/regulations/mfds-framework.md
 knowledge/shared/samd-classification.md
 knowledge/shared/combination-products.md
+knowledge/shared/mfds-digital-classification.md
 ```
 
 - `next_review` < today → 갱신 대상
@@ -103,6 +104,7 @@ knowledge_base_date: "[current year-month]"
 | mfds-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | samd-classification.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | combination-products.md | UPDATED / NO CHANGE | [summary] | [source list] |
+| mfds-digital-classification.md | UPDATED / NO CHANGE | [summary] | [source list] |
 
 **Next Review**: [today + 30 days]
 ```
