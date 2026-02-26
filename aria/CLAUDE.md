@@ -45,13 +45,13 @@
 ### 레거시 참조 (Secondary — 전환 예정)
 
 `aria/knowledge/` 디렉토리의 기존 파일은 레거시로 보존 중:
-- FDA: `knowledge/regulations/fda-framework.md`
-- EU MDR: `knowledge/regulations/eu-mdr-framework.md`
-- MFDS: `knowledge/regulations/mfds-framework.md`
+- FDA: `knowledge/regulations/fda-framework.md` (원문 DB 미구축)
+- EU MDR: `knowledge/regulations/eu-mdr-framework.md` (원문 DB 미구축)
 - SaMD: `knowledge/shared/samd-classification.md`
-- MFDS Digital: `knowledge/shared/mfds-digital-classification.md`
 
-> 레거시 파일은 LLM 요약 기반으로 할루시네이션 위험이 있다. 원문 DB를 우선 참조하고, 레거시는 보조 참고로만 사용한다.
+> MFDS 레거시 (`mfds-framework.md`, `mfds-digital-classification.md`)는 스킬 참조에서 제거됨.
+> 운영 규칙은 modules/에 인라인 보강 완료. 레거시 파일은 보존만 하고 참조하지 않음.
+> FDA/EU 레거시는 원문 DB 전환 전까지 active 참조로 유지.
 
 ## 규칙
 - base knowledge로만 규제 질문에 답하지 않는다
