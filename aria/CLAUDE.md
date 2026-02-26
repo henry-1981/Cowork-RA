@@ -32,11 +32,20 @@
 
 ## Knowledge DB
 
-규제 데이터 조회 시 `aria/knowledge/` 디렉토리의 프레임워크 파일을 참조한다:
+규제 데이터 조회 시 `aria/knowledge/catalog.yaml`을 먼저 읽어 필요한 청크를 식별한다:
+1. Read `knowledge/catalog.yaml`
+2. Filter: jurisdiction + topics로 필요한 청크 선택
+3. 선택된 청크 파일의 path를 Read
+
+MFDS 디지털 (Atomic Chunks 전환 완료):
+- catalog.yaml → jurisdiction=mfds 필터로 원문 청크 로드
+
+레거시 참조 (미전환 jurisdiction):
 - FDA: `knowledge/regulations/fda-framework.md`
 - EU MDR: `knowledge/regulations/eu-mdr-framework.md`
-- MFDS: `knowledge/regulations/mfds-framework.md`
+- MFDS 일반: `knowledge/regulations/mfds-framework.md`
 - SaMD: `knowledge/shared/samd-classification.md`
+- Combination Products: `knowledge/shared/combination-products.md`
 
 ## 규칙
 - base knowledge로만 규제 질문에 답하지 않는다
