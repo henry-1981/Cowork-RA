@@ -88,7 +88,7 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
 | 3등급 | 허가 (Approval) | 9-15 months | 의료기기법 제6조 |
 | 4등급 | 허가 + 임상 (Approval+Clinical) | 12-18+ months | 의료기기법 제6조 |
 
-> **Knowledge DB 참조**: 상세 인허가 경로는 `../../knowledge/regulations/mfds-framework.md` Section 3 참조
+> **Knowledge DB 참조**: 상세 인허가 경로는 `../../knowledge/mfds/01-법령/01-의료기기법/` (의료기기법 제6조, 제9조, 제12조) 참조
 
 ---
 
@@ -102,7 +102,10 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
 Knowledge DB references (Level 2+):
 - FDA: `../../knowledge/regulations/fda-framework.md`
 - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
-- MFDS: `../../knowledge/regulations/mfds-framework.md`
+- MFDS 의료기기법: `../../knowledge/mfds/01-법령/01-의료기기법/`
+- MFDS 체외진단법: `../../knowledge/mfds/01-법령/02-체외진단의료기기법/`
+- MFDS 디지털의료제품법: `../../knowledge/mfds/01-법령/03-디지털의료제품법/`
+- MFDS 가이드라인: `../../knowledge/mfds/02-가이드라인/`
 
 ### Step 1: Receive Classification Data
 

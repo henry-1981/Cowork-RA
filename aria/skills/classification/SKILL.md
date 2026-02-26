@@ -83,7 +83,7 @@ AI가 의료 영상(CT/MRI/X-ray)을 분석하여 **질병 확률 점수 또는 
 
 ### Override 2. 품목코드 참조
 
-> **Knowledge DB 참조**: MFDS AI SaMD 분류 기준은 `../../knowledge/regulations/mfds-framework.md` Section 4 참조
+> **Knowledge DB 참조**: MFDS AI SaMD 분류 기준은 `../../knowledge/mfds/02-가이드라인/인공지능기술이-적용된-디지털의료기기의-허가·심사-가이드라인-민원인-안내서.md` 참조
 > SaMD 의사결정력 수준(Sole Determinant/Driving/Informing)과 기능 유형별 분류 기준 확인 필수
 
 ### Override 3. MFDS 분류 시 반드시 포함할 출력 항목 (Level 2+)
@@ -127,16 +127,19 @@ Summary: Classes 1-4. Digital devices: 4-Gate → Risk Matrix. Non-digital: 품�
 Knowledge DB references (Level 2+, 해당 jurisdiction만):
 - FDA: `../../knowledge/regulations/fda-framework.md`
 - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
-- MFDS: `../../knowledge/regulations/mfds-framework.md`
+- MFDS 의료기기법: `../../knowledge/mfds/01-법령/01-의료기기법/`
+- MFDS 체외진단법: `../../knowledge/mfds/01-법령/02-체외진단의료기기법/`
+- MFDS 디지털의료제품법: `../../knowledge/mfds/01-법령/03-디지털의료제품법/`
+- MFDS 가이드라인: `../../knowledge/mfds/02-가이드라인/`
 - SaMD: `../../knowledge/shared/samd-classification.md` → SaMD 해당 시
-- MFDS Digital: `../../knowledge/shared/mfds-digital-classification.md` → MFDS + 디지털 기술 시
 
-**MFDS Digital Knowledge 로드 조건** (mfds-digital-classification.md):
+**MFDS 원문 DB 로드 조건**:
 - 키워드: AI, SW, 소프트웨어, software, IoT, 로봇, robot, VR, AR, 가상, HPC, 디지털, digital, SaMD, 앱, app, 알고리즘, 딥러닝, 머신러닝
 - 또는: 이전 Gate 2 PASS 결과가 context에 있을 때
+- 디지털 기기 → `03-디지털의료제품법/` + 가이드라인, 비디지털 → `01-의료기기법/` 또는 `02-체외진단의료기기법/`
 
 **Knowledge DB 로드 실패 시:**
-MFDS Digital Classification 규칙 참조 불가 시: 기본 등급분류 체계(mfds-framework.md)만으로 판단하고, 정확한 4-Gate/Risk Matrix/7-digit 코드 분석은 Knowledge DB 확인 후 가능하다고 안내.
+원문 DB 참조 불가 시: modules/ 인라인 규칙만으로 판단하고, 법적 근거 원문 확인이 필요하다고 안내.
 
 ### Step 1: Extract Device Characteristics
 - Device type and intended use

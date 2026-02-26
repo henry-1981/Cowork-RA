@@ -34,12 +34,17 @@ ARIA Knowledge DB의 규제 데이터를 월간 주기로 갱신한다. 각 know
 각 knowledge 파일의 YAML frontmatter에서 `next_review` 날짜를 확인한다:
 
 ```
+# Legacy (FDA/EU — 원문 DB 전환 전까지 유지)
 knowledge/regulations/fda-framework.md
 knowledge/regulations/eu-mdr-framework.md
-knowledge/regulations/mfds-framework.md
 knowledge/shared/samd-classification.md
 knowledge/shared/combination-products.md
-knowledge/shared/mfds-digital-classification.md
+
+# MFDS 원문 DB (PDF → MD 변환본)
+knowledge/mfds/01-법령/01-의료기기법/
+knowledge/mfds/01-법령/02-체외진단의료기기법/
+knowledge/mfds/01-법령/03-디지털의료제품법/
+knowledge/mfds/02-가이드라인/
 ```
 
 - `next_review` < today → 갱신 대상
@@ -101,10 +106,10 @@ knowledge_base_date: "[current year-month]"
 |------|--------|---------|---------|
 | fda-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | eu-mdr-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
-| mfds-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | samd-classification.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | combination-products.md | UPDATED / NO CHANGE | [summary] | [source list] |
-| mfds-digital-classification.md | UPDATED / NO CHANGE | [summary] | [source list] |
+| mfds/01-법령/ | UPDATED / NO CHANGE | [summary] | [source list] |
+| mfds/02-가이드라인/ | UPDATED / NO CHANGE | [summary] | [source list] |
 
 **Next Review**: [today + 30 days]
 ```
