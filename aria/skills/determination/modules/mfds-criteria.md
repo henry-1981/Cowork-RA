@@ -95,21 +95,21 @@ Tier 3: 비규제 (Non-regulated)
 
 ### Required Input Variables (6 Core Parameters)
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-notice-cls2025-product-code (제품코드 생성 기준 — 입력 변수 정의 포함)
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 1 적용
 
 ### 4-Gate Decision Logic
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-law-dmp-act-art2 (디지털의료제품법 정의) + 본 모듈 내장 4-Gate 로직
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 2 적용
 > 요약: Gate 1(의료기기)→ Gate 2(디지털 기술)→ Gate 3(핵심 기능)→ Gate 4(배제)
 
 ### 7-Digit Product Code Generation
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-notice-cls2025-product-code (고시 별표3 제품코드 생성 기준)
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 3 적용
 > 요약: [사용목적 2][기술유형 3][기기유형 1][형태 1] 형식
 
 ### Risk-Based Classification
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-notice-cls2025-risk-matrix (고시 별표4 등급 지정 세부 기준)
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 4 적용
 > 요약: Medical Impact × Patient Condition → 1~4등급, Malfunction Adjustment 적용
 
 ### Step 2 Output Format

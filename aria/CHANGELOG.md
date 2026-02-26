@@ -5,28 +5,6 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.3] - 2026-02-26
-
-### Added
-- `knowledge/catalog.yaml` — Atomic Chunks 카탈로그 인덱스 (전체 청크 검색/선택 로딩)
-- MFDS 파일럿 원문 청크 6건 (PDF 원문 직접인용, 3-Agent 파이프라인 검증 완료):
-  - 디지털의료제품법 제2조 (정의), 제3조 (분류)
-  - 고시 제2025-23호 [별표 3] 제품코드, [별표 4] 등급 지정 세부 기준
-  - 허가심사 가이드라인 III. SW 특성, IV. 안전성 등급
-- `knowledge/README.md` — Atomic Chunks 아키텍처 문서 전면 개정
-
-### Changed
-- Knowledge DB 참조 방식: 직접 경로 → catalog.yaml 기반 선택적 로딩
-  - determination SKILL.md + modules/mfds-criteria.md (4곳)
-  - classification SKILL.md + modules/mfds-classification.md (2곳)
-  - CLAUDE.md Knowledge DB 섹션
-- determination version: 0.3.1 → 0.3.2
-- classification version: 0.3.1 → 0.3.2
-
-### Fixed
-- Knowledge DB 할루시네이션 방지 — LLM 요약 방식에서 원문 직접인용(verbatim)으로 전환
-  - Spirokit 케이스에서 발견된 "Guideline Annex 4" 허구 출처 문제 근본 해결
-
 ## [0.3.2] - 2026-02-26
 
 ### Added

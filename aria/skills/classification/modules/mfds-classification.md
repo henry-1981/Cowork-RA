@@ -35,7 +35,7 @@
 
 ## Step 4A: Digital Medical Device Check (4-Gate)
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-law-dmp-act-art2 (디지털의료제품법 정의) + 본 모듈 내장 4-Gate 로직
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 2 적용
 
 Execute each gate and **MANDATORY: output the result of each gate explicitly**:
 
@@ -59,7 +59,7 @@ Execute each gate and **MANDATORY: output the result of each gate explicitly**:
 
 ## Step 4B: Risk Matrix Classification (디지털 의료기기)
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-notice-cls2025-risk-matrix (고시 별표4 등급 지정 세부 기준)
+> **Loaded Knowledge**: `../../knowledge/shared/mfds-digital-classification.md` Section 4 적용
 
 **0. 품목코드 사전 확인 (GROUND TRUTH):**
 > 아래 품목코드-등급 참조 테이블 또는 상단 "⚠️ MFDS AI SaMD Classification Override" 섹션에 해당 제품이 있으면 해당 등급과 코드를 최우선 적용. Risk Matrix 결과가 달라도 GROUND TRUTH 우선.
