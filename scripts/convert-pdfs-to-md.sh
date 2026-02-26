@@ -51,7 +51,7 @@ convert_pdf() {
 
   # Extract text
   local text
-  if ! text=$(pdftotext "$src_path" - 2>&1); then
+  if ! text=$(pdftotext "$src_path" - 2>/dev/null); then
     echo "FAIL: $filename — $text"
     failed=$((failed + 1))
     return
