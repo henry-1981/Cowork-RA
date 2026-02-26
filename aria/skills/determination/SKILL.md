@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
   category: "domain"
   status: "active"
   updated: "2026-02-25"
@@ -138,17 +138,25 @@ Execute each gate and output the result explicitly:
 **Level 3:** 전체 jurisdiction 로드 + modules/ 파일 로드.
 
 Knowledge DB references (Level 2+):
+1. Read `../../knowledge/catalog.yaml`
+2. Filter: jurisdiction={target jurisdiction} AND topics contains "determination"
+3. Read matched chunk paths
+
+레거시 참조 (catalog 미전환 jurisdiction):
 - FDA: `../../knowledge/regulations/fda-framework.md`
 - EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
-- MFDS: `../../knowledge/regulations/mfds-framework.md`
-- MFDS Digital: `../../knowledge/shared/mfds-digital-classification.md` → MFDS + 디지털 기술 시
+- MFDS 일반: `../../knowledge/regulations/mfds-framework.md`
 
-**MFDS Digital Knowledge 로드 조건** (mfds-digital-classification.md):
+MFDS 디지털 (catalog 전환 완료):
+- catalog.yaml에서 jurisdiction=mfds 필터 → 해당 청크 로드
+
+**MFDS Digital Knowledge 로드 조건**:
 - 키워드: AI, SW, 소프트웨어, software, IoT, 로봇, robot, VR, AR, 가상, HPC, 디지털, digital, SaMD, 앱, app, 알고리즘, 딥러닝, 머신러닝
 - 또는: 이전 Gate 2 PASS 결과가 context에 있을 때
+- 로드 대상: catalog.yaml → jurisdiction=mfds, topics contains "determination" or "classification"
 
 **Knowledge DB 로드 실패 시:**
-MFDS Digital Classification 규칙 참조 불가 시: 기본 등급분류 체계(mfds-framework.md)만으로 판단하고, 정확한 4-Gate/Risk Matrix/7-digit 코드 분석은 Knowledge DB 확인 후 가능하다고 안내.
+catalog.yaml 또는 청크 파일 참조 불가 시: 기본 등급분류 체계(mfds-framework.md)만으로 판단하고, 정확한 4-Gate/Risk Matrix/7-digit 코드 분석은 Knowledge DB 확인 후 가능하다고 안내.
 
 ### Step 1: Use Provided Device Information
 
