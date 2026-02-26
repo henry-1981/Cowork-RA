@@ -32,11 +32,26 @@
 
 ## Knowledge DB
 
-규제 데이터 조회 시 `aria/knowledge/` 디렉토리의 프레임워크 파일을 참조한다:
+### 원문 소스 (Primary — 원문 직접 참조)
+
+규제 원문은 `/Users/hb/Documents/01.Regulatory/01. MFDS/` 폴더의 PDF를 직접 Read한다:
+- `01. 법령/01.의료기기법/` — 의료기기법, 시행령, 별표, 고시
+- `01. 법령/02.체외진단의료기기법/` — 체외진단법, 시행령, 고시
+- `01. 법령/03.디지털의료제품법/` — 디지털의료제품법, 시행령, 고시
+- `02. 가이드라인/` — SaMD 위주 허가심사 가이드라인
+
+**원칙**: LLM이 요약/재구성한 텍스트가 아닌 원문 PDF를 직접 읽어 인용한다.
+
+### 레거시 참조 (Secondary — 전환 예정)
+
+`aria/knowledge/` 디렉토리의 기존 파일은 레거시로 보존 중:
 - FDA: `knowledge/regulations/fda-framework.md`
 - EU MDR: `knowledge/regulations/eu-mdr-framework.md`
 - MFDS: `knowledge/regulations/mfds-framework.md`
 - SaMD: `knowledge/shared/samd-classification.md`
+- MFDS Digital: `knowledge/shared/mfds-digital-classification.md`
+
+> 레거시 파일은 LLM 요약 기반으로 할루시네이션 위험이 있다. 원문 PDF를 우선 참조하고, 레거시는 보조 참고로만 사용한다.
 
 ## 규칙
 - base knowledge로만 규제 질문에 답하지 않는다
