@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
   category: "domain"
   status: "active"
   updated: "2026-02-25"

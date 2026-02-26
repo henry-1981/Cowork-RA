@@ -9,7 +9,7 @@ allowed-tools:
   - Bash
 user-invocable: true
 metadata:
-  version: "0.2.1"
+  version: "0.2.2"
   category: "maintenance"
   status: "active"
   updated: "2026-02-26"
