@@ -5,6 +5,20 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.3] - 2026-02-26
+
+### Added
+- `aria/knowledge/mfds/` — MFDS 원문 DB 50개 파일 (pdftotext 기계적 변환)
+  - `01-법령/01-의료기기법/` — 의료기기법, 시행령, 별표 6종, 고시 8종 (18 파일)
+  - `01-법령/02-체외진단의료기기법/` — 체외진단법, 시행령, 시행규칙, 별표, 고시 (9 파일)
+  - `01-법령/03-디지털의료제품법/` — 디지털의료제품법, 시행령, 시행규칙, 고시 5종 (8 파일)
+  - `02-가이드라인/` — SaMD 허가심사 가이드라인 15종
+- `scripts/convert-pdfs-to-md.sh` — PDF→Markdown 배치 변환 스크립트
+
+### Changed
+- CLAUDE.md Knowledge DB 섹션: 원문 DB + 레거시 참조 2계층 구조로 개편
+- 원칙 명시: PDF 원문을 그대로 markdown으로 변환. 요약/재구성/선택적 추출 금지
+
 ## [0.3.2] - 2026-02-26
 
 ### Added
