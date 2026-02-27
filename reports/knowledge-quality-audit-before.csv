@@ -1,0 +1,1116 @@
+file,method,pages,body_chars,total_lines,non_empty_lines,short_lines,garbage_chars,garbled_seqs,empty_ratio,score,issues
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-I.md,beautifulsoup (eli-subdivision parsing),0,44781,478,239,1,0,17,0.5,72,garbled_sequences:17
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-II.md,beautifulsoup (eli-subdivision parsing),0,15288,239,120,0,0,21,0.498,73,garbled_sequences:21
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-III.md,beautifulsoup (eli-subdivision parsing),0,2884,47,24,0,0,3,0.489,78,garbled_sequences:3
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-IV.md,beautifulsoup (eli-subdivision parsing),0,1857,25,13,0,0,2,0.48,84,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-IX.md,beautifulsoup (eli-subdivision parsing),0,30426,224,112,1,0,18,0.5,71,garbled_sequences:18
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-V.md,beautifulsoup (eli-subdivision parsing),0,526,12,8,0,0,2,0.333,90,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-VI.md,beautifulsoup (eli-subdivision parsing),0,17927,313,157,0,0,30,0.498,73,garbled_sequences:30
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-VII.md,beautifulsoup (eli-subdivision parsing),0,59249,671,336,0,0,13,0.499,73,garbled_sequences:13
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-VIII.md,beautifulsoup (eli-subdivision parsing),0,5901,109,55,0,0,4,0.495,73,garbled_sequences:4
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-X.md,beautifulsoup (eli-subdivision parsing),0,12022,87,44,0,0,3,0.494,78,garbled_sequences:3
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-XI.md,beautifulsoup (eli-subdivision parsing),0,5049,55,28,0,0,5,0.491,73,garbled_sequences:5
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-XII.md,beautifulsoup (eli-subdivision parsing),0,3611,61,31,0,0,9,0.492,73,garbled_sequences:9
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-XIII.md,beautifulsoup (eli-subdivision parsing),0,20705,257,129,0,0,19,0.498,73,garbled_sequences:19
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-XIV.md,beautifulsoup (eli-subdivision parsing),0,10005,109,55,0,0,23,0.495,73,garbled_sequences:23
+aria/knowledge/eu/01-regulation/ivdr-2017-746/annex-XV.md,beautifulsoup (eli-subdivision parsing),0,2369,69,67,0,0,2,0.029,90,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-001.md,beautifulsoup (eli-subdivision parsing),0,3038,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-002.md,beautifulsoup (eli-subdivision parsing),0,18208,209,105,0,0,0,0.498,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-003.md,beautifulsoup (eli-subdivision parsing),0,1631,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-004.md,beautifulsoup (eli-subdivision parsing),0,1464,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-005.md,beautifulsoup (eli-subdivision parsing),0,4041,43,22,0,0,0,0.488,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-006.md,beautifulsoup (eli-subdivision parsing),0,1307,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-007.md,beautifulsoup (eli-subdivision parsing),0,844,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-008.md,beautifulsoup (eli-subdivision parsing),0,1269,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-009.md,beautifulsoup (eli-subdivision parsing),0,1139,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-010.md,beautifulsoup (eli-subdivision parsing),0,9586,81,41,0,0,0,0.494,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-011.md,beautifulsoup (eli-subdivision parsing),0,3904,35,18,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-012.md,beautifulsoup (eli-subdivision parsing),0,1125,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-013.md,beautifulsoup (eli-subdivision parsing),0,4273,33,17,0,0,0,0.485,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-014.md,beautifulsoup (eli-subdivision parsing),0,4011,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-015.md,beautifulsoup (eli-subdivision parsing),0,3475,33,17,0,0,0,0.485,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-016.md,beautifulsoup (eli-subdivision parsing),0,4427,25,13,0,0,0,0.48,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-017.md,beautifulsoup (eli-subdivision parsing),0,1424,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-018.md,beautifulsoup (eli-subdivision parsing),0,1423,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-019.md,beautifulsoup (eli-subdivision parsing),0,861,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-020.md,beautifulsoup (eli-subdivision parsing),0,870,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-021.md,beautifulsoup (eli-subdivision parsing),0,294,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-022.md,beautifulsoup (eli-subdivision parsing),0,609,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-023.md,beautifulsoup (eli-subdivision parsing),0,570,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-024.md,beautifulsoup (eli-subdivision parsing),0,5999,83,42,0,0,0,0.494,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-025.md,beautifulsoup (eli-subdivision parsing),0,234,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-026.md,beautifulsoup (eli-subdivision parsing),0,1621,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-027.md,beautifulsoup (eli-subdivision parsing),0,1190,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-028.md,beautifulsoup (eli-subdivision parsing),0,2261,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-029.md,beautifulsoup (eli-subdivision parsing),0,2069,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-030.md,beautifulsoup (eli-subdivision parsing),0,953,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-031.md,beautifulsoup (eli-subdivision parsing),0,2445,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-032.md,beautifulsoup (eli-subdivision parsing),0,1658,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-033.md,beautifulsoup (eli-subdivision parsing),0,1106,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-034.md,beautifulsoup (eli-subdivision parsing),0,1319,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-035.md,beautifulsoup (eli-subdivision parsing),0,5796,47,24,0,0,0,0.489,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-036.md,beautifulsoup (eli-subdivision parsing),0,664,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-037.md,beautifulsoup (eli-subdivision parsing),0,676,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-038.md,beautifulsoup (eli-subdivision parsing),0,4479,29,15,0,0,1,0.483,89,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-039.md,beautifulsoup (eli-subdivision parsing),0,1011,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-040.md,beautifulsoup (eli-subdivision parsing),0,5650,33,17,0,0,0,0.485,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-041.md,beautifulsoup (eli-subdivision parsing),0,2726,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-042.md,beautifulsoup (eli-subdivision parsing),0,6950,49,25,0,0,0,0.49,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-043.md,beautifulsoup (eli-subdivision parsing),0,2625,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-044.md,beautifulsoup (eli-subdivision parsing),0,2232,27,14,0,0,0,0.481,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-045.md,beautifulsoup (eli-subdivision parsing),0,387,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-046.md,beautifulsoup (eli-subdivision parsing),0,214,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-047.md,beautifulsoup (eli-subdivision parsing),0,2635,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-048.md,beautifulsoup (eli-subdivision parsing),0,8619,55,28,0,0,0,0.491,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-049.md,beautifulsoup (eli-subdivision parsing),0,1791,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-050.md,beautifulsoup (eli-subdivision parsing),0,1451,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-051.md,beautifulsoup (eli-subdivision parsing),0,2084,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-052.md,beautifulsoup (eli-subdivision parsing),0,1062,23,12,0,0,0,0.478,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-053.md,beautifulsoup (eli-subdivision parsing),0,1254,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-054.md,beautifulsoup (eli-subdivision parsing),0,1562,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-055.md,beautifulsoup (eli-subdivision parsing),0,1235,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-056.md,beautifulsoup (eli-subdivision parsing),0,3806,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-057.md,beautifulsoup (eli-subdivision parsing),0,1017,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-058.md,beautifulsoup (eli-subdivision parsing),0,6850,61,31,0,0,0,0.492,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-059.md,beautifulsoup (eli-subdivision parsing),0,3983,35,18,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-060.md,beautifulsoup (eli-subdivision parsing),0,2394,27,14,0,0,0,0.481,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-061.md,beautifulsoup (eli-subdivision parsing),0,2690,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-062.md,beautifulsoup (eli-subdivision parsing),0,1494,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-063.md,beautifulsoup (eli-subdivision parsing),0,312,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-064.md,beautifulsoup (eli-subdivision parsing),0,3630,27,14,0,0,0,0.481,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-065.md,beautifulsoup (eli-subdivision parsing),0,594,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-066.md,beautifulsoup (eli-subdivision parsing),0,5293,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-067.md,beautifulsoup (eli-subdivision parsing),0,2986,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-068.md,beautifulsoup (eli-subdivision parsing),0,1993,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-069.md,beautifulsoup (eli-subdivision parsing),0,2460,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-070.md,beautifulsoup (eli-subdivision parsing),0,1155,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-071.md,beautifulsoup (eli-subdivision parsing),0,1712,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-072.md,beautifulsoup (eli-subdivision parsing),0,1481,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-073.md,beautifulsoup (eli-subdivision parsing),0,3640,25,13,0,0,0,0.48,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-074.md,beautifulsoup (eli-subdivision parsing),0,8392,53,27,0,0,0,0.491,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-075.md,beautifulsoup (eli-subdivision parsing),0,316,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-076.md,beautifulsoup (eli-subdivision parsing),0,3559,37,19,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-077.md,beautifulsoup (eli-subdivision parsing),0,1406,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-078.md,beautifulsoup (eli-subdivision parsing),0,2050,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-079.md,beautifulsoup (eli-subdivision parsing),0,334,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-080.md,beautifulsoup (eli-subdivision parsing),0,534,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-081.md,beautifulsoup (eli-subdivision parsing),0,1683,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-082.md,beautifulsoup (eli-subdivision parsing),0,5448,37,19,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-083.md,beautifulsoup (eli-subdivision parsing),0,1561,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-084.md,beautifulsoup (eli-subdivision parsing),0,7344,47,24,0,0,0,0.489,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-085.md,beautifulsoup (eli-subdivision parsing),0,724,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-086.md,beautifulsoup (eli-subdivision parsing),0,1673,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-087.md,beautifulsoup (eli-subdivision parsing),0,3656,43,22,0,0,0,0.488,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-088.md,beautifulsoup (eli-subdivision parsing),0,4001,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-089.md,beautifulsoup (eli-subdivision parsing),0,830,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-090.md,beautifulsoup (eli-subdivision parsing),0,3891,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-091.md,beautifulsoup (eli-subdivision parsing),0,1967,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-092.md,beautifulsoup (eli-subdivision parsing),0,1502,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-093.md,beautifulsoup (eli-subdivision parsing),0,2148,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-094.md,beautifulsoup (eli-subdivision parsing),0,1870,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-095.md,beautifulsoup (eli-subdivision parsing),0,1398,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-096.md,beautifulsoup (eli-subdivision parsing),0,509,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-097.md,beautifulsoup (eli-subdivision parsing),0,525,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-098.md,beautifulsoup (eli-subdivision parsing),0,442,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-099.md,beautifulsoup (eli-subdivision parsing),0,1974,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-100.md,beautifulsoup (eli-subdivision parsing),0,7310,85,43,0,0,0,0.494,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-101.md,beautifulsoup (eli-subdivision parsing),0,405,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-102.md,beautifulsoup (eli-subdivision parsing),0,1494,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-103.md,beautifulsoup (eli-subdivision parsing),0,326,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-104.md,beautifulsoup (eli-subdivision parsing),0,530,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-105.md,beautifulsoup (eli-subdivision parsing),0,457,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-106.md,beautifulsoup (eli-subdivision parsing),0,489,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-107.md,beautifulsoup (eli-subdivision parsing),0,820,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-108.md,beautifulsoup (eli-subdivision parsing),0,2136,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-109.md,beautifulsoup (eli-subdivision parsing),0,201,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-110.md,beautifulsoup (eli-subdivision parsing),0,3693,27,14,0,0,0,0.481,94,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-111.md,beautifulsoup (eli-subdivision parsing),0,563,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-112.md,beautifulsoup (eli-subdivision parsing),0,1749,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/article-113.md,beautifulsoup (eli-subdivision parsing),0,2788,71,36,0,0,0,0.493,93,
+aria/knowledge/eu/01-regulation/ivdr-2017-746/preamble.md,beautifulsoup (eli-subdivision parsing),0,726,21,11,0,0,4,0.476,74,garbled_sequences:4
+aria/knowledge/eu/01-regulation/ivdr-2017-746/recitals.md,beautifulsoup (eli-subdivision parsing),0,48979,201,101,0,0,0,0.498,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-I.md,beautifulsoup (eli-subdivision parsing),0,52415,542,271,1,0,16,0.5,72,garbled_sequences:16
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-II.md,beautifulsoup (eli-subdivision parsing),0,11931,136,68,1,0,21,0.5,70,garbled_sequences:21
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-III.md,beautifulsoup (eli-subdivision parsing),0,2881,47,24,0,0,3,0.489,78,garbled_sequences:3
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-IV.md,beautifulsoup (eli-subdivision parsing),0,1867,25,13,0,0,2,0.48,84,
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-IX.md,beautifulsoup (eli-subdivision parsing),0,37198,241,121,0,0,18,0.498,73,garbled_sequences:18
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-V.md,beautifulsoup (eli-subdivision parsing),0,527,12,8,0,0,2,0.333,90,
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-VI.md,beautifulsoup (eli-subdivision parsing),0,21704,369,185,0,0,30,0.499,73,garbled_sequences:30
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-VII.md,beautifulsoup (eli-subdivision parsing),0,60687,695,348,0,0,13,0.499,73,garbled_sequences:13
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-VIII.md,beautifulsoup (eli-subdivision parsing),0,18491,269,135,0,0,22,0.498,73,garbled_sequences:22
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-X.md,beautifulsoup (eli-subdivision parsing),0,7164,65,33,0,0,3,0.492,78,garbled_sequences:3
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-XI.md,beautifulsoup (eli-subdivision parsing),0,13780,143,72,0,0,10,0.497,73,garbled_sequences:10
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-XII.md,beautifulsoup (eli-subdivision parsing),0,5437,67,39,0,0,9,0.418,79,garbled_sequences:9
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-XIII.md,beautifulsoup (eli-subdivision parsing),0,5685,26,20,0,0,3,0.231,85,garbled_sequences:3
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-XIV.md,beautifulsoup (eli-subdivision parsing),0,8329,95,48,0,0,8,0.495,73,garbled_sequences:8
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-XV.md,beautifulsoup (eli-subdivision parsing),0,21387,217,109,0,0,14,0.498,73,garbled_sequences:14
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-XVI.md,beautifulsoup (eli-subdivision parsing),0,1514,21,14,0,0,7,0.333,80,garbled_sequences:7
+aria/knowledge/eu/01-regulation/mdr-2017-745/annex-XVII.md,beautifulsoup (eli-subdivision parsing),0,3674,74,72,0,0,2,0.027,90,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-001.md,beautifulsoup (eli-subdivision parsing),0,9014,65,33,0,0,0,0.492,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-002.md,beautifulsoup (eli-subdivision parsing),0,19197,219,110,0,0,0,0.498,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-003.md,beautifulsoup (eli-subdivision parsing),0,407,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-004.md,beautifulsoup (eli-subdivision parsing),0,1652,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-005.md,beautifulsoup (eli-subdivision parsing),0,3602,41,21,0,0,0,0.488,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-006.md,beautifulsoup (eli-subdivision parsing),0,1305,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-007.md,beautifulsoup (eli-subdivision parsing),0,844,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-008.md,beautifulsoup (eli-subdivision parsing),0,1418,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-009.md,beautifulsoup (eli-subdivision parsing),0,1390,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-010.md,beautifulsoup (eli-subdivision parsing),0,9632,81,41,0,0,0,0.494,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-011.md,beautifulsoup (eli-subdivision parsing),0,3912,35,18,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-012.md,beautifulsoup (eli-subdivision parsing),0,1125,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-013.md,beautifulsoup (eli-subdivision parsing),0,4272,33,17,0,0,0,0.485,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-014.md,beautifulsoup (eli-subdivision parsing),0,4018,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-015.md,beautifulsoup (eli-subdivision parsing),0,3500,35,18,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-016.md,beautifulsoup (eli-subdivision parsing),0,4419,25,13,0,0,0,0.48,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-017.md,beautifulsoup (eli-subdivision parsing),0,5237,51,26,0,0,0,0.49,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-018.md,beautifulsoup (eli-subdivision parsing),0,2317,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-019.md,beautifulsoup (eli-subdivision parsing),0,1466,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-020.md,beautifulsoup (eli-subdivision parsing),0,1430,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-021.md,beautifulsoup (eli-subdivision parsing),0,1418,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-022.md,beautifulsoup (eli-subdivision parsing),0,3552,25,13,0,0,0,0.48,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-023.md,beautifulsoup (eli-subdivision parsing),0,870,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-024.md,beautifulsoup (eli-subdivision parsing),0,294,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-025.md,beautifulsoup (eli-subdivision parsing),0,609,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-026.md,beautifulsoup (eli-subdivision parsing),0,544,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-027.md,beautifulsoup (eli-subdivision parsing),0,6281,89,45,0,0,0,0.494,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-028.md,beautifulsoup (eli-subdivision parsing),0,1001,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-029.md,beautifulsoup (eli-subdivision parsing),0,2095,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-030.md,beautifulsoup (eli-subdivision parsing),0,1224,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-031.md,beautifulsoup (eli-subdivision parsing),0,2295,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-032.md,beautifulsoup (eli-subdivision parsing),0,2166,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-033.md,beautifulsoup (eli-subdivision parsing),0,4549,47,24,0,0,0,0.489,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-034.md,beautifulsoup (eli-subdivision parsing),0,1051,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-035.md,beautifulsoup (eli-subdivision parsing),0,2401,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-036.md,beautifulsoup (eli-subdivision parsing),0,1657,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-037.md,beautifulsoup (eli-subdivision parsing),0,1106,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-038.md,beautifulsoup (eli-subdivision parsing),0,1319,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-039.md,beautifulsoup (eli-subdivision parsing),0,5775,47,24,0,0,0,0.489,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-040.md,beautifulsoup (eli-subdivision parsing),0,642,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-041.md,beautifulsoup (eli-subdivision parsing),0,676,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-042.md,beautifulsoup (eli-subdivision parsing),0,4487,29,15,0,0,1,0.483,89,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-043.md,beautifulsoup (eli-subdivision parsing),0,1030,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-044.md,beautifulsoup (eli-subdivision parsing),0,5633,33,17,0,0,0,0.485,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-045.md,beautifulsoup (eli-subdivision parsing),0,2774,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-046.md,beautifulsoup (eli-subdivision parsing),0,6844,49,25,0,0,0,0.49,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-047.md,beautifulsoup (eli-subdivision parsing),0,2618,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-048.md,beautifulsoup (eli-subdivision parsing),0,2222,27,14,0,0,0,0.481,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-049.md,beautifulsoup (eli-subdivision parsing),0,595,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-050.md,beautifulsoup (eli-subdivision parsing),0,214,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-051.md,beautifulsoup (eli-subdivision parsing),0,2639,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-052.md,beautifulsoup (eli-subdivision parsing),0,7557,53,27,0,0,0,0.491,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-053.md,beautifulsoup (eli-subdivision parsing),0,1791,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-054.md,beautifulsoup (eli-subdivision parsing),0,2710,23,12,0,0,0,0.478,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-055.md,beautifulsoup (eli-subdivision parsing),0,1322,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-056.md,beautifulsoup (eli-subdivision parsing),0,2074,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-057.md,beautifulsoup (eli-subdivision parsing),0,1309,25,13,0,0,0,0.48,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-058.md,beautifulsoup (eli-subdivision parsing),0,1254,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-059.md,beautifulsoup (eli-subdivision parsing),0,1561,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-060.md,beautifulsoup (eli-subdivision parsing),0,1235,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-061.md,beautifulsoup (eli-subdivision parsing),0,8608,71,36,0,0,0,0.493,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-062.md,beautifulsoup (eli-subdivision parsing),0,7052,53,27,0,0,0,0.491,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-063.md,beautifulsoup (eli-subdivision parsing),0,4035,35,18,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-064.md,beautifulsoup (eli-subdivision parsing),0,1761,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-065.md,beautifulsoup (eli-subdivision parsing),0,2134,23,12,0,0,0,0.478,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-066.md,beautifulsoup (eli-subdivision parsing),0,823,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-067.md,beautifulsoup (eli-subdivision parsing),0,316,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-068.md,beautifulsoup (eli-subdivision parsing),0,3695,27,14,0,0,0,0.481,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-069.md,beautifulsoup (eli-subdivision parsing),0,604,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-070.md,beautifulsoup (eli-subdivision parsing),0,5058,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-071.md,beautifulsoup (eli-subdivision parsing),0,3268,35,18,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-072.md,beautifulsoup (eli-subdivision parsing),0,2041,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-073.md,beautifulsoup (eli-subdivision parsing),0,2522,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-074.md,beautifulsoup (eli-subdivision parsing),0,1178,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-075.md,beautifulsoup (eli-subdivision parsing),0,1767,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-076.md,beautifulsoup (eli-subdivision parsing),0,1487,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-077.md,beautifulsoup (eli-subdivision parsing),0,3801,25,13,0,0,0,0.48,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-078.md,beautifulsoup (eli-subdivision parsing),0,8392,53,27,0,0,0,0.491,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-079.md,beautifulsoup (eli-subdivision parsing),0,308,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-080.md,beautifulsoup (eli-subdivision parsing),0,3644,37,19,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-081.md,beautifulsoup (eli-subdivision parsing),0,1419,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-082.md,beautifulsoup (eli-subdivision parsing),0,657,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-083.md,beautifulsoup (eli-subdivision parsing),0,2057,29,15,0,0,0,0.483,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-084.md,beautifulsoup (eli-subdivision parsing),0,380,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-085.md,beautifulsoup (eli-subdivision parsing),0,506,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-086.md,beautifulsoup (eli-subdivision parsing),0,2162,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-087.md,beautifulsoup (eli-subdivision parsing),0,5412,37,19,0,0,0,0.486,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-088.md,beautifulsoup (eli-subdivision parsing),0,1664,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-089.md,beautifulsoup (eli-subdivision parsing),0,8023,49,25,0,0,0,0.49,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-090.md,beautifulsoup (eli-subdivision parsing),0,724,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-091.md,beautifulsoup (eli-subdivision parsing),0,1673,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-092.md,beautifulsoup (eli-subdivision parsing),0,3662,43,22,0,0,0,0.488,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-093.md,beautifulsoup (eli-subdivision parsing),0,4005,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-094.md,beautifulsoup (eli-subdivision parsing),0,831,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-095.md,beautifulsoup (eli-subdivision parsing),0,3898,23,12,0,0,0,0.478,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-096.md,beautifulsoup (eli-subdivision parsing),0,1967,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-097.md,beautifulsoup (eli-subdivision parsing),0,1507,9,5,0,0,0,0.444,97,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-098.md,beautifulsoup (eli-subdivision parsing),0,2148,11,6,0,0,0,0.455,96,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-099.md,beautifulsoup (eli-subdivision parsing),0,1871,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-100.md,beautifulsoup (eli-subdivision parsing),0,1388,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-101.md,beautifulsoup (eli-subdivision parsing),0,510,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-102.md,beautifulsoup (eli-subdivision parsing),0,528,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-103.md,beautifulsoup (eli-subdivision parsing),0,2734,33,17,0,0,0,0.485,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-104.md,beautifulsoup (eli-subdivision parsing),0,487,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-105.md,beautifulsoup (eli-subdivision parsing),0,2162,21,11,0,0,0,0.476,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-106.md,beautifulsoup (eli-subdivision parsing),0,8696,85,43,0,0,0,0.494,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-107.md,beautifulsoup (eli-subdivision parsing),0,861,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-108.md,beautifulsoup (eli-subdivision parsing),0,481,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-109.md,beautifulsoup (eli-subdivision parsing),0,1496,17,9,0,0,0,0.471,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-110.md,beautifulsoup (eli-subdivision parsing),0,326,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-111.md,beautifulsoup (eli-subdivision parsing),0,530,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-112.md,beautifulsoup (eli-subdivision parsing),0,457,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-113.md,beautifulsoup (eli-subdivision parsing),0,491,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-114.md,beautifulsoup (eli-subdivision parsing),0,764,13,7,0,0,0,0.462,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-115.md,beautifulsoup (eli-subdivision parsing),0,2277,15,8,0,0,0,0.467,95,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-116.md,beautifulsoup (eli-subdivision parsing),0,201,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-117.md,beautifulsoup (eli-subdivision parsing),0,1396,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-118.md,beautifulsoup (eli-subdivision parsing),0,286,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-119.md,beautifulsoup (eli-subdivision parsing),0,486,7,4,0,0,0,0.429,98,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-120.md,beautifulsoup (eli-subdivision parsing),0,4992,31,16,0,0,0,0.484,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-121.md,beautifulsoup (eli-subdivision parsing),0,495,5,3,0,0,0,0.4,100,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-122.md,beautifulsoup (eli-subdivision parsing),0,2557,19,10,0,0,0,0.474,94,
+aria/knowledge/eu/01-regulation/mdr-2017-745/article-123.md,beautifulsoup (eli-subdivision parsing),0,3090,77,39,0,0,0,0.494,93,
+aria/knowledge/eu/01-regulation/mdr-2017-745/preamble.md,beautifulsoup (eli-subdivision parsing),0,786,21,11,0,0,4,0.476,74,garbled_sequences:4
+aria/knowledge/eu/01-regulation/mdr-2017-745/recitals.md,beautifulsoup (eli-subdivision parsing),0,52692,203,102,0,0,1,0.498,88,
+aria/knowledge/eu/02-mdcg/annex-xvi-products/md_new-reg_annex-xvi_q-n-a_transition-prov.md,pdftotext,8,19441,386,321,30,7,9,0.168,64,garbled_sequences:9
+aria/knowledge/eu/02-mdcg/annex-xvi-products/mdcg_2023-5_en.md,pdftotext,14,28600,569,452,67,13,2,0.206,65,
+aria/knowledge/eu/02-mdcg/annex-xvi-products/mdcg_2023-6_en.md,pdftotext,4,8511,188,159,19,3,0,0.154,80,
+aria/knowledge/eu/02-mdcg/article-10a/md_mdc-2024-16_annex_en.md,pdftotext,2,773,66,49,4,1,4,0.258,63,garbled_sequences:4
+aria/knowledge/eu/02-mdcg/article-10a/md_mdc-2024-16_en.md,pdftotext,5,7075,271,189,29,4,5,0.303,55,orphaned_lines:29(15.3%); garbled_sequences:5
+aria/knowledge/eu/02-mdcg/article-10a/mdr_qna-article10a_mdr-ivdr_en.md,pdftotext,12,34483,542,453,50,11,24,0.164,61,garbled_sequences:24
+aria/knowledge/eu/02-mdcg/authorised-representatives/md_mdcg_2021_26_en.md,pdftotext,8,18752,379,321,29,40,3,0.153,69,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/authorised-representatives/mdcg_2021-27_en.md,pdftotext,14,41428,654,577,7,13,11,0.118,78,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/authorised-representatives/mdcg_202216_en.md,pdftotext,10,28460,482,411,29,34,9,0.147,67,garbled_sequences:9
+aria/knowledge/eu/02-mdcg/borderline-and-classification/md_border-class_helsinki-proc-mdr-ivdr_en.md,pdftotext,7,19707,473,362,31,28,3,0.235,70,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/borderline-and-classification/md_borderline_bckgr-note-manual-bc-dir_en_1.md,pdftotext,1,914,16,13,0,0,0,0.188,100,
+aria/knowledge/eu/02-mdcg/borderline-and-classification/md_borderline_manual_en.md,pdftotext,28,62212,1012,862,41,29,4,0.148,72,garbled_sequences:4
+aria/knowledge/eu/02-mdcg/borderline-and-classification/mdcg_2021-24_en.md,pdftotext,57,127249,3642,2899,689,416,15,0.204,53,orphaned_lines:689(23.8%); garbled_sequences:15
+aria/knowledge/eu/02-mdcg/borderline-and-classification/mdcg_2022-5_en.md,pdftotext,28,76478,1391,1193,60,27,28,0.142,71,garbled_sequences:28
+aria/knowledge/eu/02-mdcg/borderline-and-classification/mdcg_2024-13_en.md,pdftotext,3,5412,112,87,7,2,1,0.223,81,
+aria/knowledge/eu/02-mdcg/class-i-devices/md_guidance-manufacturers_en.md,pdftotext,23,61742,1016,863,100,50,11,0.151,60,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/clinical-investigation/md_2020-13-cea-report-template_en.md,pdftotext,31,59326,1271,948,110,72,3,0.254,65,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/clinical-investigation/md_mdcg_2019_9_sscp_en.md,pdftotext,24,56198,1293,1125,140,84,4,0.13,58,garbled_sequences:4
+aria/knowledge/eu/02-mdcg/clinical-investigation/md_mdcg_2020-10-1_guidance_safety_reporting_en.md,pdftotext,19,55346,966,777,119,72,75,0.196,54,orphaned_lines:119(15.3%); garbled_sequences:75
+aria/knowledge/eu/02-mdcg/clinical-investigation/md_mdcg_2020_5_guidance_clinical_evaluation_equivalence_en.md,pdftotext,20,39790,927,800,92,28,0,0.137,80,
+aria/knowledge/eu/02-mdcg/clinical-investigation/md_mdcg_2020_6_guidance_sufficient_clinical_evidence_en.md,pdftotext,22,58430,1198,1012,130,102,2,0.155,68,
+aria/knowledge/eu/02-mdcg/clinical-investigation/md_mdcg_2020_7_guidance_pmcf_plan_template_en.md,pdftotext,12,15395,343,260,29,26,0,0.242,80,
+aria/knowledge/eu/02-mdcg/clinical-investigation/md_mdcg_2020_8_guidance_pmcf_evaluation_report_en.md,pdftotext,10,10733,243,184,17,9,0,0.243,84,
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2021-20_en.md,pdftotext,6,7465,201,146,7,15,2,0.274,81,
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2021-28_en.md,pdftotext,5,4359,120,89,7,4,4,0.258,66,garbled_sequences:4
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2021-6_en.md,pdftotext,36,89396,1937,1490,208,41,15,0.231,56,garbled_sequences:15
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2021-8_en.md,pdftotext,5,5409,157,110,11,4,7,0.299,63,garbled_sequences:7
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2023-7_en.md,pdftotext,12,29235,757,612,57,11,0,0.192,84,
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2024-10_en.md,pdftotext,33,93320,1744,1388,139,33,8,0.204,63,garbled_sequences:8
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2024-15_en.md,pdftotext,3,6997,114,100,4,2,11,0.123,73,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2024-3_en_0.md,pdftotext,21,60031,1369,1068,162,20,5,0.22,55,orphaned_lines:162(15.2%); garbled_sequences:5
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2024-5_en.md,pdftotext,34,83019,2071,1430,130,33,3,0.31,70,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/clinical-investigation/mdcg_2025-5_en.md,pdftotext,33,83519,1663,1344,128,34,7,0.192,64,garbled_sequences:7
+aria/knowledge/eu/02-mdcg/covid-19/covid-19_ivd-qa_en.md,pdftotext,18,50422,809,667,82,33,127,0.176,59,garbled_sequences:127
+aria/knowledge/eu/02-mdcg/covid-19/md_guidance-reg-req-med-face-masks.md,pdftotext,8,19950,365,317,28,7,27,0.132,65,garbled_sequences:27
+aria/knowledge/eu/02-mdcg/covid-19/md_mdcg_2020-9_regulatory_requirements_ventilators_en.md,pdftotext,10,24793,493,406,39,18,27,0.176,64,garbled_sequences:27
+aria/knowledge/eu/02-mdcg/covid-19/md_mdcg_guidance_md_qa_covid-19_en.md,pdftotext,11,19754,501,424,16,20,10,0.154,73,garbled_sequences:10
+aria/knowledge/eu/02-mdcg/covid-19/md_mdcg_qa_3d_ppp_covid-19_en.md,pdftotext,4,11822,212,182,35,27,1,0.142,69,orphaned_lines:35(19.2%)
+aria/knowledge/eu/02-mdcg/covid-19/md_mdcg_qa_conformity_assessment_en.md,pdftotext,9,29095,392,365,24,8,11,0.069,69,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/covid-19/md_mdcg_qa_conformity_documents_en.md,pdftotext,10,27791,483,425,56,26,10,0.12,57,garbled_sequences:10
+aria/knowledge/eu/02-mdcg/covid-19/mdcg_2021-21_en.md,pdftotext,15,30260,872,669,54,41,1,0.233,81,
+aria/knowledge/eu/02-mdcg/covid-19/mdcg_2021-2_en.md,pdftotext,5,13002,256,210,30,4,11,0.18,56,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/covid-19/mdcg_2021-7_en.md,pdftotext,3,4564,86,66,1,2,0,0.233,97,
+aria/knowledge/eu/02-mdcg/covid-19/mdcg_2022-1_en.md,pdftotext,4,7455,146,119,1,3,0,0.185,98,
+aria/knowledge/eu/02-mdcg/custom-made-devices/mdcg_2021-3_en.md,pdftotext,8,20515,425,339,47,7,2,0.202,67,
+aria/knowledge/eu/02-mdcg/emdn/md_2021-12_en.md,pdftotext,12,16086,365,287,14,11,14,0.214,71,garbled_sequences:14
+aria/knowledge/eu/02-mdcg/emdn/md_cnd_general_principles_en.md,pdftotext,13,20964,667,448,70,45,70,0.328,54,orphaned_lines:70(15.6%); garbled_sequences:70
+aria/knowledge/eu/02-mdcg/emdn/md_emdn_eudamed_nomenclature_en.md,pdftotext,1,2220,41,35,2,0,2,0.146,80,
+aria/knowledge/eu/02-mdcg/emdn/md_mdcg_2018_2_nomenclature_en.md,pdftotext,3,8641,136,127,4,2,9,0.066,75,garbled_sequences:9
+aria/knowledge/eu/02-mdcg/emdn/mdcg_2024-2_en.md,pdftotext,7,10606,283,223,12,6,5,0.212,71,garbled_sequences:5
+aria/knowledge/eu/02-mdcg/emdn/mdcg_2025-2_en.md,pdftotext,27,23065,1399,1181,493,26,828,0.156,54,orphaned_lines:493(41.7%); garbled_sequences:828
+aria/knowledge/eu/02-mdcg/eudamed/2021-1_guidance-administrative-practices_en.md,pdftotext,31,56444,1842,1611,72,30,23,0.125,72,garbled_sequences:23
+aria/knowledge/eu/02-mdcg/eudamed/md_eudamed-qa_en.md,pdftotext,13,36533,559,481,46,11,41,0.14,64,garbled_sequences:41
+aria/knowledge/eu/02-mdcg/eudamed/md_mdcg_2021-13_q-a-actor_registr_eudamed_en.md,pdftotext,7,13715,302,241,14,11,45,0.202,70,garbled_sequences:45
+aria/knowledge/eu/02-mdcg/eudamed/md_mdcg_2022-12_guidance-admpractice_techsol_eudamed_en_0.md,pdftotext,34,59879,2019,1664,58,33,2,0.176,84,
+aria/knowledge/eu/02-mdcg/implant-cards/md_2021-11_en.md,pdftotext,6,7126,769,406,87,5,0,0.472,69,orphaned_lines:87(21.4%)
+aria/knowledge/eu/02-mdcg/implant-cards/md_mdcg_2019_8_implant_guidance_card_en.md,pdftotext,14,18376,458,353,25,143,3,0.229,69,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/in-house-devices/mdcg_2023-1_en.md,pdftotext,20,41961,833,687,16,82,11,0.175,75,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/ivd/md_mdcg_2020_guidance_classification_ivd-md_en.md,pdftotext,54,110053,1926,1438,121,53,60,0.253,66,garbled_sequences:60
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2021-22_en.md,pdftotext,6,11678,259,220,10,13,1,0.151,87,
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2021-4_en.md,pdftotext,5,9061,181,142,12,4,0,0.215,86,
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-10_en.md,pdftotext,12,31279,548,471,5,13,1,0.141,93,
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-15_en.md,pdftotext,6,15157,272,226,10,9,3,0.169,77,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-19_en.md,pdftotext,5,5192,143,95,9,4,10,0.336,64,garbled_sequences:10
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-20_en.md,pdftotext,5,4161,102,72,5,4,7,0.294,68,garbled_sequences:7
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-2_en.md,pdftotext,31,67223,1762,1462,59,30,3,0.17,78,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-3_en.md,pdftotext,12,24102,665,539,51,11,0,0.189,84,
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-6.md,pdftotext,17,29823,1049,739,157,54,0,0.296,74,orphaned_lines:157(21.2%)
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-8_en.md,pdftotext,10,22023,518,428,36,13,6,0.174,66,garbled_sequences:6
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2022-9_en.md,pdftotext,10,15005,364,310,2,9,0,0.148,99,
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2024-11_en.md,pdftotext,13,32483,742,581,27,12,0,0.217,92,
+aria/knowledge/eu/02-mdcg/ivd/mdcg_2024-4_en.md,pdftotext,23,52833,1249,992,118,22,82,0.206,60,garbled_sequences:82
+aria/knowledge/eu/02-mdcg/new-technologies/md_cybersecurity_en.md,pdftotext,46,111297,3138,2441,232,195,11,0.222,63,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/new-technologies/md_mdcg_2020_1_guidance_clinic_eva_md_software_en.md,pdftotext,22,47619,1064,813,59,21,410,0.236,68,garbled_sequences:410
+aria/knowledge/eu/02-mdcg/new-technologies/md_mdcg_2021_mdsw_en.md,pdftotext,2,1858,124,84,25,4,13,0.323,54,orphaned_lines:25(29.8%); garbled_sequences:13
+aria/knowledge/eu/02-mdcg/new-technologies/md_mdcg_2023-4_software_en.md,pdftotext,8,16777,300,243,7,7,0,0.19,95,
+aria/knowledge/eu/02-mdcg/new-technologies/mdcg_2019_11_en.md,pdftotext,36,89608,1850,1470,160,36,5,0.205,62,garbled_sequences:5
+aria/knowledge/eu/02-mdcg/new-technologies/mdcg_2025-4_en.md,pdftotext,8,19693,361,292,20,12,0,0.191,88,
+aria/knowledge/eu/02-mdcg/new-technologies/mdcg_2025-6_en.md,pdftotext,27,70017,1329,1161,32,26,1,0.126,90,
+aria/knowledge/eu/02-mdcg/new-technologies/mdcg_2025-9.md,pdftotext,36,99414,2009,1607,160,35,5,0.2,63,garbled_sequences:5
+aria/knowledge/eu/02-mdcg/notified-bodies/md_2020-14-guidance-mdsap_en.md,pdftotext,10,21072,404,306,15,9,4,0.243,72,garbled_sequences:4
+aria/knowledge/eu/02-mdcg/notified-bodies/md_2020-17-guidance-mdcg-qa_en.md,pdftotext,6,13330,201,176,10,5,11,0.124,70,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2017_2_nbog_bpg_en.md,pdftotext,18,54120,1088,876,49,31,0,0.195,90,
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2018_8_crf_transfer_en.md,pdftotext,2,2693,57,46,0,1,0,0.193,100,
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2019_13_sampling_mdr_ivdr_en.md,pdftotext,8,18641,348,299,12,7,0,0.141,93,
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2019_14_mdr_codes_en.md,pdftotext,23,32757,1129,834,106,22,0,0.261,78,
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2020-11_guidance_renewal_designation_en.md,pdftotext,5,11059,206,178,17,13,5,0.136,63,garbled_sequences:5
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2020-12_guidance_transitional_provisions_en.md,pdftotext,6,17256,261,230,4,5,2,0.119,87,
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2020_4_nb_audits_covid-19_en.md,pdftotext,6,12296,253,205,13,14,7,0.19,69,garbled_sequences:7
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_2021-14-guidance-ivdr-codes_en.md,pdftotext,17,39141,1151,867,38,18,0,0.247,92,
+aria/knowledge/eu/02-mdcg/notified-bodies/md_mdcg_qa_requirements_notified_bodies_en.md,pdftotext,21,57845,1251,1028,63,20,13,0.178,70,garbled_sequences:13
+aria/knowledge/eu/02-mdcg/notified-bodies/mdcg_2020-3_en_1.md,pdftotext,21,39602,1333,946,203,138,18,0.29,53,orphaned_lines:203(21.5%); garbled_sequences:18
+aria/knowledge/eu/02-mdcg/notified-bodies/mdcg_2021-23_en.md,pdftotext,7,19215,369,306,38,36,0,0.171,78,
+aria/knowledge/eu/02-mdcg/notified-bodies/mdcg_2022-17_en_0.md,pdftotext,3,5859,123,106,10,2,2,0.138,74,
+aria/knowledge/eu/02-mdcg/notified-bodies/mdcg_2022-4_en.md,pdftotext,11,28663,494,418,21,10,6,0.154,71,garbled_sequences:6
+aria/knowledge/eu/02-mdcg/notified-bodies/mdcg_2023-2_en.md,pdftotext,8,12325,556,430,50,40,1,0.227,74,
+aria/knowledge/eu/02-mdcg/notified-bodies/mdcg_2024-12_en.md,pdftotext,15,32813,788,611,65,44,18,0.225,61,garbled_sequences:18
+aria/knowledge/eu/02-mdcg/other-guidance/md_guidance_meddevs.md,pdftotext,6,7302,217,189,5,6,0,0.129,95,
+aria/knowledge/eu/02-mdcg/other-guidance/md_mdcg_camd_mdr_en.md,pdftotext,13,19912,538,358,56,18,38,0.335,54,orphaned_lines:56(15.6%); garbled_sequences:38
+aria/knowledge/eu/02-mdcg/other-guidance/md_sector_lang-req-table-ivdr.md,pdftotext,12,19555,1375,1157,40,54,6,0.159,73,garbled_sequences:6
+aria/knowledge/eu/02-mdcg/other-guidance/md_sector_lang-req-table-mdr.md,pdftotext,12,21420,1701,1403,41,63,4,0.175,73,garbled_sequences:4
+aria/knowledge/eu/02-mdcg/other-guidance/mdcg_scheer_o_064.md,pdftotext,98,281302,5917,4865,408,116,91,0.178,66,garbled_sequences:91
+aria/knowledge/eu/02-mdcg/other-topics/md_mdcg_2019_3_rev1_cecp_en.md,pdftotext,4,6856,140,112,6,11,0,0.2,90,
+aria/knowledge/eu/02-mdcg/other-topics/md_mdcg_2021_25_en.md,pdftotext,11,24975,610,495,39,10,3,0.189,72,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/other-topics/mdcg_2022-11_en.md,pdftotext,7,13138,359,269,25,6,2,0.251,74,
+aria/knowledge/eu/02-mdcg/other-topics/mdcg_2022-14_en.md,pdftotext,6,20651,327,287,11,5,0,0.122,93,
+aria/knowledge/eu/02-mdcg/other-topics/mdcg_2022-18_add-1_en.md,pdftotext,2,3212,63,53,1,1,0,0.159,97,
+aria/knowledge/eu/02-mdcg/other-topics/mdcg_2022-18_en_1.md,pdftotext,8,19087,420,335,37,17,0,0.202,81,
+aria/knowledge/eu/02-mdcg/other-topics/mdr_proposal_extension-q-n-a_1.md,pdftotext,12,44450,631,511,46,11,37,0.19,65,garbled_sequences:37
+aria/knowledge/eu/02-mdcg/other-topics/mdr_qna-ext-ivdr.md,pdftotext,17,52002,771,615,59,16,53,0.202,64,garbled_sequences:53
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2022-21_en.md,pdftotext,40,77308,2754,1986,273,150,50,0.279,56,garbled_sequences:50
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2023-3_en.md,pdftotext,24,79469,1521,1289,115,23,11,0.153,65,garbled_sequences:11
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2024-1-1_en.md,pdftotext,7,12294,353,250,40,6,3,0.292,60,orphaned_lines:40(16.0%); garbled_sequences:3
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2024-1-2_en.md,pdftotext,8,12675,417,298,40,7,3,0.285,62,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2024-1-3_en.md,pdftotext,6,13353,387,280,57,9,3,0.276,60,orphaned_lines:57(20.4%); garbled_sequences:3
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2024-1-4_en.md,pdftotext,7,11773,371,258,37,6,3,0.305,61,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2024-1-5_en_1.md,pdftotext,7,12136,391,267,50,6,3,0.317,60,orphaned_lines:50(18.7%); garbled_sequences:3
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2024-1_en.md,pdftotext,6,11509,285,216,24,5,5,0.242,61,garbled_sequences:5
+aria/knowledge/eu/02-mdcg/pmsv/mdcg_2025-10_en.md,pdftotext,23,57692,1449,1162,121,22,15,0.198,62,garbled_sequences:15
+aria/knowledge/eu/02-mdcg/prrc/md_mdcg_2019_7_guidance_art15_mdr_ivdr_en.md,pdftotext,10,26323,463,395,4,11,0,0.147,98,
+aria/knowledge/eu/02-mdcg/standards/md_mdcg_2021_5_en.md,pdftotext,27,74644,1471,1112,118,26,36,0.244,62,garbled_sequences:36
+aria/knowledge/eu/02-mdcg/udi/md_2018-3-guidance-udi-spp_en.md,pdftotext,4,6326,143,114,5,3,1,0.203,87,
+aria/knowledge/eu/02-mdcg/udi/md_2021-10_en.md,pdftotext,3,5907,238,188,5,2,1,0.21,90,
+aria/knowledge/eu/02-mdcg/udi/md_2021-19_en.md,pdftotext,10,22749,469,400,39,34,12,0.147,63,garbled_sequences:12
+aria/knowledge/eu/02-mdcg/udi/md_mdcg_2018-1_guidance_udi-di_en.md,pdftotext,4,7782,166,142,12,3,2,0.145,76,
+aria/knowledge/eu/02-mdcg/udi/md_mdcg_2018_4_udi_core_spp_en.md,pdftotext,3,3497,84,69,3,2,0,0.179,92,
+aria/knowledge/eu/02-mdcg/udi/md_mdcg_2018_5_software_en.md,pdftotext,3,5050,130,97,12,2,0,0.254,79,
+aria/knowledge/eu/02-mdcg/udi/md_mdcg_2018_6_art16_en.md,pdftotext,2,2285,54,44,0,1,0,0.185,100,
+aria/knowledge/eu/02-mdcg/udi/md_mdcg_2018_7_languages_en.md,pdftotext,3,5330,105,90,4,2,2,0.143,82,
+aria/knowledge/eu/02-mdcg/udi/md_mdcg_2019_1_budi_rules_ie_en.md,pdftotext,2,1453,43,31,2,3,0,0.279,88,
+aria/knowledge/eu/02-mdcg/udi/md_mdcg_2019_2_gui_udi_dev_en.md,pdftotext,3,6539,121,105,2,2,2,0.132,87,
+aria/knowledge/eu/02-mdcg/udi/mdcg_2022-7_en.md,pdftotext,13,31301,581,494,48,24,3,0.15,68,garbled_sequences:3
+aria/knowledge/eu/02-mdcg/udi/mdcg_2024-14_en.md,pdftotext,13,23344,535,407,35,12,0,0.239,85,
+aria/knowledge/eu/02-mdcg/udi/mdcg_2025-7_en.md,pdftotext,6,13126,350,271,64,5,0,0.226,75,orphaned_lines:64(23.6%)
+aria/knowledge/eu/02-mdcg/udi/mdcg_2025-8_en.md,pdftotext,43,74251,4163,3699,1991,42,0,0.111,75,orphaned_lines:1991(53.8%)
+aria/knowledge/eu/03-meddev/2_-12-1_rev8_en.md,pdftotext,64,135713,3439,2694,378,213,878,0.217,56,garbled_sequences:878
+aria/knowledge/eu/03-meddev/2_12_2_ol_en.md,pdftotext,14,21470,1308,740,417,59,14,0.434,51,orphaned_lines:417(56.4%); garbled_sequences:14
+aria/knowledge/eu/03-meddev/2_7_1_rev4_en.md,pdftotext,65,182626,4467,3294,469,64,24,0.263,56,garbled_sequences:24
+aria/knowledge/eu/03-meddev/AdditionalGuidance_-MEDDEV_2_12_1_Final_070519-002.md,pdftotext,15,24829,455,388,45,32,147,0.147,60,garbled_sequences:147
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-351.md,beautifulsoup (documentid comment parsing),0,16551,155,75,0,0,0,0.516,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-352.md,beautifulsoup (documentid comment parsing),0,59517,456,224,0,0,0,0.509,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-353.md,beautifulsoup (documentid comment parsing),0,66512,726,343,0,0,0,0.528,90,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-353a-1.md,beautifulsoup (documentid comment parsing),0,1883,40,20,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-353a.md,beautifulsoup (documentid comment parsing),0,8496,113,54,0,0,0,0.522,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-353b.md,beautifulsoup (documentid comment parsing),0,16655,271,134,0,0,0,0.506,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-353c.md,beautifulsoup (documentid comment parsing),0,3302,56,27,0,0,0,0.518,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-353d.md,beautifulsoup (documentid comment parsing),0,9837,133,66,0,0,0,0.504,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-354.md,beautifulsoup (documentid comment parsing),0,4631,41,20,0,0,0,0.512,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355-1.md,beautifulsoup (documentid comment parsing),0,54207,704,349,0,0,0,0.504,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355-2.md,beautifulsoup (documentid comment parsing),0,14356,231,111,0,0,0,0.519,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355.md,beautifulsoup (documentid comment parsing),0,270656,2423,1165,0,0,12,0.519,71,garbled_sequences:12
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355a.md,beautifulsoup (documentid comment parsing),0,50342,548,271,0,0,0,0.505,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355b.md,beautifulsoup (documentid comment parsing),0,3390,49,24,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355c-1.md,beautifulsoup (documentid comment parsing),0,9299,103,50,0,0,0,0.515,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355c.md,beautifulsoup (documentid comment parsing),0,61046,706,349,0,0,0,0.506,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355d.md,beautifulsoup (documentid comment parsing),0,1327,14,7,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355e.md,beautifulsoup (documentid comment parsing),0,2938,55,28,0,0,0,0.491,93,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355f.md,beautifulsoup (documentid comment parsing),0,7616,136,67,0,0,0,0.507,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355g.md,beautifulsoup (documentid comment parsing),0,4474,96,47,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-355h.md,beautifulsoup (documentid comment parsing),0,53460,717,353,0,0,0,0.508,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356-1.md,beautifulsoup (documentid comment parsing),0,3600,51,25,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356-2.md,beautifulsoup (documentid comment parsing),0,3538,65,32,0,0,0,0.508,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356.md,beautifulsoup (documentid comment parsing),0,40917,443,220,0,0,0,0.503,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356a.md,beautifulsoup (documentid comment parsing),0,6642,78,39,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356b.md,beautifulsoup (documentid comment parsing),0,6294,75,37,0,0,0,0.507,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356c-1.md,beautifulsoup (documentid comment parsing),0,4189,60,29,0,0,0,0.517,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356c.md,beautifulsoup (documentid comment parsing),0,20732,224,109,0,0,0,0.513,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356d.md,beautifulsoup (documentid comment parsing),0,5633,91,45,0,0,0,0.505,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356e.md,beautifulsoup (documentid comment parsing),0,2890,68,33,0,0,0,0.515,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356f.md,beautifulsoup (documentid comment parsing),0,2562,47,24,0,0,0,0.489,93,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356g.md,beautifulsoup (documentid comment parsing),0,4052,53,26,0,0,0,0.509,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356h.md,beautifulsoup (documentid comment parsing),0,4979,91,45,0,0,0,0.505,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356i.md,beautifulsoup (documentid comment parsing),0,8359,82,41,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356j.md,beautifulsoup (documentid comment parsing),0,10697,153,75,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356k.md,beautifulsoup (documentid comment parsing),0,10221,102,50,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-356l.md,beautifulsoup (documentid comment parsing),0,6945,95,48,0,0,0,0.495,93,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-357.md,beautifulsoup (documentid comment parsing),0,16144,238,118,0,0,0,0.504,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-358.md,beautifulsoup (documentid comment parsing),0,5413,49,24,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-359.md,beautifulsoup (documentid comment parsing),0,986,14,7,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360.md,beautifulsoup (documentid comment parsing),0,67287,549,268,0,0,0,0.512,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360a-1.md,beautifulsoup (documentid comment parsing),0,14872,147,73,0,0,0,0.503,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360a-2.md,beautifulsoup (documentid comment parsing),0,18706,260,126,0,0,0,0.515,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360a.md,beautifulsoup (documentid comment parsing),0,1410,18,9,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360aa.md,beautifulsoup (documentid comment parsing),0,12899,128,63,0,0,0,0.508,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360b-1.md,beautifulsoup (documentid comment parsing),0,3029,29,15,0,0,0,0.483,94,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360b.md,beautifulsoup (documentid comment parsing),0,108463,759,361,0,0,0,0.524,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bb.md,beautifulsoup (documentid comment parsing),0,5955,64,31,0,0,0,0.516,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-0.md,beautifulsoup (documentid comment parsing),0,10614,148,71,0,0,0,0.52,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-1.md,beautifulsoup (documentid comment parsing),0,1633,19,9,0,0,0,0.526,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-2.md,beautifulsoup (documentid comment parsing),0,2165,22,11,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-3.md,beautifulsoup (documentid comment parsing),0,51602,583,286,0,0,3,0.509,77,garbled_sequences:3
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-4.md,beautifulsoup (documentid comment parsing),0,47408,546,267,0,0,0,0.511,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-5.md,beautifulsoup (documentid comment parsing),0,9415,136,67,0,0,0,0.507,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-6.md,beautifulsoup (documentid comment parsing),0,1901,42,21,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-7.md,beautifulsoup (documentid comment parsing),0,2054,44,22,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb-8.md,beautifulsoup (documentid comment parsing),0,22903,326,160,0,0,0,0.509,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360bbb.md,beautifulsoup (documentid comment parsing),0,13573,122,60,0,0,0,0.508,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360c-1.md,beautifulsoup (documentid comment parsing),0,928,18,9,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360c.md,beautifulsoup (documentid comment parsing),0,60994,503,239,0,0,0,0.525,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360cc.md,beautifulsoup (documentid comment parsing),0,11090,104,51,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ccc-1.md,beautifulsoup (documentid comment parsing),0,17291,219,104,0,0,3,0.525,76,garbled_sequences:3
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ccc-2.md,beautifulsoup (documentid comment parsing),0,5775,68,32,0,0,0,0.529,90,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ccc.md,beautifulsoup (documentid comment parsing),0,20750,217,103,0,0,0,0.525,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360d.md,beautifulsoup (documentid comment parsing),0,28650,244,118,0,0,0,0.516,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360dd.md,beautifulsoup (documentid comment parsing),0,793,5,3,0,0,0,0.4,100,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ddd-1.md,beautifulsoup (documentid comment parsing),0,7278,116,58,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ddd-2.md,beautifulsoup (documentid comment parsing),0,785,14,7,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ddd.md,beautifulsoup (documentid comment parsing),0,5191,78,38,0,0,0,0.513,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360e-1.md,beautifulsoup (documentid comment parsing),0,4526,72,35,0,0,0,0.514,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360e-3.md,beautifulsoup (documentid comment parsing),0,8775,127,63,0,0,0,0.504,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360e-4.md,beautifulsoup (documentid comment parsing),0,3074,46,23,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360e.md,beautifulsoup (documentid comment parsing),0,51138,433,206,0,0,0,0.524,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ee-1.md,beautifulsoup (documentid comment parsing),0,1299,22,11,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ee.md,beautifulsoup (documentid comment parsing),0,17439,161,79,0,0,0,0.509,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360eee-1.md,beautifulsoup (documentid comment parsing),0,70784,833,413,0,0,0,0.504,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360eee-2.md,beautifulsoup (documentid comment parsing),0,3998,61,30,0,0,0,0.508,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360eee-3.md,beautifulsoup (documentid comment parsing),0,7507,104,52,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360eee-4.md,beautifulsoup (documentid comment parsing),0,3601,47,24,0,0,0,0.489,93,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360eee.md,beautifulsoup (documentid comment parsing),0,19028,298,148,0,0,0,0.503,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360f.md,beautifulsoup (documentid comment parsing),0,3921,36,17,0,0,0,0.528,90,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ff-1.md,beautifulsoup (documentid comment parsing),0,5358,69,33,0,0,0,0.522,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ff.md,beautifulsoup (documentid comment parsing),0,20947,302,149,0,0,0,0.507,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-1.md,beautifulsoup (documentid comment parsing),0,670,5,3,0,0,0,0.4,100,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-2.md,beautifulsoup (documentid comment parsing),0,7798,112,56,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-3.md,beautifulsoup (documentid comment parsing),0,17160,214,105,0,0,0,0.509,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-4.md,beautifulsoup (documentid comment parsing),0,3776,64,32,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-5.md,beautifulsoup (documentid comment parsing),0,242,3,2,0,0,0,0.333,100,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-6.md,beautifulsoup (documentid comment parsing),0,10503,118,59,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-7.md,beautifulsoup (documentid comment parsing),0,3686,47,23,0,0,0,0.511,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff-8.md,beautifulsoup (documentid comment parsing),0,228,5,3,0,0,0,0.4,100,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360fff.md,beautifulsoup (documentid comment parsing),0,3863,60,28,0,0,0,0.533,90,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360g-1.md,beautifulsoup (documentid comment parsing),0,3902,48,24,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360g-2.md,beautifulsoup (documentid comment parsing),0,2291,33,16,0,0,0,0.515,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360g.md,beautifulsoup (documentid comment parsing),0,6660,72,35,0,0,0,0.514,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360h-1.md,beautifulsoup (documentid comment parsing),0,2000,40,20,0,0,0,0.5,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360h.md,beautifulsoup (documentid comment parsing),0,10328,95,44,0,0,0,0.537,90,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360hh.md,beautifulsoup (documentid comment parsing),0,4109,54,26,0,0,0,0.519,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360i.md,beautifulsoup (documentid comment parsing),0,41466,490,238,0,0,0,0.514,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ii.md,beautifulsoup (documentid comment parsing),0,5516,67,33,0,0,0,0.507,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360j.md,beautifulsoup (documentid comment parsing),0,87005,797,381,0,0,0,0.522,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360jj.md,beautifulsoup (documentid comment parsing),0,4490,58,28,0,0,0,0.517,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360k.md,beautifulsoup (documentid comment parsing),0,1433,23,12,0,0,0,0.478,94,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360kk.md,beautifulsoup (documentid comment parsing),0,11956,101,49,0,0,0,0.515,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360l.md,beautifulsoup (documentid comment parsing),0,7236,81,40,0,0,0,0.506,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ll.md,beautifulsoup (documentid comment parsing),0,8844,70,34,0,0,0,0.514,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360m.md,beautifulsoup (documentid comment parsing),0,17086,214,106,0,0,0,0.505,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360mm.md,beautifulsoup (documentid comment parsing),0,5860,45,22,0,0,0,0.511,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360n-1.md,beautifulsoup (documentid comment parsing),0,1959,27,13,0,0,0,0.519,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360n-2.md,beautifulsoup (documentid comment parsing),0,5903,67,33,0,0,0,0.507,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360n.md,beautifulsoup (documentid comment parsing),0,9451,174,86,0,0,0,0.506,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360nn.md,beautifulsoup (documentid comment parsing),0,7506,51,25,0,0,0,0.51,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360oo.md,beautifulsoup (documentid comment parsing),0,3572,46,22,0,0,0,0.522,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360pp.md,beautifulsoup (documentid comment parsing),0,4542,57,28,0,0,0,0.509,92,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360qq.md,beautifulsoup (documentid comment parsing),0,525,3,2,0,0,0,0.333,100,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360rr.md,beautifulsoup (documentid comment parsing),0,1799,25,12,0,0,0,0.52,91,
+aria/knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/section-360ss.md,beautifulsoup (documentid comment parsing),0,5324,65,31,0,0,0,0.523,91,
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-800.md,xml.etree.ElementTree (PART-level chunking),0,70791,827,563,92,0,1,0.319,70,orphaned_lines:92(16.3%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-801.md,xml.etree.ElementTree (PART-level chunking),0,124858,1340,791,80,2,18,0.41,62,garbled_sequences:18
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-803.md,xml.etree.ElementTree (PART-level chunking),0,66480,936,511,37,0,2,0.454,74,
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-806.md,xml.etree.ElementTree (PART-level chunking),0,15489,207,121,15,0,5,0.415,58,garbled_sequences:5
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-807.md,xml.etree.ElementTree (PART-level chunking),0,72175,665,363,27,0,7,0.454,64,garbled_sequences:7
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-808.md,xml.etree.ElementTree (PART-level chunking),0,25902,236,135,10,0,5,0.428,66,garbled_sequences:5
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-809.md,xml.etree.ElementTree (PART-level chunking),0,36892,391,201,3,3,2,0.486,81,
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-810.md,xml.etree.ElementTree (PART-level chunking),0,29271,341,196,23,0,7,0.425,59,garbled_sequences:7
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-812.md,xml.etree.ElementTree (PART-level chunking),0,91136,1013,628,112,0,4,0.38,55,orphaned_lines:112(17.8%); garbled_sequences:4
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-814.md,xml.etree.ElementTree (PART-level chunking),0,99713,1016,573,48,0,4,0.436,63,garbled_sequences:4
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-820-qmsr.md,xml.etree.ElementTree (PART-level chunking),0,19407,230,149,17,0,3,0.352,66,garbled_sequences:3
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-820.md,xml.etree.ElementTree (PART-level chunking),0,77492,992,630,107,0,5,0.365,55,orphaned_lines:107(17.0%); garbled_sequences:5
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-821.md,xml.etree.ElementTree (PART-level chunking),0,24521,287,161,14,0,3,0.439,68,garbled_sequences:3
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-822.md,xml.etree.ElementTree (PART-level chunking),0,31012,414,230,16,0,2,0.444,75,
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-830.md,xml.etree.ElementTree (PART-level chunking),0,32124,472,273,17,0,2,0.422,78,
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-860.md,xml.etree.ElementTree (PART-level chunking),0,89353,826,482,40,0,3,0.416,70,garbled_sequences:3
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-861.md,xml.etree.ElementTree (PART-level chunking),0,15193,181,98,0,0,4,0.459,76,garbled_sequences:4
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-862.md,xml.etree.ElementTree (PART-level chunking),0,231117,3418,2258,510,0,19,0.339,55,orphaned_lines:510(22.6%); garbled_sequences:19
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-864.md,xml.etree.ElementTree (PART-level chunking),0,137183,2090,1322,251,0,3,0.367,60,orphaned_lines:251(19.0%); garbled_sequences:3
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-866.md,xml.etree.ElementTree (PART-level chunking),0,521033,6437,4534,766,11,4,0.296,55,orphaned_lines:766(16.9%); garbled_sequences:4
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-868.md,xml.etree.ElementTree (PART-level chunking),0,103085,1960,1295,310,0,2,0.339,65,orphaned_lines:310(23.9%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-870.md,xml.etree.ElementTree (PART-level chunking),0,182271,3104,1953,355,0,2,0.371,65,orphaned_lines:355(18.2%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-872.md,xml.etree.ElementTree (PART-level chunking),0,130122,1954,1282,295,0,1,0.344,70,orphaned_lines:295(23.0%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-874.md,xml.etree.ElementTree (PART-level chunking),0,70253,1068,670,132,0,2,0.373,65,orphaned_lines:132(19.7%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-876.md,xml.etree.ElementTree (PART-level chunking),0,161664,2446,1436,212,0,2,0.413,64,
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-878.md,xml.etree.ElementTree (PART-level chunking),0,142598,2345,1435,256,0,6,0.388,55,orphaned_lines:256(17.8%); garbled_sequences:6
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-880.md,xml.etree.ElementTree (PART-level chunking),0,124899,1838,1177,243,0,6,0.36,55,orphaned_lines:243(20.6%); garbled_sequences:6
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-882.md,xml.etree.ElementTree (PART-level chunking),0,146959,2590,1605,319,4,2,0.38,65,orphaned_lines:319(19.9%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-884.md,xml.etree.ElementTree (PART-level chunking),0,121718,1846,1158,227,0,3,0.373,60,orphaned_lines:227(19.6%); garbled_sequences:3
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-886.md,xml.etree.ElementTree (PART-level chunking),0,135526,2150,1363,285,0,2,0.366,65,orphaned_lines:285(20.9%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-888.md,xml.etree.ElementTree (PART-level chunking),0,138673,1900,1181,221,0,2,0.378,65,orphaned_lines:221(18.7%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-890.md,xml.etree.ElementTree (PART-level chunking),0,108053,1611,1022,194,0,3,0.366,60,orphaned_lines:194(19.0%); garbled_sequences:3
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-892.md,xml.etree.ElementTree (PART-level chunking),0,79535,1240,806,167,0,2,0.35,65,orphaned_lines:167(20.7%)
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-895.md,xml.etree.ElementTree (PART-level chunking),0,22683,179,98,2,0,1,0.453,88,
+aria/knowledge/fda/02-regulation/21cfr-subchapter-h/part-898.md,xml.etree.ElementTree (PART-level chunking),0,3549,70,41,0,0,4,0.414,79,garbled_sequences:4
+aria/knowledge/fda/03-guidance/001_cybersecurity_in_medical_devices_quality_management_system_considerations_and_content_of_premarket_submissions_guida.md,pdftotext,64,186692,3357,2867,399,63,4,0.146,57,garbled_sequences:4
+aria/knowledge/fda/03-guidance/002_computer_software_assurance_for_production_and_quality_management_system_software_guidance_for_industry_and_food_and.md,pdftotext,41,99405,2673,2292,230,40,2,0.143,73,
+aria/knowledge/fda/03-guidance/003_clinical_decision_support_software_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,27,82974,1235,1122,85,26,1,0.091,82,
+aria/knowledge/fda/03-guidance/004_general_wellness_policy_for_low_risk_devices_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,15,34081,617,538,70,20,0,0.128,78,
+aria/knowledge/fda/03-guidance/005_processes_and_practices_applicable_to_bioresearch_monitoring_inspections_guidance_for_industry.md,pdftotext,16,37479,728,620,95,15,34,0.148,55,orphaned_lines:95(15.3%); garbled_sequences:34
+aria/knowledge/fda/03-guidance/006_use_of_real-world_evidence_to_support_regulatory_decision-making_for_medical_devices_guidance_for_industry_and_food_.md,pdftotext,44,119318,2366,1996,253,43,14,0.156,59,garbled_sequences:14
+aria/knowledge/fda/03-guidance/007_investigator_responsibilities_safety_reporting_for_investigational_drugs_and_devices_guidance_for_industry.md,pdftotext,14,35543,720,549,82,13,45,0.237,55,garbled_sequences:45
+aria/knowledge/fda/03-guidance/008_ecopy_program_for_medical_device_submissions_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,30,63647,1101,944,108,32,15,0.143,61,garbled_sequences:15
+aria/knowledge/fda/03-guidance/009_patient-focused_drug_development_selecting_developing_or_modifying_fit-for-purpose_clinical_outcome_assessments.md,pdftotext,53,147177,2582,2208,228,66,137,0.145,62,garbled_sequences:137
+aria/knowledge/fda/03-guidance/010_consideration_of_enforcement_policies_for_in_vitro_diagnostic_tests_during_a_section_564_declared_emergency_guidance.md,pdftotext,10,23513,362,312,28,9,9,0.138,65,garbled_sequences:9
+aria/knowledge/fda/03-guidance/011_animal_studies_for_dental_bone_grafting_material_devices_-_premarket_notification_510_k_submissions_guidance_for_ind.md,pdftotext,17,42592,678,607,56,17,1,0.105,79,
+aria/knowledge/fda/03-guidance/012_marketing_submission_recommendations_for_a_predetermined_change_control_plan_for_artificial_intelligence-enabled_dev.md,pdftotext,49,145690,2371,2098,210,48,1,0.115,78,
+aria/knowledge/fda/03-guidance/013_medical_device_user_fee_small_business_qualification_and_determination_guidance_for_industry_food_and_drug_administr.md,pdftotext,22,54305,975,838,92,21,0,0.141,81,
+aria/knowledge/fda/03-guidance/014_conducting_remote_regulatory_assessments_questions_and_answers_guidance_for_industry.md,pdftotext,18,49168,897,727,112,25,7,0.19,55,orphaned_lines:112(15.4%); garbled_sequences:7
+aria/knowledge/fda/03-guidance/015_requests_for_feedback_and_meetings_for_medical_device_submissions_the_q-submission_program_-_final_guidance_for_indu.md,pdftotext,41,113309,2010,1700,196,60,6,0.154,60,garbled_sequences:6
+aria/knowledge/fda/03-guidance/016_evaluation_of_sex-specific_data_in_medical_device_clinical_studies_-_guidance_for_industry_and_food_and_drug_adminis.md,pdftotext,27,64623,1245,1014,122,26,93,0.186,60,garbled_sequences:93
+aria/knowledge/fda/03-guidance/018_institutional_review_board_irb_written_procedures_guidance_for_institutions_and_irbs.md,pdftotext,16,35966,856,714,94,15,57,0.166,58,garbled_sequences:57
+aria/knowledge/fda/03-guidance/019_premarket_approval_application_and_humanitarian_device_exemption_modular_review_guidance_for_industry_and_fda_staff.md,pdftotext,17,38302,756,621,71,16,5,0.179,61,garbled_sequences:5
+aria/knowledge/fda/03-guidance/020_notifying_fda_of_a_permanent_discontinuance_or_interruption_in_manufacturing_of_a_device_under_section_506j_of_the_f.md,pdftotext,21,57925,1061,877,141,20,10,0.173,55,orphaned_lines:141(16.1%); garbled_sequences:10
+aria/knowledge/fda/03-guidance/021_communications_from_firms_to_health_care_providers_regarding_scientific_information_on_unapproved_uses_of_approved_c.md,pdftotext,32,97091,1650,1360,170,31,15,0.176,59,garbled_sequences:15
+aria/knowledge/fda/03-guidance/022_global_unique_device_identification_database_gudid_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,39,78167,1928,1615,179,38,12,0.162,61,garbled_sequences:12
+aria/knowledge/fda/03-guidance/023_transitional_enforcement_policy_for_ethylene_oxide_sterilization_facility_changes_for_class_iii_devices_guidance_for.md,pdftotext,21,57694,1014,860,105,20,2,0.152,69,
+aria/knowledge/fda/03-guidance/024_orthopedic_non-spinal_metallic_bone_screws_and_washers_-_performance_criteria_for_safety_and_performance_based_pathw.md,pdftotext,11,24883,488,435,62,42,0,0.109,75,
+aria/knowledge/fda/03-guidance/025_orthopedic_non-spinal_bone_plates_screws_and_washers_-_premarket_notification_510_k_submissions_guidance_for_industr.md,pdftotext,38,86863,2339,1903,107,69,3,0.186,75,garbled_sequences:3
+aria/knowledge/fda/03-guidance/026_510_k_third_party_review_program_and_third_party_emergency_use_authorization_eua_review_guidance_for_industry_food_a.md,pdftotext,44,126544,2354,2014,230,43,22,0.144,61,garbled_sequences:22
+aria/knowledge/fda/03-guidance/027_considerations_for_long-term_clinical_neurodevelopmental_safety_studies_in_neonatal_product_development_guidance_for.md,pdftotext,15,37253,1072,990,467,15,20,0.076,55,orphaned_lines:467(47.2%); garbled_sequences:20
+aria/knowledge/fda/03-guidance/028_endosseous_dental_implants_and_endosseous_dental_implant_abutments_-_performance_criteria_for_safety_and_performance.md,pdftotext,12,28430,515,454,49,11,1,0.118,77,
+aria/knowledge/fda/03-guidance/029_air_powered_dental_handpieces_and_air_motors_-_performance_criteria_for_safety_and_performance_based_pathway_guidanc.md,pdftotext,14,32707,631,546,48,14,1,0.135,80,
+aria/knowledge/fda/03-guidance/030_dental_cements_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_and_food_and_dr.md,pdftotext,10,20157,421,352,28,12,1,0.164,81,
+aria/knowledge/fda/03-guidance/031_dental_ceramics_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_and_food_and_d.md,pdftotext,9,17810,374,321,31,8,1,0.142,79,
+aria/knowledge/fda/03-guidance/032_dental_impression_materials_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_an.md,pdftotext,9,16371,350,292,23,8,1,0.166,82,
+aria/knowledge/fda/03-guidance/033_clarification_of_radiation_control_regulations_for_manufacturers_of_diagnostic_x-ray_equipment_guidance_for_industry.md,pdftotext,54,141070,2590,2110,316,53,232,0.185,55,garbled_sequences:232
+aria/knowledge/fda/03-guidance/034_conducting_clinical_trials_with_decentralized_elements.md,pdftotext,21,55763,1133,855,151,20,11,0.245,55,orphaned_lines:151(17.7%); garbled_sequences:11
+aria/knowledge/fda/03-guidance/035_appeal_options_available_to_mammography_facilities_concerning_adverse_accreditation_decisions_suspension_revocation_.md,pdftotext,10,23239,352,311,20,9,0,0.116,89,
+aria/knowledge/fda/03-guidance/036_voluntary_malfunction_summary_reporting_vmsr_program_for_manufacturers_guidance_for_industry_and_food_and_drug_admin.md,pdftotext,21,53682,1070,840,133,20,1,0.215,70,orphaned_lines:133(15.8%)
+aria/knowledge/fda/03-guidance/037_mammography_quality_standards_act_and_regulation_amendments_small_entity_compliance_guide_guidance_for_industry_and_.md,pdftotext,54,145526,2705,2263,257,53,82,0.163,61,garbled_sequences:82
+aria/knowledge/fda/03-guidance/038_fda_and_industry_procedures_for_section_513_g_requests_for_information_under_the_federal_food_drug_and_cosmetic_act_.md,pdftotext,12,24995,546,419,68,11,1,0.233,70,orphaned_lines:68(16.2%)
+aria/knowledge/fda/03-guidance/039_electronic_submission_template_for_medical_device_de_novo_requests_guidance_for_industry_and_food_and_drug_administr.md,pdftotext,15,37973,727,598,63,14,1,0.177,77,
+aria/knowledge/fda/03-guidance/040_acceptable_media_for_electronic_product_user_manuals_guidance_for_industry_and_fda_staff.md,pdftotext,4,6100,113,94,5,3,0,0.168,91,
+aria/knowledge/fda/03-guidance/041_clinical_considerations_for_studies_of_devices_intended_to_treat_opioid_use_disorder_guidance_for_industry_and_food_.md,pdftotext,12,30936,506,410,49,11,0,0.19,80,
+aria/knowledge/fda/03-guidance/042_circumstances_that_constitute_delaying_denying_limiting_or_refusing_a_drug_or_device_inspection_guidance_for_industr.md,pdftotext,13,33512,570,488,71,12,18,0.144,55,garbled_sequences:18
+aria/knowledge/fda/03-guidance/043_remanufacturing_of_medical_devices_guidance_for_industry_entities_that_perform_servicing_or_remanufacturing_and_food.md,pdftotext,41,107900,1754,1593,137,40,1,0.092,80,
+aria/knowledge/fda/03-guidance/044_submission_and_review_of_sterility_information_in_premarket_notification_510_k_submissions_for_devices_labeled_as_st.md,pdftotext,11,23561,411,361,35,10,0,0.122,84,
+aria/knowledge/fda/03-guidance/045_digital_health_technologies_for_remote_data_acquisition_in_clinical_investigations.md,pdftotext,35,90713,1776,1372,226,34,57,0.227,55,orphaned_lines:226(16.5%); garbled_sequences:57
+aria/knowledge/fda/03-guidance/046_assessing_the_credibility_of_computational_modeling_and_simulation_in_medical_device_submissions_guidance_for_indust.md,pdftotext,42,110759,1993,1745,151,41,0,0.124,85,
+aria/knowledge/fda/03-guidance/047_process_to_request_a_review_of_fda_s_decision_not_to_issue_certain_export_certificates_for_devices_guidance_for_indu.md,pdftotext,9,20811,368,297,36,8,1,0.193,75,
+aria/knowledge/fda/03-guidance/048_enforcement_policy_for_certain_supplements_for_approved_premarket_approval_pma_or_humanitarian_device_exemption_hde_.md,pdftotext,9,20937,334,299,22,8,14,0.105,67,garbled_sequences:14
+aria/knowledge/fda/03-guidance/049_enforcement_policy_for_non-invasive_remote_monitoring_devices_used_to_support_patient_monitoring_guidance_for_indust.md,pdftotext,12,27113,592,474,93,11,13,0.199,55,orphaned_lines:93(19.6%); garbled_sequences:13
+aria/knowledge/fda/03-guidance/050_testing_and_labeling_medical_devices_for_safety_in_the_magnetic_resonance_mr_environment_guidance_for_industry_and_f.md,pdftotext,32,79743,1602,1305,88,32,1,0.185,83,
+aria/knowledge/fda/03-guidance/051_submission_of_premarket_notifications_for_magnetic_resonance_diagnostic_devices_guidance_for_industry_and_food_and_d.md,pdftotext,21,51066,1076,809,139,20,1,0.248,70,orphaned_lines:139(17.2%)
+aria/knowledge/fda/03-guidance/052_electronic_submission_template_for_medical_device_510_k_submissions_guidance_for_industry_and_food_and_drug_administ.md,pdftotext,16,39909,720,616,75,15,0,0.144,79,
+aria/knowledge/fda/03-guidance/053_technical_considerations_for_medical_devices_with_physiologic_closed-loop_control_technology_guidance_for_industry_a.md,pdftotext,35,104854,1759,1494,219,34,0,0.151,75,
+aria/knowledge/fda/03-guidance/054_antimicrobial_susceptibility_test_ast_system_devices_updating_breakpoints_in_device_labeling_guidance_for_industry_a.md,pdftotext,13,32194,551,465,51,12,4,0.156,61,garbled_sequences:4
+aria/knowledge/fda/03-guidance/055_considerations_for_the_conduct_of_clinical_trials_of_medical_products_during_major_disruptions_due_to_disasters_and_.md,pdftotext,34,96184,1678,1368,175,33,30,0.185,58,garbled_sequences:30
+aria/knowledge/fda/03-guidance/056_fostering_medical_device_improvement_fda_activities_and_engagement_with_the_voluntary_improvement_program_guidance_f.md,pdftotext,19,47103,998,807,100,18,2,0.191,69,
+aria/knowledge/fda/03-guidance/057_breakthrough_devices_program_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,32,99934,1588,1341,175,31,4,0.156,58,garbled_sequences:4
+aria/knowledge/fda/03-guidance/058_use_of_international_standard_iso_10993-1_biological_evaluation_of_medical_devices_-_part_1_evaluation_and_testing_w.md,pdftotext,71,189354,3655,3061,488,70,5,0.163,55,orphaned_lines:488(15.9%); garbled_sequences:5
+aria/knowledge/fda/03-guidance/059_application_of_human_factors_engineering_principles_for_combination_products_questions_and_answers_guidance_for_indu.md,pdftotext,17,49016,815,687,72,16,8,0.157,62,garbled_sequences:8
+aria/knowledge/fda/03-guidance/060_enforcement_policy_for_face_masks_and_barrier_face_coverings_during_the_coronavirus_disease_covid-19_public_health_e.md,pdftotext,12,27850,521,423,68,11,24,0.188,55,orphaned_lines:68(16.1%); garbled_sequences:24
+aria/knowledge/fda/03-guidance/061_informed_consent_guidance_for_irbs_clinical_investigators_and_sponsors.md,pdftotext,66,187533,2872,2239,247,65,32,0.22,61,garbled_sequences:32
+aria/knowledge/fda/03-guidance/062_off-the-shelf_software_use_in_medical_devices_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,20,52763,957,816,117,19,0,0.147,76,
+aria/knowledge/fda/03-guidance/063_hydrogen_peroxide-based_contact_lens_care_products_consumer_labeling_recommendations_-_premarket_notification_510_k_.md,pdftotext,27,64079,1165,1042,129,26,82,0.106,59,garbled_sequences:82
+aria/knowledge/fda/03-guidance/064_qualification_of_medical_device_development_tools_guidance_for_industry_tool_developers_and_food_and_drug_administra.md,pdftotext,18,43242,816,671,102,17,0,0.178,75,orphaned_lines:102(15.2%)
+aria/knowledge/fda/03-guidance/065_oncology_drug_products_used_with_certain_in_vitro_diagnostic_tests_pilot_program_guidance_for_industry_clinical_labo.md,pdftotext,10,21963,425,330,44,9,18,0.224,57,garbled_sequences:18
+aria/knowledge/fda/03-guidance/066_content_of_premarket_submissions_for_device_software_functions_guidance_for_industry_and_food_and_drug_administratio.md,pdftotext,45,112575,2027,1711,188,44,1,0.156,76,
+aria/knowledge/fda/03-guidance/067_non-clinical_performance_assessment_of_tissue_containment_systems_used_during_power_morcellation_procedures_guidance.md,pdftotext,20,52463,939,801,104,19,0,0.147,78,
+aria/knowledge/fda/03-guidance/068_peripheral_percutaneous_transluminal_angioplasty_pta_and_specialty_catheters_-_premarket_notification_510_k_submissi.md,pdftotext,30,78082,1468,1209,202,29,1,0.176,70,orphaned_lines:202(16.7%)
+aria/knowledge/fda/03-guidance/069_a_risk-based_approach_to_monitoring_of_clinical_investigations_questions_and_answers_guidance_for_industry.md,pdftotext,13,31213,580,467,55,12,9,0.195,60,garbled_sequences:9
+aria/knowledge/fda/03-guidance/070_general_considerations_for_animal_studies_intended_to_evaluate_medical_devices_guidance_for_industry_and_food_and_dr.md,pdftotext,24,66593,1241,1058,181,23,1,0.147,70,orphaned_lines:181(17.1%)
+aria/knowledge/fda/03-guidance/071_soft_hydrophilic_daily_wear_contact_lenses_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_.md,pdftotext,12,27360,519,444,45,26,0,0.145,83,
+aria/knowledge/fda/03-guidance/072_transition_plan_for_medical_devices_that_fall_within_enforcement_policies_issued_during_the_coronavirus_disease_2019.md,pdftotext,31,93365,1459,1281,173,30,76,0.122,57,garbled_sequences:76
+aria/knowledge/fda/03-guidance/073_transition_plan_for_medical_devices_issued_emergency_use_authorizations_euas_related_to_coronavirus_disease_2019_cov.md,pdftotext,26,82053,1316,1142,166,25,42,0.132,56,garbled_sequences:42
+aria/knowledge/fda/03-guidance/074_performance_standard_for_diagnostic_x-ray_systems_and_their_major_components_21cfr_1020.30_1020.31_1020.32_1020.33_s.md,pdftotext,13,25267,621,527,120,12,0,0.151,75,orphaned_lines:120(22.8%)
+aria/knowledge/fda/03-guidance/075_guidance_for_industry_and_food_and_drug_administration_staff_-_assembler_s_guide_to_diagnostic_x-ray_equipment.md,pdftotext,25,58685,1293,1030,116,24,116,0.203,61,garbled_sequences:116
+aria/knowledge/fda/03-guidance/076_marketing_clearance_of_diagnostic_ultrasound_systems_and_transducers_guidance_for_industry_and_food_and_drug_adminis.md,pdftotext,65,117501,3006,2240,252,64,64,0.255,61,garbled_sequences:64
+aria/knowledge/fda/03-guidance/077_medical_x-ray_imaging_devices_conformance_with_iec_standards_guidance_for_industry_and_food_and_drug_administration_.md,pdftotext,19,38649,1013,828,174,18,0,0.183,75,orphaned_lines:174(21.0%)
+aria/knowledge/fda/03-guidance/078_policy_clarification_and_premarket_notification_510_k_submissions_for_ultrasonic_diathermy_devices_guidance_for_indu.md,pdftotext,19,41984,824,678,73,26,18,0.177,62,garbled_sequences:18
+aria/knowledge/fda/03-guidance/079_laser_products_-_conformance_with_iec_60825-1_ed._3_and_iec_60601-2-22_ed._3.1_laser_notice_no._56_guidance_for_indu.md,pdftotext,9,19930,346,299,26,8,0,0.136,85,
+aria/knowledge/fda/03-guidance/080_surveying_leveling_and_alignment_laser_products_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,13,30431,528,443,47,12,1,0.161,77,
+aria/knowledge/fda/03-guidance/081_policy_for_coronavirus_disease-2019_tests_revised_guidance_for_developers_and_food_and_drug_administration_staff.md,pdftotext,15,44801,668,571,61,14,42,0.145,62,garbled_sequences:42
+aria/knowledge/fda/03-guidance/082_policy_for_evaluating_impact_of_viral_mutations_on_covid-19_tests_revised_guidance_for_test_developers_and_food_and_.md,pdftotext,14,36522,565,479,50,13,33,0.152,62,garbled_sequences:33
+aria/knowledge/fda/03-guidance/083_referencing_the_definition_of_device_in_the_federal_food_drug_and_cosmetic_act_in_guidance_regulatory_documents_comm.md,pdftotext,8,15042,262,219,19,7,0,0.164,85,
+aria/knowledge/fda/03-guidance/084_developing_and_responding_to_deficiencies_in_accordance_with_the_least_burdensome_provisions_guidance_for_industry_a.md,pdftotext,18,46990,752,658,64,19,1,0.125,79,
+aria/knowledge/fda/03-guidance/085_procedures_for_handling_post-approval_studies_imposed_by_pma_order_guidance_for_industry_and_food_and_drug_administr.md,pdftotext,21,53076,1036,902,148,20,0,0.129,75,orphaned_lines:148(16.4%)
+aria/knowledge/fda/03-guidance/086_postmarket_surveillance_under_section_522_of_the_federal_food_drug_and_cosmetic_act_guidance_for_industry_and_food_a.md,pdftotext,30,72662,1585,1298,181,34,2,0.181,66,
+aria/knowledge/fda/03-guidance/087_user_fees_for_513_g_requests_for_information_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,7,13662,263,215,20,6,2,0.183,74,
+aria/knowledge/fda/03-guidance/088_user_fees_and_refunds_for_premarket_notification_submissions_510_k_s_guidance_for_industry_and_food_and_drug_adminis.md,pdftotext,15,34350,669,557,91,14,2,0.167,65,orphaned_lines:91(16.3%)
+aria/knowledge/fda/03-guidance/089_user_fees_and_refunds_for_premarket_approval_applications_and_device_biologics_license_applications_guidance_for_ind.md,pdftotext,18,44237,887,726,134,17,2,0.182,65,orphaned_lines:134(18.5%)
+aria/knowledge/fda/03-guidance/090_user_fees_and_refunds_for_de_novo_classification_requests_guidance_for_industry_and_food_and_drug_administration_sta.md,pdftotext,14,29303,598,497,77,13,2,0.169,65,orphaned_lines:77(15.5%)
+aria/knowledge/fda/03-guidance/091_fda_and_industry_actions_on_premarket_approval_applications_pmas_effect_on_fda_review_clock_and_goals_guidance_for_i.md,pdftotext,15,34509,778,584,111,14,1,0.249,70,orphaned_lines:111(19.0%)
+aria/knowledge/fda/03-guidance/092_fda_and_industry_actions_on_premarket_notification_510_k_submissions_effect_on_fda_review_clock_and_goals_guidance_f.md,pdftotext,15,34060,811,604,126,14,1,0.255,70,orphaned_lines:126(20.9%)
+aria/knowledge/fda/03-guidance/093_fda_and_industry_actions_on_de_novo_classification_requests_effect_on_fda_review_clock_and_goals_guidance_for_indust.md,pdftotext,14,32157,681,524,86,13,1,0.231,70,orphaned_lines:86(16.4%)
+aria/knowledge/fda/03-guidance/094_computer-assisted_detection_devices_applied_to_radiology_images_and_radiology_device_data_-_premarket_notification_5.md,pdftotext,30,78200,1532,1244,243,113,0,0.188,74,orphaned_lines:243(19.5%)
+aria/knowledge/fda/03-guidance/095_clinical_performance_assessment_considerations_for_computer-assisted_detection_devices_applied_to_radiology_images_a.md,pdftotext,22,60583,1102,925,164,21,1,0.161,70,orphaned_lines:164(17.7%)
+aria/knowledge/fda/03-guidance/096_policy_for_device_software_functions_and_mobile_medical_applications_guidance_for_industry_and_food_and_drug_adminis.md,pdftotext,45,112602,1978,1697,233,44,3,0.142,62,garbled_sequences:3
+aria/knowledge/fda/03-guidance/097_medical_device_data_systems_medical_image_storage_devices_and_medical_image_communications_devices_guidance_for_indu.md,pdftotext,9,19547,348,277,35,8,0,0.204,79,
+aria/knowledge/fda/03-guidance/098_display_devices_for_diagnostic_radiology_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,16,35464,717,601,117,15,0,0.162,75,orphaned_lines:117(19.5%)
+aria/knowledge/fda/03-guidance/099_policy_for_monkeypox_tests_to_address_the_public_health_emergency_guidance_for_laboratories_commercial_manufacturers.md,pdftotext,15,38720,655,557,79,14,1,0.15,71,
+aria/knowledge/fda/03-guidance/100_regulatory_requirements_for_hearing_aid_devices_and_personal_sound_amplification_products_guidance_for_industry_and_.md,pdftotext,10,21133,378,319,35,9,0,0.156,81,
+aria/knowledge/fda/03-guidance/101_replacement_reagent_and_instrument_family_policy_for_in_vitro_diagnostic_devices_guidance_for_industry_and_fda_staff.md,pdftotext,25,68729,974,847,76,24,0,0.13,85,
+aria/knowledge/fda/03-guidance/102_unique_device_identification_policy_regarding_compliance_dates_for_class_i_and_unclassified_devices_direct_marking_a.md,pdftotext,13,34599,566,494,57,12,2,0.127,71,
+aria/knowledge/fda/03-guidance/103_technical_performance_assessment_of_quantitative_imaging_in_radiological_device_premarket_submissions_guidance_for_i.md,pdftotext,17,43346,666,578,42,16,0,0.132,88,
+aria/knowledge/fda/03-guidance/104_electromagnetic_compatibility_emc_of_medical_devices_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,20,56584,973,847,97,19,5,0.129,61,garbled_sequences:5
+aria/knowledge/fda/03-guidance/105_feasibility_and_early_feasibility_clinical_studies_for_certain_medical_devices_intended_to_therapeutically_improve_g.md,pdftotext,15,36753,685,533,82,14,0,0.222,75,orphaned_lines:82(15.4%)
+aria/knowledge/fda/03-guidance/106_refuse_to_accept_policy_for_510_k_s_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,103,208877,5263,4303,713,102,1,0.182,70,orphaned_lines:713(16.6%)
+aria/knowledge/fda/03-guidance/107_denture_base_resins_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_and_food_a.md,pdftotext,9,19152,399,333,48,11,0,0.165,76,
+aria/knowledge/fda/03-guidance/108_facet_screw_systems_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_and_food_a.md,pdftotext,11,22558,423,364,30,42,0,0.139,85,
+aria/knowledge/fda/03-guidance/109_orthopedic_fracture_fixation_plates_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_ind.md,pdftotext,11,28261,513,446,48,10,1,0.131,77,
+aria/knowledge/fda/03-guidance/110_surgical_sutures_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_and_food_and_.md,pdftotext,12,29027,529,448,40,11,1,0.153,80,
+aria/knowledge/fda/03-guidance/111_certain_ophthalmic_products_policy_regarding_compliance_with_21_cfr_part_4_guidance_for_industry_guidance_for_indust.md,pdftotext,8,18835,323,277,24,7,7,0.142,65,garbled_sequences:7
+aria/knowledge/fda/03-guidance/112_initiation_of_voluntary_recalls_under_21_cfr_part_7_subpart_c_guidance_for_industry_and_fda_staff.md,pdftotext,13,35014,618,539,76,12,62,0.128,56,garbled_sequences:62
+aria/knowledge/fda/03-guidance/113_center_for_devices_and_radiological_health_cdrh_appeals_processes_guidance_for_industry_and_food_and_drug_administra.md,pdftotext,24,62764,1090,894,97,23,3,0.18,67,garbled_sequences:3
+aria/knowledge/fda/03-guidance/114_principles_of_premarket_pathways_for_combination_products_guidance_for_industry_and_fda_staff.md,pdftotext,25,78406,1312,1123,167,48,30,0.144,55,garbled_sequences:30
+aria/knowledge/fda/03-guidance/115_patient_engagement_in_the_design_and_conduct_of_medical_device_clinical_studies_guidance_for_industry_food_and_drug_.md,pdftotext,11,28404,478,415,58,10,0,0.132,76,
+aria/knowledge/fda/03-guidance/116_principles_for_selecting_developing_modifying_and_adapting_patient-reported_outcome_instruments_for_use_in_medical_d.md,pdftotext,16,42648,666,579,63,15,2,0.131,72,
+aria/knowledge/fda/03-guidance/117_non-clinical_and_clinical_investigation_of_devices_used_for_the_treatment_of_benign_prostatic_hyperplasia_bph_guidan.md,pdftotext,41,117235,2106,1762,223,42,0,0.163,79,
+aria/knowledge/fda/03-guidance/118_pathology_peer_review_in_nonclinical_toxicology_studies_questions_and_answers.md,pdftotext,9,18913,334,291,17,8,9,0.129,70,garbled_sequences:9
+aria/knowledge/fda/03-guidance/119_arthroscopy_pump_tubing_sets_intended_for_multiple_patient_use_-_premarket_notification_510_k_submissions_guidance_f.md,pdftotext,24,51538,1018,826,111,23,0,0.189,77,
+aria/knowledge/fda/03-guidance/120_surgical_staplers_and_staples_for_internal_use_-_labeling_recommendations_guidance_for_industry_and_food_and_drug_ad.md,pdftotext,13,25747,613,521,91,12,0,0.15,75,orphaned_lines:91(17.5%)
+aria/knowledge/fda/03-guidance/121_de_novo_classification_process_evaluation_of_automatic_class_iii_designation_guidance_for_industry_and_food_and_drug.md,pdftotext,14,35432,636,522,53,13,3,0.179,68,garbled_sequences:3
+aria/knowledge/fda/03-guidance/122_acceptance_review_for_de_novo_classification_requests_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,35,84644,2143,1626,383,34,0,0.241,75,orphaned_lines:383(23.6%)
+aria/knowledge/fda/03-guidance/123_fda_export_certification_guidance_for_industry.md,pdftotext,9,23114,823,718,406,8,54,0.128,55,orphaned_lines:406(56.5%); garbled_sequences:54
+aria/knowledge/fda/03-guidance/124_technical_considerations_for_non-clinical_assessment_of_medical_devices_containing_nitinol_guidance_for_industry_and.md,pdftotext,19,48855,839,732,86,18,2,0.128,70,
+aria/knowledge/fda/03-guidance/125_unique_device_identification_system_form_and_content_of_the_unique_device_identifier_udi_guidance_for_industry_and_f.md,pdftotext,11,26265,469,378,43,10,0,0.194,81,
+aria/knowledge/fda/03-guidance/126_peripheral_vascular_atherectomy_devices_-_premarket_notification_510_k_submissions_guidance_for_industry_and_food_an.md,pdftotext,34,90369,1530,1298,141,34,0,0.152,82,
+aria/knowledge/fda/03-guidance/127_implanted_brain-computer_interface_bci_devices_for_patients_with_paralysis_or_amputation_-_non-clinical_testing_and_.md,pdftotext,45,113942,2108,1775,231,58,34,0.158,58,garbled_sequences:34
+aria/knowledge/fda/03-guidance/128_safer_technologies_program_for_medical_devices_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,24,69586,1123,920,124,23,1,0.181,72,
+aria/knowledge/fda/03-guidance/129_mouse_embryo_assay_for_assisted_reproduction_technology_devices.md,pdftotext,8,15178,283,227,22,7,0,0.198,84,
+aria/knowledge/fda/03-guidance/130_product_labeling_for_laparoscopic_power_morcellators_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,9,23645,335,296,10,8,6,0.116,74,garbled_sequences:6
+aria/knowledge/fda/03-guidance/131_spinal_plating_systems_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_and_foo.md,pdftotext,10,22259,436,390,31,9,0,0.106,86,
+aria/knowledge/fda/03-guidance/132_magnetic_resonance_mr_receive-only_coil_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for.md,pdftotext,8,17930,321,274,27,7,0,0.146,83,
+aria/knowledge/fda/03-guidance/133_requesting_fda_feedback_on_combination_products_guidance_for_industry_and_fda_staff.md,pdftotext,20,53762,1100,922,113,19,4,0.162,59,garbled_sequences:4
+aria/knowledge/fda/03-guidance/134_certificates_of_confidentiality_guidance_for_sponsors_sponsor-investigators_researchers_industry_and_food_and_drug_a.md,pdftotext,10,23949,407,352,32,21,8,0.135,64,garbled_sequences:8
+aria/knowledge/fda/03-guidance/135_regulatory_considerations_for_microneedling_products_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,11,24685,447,369,47,10,0,0.174,78,
+aria/knowledge/fda/03-guidance/136_testing_for_biotin_interference_in_in_vitro_diagnostic_devices_guidance_for_industry.md,pdftotext,7,9531,219,161,26,7,10,0.265,55,orphaned_lines:26(16.1%); garbled_sequences:10
+aria/knowledge/fda/03-guidance/137_saline_silicone_gel_and_alternative_breast_implants_guidance_for_industry_and_fda_staff.md,pdftotext,45,104305,2482,1961,448,44,1,0.21,70,orphaned_lines:448(22.8%)
+aria/knowledge/fda/03-guidance/138_self-monitoring_blood_glucose_test_systems_for_over-the-counter_use_guidance_for_industry_and_food_and_drug_administ.md,pdftotext,42,111209,2232,1980,267,41,38,0.113,57,garbled_sequences:38
+aria/knowledge/fda/03-guidance/139_blood_glucose_monitoring_test_systems_for_prescription_point-of-care_use_guidance_for_industry_and_food_and_drug_adm.md,pdftotext,43,115216,2249,2000,235,43,44,0.111,60,garbled_sequences:44
+aria/knowledge/fda/03-guidance/140_breast_implants_-_certain_labeling_recommendations_to_improve_patient_communication_guidance_for_industry_and_food_a.md,pdftotext,22,46962,1078,842,105,21,9,0.219,59,garbled_sequences:9
+aria/knowledge/fda/03-guidance/141_the_accreditation_scheme_for_conformity_assessment_asca_pilot_program_guidance_for_industry_accreditation_bodies_tes.md,pdftotext,49,128811,2471,1986,328,48,3,0.196,60,orphaned_lines:328(16.5%); garbled_sequences:3
+aria/knowledge/fda/03-guidance/142_biocompatibility_testing_of_medical_devices_-_standards_specific_information_for_the_accreditation_scheme_for_confor.md,pdftotext,65,125194,3784,3234,785,363,91,0.145,53,orphaned_lines:785(24.3%); garbled_sequences:91
+aria/knowledge/fda/03-guidance/143_basic_safety_and_essential_performance_of_medical_electrical_equipment_medical_electrical_systems_and_laboratory_med.md,pdftotext,28,57387,1195,1003,159,27,5,0.161,55,orphaned_lines:159(15.9%); garbled_sequences:5
+aria/knowledge/fda/03-guidance/144_recognition_and_withdrawal_of_voluntary_consensus_standards_guidance_for_industry_and_food_and_drug_administration_s.md,pdftotext,13,31398,567,456,58,12,0,0.196,79,
+aria/knowledge/fda/03-guidance/145_civil_money_penalties_relating_to_the_clinicaltrials.gov_data_bank_guidance_for_responsible_parties_submitters_of_ce.md,pdftotext,12,26262,522,443,68,11,7,0.151,55,orphaned_lines:68(15.3%); garbled_sequences:7
+aria/knowledge/fda/03-guidance/146_cutaneous_electrodes_for_recording_purposes_-_performance_criteria_for_safety_and_performance_based_pathway_guidance.md,pdftotext,8,16108,303,261,24,7,0,0.139,84,
+aria/knowledge/fda/03-guidance/147_conventional_foley_catheters_-_performance_criteria_for_safety_and_performance_based_pathway_guidance_for_industry_a.md,pdftotext,9,18228,401,343,54,8,0,0.145,75,orphaned_lines:54(15.7%)
+aria/knowledge/fda/03-guidance/148_multiple_function_device_products_policy_and_considerations_guidance_for_industry_and_food_and_drug_administration.md,pdftotext,27,73617,1475,1198,145,26,0,0.188,80,
+aria/knowledge/fda/03-guidance/149_regulatory_considerations_for_human_cells_tissues_and_cellular_and_tissue-based_products_minimal_manipulation_and_ho.md,pdftotext,28,70402,1302,1100,132,27,31,0.155,60,garbled_sequences:31
+aria/knowledge/fda/03-guidance/150_clinical_investigations_for_prostate_tissue_ablation_devices_guidance_for_industry_and_food_and_drug_administration_.md,pdftotext,10,24292,393,343,32,9,0,0.127,84,
+aria/knowledge/fda/03-guidance/151_providing_regulatory_submissions_for_medical_devices_in_electronic_format_-_submissions_under_section_745a_b_of_the_.md,pdftotext,10,20984,380,315,34,9,1,0.171,77,
+aria/knowledge/fda/03-guidance/152_review_and_update_of_device_establishment_inspection_processes_and_standards_guidance_for_industry.md,pdftotext,6,11235,183,156,10,5,3,0.148,74,garbled_sequences:3
+aria/knowledge/fda/03-guidance/153_postmarketing_adverse_event_reporting_for_medical_products_and_dietary_supplements_during_a_pandemic.md,pdftotext,14,31925,901,669,59,13,44,0.257,65,garbled_sequences:44
+aria/knowledge/fda/03-guidance/154_classification_of_posterior_cervical_screw_systems_small_entity_compliance_guide_guidance_for_industry_and_food_and_.md,pdftotext,5,6035,146,112,15,4,0,0.233,77,
+aria/knowledge/fda/03-guidance/155_nonbinding_feedback_after_certain_fda_inspections_of_device_establishments_guidance_for_industry_and_food_and_drug_a.md,pdftotext,8,15749,301,239,27,7,0,0.206,81,
+aria/knowledge/fda/03-guidance/156_developing_and_labeling_in_vitro_companion_diagnostic_devices_for_a_specific_group_of_oncology_therapeutic_products_.md,pdftotext,12,32553,545,475,52,11,37,0.128,62,garbled_sequences:37
+aria/knowledge/fda/03-guidance/157_center_for_devices_and_radiological_health_cdrh_appeals_processes_questions_and_answers_about_517a_guidance_for_indu.md,pdftotext,9,16394,355,268,41,8,22,0.245,55,orphaned_lines:41(15.3%); garbled_sequences:22
+aria/knowledge/fda/03-guidance/158_premarket_notification_510_k_submissions_for_electrosurgical_devices_for_general_surgery_guidance_for_industry_and_f.md,pdftotext,29,71212,1207,1027,99,30,2,0.149,74,
+aria/knowledge/fda/03-guidance/159_bone_anchors_-_premarket_notification_510_k_submissions_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,20,49357,935,757,107,19,34,0.19,56,garbled_sequences:34
+aria/knowledge/fda/03-guidance/160_product_recalls_including_removals_and_corrections_guidance_for_industry.md,pdftotext,18,31872,941,649,158,66,54,0.31,54,orphaned_lines:158(24.3%); garbled_sequences:54
+aria/knowledge/fda/03-guidance/161_recommendations_for_dual_510_k_and_clia_waiver_by_application_studies_guidance_for_industry_and_food_and_drug_admini.md,pdftotext,13,30691,646,509,110,12,0,0.212,75,orphaned_lines:110(21.6%)
+aria/knowledge/fda/03-guidance/162_recommendations_for_clinical_laboratory_improvement_amendments_of_1988_clia_waiver_applications_for_manufacturers_of.md,pdftotext,32,83144,1872,1467,250,31,24,0.216,55,orphaned_lines:250(17.0%); garbled_sequences:24
+aria/knowledge/fda/03-guidance/163_recommended_content_and_format_of_non-clinical_bench_performance_testing_information_in_premarket_submissions_guidan.md,pdftotext,12,27734,512,431,29,11,0,0.158,89,
+aria/knowledge/fda/03-guidance/164_30-day_notices_135-day_premarket_approval_pma_supplements_and_75-day_humanitarian_device_exemption_hde_supplements_f.md,pdftotext,12,25641,613,459,93,11,5,0.251,55,orphaned_lines:93(20.3%); garbled_sequences:5
+aria/knowledge/fda/03-guidance/165_real-time_premarket_approval_application_pma_supplements_guidance_for_industry_and_fda_staff.md,pdftotext,9,15404,338,272,32,8,3,0.195,65,garbled_sequences:3
+aria/knowledge/fda/03-guidance/166_annual_reports_for_approved_premarket_approval_applications_pma_guidance_for_industry_and_food_and_drug_administrati.md,pdftotext,12,23055,443,363,32,11,0,0.181,85,
+aria/knowledge/fda/03-guidance/167_acceptance_and_filing_reviews_for_premarket_approval_applications_pmas_guidance_for_industry_and_food_and_drug_admin.md,pdftotext,36,78627,1781,1399,216,35,3,0.214,60,orphaned_lines:216(15.4%); garbled_sequences:3
+aria/knowledge/fda/03-guidance/168_investigational_in_vitro_diagnostics_in_oncology_trials_streamlined_submission_process_for_study_risk_determination_.md,pdftotext,9,15318,337,265,32,12,23,0.214,59,garbled_sequences:23
+aria/knowledge/fda/03-guidance/169_intravascular_catheters_wires_and_delivery_systems_with_lubricious_coatings_-_labeling_considerations_guidance_for_i.md,pdftotext,12,24882,565,492,89,11,0,0.129,75,orphaned_lines:89(18.1%)
+aria/knowledge/fda/03-guidance/170_coronary_peripheral_and_neurovascular_guidewires_-_performance_tests_and_recommended_labeling_guidance_for_industry_.md,pdftotext,20,50544,866,736,59,24,0,0.15,86,
+aria/knowledge/fda/03-guidance/171_changes_to_existing_medical_software_policies_resulting_from_section_3060_of_the_21st_century_cures_act_guidance_for.md,pdftotext,20,55718,940,806,87,19,6,0.143,62,garbled_sequences:6
+aria/knowledge/fda/03-guidance/172_safety_and_performance_based_pathway_guidance_for_industry_and_food_and_drug_administration.md,pdftotext,14,33015,538,469,46,13,1,0.128,78,
+aria/knowledge/fda/03-guidance/173_the_abbreviated_510_k_program_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,7,13629,240,205,20,6,0,0.146,83,
+aria/knowledge/fda/03-guidance/174_the_special_510_k_program_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,37,88497,1813,1584,151,36,1,0.126,79,
+aria/knowledge/fda/03-guidance/175_humanitarian_device_exemption_hde_program_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,58,160093,3218,2614,435,87,6,0.188,55,orphaned_lines:435(16.6%); garbled_sequences:6
+aria/knowledge/fda/03-guidance/176_humanitarian_use_device_hud_designations_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,17,43133,794,659,86,16,21,0.17,58,garbled_sequences:21
+aria/knowledge/fda/03-guidance/177_factors_to_consider_when_making_benefit-risk_determinations_in_medical_device_premarket_approval_and_de_novo_classif.md,pdftotext,75,180421,3187,2844,149,204,0,0.108,91,
+aria/knowledge/fda/03-guidance/178_consideration_of_uncertainty_in_making_benefit-risk_determinations_in_medical_device_premarket_approvals_de_novo_cla.md,pdftotext,22,66891,1092,961,116,21,2,0.12,70,
+aria/knowledge/fda/03-guidance/179_metal_expandable_biliary_stents_-_premarket_notification_510_k_submissions_guidance_for_industry_and_food_and_drug_a.md,pdftotext,27,58303,1350,1083,204,26,2,0.198,65,orphaned_lines:204(18.8%)
+aria/knowledge/fda/03-guidance/180_postmarketing_safety_reporting_for_combination_products_guidance_for_industry_and_fda_staff.md,pdftotext,44,126377,2348,1947,280,43,5,0.171,56,garbled_sequences:5
+aria/knowledge/fda/03-guidance/181_submitting_next_generation_sequencing_data_to_the_division_of_antiviral_products_guidance_for_industry_technical_spe.md,pdftotext,11,22751,698,589,136,10,4,0.156,55,orphaned_lines:136(23.1%); garbled_sequences:4
+aria/knowledge/fda/03-guidance/182_live_case_presentations_during_investigational_device_exemption_ide_clinical_trials_guidance_for_institutional_revie.md,pdftotext,15,39555,626,557,29,14,0,0.11,91,
+aria/knowledge/fda/03-guidance/183_policy_clarification_for_certain_fluoroscopic_equipment_requirements_guidance_for_industry_and_food_and_drug_adminis.md,pdftotext,9,16784,310,269,26,8,0,0.132,84,
+aria/knowledge/fda/03-guidance/184_classification_and_requirements_for_laser_illuminated_projectors_lips_laser_notice_no._57_guidance_for_industry_and_.md,pdftotext,12,23457,489,396,34,13,5,0.19,65,garbled_sequences:5
+aria/knowledge/fda/03-guidance/185_utilizing_animal_studies_to_evaluate_organ_preservation_devices_guidance_for_industry_and_food_and_drug_administrati.md,pdftotext,11,23360,423,339,37,10,0,0.199,82,
+aria/knowledge/fda/03-guidance/186_unique_device_identification_convenience_kits_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,10,22039,388,334,38,9,3,0.139,66,garbled_sequences:3
+aria/knowledge/fda/03-guidance/187_characterization_of_ultrahigh_molecular_weight_polyethylene_uhmwpe_used_in_orthopedic_devices_guidance_for_industry_.md,pdftotext,18,38941,883,717,113,20,24,0.188,55,orphaned_lines:113(15.8%); garbled_sequences:24
+aria/knowledge/fda/03-guidance/188_compliance_policy_for_combination_product_postmarketing_safety_reporting_immediately_in_effect_guidance_for_industry.md,pdftotext,4,8618,150,129,9,3,0,0.14,88,
+aria/knowledge/fda/03-guidance/189_medical_devices_containing_materials_derived_from_animal_sources_except_for_in_vitro_diagnostic_devices_guidance_for.md,pdftotext,13,31038,559,473,69,12,0,0.154,75,
+aria/knowledge/fda/03-guidance/190_release_of_ora_laboratory_analytical_results_to_the_responsible_party_guidance_for_food_and_drug_administration_staf.md,pdftotext,5,12668,212,191,12,4,1,0.099,84,
+aria/knowledge/fda/03-guidance/191_evaluation_of_devices_used_with_regenerative_medicine_advanced_therapies_guidance_for_industry.md,pdftotext,14,35510,616,536,69,13,29,0.13,58,garbled_sequences:29
+aria/knowledge/fda/03-guidance/192_intent_to_exempt_certain_unclassified_medical_devices_from_premarket_notification_requirements_guidance_for_industry.md,pdftotext,6,7569,169,132,19,5,0,0.219,76,
+aria/knowledge/fda/03-guidance/193_public_warning-notification_of_recalls_under_21_cfr_part_7_subpart_c_guidance_for_industry_and_fda_staff.md,pdftotext,12,29048,477,412,36,19,7,0.136,65,garbled_sequences:7
+aria/knowledge/fda/03-guidance/194_the_least_burdensome_provisions_concept_and_principles_guidance_for_industry_and_fda_staff.md,pdftotext,24,71591,1224,1039,153,23,3,0.151,60,garbled_sequences:3
+aria/knowledge/fda/03-guidance/195_coordinated_development_of_antimicrobial_drugs_and_antimicrobial_susceptibility_test_devices_guidance_for_industry_a.md,pdftotext,11,19805,333,293,23,10,3,0.12,72,garbled_sequences:3
+aria/knowledge/fda/03-guidance/196_manufacturing_site_change_supplements_content_and_submission_guidance_for_industry_and_food_and_drug_administration_.md,pdftotext,20,49738,853,743,65,28,22,0.129,65,garbled_sequences:22
+aria/knowledge/fda/03-guidance/197_selection_of_the_appropriate_package_type_terms_and_recommendations_for_labeling_injectable_medical_products_package.md,pdftotext,11,27876,506,432,57,10,24,0.146,58,garbled_sequences:24
+aria/knowledge/fda/03-guidance/198_benefit-risk_factors_to_consider_when_determining_substantial_equivalence_in_premarket_notifications_510_k_with_diff.md,pdftotext,25,73535,1248,1058,113,24,7,0.152,62,garbled_sequences:7
+aria/knowledge/fda/03-guidance/199_heparin-containing_medical_devices_and_combination_products_recommendations_for_labeling_and_safety_testing_guidance.md,pdftotext,9,18263,335,281,37,8,0,0.161,78,
+aria/knowledge/fda/03-guidance/200_appropriate_use_of_voluntary_consensus_standards_in_premarket_submissions_for_medical_devices_guidance_for_industry_.md,pdftotext,17,43891,763,634,63,16,0,0.169,83,
+aria/knowledge/fda/03-guidance/201_use_of_electronic_health_record_data_in_clinical_investigations_guidance_for_industry.md,pdftotext,15,37375,728,563,82,36,27,0.227,55,garbled_sequences:27
+aria/knowledge/fda/03-guidance/202_logical_observation_identifiers_names_and_codes_for_in_vitro_diagnostic_tests_guidance_for_industry_and_food_and_dru.md,pdftotext,8,16490,273,234,24,7,1,0.143,78,
+aria/knowledge/fda/03-guidance/203_medical_product_communications_that_are_consistent_with_the_fda-required_labeling_questions_and_answers_guidance_for.md,pdftotext,22,63558,1128,932,78,21,13,0.174,66,garbled_sequences:13
+aria/knowledge/fda/03-guidance/204_drug_and_device_manufacturer_communications_with_payors_formulary_committees_and_similar_entities_questions_and_answ.md,pdftotext,26,68500,1400,1113,121,27,21,0.205,62,garbled_sequences:21
+aria/knowledge/fda/03-guidance/205_use_of_public_human_genetic_variant_databases_to_support_clinical_validity_for_genetic_and_genomic-based_in_vitro_di.md,pdftotext,16,43315,710,604,62,15,0,0.149,83,
+aria/knowledge/fda/03-guidance/206_considerations_for_design_development_and_analytical_validation_of_next_generation_sequencing_ngs_-_based_in_vitro_d.md,pdftotext,41,100499,2287,1824,337,40,1,0.202,70,orphaned_lines:337(18.5%)
+aria/knowledge/fda/03-guidance/207_e18_genomic_sampling_and_management_of_genomic_data_guidance_for_industry.md,pdftotext,14,36879,641,515,57,13,21,0.197,61,garbled_sequences:21
+aria/knowledge/fda/03-guidance/208_acceptance_of_clinical_data_to_support_medical_device_applications_and_submissions_frequently_asked_questions_guidan.md,pdftotext,22,61883,1054,920,131,21,1,0.127,71,
+aria/knowledge/fda/03-guidance/209_technical_considerations_for_additive_manufactured_medical_devices_guidance_for_industry_and_food_and_drug_administr.md,pdftotext,32,83277,1525,1288,156,31,1,0.155,75,
+aria/knowledge/fda/03-guidance/210_fda_categorization_of_investigational_device_exemption_ide_devices_to_assist_the_centers_for_medicare_and_medicaid_s.md,pdftotext,14,33502,573,478,51,39,0,0.166,81,
+aria/knowledge/fda/03-guidance/211_pediatric_information_for_x-ray_imaging_device_premarket_notifications_guidance_for_industry_and_food_and_drug_admin.md,pdftotext,29,75928,1528,1302,148,43,1,0.148,76,
+aria/knowledge/fda/03-guidance/212_unique_device_identification_direct_marking_of_devices_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,16,35432,650,536,65,15,4,0.175,59,garbled_sequences:4
+aria/knowledge/fda/03-guidance/213_manufacturers_sharing_patient-specific_information_from_medical_devices_with_patients_upon_request_guidance_for_indu.md,pdftotext,5,8722,139,120,4,4,0,0.137,94,
+aria/knowledge/fda/03-guidance/214_product_labeling_for_certain_ultrasonic_surgical_aspirator_devices_guidance_for_industry_and_food_and_drug_administr.md,pdftotext,5,10194,160,138,6,4,1,0.138,88,
+aria/knowledge/fda/03-guidance/215_deciding_when_to_submit_a_510_k_for_a_software_change_to_an_existing_device_guidance_for_industry_and_food_and_drug_.md,pdftotext,32,79883,1623,1349,98,31,1,0.169,83,
+aria/knowledge/fda/03-guidance/216_deciding_when_to_submit_a_510_k_for_a_change_to_an_existing_device_guidance_for_industry_and_food_and_drug_administr.md,pdftotext,78,208181,3666,3289,307,77,0,0.103,84,
+aria/knowledge/fda/03-guidance/217_administrative_procedures_for_clia_categorization_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,10,20214,391,326,38,9,0,0.166,80,
+aria/knowledge/fda/03-guidance/218_minutes_of_institutional_review_board_irb_meetings_guidance_for_institutions_and_irbs.md,pdftotext,16,39812,667,570,51,15,11,0.145,65,garbled_sequences:11
+aria/knowledge/fda/03-guidance/219_establishing_the_performance_characteristics_of_in_vitro_diagnostic_devices_for_the_detection_or_detection_and_diffe.md,pdftotext,41,107483,1799,1568,127,52,19,0.128,66,garbled_sequences:19
+aria/knowledge/fda/03-guidance/220_evaluation_and_reporting_of_age-_race-_and_ethnicity-specific_data_in_medical_device_clinical_studies_guidance_for_i.md,pdftotext,36,84129,1593,1276,190,35,102,0.199,55,garbled_sequences:102
+aria/knowledge/fda/03-guidance/221_design_considerations_and_pre-market_submission_recommendations_for_interoperable_medical_devices_guidance_for_indus.md,pdftotext,21,51354,962,810,111,20,1,0.158,72,
+aria/knowledge/fda/03-guidance/222_procedures_for_meetings_of_the_medical_devices_advisory_committee_guidance_for_industry_and_food_and_drug_administra.md,pdftotext,17,41836,768,639,83,16,0,0.168,78,
+aria/knowledge/fda/03-guidance/223_factors_to_consider_when_making_benefit-risk_determinations_for_medical_device_investigational_device_exemptions_gui.md,pdftotext,37,87818,1544,1329,155,36,131,0.139,60,garbled_sequences:131
+aria/knowledge/fda/03-guidance/224_current_good_manufacturing_practice_requirements_for_combination_products_guidance_for_industry_and_fda_staff.md,pdftotext,60,183616,3035,2657,261,59,4,0.125,63,garbled_sequences:4
+aria/knowledge/fda/03-guidance/225_postmarket_management_of_cybersecurity_in_medical_devices_guidance_for_industry_and_food_and_drug_administration_sta.md,pdftotext,31,85888,1525,1265,179,30,87,0.17,56,garbled_sequences:87
+aria/knowledge/fda/03-guidance/226_factors_to_consider_regarding_benefit-risk_in_medical_device_product_availability_compliance_and_enforcement_decisio.md,pdftotext,32,85771,1526,1361,61,31,1,0.108,87,
+aria/knowledge/fda/03-guidance/227_use_of_electronic_informed_consent_in_clinical_investigations_questions_and_answers_guidance_for_institutional_revie.md,pdftotext,16,44021,747,618,55,19,19,0.173,65,garbled_sequences:19
+aria/knowledge/fda/03-guidance/228_public_notification_of_emerging_postmarket_medical_device_signals_emerging_signals_guidance_for_industry_and_food_an.md,pdftotext,8,19691,329,289,36,7,0,0.122,79,
+aria/knowledge/fda/03-guidance/229_mitigating_the_risk_of_cross-contamination_from_valves_and_accessories_used_for_irrigation_through_flexible_gastroin.md,pdftotext,12,24780,443,367,24,11,9,0.172,69,garbled_sequences:9
+aria/knowledge/fda/03-guidance/230_medical_device_reporting_for_manufacturers_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,54,134339,2291,1962,155,54,10,0.144,67,garbled_sequences:10
+aria/knowledge/fda/03-guidance/231_clinical_considerations_for_investigational_device_exemptions_ides_for_neurological_devices_targeting_disease_progre.md,pdftotext,11,24503,372,337,12,10,0,0.094,94,
+aria/knowledge/fda/03-guidance/232_labeling_for_permanent_hysteroscopically-placed_tubal_implants_intended_for_sterilization_guidance_for_industry_and_.md,pdftotext,13,23773,433,369,46,12,7,0.148,59,garbled_sequences:7
+aria/knowledge/fda/03-guidance/233_collection_of_race_and_ethnicity_data_in_clinical_trials_guidance_for_industry_and_food_and_drug_administration_staf.md,pdftotext,20,50212,954,822,149,19,28,0.138,55,orphaned_lines:149(18.1%); garbled_sequences:28
+aria/knowledge/fda/03-guidance/234_reporting_of_computational_modeling_studies_in_medical_device_submissions_guidance_for_industry_and_food_and_drug_ad.md,pdftotext,48,110200,2129,1827,109,47,0,0.142,90,
+aria/knowledge/fda/03-guidance/235_guidance_for_the_submission_of_510_k_s_for_solid_state_x-ray_imaging_devices_guidance_for_industry_and_food_and_drug.md,pdftotext,13,25607,510,437,50,12,6,0.143,61,garbled_sequences:6
+aria/knowledge/fda/03-guidance/236_patient_preference_information_-_voluntary_submission_review_in_premarket_approval_applications_humanitarian_device_.md,pdftotext,29,77362,1252,1100,111,28,6,0.121,63,garbled_sequences:6
+aria/knowledge/fda/03-guidance/237_premarket_notification_510_k_submissions_for_bipolar_electrosurgical_vessel_sealers_for_general_surgery_guidance_for.md,pdftotext,19,42125,773,665,56,20,3,0.14,71,garbled_sequences:3
+aria/knowledge/fda/03-guidance/238_adaptive_designs_for_medical_device_clinical_studies_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,49,102743,1719,1412,125,48,0,0.179,85,
+aria/knowledge/fda/03-guidance/239_leveraging_existing_clinical_data_for_extrapolation_to_pediatric_uses_of_medical_devices_guidance_for_industry_and_f.md,pdftotext,37,97509,1593,1376,102,36,4,0.136,67,garbled_sequences:4
+aria/knowledge/fda/03-guidance/240_technical_performance_assessment_of_digital_pathology_whole_slide_imaging_devices_guidance_for_industry_and_food_and.md,pdftotext,27,61245,2407,2070,1050,26,0,0.14,75,orphaned_lines:1050(50.7%)
+aria/knowledge/fda/03-guidance/241_radiation_biodosimetry_medical_countermeasure_devices_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,28,81212,1391,1111,149,27,0,0.201,77,
+aria/knowledge/fda/03-guidance/242_assessment_of_radiofrequency-induced_heating_in_the_magnetic_resonance_mr_environment_for_multi-configuration_passiv.md,pdftotext,13,27935,492,417,39,15,0,0.152,84,
+aria/knowledge/fda/03-guidance/243_medical_devices_and_clinical_trial_design_for_the_treatment_or_improvement_in_the_appearance_of_fungally-infected_na.md,pdftotext,32,87086,1421,1226,119,31,12,0.137,64,garbled_sequences:12
+aria/knowledge/fda/03-guidance/244_recommendations_for_premarket_notifications_for_lamotrigine_and_zonisamide_assays_guidance_for_industry_and_food_and.md,pdftotext,20,46826,980,742,125,19,8,0.243,55,orphaned_lines:125(16.8%); garbled_sequences:8
+aria/knowledge/fda/03-guidance/245_applying_human_factors_and_usability_engineering_to_medical_devices_guidance_for_industry_and_food_and_drug_administ.md,pdftotext,49,118317,2811,2395,243,48,1,0.148,78,
+aria/knowledge/fda/03-guidance/246_implanted_blood_access_devices_for_hemodialysis_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,22,51819,886,769,76,21,13,0.132,63,garbled_sequences:13
+aria/knowledge/fda/03-guidance/247_premarket_studies_of_implantable_minimally_invasive_glaucoma_surgical_migs_devices_guidance_for_industry_and_food_an.md,pdftotext,20,38731,969,742,146,21,0,0.234,75,orphaned_lines:146(19.7%)
+aria/knowledge/fda/03-guidance/248_premarket_notification_requirements_concerning_gowns_intended_for_use_in_health_care_settings_guidance_for_industry_.md,pdftotext,9,21945,352,315,20,8,0,0.105,89,
+aria/knowledge/fda/03-guidance/249_select_updates_for_non-clinical_engineering_tests_and_recommended_labeling_for_intravascular_stents_and_associated_d.md,pdftotext,10,23413,360,322,18,11,0,0.106,90,
+aria/knowledge/fda/03-guidance/250_endotoxin_testing_recommendations_for_single-use_intraocular_ophthalmic_devices.md,pdftotext,9,20686,357,323,26,8,0,0.095,86,
+aria/knowledge/fda/03-guidance/251_content_and_format_for_abbreviated_510_k_s_for_early_growth_response_1_egr1_gene_fluorescence_in-situ_hybridization_.md,pdftotext,10,19785,858,704,342,9,0,0.179,75,orphaned_lines:342(48.6%)
+aria/knowledge/fda/03-guidance/252_balancing_premarket_and_postmarket_data_collection_for_devices_subject_to_premarket_approval_guidance_for_industry_a.md,pdftotext,19,52769,871,746,80,18,1,0.144,77,
+aria/knowledge/fda/03-guidance/253_reprocessing_medical_devices_in_health_care_settings_validation_methods_and_labeling_guidance_for_industry_and_food_.md,pdftotext,45,109529,2069,1784,140,44,70,0.138,67,garbled_sequences:70
+aria/knowledge/fda/03-guidance/254_safety_considerations_to_mitigate_the_risks_of_misconnections_with_small-bore_connectors_intended_for_enteral_applic.md,pdftotext,13,27598,514,415,43,12,0,0.193,82,
+aria/knowledge/fda/03-guidance/255_minimizing_risk_for_children_s_toy_laser_products_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,7,13771,222,198,15,6,0,0.108,87,
+aria/knowledge/fda/03-guidance/256_infusion_pumps_total_product_life_cycle_guidance_for_industry_and_fda_staff.md,pdftotext,37,90272,2006,1687,221,36,21,0.159,58,garbled_sequences:21
+aria/knowledge/fda/03-guidance/257_recommendations_for_labeling_medical_products_to_inform_users_that_the_product_or_product_container_is_not_made_with.md,pdftotext,8,15961,249,221,13,7,0,0.112,90,
+aria/knowledge/fda/03-guidance/258_design_considerations_for_devices_intended_for_home_use_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,27,68584,1267,1022,135,26,0,0.193,78,
+aria/knowledge/fda/03-guidance/259_molecular_diagnostic_instruments_with_combined_functions_guidance_for_industry_and_food_and_drug_administration_staf.md,pdftotext,9,19725,349,298,23,8,0,0.146,87,
+aria/knowledge/fda/03-guidance/260_distinguishing_medical_device_recalls_from_medical_device_enhancements_guidance_for_industry_and_food_and_drug_admin.md,pdftotext,11,27768,382,338,25,10,0,0.115,87,
+aria/knowledge/fda/03-guidance/261_custom_device_exemption_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,26,57431,1099,916,84,25,6,0.167,64,garbled_sequences:6
+aria/knowledge/fda/03-guidance/262_highly_multiplexed_microbiological_medical_countermeasure_in_vitro_nucleic_acid_based_diagnostic_devices_guidance_fo.md,pdftotext,32,89592,1483,1305,98,31,34,0.12,67,garbled_sequences:34
+aria/knowledge/fda/03-guidance/263_unique_device_identifier_system_frequently_asked_questions_vol._1_guidance_for_industry_and_food_and_drug_administra.md,pdftotext,14,25870,547,439,41,13,4,0.197,64,garbled_sequences:4
+aria/knowledge/fda/03-guidance/264_fda_decisions_for_investigational_device_exemption_clinical_investigations_guidance_for_sponsors_clinical_investigat.md,pdftotext,19,53791,872,764,82,18,1,0.124,77,
+aria/knowledge/fda/03-guidance/265_unique_device_identification_system_small_entity_compliance_guide_guidance_for_industry_and_food_and_drug_administra.md,pdftotext,24,50162,1120,927,94,23,3,0.172,68,garbled_sequences:3
+aria/knowledge/fda/03-guidance/266_in_vitro_companion_diagnostic_devices_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,13,32048,588,474,59,30,13,0.194,59,garbled_sequences:13
+aria/knowledge/fda/03-guidance/267_the_510_k_program_evaluating_substantial_equivalence_in_premarket_notifications_510_k_guidance_for_industry_and_food.md,pdftotext,42,131746,2272,1962,289,158,19,0.136,55,garbled_sequences:19
+aria/knowledge/fda/03-guidance/268_criteria_for_significant_risk_investigations_of_magnetic_resonance_diagnostic_devices_-_guidance_for_industry_and_fo.md,pdftotext,5,6131,163,127,13,4,0,0.221,83,
+aria/knowledge/fda/03-guidance/269_considerations_when_transferring_clinical_investigation_oversight_to_another_irb_guidance_for_irbs_clinical_investig.md,pdftotext,17,47776,804,720,94,22,40,0.104,58,garbled_sequences:40
+aria/knowledge/fda/03-guidance/270_providing_information_about_pediatric_uses_of_medical_devices_guidance_for_industry_and_fda_staff.md,pdftotext,12,26016,495,410,42,11,2,0.172,73,
+aria/knowledge/fda/03-guidance/271_types_of_communication_during_the_review_of_medical_device_submissions_guidance_for_industry_and_fda_staff.md,pdftotext,15,37950,725,589,90,14,3,0.188,60,orphaned_lines:90(15.3%); garbled_sequences:3
+aria/knowledge/fda/03-guidance/272_medical_device_tracking_guidance_for_industry_and_fda_staff.md,pdftotext,12,22458,517,393,63,11,0,0.24,75,orphaned_lines:63(16.0%)
+aria/knowledge/fda/03-guidance/273_premarket_assessment_of_pediatric_medical_devices_guidance_for_industry_and_fda_staff.md,pdftotext,22,50600,922,802,62,21,3,0.13,72,garbled_sequences:3
+aria/knowledge/fda/03-guidance/274_questions_and_answers_about_emdr_-_electronic_medical_device_reporting_-_guidance_for_industry_user_facilities_and_f.md,pdftotext,13,24920,460,397,38,12,0,0.137,84,
+aria/knowledge/fda/03-guidance/275_distribution_of_in_vitro_diagnostic_products_labeled_for_research_use_only_or_investigational_use_only_guidance_for_.md,pdftotext,12,27698,475,412,38,11,33,0.133,64,garbled_sequences:33
+aria/knowledge/fda/03-guidance/276_design_considerations_for_pivotal_clinical_investigations_for_medical_devices_guidance_for_industry_clinical_investi.md,pdftotext,57,174818,2967,2502,249,64,28,0.157,63,garbled_sequences:28
+aria/knowledge/fda/03-guidance/277_investigational_device_exemptions_ides_for_early_feasibility_medical_device_clinical_studies_including_certain_first.md,pdftotext,40,115021,2660,2350,117,108,1,0.117,86,
+aria/knowledge/fda/03-guidance/278_electronic_source_data_in_clinical_investigations_guidance_for_industry.md,pdftotext,15,31295,757,634,206,36,22,0.162,54,orphaned_lines:206(32.5%); garbled_sequences:22
+aria/knowledge/fda/03-guidance/279_radio_frequency_wireless_technology_in_medical_devices_-_guidance_for_industry_and_fda_staff.md,pdftotext,24,56543,1076,859,99,28,28,0.202,60,garbled_sequences:28
+aria/knowledge/fda/03-guidance/280_oversight_of_clinical_investigations_a_risk-based_approach_to_monitoring_guidance_for_industry.md,pdftotext,22,64877,1179,954,145,23,32,0.191,55,orphaned_lines:145(15.2%); garbled_sequences:32
+aria/knowledge/fda/03-guidance/281_heparin_for_drug_and_medical_device_use_monitoring_crude_heparin_for_quality_guidance_for_industry.md,pdftotext,9,20005,363,295,33,8,5,0.187,61,garbled_sequences:5
+aria/knowledge/fda/03-guidance/282_technical_considerations_for_pen_jet_and_related_injectors_intended_for_use_with_drugs_and_biological_products_guida.md,pdftotext,29,74984,1521,1348,219,208,52,0.114,53,orphaned_lines:219(16.2%); garbled_sequences:52
+aria/knowledge/fda/03-guidance/283_assay_migration_studies_for_in_vitro_diagnostic_devices_guidance_for_industry_and_fda_staff.md,pdftotext,51,115671,2353,1915,238,177,42,0.186,58,garbled_sequences:42
+aria/knowledge/fda/03-guidance/284_medical_device_classification_product_codes_-_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,16,33936,602,530,21,15,7,0.12,73,garbled_sequences:7
+aria/knowledge/fda/03-guidance/285_exception_from_informed_consent_requirements_for_emergency_research_guidance_for_institutional_review_boards_clinica.md,pdftotext,64,194229,2919,2580,248,73,101,0.116,64,garbled_sequences:101
+aria/knowledge/fda/03-guidance/286_establishing_the_performance_characteristics_of_in_vitro_diagnostic_devices_for_the_detection_of_antibodies_to_borre.md,pdftotext,12,24581,440,387,25,11,0,0.12,89,
+aria/knowledge/fda/03-guidance/287_investigational_device_exemption_ide_guidance_for_retinal_prostheses_guidance_for_industry_and_fda_staff.md,pdftotext,27,61905,1217,970,106,26,3,0.203,66,garbled_sequences:3
+aria/knowledge/fda/03-guidance/288_pulse_oximeters_-_premarket_notification_submissions_510_k_s_guidance_for_industry_and_food_and_drug_administration_.md,pdftotext,19,39629,945,691,102,22,56,0.269,55,garbled_sequences:56
+aria/knowledge/fda/03-guidance/289_clinical_study_designs_for_surgical_ablation_devices_for_treatment_of_atrial_fibrillation_-_guidance_for_industry_an.md,pdftotext,21,56078,982,857,97,20,1,0.127,76,
+aria/knowledge/fda/03-guidance/291_financial_disclosure_by_clinical_investigators_guidance_for_clinical_investigators_industry_and_fda_staff.md,pdftotext,35,102374,1603,1418,104,34,55,0.115,68,garbled_sequences:55
+aria/knowledge/fda/03-guidance/292_clinical_pharmacogenomics_premarket_evaluation_in_early-phase_clinical_studies_and_recommendations_for_labeling.md,pdftotext,26,75657,1150,1036,70,32,68,0.099,68,garbled_sequences:68
+aria/knowledge/fda/03-guidance/293_the_content_of_investigational_device_exemption_ide_and_premarket_approval_pma_applications_for_artificial_pancreas_.md,pdftotext,64,163474,3044,2592,301,63,107,0.148,60,garbled_sequences:107
+aria/knowledge/fda/03-guidance/294_compliance_policy_guide_sec._390.200_determination_by_secretary_that_product_fails_to_comply_or_has_defect_-_21_cfr_.md,pdftotext,2,4947,77,72,0,1,0,0.065,100,
+aria/knowledge/fda/03-guidance/295_pyrogen_and_endotoxins_testing_questions_and_answers.md,pdftotext,13,31734,545,472,53,12,9,0.134,61,garbled_sequences:9
+aria/knowledge/fda/03-guidance/296_irb_continuing_review_after_clinical_investigation_approval_guidance_for_irbs_clinical_investigators_and_sponsors.md,pdftotext,28,85019,1303,1161,111,81,20,0.109,63,garbled_sequences:20
+aria/knowledge/fda/03-guidance/297_establishing_the_performance_characteristics_of_in_vitro_diagnostic_devices_for_the_detection_or_detection_and_diffe.md,pdftotext,35,87852,1851,1575,206,35,33,0.149,58,garbled_sequences:33
+aria/knowledge/fda/03-guidance/298_clinical_investigations_of_devices_indicated_for_the_treatment_of_urinary_incontinence_-_guidance_for_industry_and_f.md,pdftotext,39,99243,2074,1782,285,38,44,0.141,55,orphaned_lines:285(16.0%); garbled_sequences:44
+aria/knowledge/fda/03-guidance/299_cpg_sec._335.700_surgeons_gloves_and_patient_examination_gloves_defects_-_criteria_for_direct_reference_seizure.md,pdftotext,2,5368,83,75,2,1,2,0.096,85,
+aria/knowledge/fda/03-guidance/300_blood_lancet_labeling_-_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,6,10548,184,156,7,5,0,0.152,92,
+aria/knowledge/fda/03-guidance/301_addition_of_urls_to_electronic_product_labeling_guidance_for_industry_and_fda_staff.md,pdftotext,4,5189,93,80,3,3,0,0.14,93,
+aria/knowledge/fda/03-guidance/302_impact-resistant_lenses_questions_and_answers_guidance_for_industry_and_fda_staff.md,pdftotext,24,53363,814,742,22,23,16,0.088,75,garbled_sequences:16
+aria/knowledge/fda/03-guidance/303_contact_lens_care_products_labeling_guidance_for_industry_and_food_and_drug_administration_staff.md,pdftotext,10,17150,339,284,21,9,31,0.162,67,garbled_sequences:31
+aria/knowledge/fda/03-guidance/304_in_vitro_diagnostic_ivd_device_studies_-_frequently_asked_questions_guidance_for_industry_and_fda_staff.md,pdftotext,53,116144,2277,1979,162,59,25,0.131,66,garbled_sequences:25
+aria/knowledge/fda/03-guidance/305_systemic_lupus_erythematosus_-developing_medical_products_for_treatment.md,pdftotext,18,49391,818,683,70,17,26,0.165,63,garbled_sequences:26
+aria/knowledge/fda/03-guidance/306_non-clinical_engineering_tests_and_recommended_labeling_for_intravascular_stents_and_associated_delivery_systems_-_g.md,pdftotext,55,121408,2604,2256,279,55,11,0.134,59,garbled_sequences:11
+aria/knowledge/fda/03-guidance/307_guidance_for_the_use_of_bayesian_statistics_in_medical_device_clinical_trials_pdf_version.md,pdftotext,50,110326,2241,1858,202,90,5,0.171,61,garbled_sequences:5
+aria/knowledge/fda/03-guidance/308_new_contrast_imaging_indication_considerations_for_devices_and_approved_drug_and_biological_products_guidance_for_in.md,pdftotext,24,67551,1198,1037,108,23,82,0.134,62,garbled_sequences:82
+aria/knowledge/fda/03-guidance/309_patient-reported_outcome_measures_use_in_medical_product_development_to_support_labeling_claims_guidance_for_industr.md,pdftotext,43,111900,2193,1798,240,42,24,0.18,57,garbled_sequences:24
+aria/knowledge/fda/03-guidance/310_investigator_responsibilities_protecting_the_rights_safety_and_welfare_of_study_subjects_guidance_for_industry.md,pdftotext,18,42581,789,661,80,17,153,0.162,60,garbled_sequences:153
+aria/knowledge/fda/03-guidance/311_radiation_safety_considerations_for_x-ray_equipment_designed_for_hand-held_use.md,pdftotext,7,12148,216,186,11,6,1,0.139,85,
+aria/knowledge/fda/03-guidance/312_modifications_to_devices_subject_to_premarket_approval_pma_-_the_pma_supplement_decision-making_process_guidance_for.md,pdftotext,29,86254,1572,1303,159,28,8,0.171,59,garbled_sequences:8
+aria/knowledge/fda/03-guidance/313_clinical_study_designs_for_catheter_ablation_devices_for_treatment_of_atrial_flutter_guidance_for_industry_and_fda_s.md,pdftotext,15,28421,600,455,66,14,16,0.242,55,garbled_sequences:16
+aria/knowledge/fda/03-guidance/314_surveillance_and_detention_without_physical_examination_of_condoms_guidance_for_industry_and_fda_staff.md,pdftotext,15,33100,599,510,46,14,2,0.149,75,
+aria/knowledge/fda/03-guidance/315_intravascular_administration_sets_premarket_notification_submissions_510_k_guidance_for_industry_and_fda_staff.md,pdftotext,23,38594,1011,778,100,22,0,0.23,78,
+aria/knowledge/fda/03-guidance/316_surveillance_and_detention_without_physical_examination_of_surgeons_and_or_patient_examination_gloves_guidance_for_i.md,pdftotext,16,35046,625,535,49,15,2,0.144,74,
+aria/knowledge/fda/03-guidance/317_hemodialysis_blood_tubing_sets_-_premarket_notification_510_k_submissions_guidance_for_industry_and_fda_staff.md,pdftotext,15,29860,749,535,93,14,18,0.286,55,orphaned_lines:93(17.4%); garbled_sequences:18
+aria/knowledge/fda/03-guidance/318_investigational_device_exemptions_ides_for_devices_indicated_for_nocturnal_home_hemodialysis_guidance_for_industry_a.md,pdftotext,18,41173,898,676,111,17,33,0.247,55,orphaned_lines:111(16.4%); garbled_sequences:33
+aria/knowledge/fda/03-guidance/319_preparation_and_review_of_investigational_device_exemption_applications_ides_for_total_artificial_discs_guidance_for.md,pdftotext,31,73365,1651,1292,215,30,5,0.217,55,orphaned_lines:215(16.6%); garbled_sequences:5
+aria/knowledge/fda/03-guidance/320_container_and_closure_system_integrity_testing_in_lieu_of_sterility_testing_as_a_component_of_the_stability_protocol.md,pdftotext,9,21502,370,315,27,8,20,0.149,65,garbled_sequences:20
+aria/knowledge/fda/03-guidance/321_coronary_and_carotid_embolic_protection_devices_-_premarket_notification_510_k_submissions_guidance_for_industry_and.md,pdftotext,29,70637,1309,1093,103,28,21,0.165,64,garbled_sequences:21
+aria/knowledge/fda/03-guidance/322_medical_glove_guidance_manual_guidance_for_industry_and_fda_staff.md,pdftotext,92,178497,3834,3282,361,290,358,0.144,61,garbled_sequences:358
+aria/knowledge/fda/03-guidance/325_biological_indicator_bi_premarket_notification_510_k_submissions_guidance_for_industry_and_fda_staff.md,pdftotext,20,36168,1464,975,290,19,32,0.334,55,orphaned_lines:290(29.7%); garbled_sequences:32
+aria/knowledge/fda/03-guidance/326_procedures_for_renewal_and_amendment_of_certain_laser_light_show_variances_laser_notice_55.md,pdftotext,8,13338,302,227,31,7,0,0.248,77,
+aria/knowledge/fda/03-guidance/327_compliance_guide_for_cabinet_x-ray_systems.md,pdftotext,27,66834,1110,977,64,26,0,0.12,89,
+aria/knowledge/fda/03-guidance/328_non-clinical_information_for_femoral_stem_prostheses_guidance_for_industry_and_fda_staff.md,pdftotext,16,34717,828,635,94,15,47,0.233,55,garbled_sequences:47
+aria/knowledge/fda/03-guidance/329_commercially_distributed_analyte_specific_reagents_asrs_frequently_asked_questions_guidance_for_industry_and_fda_sta.md,pdftotext,13,30585,498,455,16,15,3,0.086,79,garbled_sequences:3
+aria/knowledge/fda/03-guidance/330_writing_dear_doctor_letters_for_recalls_of_implantable_cardioverter_defibrillators_icds_guidance_for_industry_and_fd.md,pdftotext,9,17254,318,272,15,21,0,0.145,90,
+aria/knowledge/fda/03-guidance/331_bundling_multiple_devices_or_multiple_indications_in_a_single_submission_guidance_for_industry_and_fda_staff.md,pdftotext,17,39873,766,634,72,16,8,0.172,61,garbled_sequences:8
+aria/knowledge/fda/03-guidance/332_pre-clinical_and_clinical_studies_for_neurothrombectomy_devices_guidance_for_industry_and_fda_staff.md,pdftotext,14,32596,680,540,70,13,17,0.206,58,garbled_sequences:17
+aria/knowledge/fda/03-guidance/333_dental_handpieces_-_premarket_notification_510_k_submissions_guidance_for_industry_and_fda_staff.md,pdftotext,13,23608,673,482,84,12,0,0.284,75,orphaned_lines:84(17.4%)
+aria/knowledge/fda/03-guidance/334_approval_of_alternate_means_of_labeling_for_laser_products_laser_notice_53.md,pdftotext,5,7584,147,126,5,4,0,0.143,93,
+aria/knowledge/fda/03-guidance/335_statistical_guidance_on_reporting_results_from_studies_evaluating_diagnostic_tests_-_guidance_for_industry_and_fda_s.md,pdftotext,39,79239,2081,1593,347,38,4,0.235,55,orphaned_lines:347(21.8%); garbled_sequences:4
+aria/knowledge/fda/03-guidance/336_decorative_non-corrective_contact_lenses_guidance_for_industry_fda_staff_eye_care_professionals_and_consumers.md,pdftotext,7,11536,194,171,8,6,0,0.119,92,
+aria/knowledge/fda/03-guidance/338_keratome_and_replacement_keratome_blades_premarket_notification_510_k_submissions_guidance_for_industry_and_fda_staf.md,pdftotext,17,32339,721,548,73,16,24,0.24,57,garbled_sequences:24
+aria/knowledge/fda/03-guidance/339_compliance_with_section_301_of_the_medical_device_user_fee_and_modernization_act_of_2002_as_amended_prominent_and_co.md,pdftotext,13,22012,407,356,19,12,8,0.125,71,garbled_sequences:8
+aria/knowledge/fda/03-guidance/340_guidance_on_informed_consent_for_in_vitro_diagnostic_device_studies_using_leftover_human_specimens_that_are_not_indi.md,pdftotext,10,22190,358,312,23,9,0,0.128,87,
+aria/knowledge/fda/03-guidance/341_establishment_and_operation_of_clinical_trial_data_monitoring_committees_guidance_for_clinical_trial_sponsors.md,pdftotext,38,113038,1865,1673,100,38,36,0.103,70,garbled_sequences:36
+aria/knowledge/fda/03-guidance/342_tonometers_-_premarket_notification_510_k_submissions_guidance_for_industry_and_fda_staff.md,pdftotext,14,27446,621,468,66,13,0,0.246,76,
+aria/knowledge/fda/03-guidance/343_dental_curing_lights_-_premarket_notification_510_k_guidance_for_industry_and_fda_staff.md,pdftotext,12,21675,552,411,59,11,0,0.255,76,
+aria/knowledge/fda/03-guidance/344_hospital_bed_system_dimensional_and_assessment_guidance_to_reduce_entrapment_guidance_for_industry_and_fda_staff.md,pdftotext,49,95764,2179,1761,231,57,16,0.192,58,garbled_sequences:16
+aria/knowledge/fda/03-guidance/345_pharmacogenetic_tests_and_genetic_tests_for_heritable_markers_guidance_for_industry_and_fda_staff.md,pdftotext,21,45771,827,741,73,20,0,0.104,83,
+aria/knowledge/fda/03-guidance/346_exemption_from_reporting_and_recordkeeping_requirements_for_low_power_laser_products_laser_notice_54_guidance_for_in.md,pdftotext,6,7675,156,135,12,5,0,0.135,85,
+aria/knowledge/fda/03-guidance/347_frequently_asked_questions_about_medical_devices_guidance_for_irbs_clinical_investigators_and_sponsors.md,pdftotext,14,33636,576,477,46,13,11,0.172,64,garbled_sequences:11
+aria/knowledge/fda/03-guidance/348_significant_risk_and_nonsignificant_risk_medical_device_studies_guidance_for_irbs_clinical_investigators_and_sponsor.md,pdftotext,15,29777,959,772,266,14,43,0.195,55,orphaned_lines:266(34.5%); garbled_sequences:43
+aria/knowledge/fda/03-guidance/349_applicability_of_the_performance_standard_for_high-intensity_mercury_vapor_discharge_lamps_21_cfr_1040.30.md,pdftotext,5,8474,150,132,4,4,0,0.12,95,
+aria/knowledge/fda/03-guidance/351_review_criteria_for_assessment_of_c-reactive_protein_crp_high_sensitivity_c-reactive_protein_hscrp_and_cardiac_c-rea.md,pdftotext,21,48111,1003,833,86,20,16,0.169,63,garbled_sequences:16
+aria/knowledge/fda/03-guidance/352_medical_devices_with_sharps_injury_prevention_features_-_guidance_for_industry_and_fda_staff.md,pdftotext,20,38530,1006,763,135,19,0,0.242,75,orphaned_lines:135(17.7%)
+aria/knowledge/fda/03-guidance/353_menstrual_tampons_and_pads_information_for_premarket_notification_submissions_510_k_s_-_guidance_for_industry_and_fd.md,pdftotext,19,36965,942,686,117,18,33,0.272,55,orphaned_lines:117(17.1%); garbled_sequences:33
+aria/knowledge/fda/03-guidance/354_cpg_sec._315.100_illegal_interstate_commercial_shipment_of_dentures_cpg_retitled_and_revised_5_19_2005.md,pdftotext,2,4216,59,58,0,1,3,0.017,85,garbled_sequences:3
+aria/knowledge/fda/03-guidance/356_pharmacogenomic_data_submissions_guidance_for_industry.md,pdftotext,29,63847,1266,1007,115,28,74,0.205,61,garbled_sequences:74
+aria/knowledge/fda/03-guidance/358_cpg_sec._310.210_blood_pressure_measurement_devices_sphygmomanometers_-_accuracy.md,pdftotext,1,868,18,18,0,0,0,0.0,100,
+aria/knowledge/fda/03-guidance/359_clinical_data_presentations_for_orthopedic_device_applications_-_guidance_for_industry_and_fda_staff.md,pdftotext,18,34202,920,766,153,17,17,0.167,55,orphaned_lines:153(20.0%); garbled_sequences:17
+aria/knowledge/fda/03-guidance/361_the_use_of_clinical_holds_following_clinical_investigator_misconduct_guidance_for_industry_and_clinical_investigator.md,pdftotext,11,26771,432,368,32,10,11,0.148,65,garbled_sequences:11
+aria/knowledge/fda/03-guidance/362_medical_device_user_fee_and_modernization_act_of_2002_validation_data_in_premarket_notification_submissions_510_k_s_.md,pdftotext,19,47591,857,722,68,18,9,0.158,64,garbled_sequences:9
+aria/knowledge/fda/03-guidance/363_guidance_for_industry_and_fda_staff_spinal_system_510_k_s.md,pdftotext,23,50305,1193,944,133,22,24,0.209,56,garbled_sequences:24
+aria/knowledge/fda/03-guidance/364_surgical_masks_-_premarket_notification_510_k_submissions_guidance_for_industry_and_fda_staff.md,pdftotext,18,27033,690,518,73,17,21,0.249,56,garbled_sequences:21
+aria/knowledge/fda/03-guidance/365_guidance_for_industry_and_fda_staff_vocal_fold_medialization_devices_-_premarket_notification_510_k_submissions.md,pdftotext,12,25177,527,408,52,11,18,0.226,58,garbled_sequences:18
+aria/knowledge/fda/03-guidance/366_premarket_notification_510_k_submissions_for_chemical_indicators_-_guidance_for_industry_and_fda_staff.md,pdftotext,20,38657,945,710,110,19,58,0.249,55,orphaned_lines:110(15.5%); garbled_sequences:58
+aria/knowledge/fda/03-guidance/367_part_11_electronic_records_electronic_signatures_-_scope_and_application_guidance_for_industry.md,pdftotext,12,28777,905,791,417,11,9,0.126,55,orphaned_lines:417(52.7%); garbled_sequences:9
+aria/knowledge/fda/03-guidance/368_information_disclosure_by_manufacturers_to_assemblers_for_diagnostic_x-ray_systems_-_guidance_for_industry_and_fda_s.md,pdftotext,9,20846,296,271,8,8,1,0.084,90,
+aria/knowledge/fda/03-guidance/369_frequently-asked-questions_about_the_reprocessing_and_reuse_of_single-use_devices_by_third-party_and_hospital_reproc.md,pdftotext,5,6060,137,121,15,4,4,0.117,59,garbled_sequences:4
+aria/knowledge/fda/03-guidance/370_pediatric_expertise_for_advisory_panels_-_guidance_for_industry_and_fda_staff.md,pdftotext,6,9385,201,158,9,5,2,0.214,80,
+aria/knowledge/fda/03-guidance/371_user_labeling_for_devices_that_contain_natural_rubber_21_cfr_801.437_small_entity_compliance_guide_-_guidance_for_in.md,pdftotext,8,14062,247,209,13,7,0,0.154,89,
+aria/knowledge/fda/03-guidance/372_quality_system_information_for_certain_premarket_application_reviews_guidance_for_industry_and_fda_staff.md,pdftotext,19,31325,905,705,150,81,0,0.221,73,orphaned_lines:150(21.3%)
+aria/knowledge/fda/03-guidance/373_determination_of_intended_use_for_510_k_devices_-_guidance_for_cdrh_staff_update_to_k98-1.md,pdftotext,7,12686,227,193,15,6,2,0.15,77,
+aria/knowledge/fda/03-guidance/374_needlesticks_-_medical_device_reporting_guidance_for_user_facilities_manufacturers_and_importers.md,pdftotext,7,13647,198,183,0,6,0,0.076,100,
+aria/knowledge/fda/03-guidance/375_guidance_on_the_department_of_defense_exemption_from_the_fda_performance_standard_for_laser_products_guidance_for_in.md,pdftotext,5,8027,161,144,8,4,1,0.106,85,
+aria/knowledge/fda/03-guidance/376_guidance_for_resorbable_adhesion_barrier_devices_for_use_in_abdominal_and_or_pelvic_surgery_-_guidance_for_industry.md,pdftotext,30,68058,1685,1249,255,29,62,0.259,55,orphaned_lines:255(20.4%); garbled_sequences:62
+aria/knowledge/fda/03-guidance/377_general_principles_of_software_validation_guidance_for_industry_and_fda_staff.md,pdftotext,48,122164,2080,1773,170,47,103,0.148,64,garbled_sequences:103
+aria/knowledge/fda/03-guidance/378_sterilized_convenience_kits_for_clinical_and_surgical_use_final_guidance_for_industry.md,pdftotext,8,12393,209,189,6,7,0,0.096,94,
+aria/knowledge/fda/03-guidance/379_labeling_recommendations_for_single-use_devices_reprocessed_by_third_parties_and_hospitals_final_guidance_for_indust.md,pdftotext,12,22281,352,305,24,11,3,0.134,72,garbled_sequences:3
+aria/knowledge/fda/03-guidance/380_frequently-asked-questions_about_the_reprocessing_and_reuse_of_single-use_devices_by_third-party_and_hospital_reproc.md,pdftotext,10,18884,313,276,16,9,19,0.118,70,garbled_sequences:19
+aria/knowledge/fda/03-guidance/381_information_for_keratome_manufacturers_regarding_lasik_-_final_guidance_for_industry.md,pdftotext,4,5707,100,92,5,3,1,0.08,86,
+aria/knowledge/fda/03-guidance/382_changes_or_modifications_during_the_conduct_of_a_clinical_investigation_final_guidance_for_industry_and_cdrh_staff.md,pdftotext,25,57064,1151,978,168,24,27,0.15,55,orphaned_lines:168(17.2%); garbled_sequences:27
+aria/knowledge/fda/03-guidance/383_responsibilities_of_laser_light_show_projector_manufacturers_dealers_and_distributors_laser_notice_51.md,pdftotext,5,6407,122,107,4,3,0,0.123,93,
+aria/knowledge/fda/03-guidance/384_guidance_on_medical_device_patient_labeling_final_guidance_for_industry_and_fda_staff.md,pdftotext,54,92840,1961,1646,251,53,5,0.161,55,orphaned_lines:251(15.2%); garbled_sequences:5
+aria/knowledge/fda/03-guidance/385_early_collaboration_meetings_under_the_fda_modernization_act_fdama_final_guidance_for_industry_and_for_cdrh_staff.md,pdftotext,15,33212,608,541,13,14,3,0.11,81,garbled_sequences:3
+aria/knowledge/fda/03-guidance/386_content_of_investigational_device_exemptions_for_solutions_for_hypothermic_flushing_transport_and_storage_of_organs_.md,pdftotext,8,13887,274,231,23,7,7,0.157,63,garbled_sequences:7
+aria/knowledge/fda/03-guidance/387_guidance_document_for_dura_substitute_devices_-_guidance_for_industry.md,pdftotext,11,22540,487,415,70,10,27,0.148,55,orphaned_lines:70(16.9%); garbled_sequences:27
+aria/knowledge/fda/03-guidance/388_labeling_for_electronic_anti-theft_systems_guidance_for_industry.md,pdftotext,5,6821,118,101,2,4,5,0.144,76,garbled_sequences:5
+aria/knowledge/fda/03-guidance/389_guidance_on_section_216_of_the_food_and_drug_administration_modernization_act_of_1997_-_guidance_for_industry_and_fo.md,pdftotext,8,19330,303,272,10,7,7,0.102,74,garbled_sequences:7
+aria/knowledge/fda/03-guidance/390_guidance_for_the_submission_of_premarket_notifications_for_photon-emitting_brachytherapy_sources_-_guidance_for_indu.md,pdftotext,14,22082,480,385,50,13,8,0.198,58,garbled_sequences:8
+aria/knowledge/fda/03-guidance/391_guidance_for_over-the-counter_otc_human_chorionic_gonadotropin_hcg_510_k_s_-_guidance_for_industry_and_fda_reviewers.md,pdftotext,12,19453,417,354,53,11,9,0.151,55,garbled_sequences:9
+aria/knowledge/fda/03-guidance/392_1-consolidated_annual_report_for_a_device_product_line_1-card_-_guidance_for_industry_and_cdrh_reviewers.md,pdftotext,6,9407,185,164,13,5,5,0.114,66,garbled_sequences:5
+aria/knowledge/fda/03-guidance/393_guidance_for_premarket_submissions_of_orthokeratology_rigid_gas_permeable_contact_lenses_-_guidance_for_industry.md,pdftotext,72,114239,3358,2677,386,71,320,0.203,56,garbled_sequences:320
+aria/knowledge/fda/03-guidance/394_guidance_for_manufacturers_seeking_marketing_clearance_of_ear_nose_and_throat_endoscope_sheaths_used_as_protective_b.md,pdftotext,18,43454,684,628,37,17,11,0.082,70,garbled_sequences:11
+aria/knowledge/fda/03-guidance/395_guidance_for_industry_on_the_testing_of_metallic_plasma_sprayed_coatings_on_orthopedic_implants_to_support_reconside.md,pdftotext,11,19994,409,337,37,10,10,0.176,61,garbled_sequences:10
+aria/knowledge/fda/03-guidance/396_guidance_document_for_premarket_notification_submissions_for_nitric_oxide_delivery_apparatus_nitric_oxide_analyzer_a.md,pdftotext,51,102995,2289,1804,226,79,66,0.212,59,garbled_sequences:66
+aria/knowledge/fda/03-guidance/397_guidance_for_the_content_of_premarket_notifications_for_penile_rigidity_implants_-_guidance_for_industry_and_for_fda.md,pdftotext,16,31925,813,591,126,15,1,0.273,70,orphaned_lines:126(21.3%)
+aria/knowledge/fda/03-guidance/398_guidance_document_for_the_preparation_of_ides_for_spinal_systems_-_guidance_for_industry_and_or_fda_staff.md,pdftotext,32,95296,1493,1329,78,31,37,0.11,70,garbled_sequences:37
+aria/knowledge/fda/03-guidance/399_content_and_format_of_premarket_notification_510_k_submissions_for_liquid_chemical_sterilants_high_level_disinfectan.md,pdftotext,59,123951,2740,2076,391,58,64,0.242,55,orphaned_lines:391(18.8%); garbled_sequences:64
+aria/knowledge/fda/03-guidance/401_guidance_document_for_powered_muscle_stimulator_510_k_s_-_guidance_for_industry_fda_reviewers_staff_and_compliance.md,pdftotext,19,30101,885,626,83,38,27,0.293,57,garbled_sequences:27
+aria/knowledge/fda/03-guidance/402_recommended_clinical_study_design_for_ventricular_tachycardia_ablation.md,pdftotext,14,21191,459,395,41,13,0,0.139,82,
+aria/knowledge/fda/03-guidance/404_preparing_notices_of_availability_of_investigational_medical_devices_and_for_recruiting_study_subjects_guidance_for_.md,pdftotext,9,7432,271,195,22,8,7,0.28,61,garbled_sequences:7
+aria/knowledge/fda/03-guidance/405_guidance_on_510_k_submissions_for_keratoprostheses_-_guidance_for_industry_and_for_fda_reviewers_staff.md,pdftotext,11,17293,465,355,56,10,0,0.237,75,orphaned_lines:56(15.8%)
+aria/knowledge/fda/03-guidance/406_guidance_for_dermabrasion_devices_-_guidance_for_industry.md,pdftotext,4,4586,91,80,8,3,0,0.121,83,
+aria/knowledge/fda/03-guidance/407_guidance_for_the_preparation_of_a_premarket_notification_application_for_a_surgical_mesh_-_guidance_for_industry_and.md,pdftotext,10,15065,395,314,48,9,8,0.205,55,orphaned_lines:48(15.3%); garbled_sequences:8
+aria/knowledge/fda/03-guidance/408_clinical_development_programs_for_drugs_devices_and_biological_products_for_the_treatment_of_rheumatoid_arthritis_ra.md,pdftotext,51,121724,2335,1967,212,50,61,0.158,62,garbled_sequences:61
+aria/knowledge/fda/03-guidance/409_premarket_notification_510_k_submissions_for_testing_for_skin_sensitization_to_chemicals_in_natural_rubber_products_.md,pdftotext,14,21089,603,501,62,13,31,0.169,59,garbled_sequences:31
+aria/knowledge/fda/03-guidance/410_guidance_for_the_submission_of_premarket_notifications_for_emission_computed_tomography_devices_and_accessories_spec.md,pdftotext,25,39963,1245,937,261,24,9,0.247,55,orphaned_lines:261(27.9%); garbled_sequences:9
+aria/knowledge/fda/03-guidance/411_guidance_for_the_submission_of_premarket_notifications_for_radionuclide_dose_calibrators_-_guidance_for_industry.md,pdftotext,13,19253,434,364,56,12,8,0.161,55,orphaned_lines:56(15.4%); garbled_sequences:8
+aria/knowledge/fda/03-guidance/412_non-automated_sphygmomanometer_blood_pressure_cuff_guidance_-_version_1_-_guidance_for_industry.md,pdftotext,8,15599,376,310,62,7,0,0.176,75,orphaned_lines:62(20.0%)
+aria/knowledge/fda/03-guidance/413_aqueous_shunts_-_510_k_submissions_-_guidance_for_industry_and_for_fda_reviewers_staff.md,pdftotext,20,34736,708,619,53,22,0,0.126,85,
+aria/knowledge/fda/03-guidance/414_fda_animal_products_database_data_entry_form.md,tesseract-ocr,2,3153,211,128,3,0,23,0.393,76,garbled_sequences:23
+aria/knowledge/fda/03-guidance/415_cardiac_monitor_guidance_including_cardiotachometer_and_rate_alarm_-_guidance_for_industry.md,pdftotext,11,21302,422,358,17,10,11,0.152,72,garbled_sequences:11
+aria/knowledge/fda/03-guidance/416_diagnostic_ecg_guidance_including_non-alarming_st_segment_measurement_-_guidance_for_industry.md,pdftotext,11,22529,434,373,17,10,13,0.141,72,garbled_sequences:13
+aria/knowledge/fda/03-guidance/417_general_specific_intended_use_-_guidance_for_industry.md,pdftotext,12,27016,474,423,18,11,1,0.108,88,
+aria/knowledge/fda/03-guidance/418_noise_claims_in_hearing_aid_labeling_-_guidance_for_industry.md,pdftotext,3,2408,54,48,0,2,0,0.111,100,
+aria/knowledge/fda/03-guidance/419_guidance_document_for_nonprescription_sunglasses_-_guidance_for_industry.md,pdftotext,20,32754,622,551,31,19,3,0.114,75,garbled_sequences:3
+aria/knowledge/fda/03-guidance/420_guidance_document_for_powered_suction_pump_510_k_s_-_guidance_for_industry_and_fda_reviewers_staff.md,pdftotext,6,8517,229,182,39,5,8,0.205,55,orphaned_lines:39(21.4%); garbled_sequences:8
+aria/knowledge/fda/03-guidance/421_otc_denture_cushions_pads_reliners_repair_kits_and_partially_fabricated_denture_kits_-_guidance_for_industry_and_fda.md,pdftotext,11,14435,338,266,39,10,31,0.213,55,garbled_sequences:31
+aria/knowledge/fda/03-guidance/422_accidental_radioactive_contamination_of_human_food_and_animal_feeds_recommendations_for_state_and_local_agencies.md,pdftotext,59,100020,3845,2895,603,58,182,0.247,55,orphaned_lines:603(20.8%); garbled_sequences:182
+aria/knowledge/fda/03-guidance/423_revised_procedures_for_adding_lens_finishing_laboratories_to_approved_premarket_approval_applications_for_class_iii_.md,pdftotext,14,30144,570,477,37,13,52,0.163,67,garbled_sequences:52
+aria/knowledge/fda/03-guidance/424_latex_condoms_for_men_-_information_for_510_k_premarket_notifications_use_of_consensus_standards_for_abbreviated_sub.md,pdftotext,16,24394,785,588,106,45,56,0.251,54,orphaned_lines:106(18.0%); garbled_sequences:56
+aria/knowledge/fda/03-guidance/425_uniform_contraceptive_labeling_-_guidance_for_industry.md,pdftotext,7,9085,247,212,30,9,0,0.142,76,
+aria/knowledge/fda/03-guidance/426_slit_lamp_guidance_-_guidance_for_industry.md,pdftotext,10,14353,307,268,9,9,2,0.127,84,
+aria/knowledge/fda/03-guidance/429_guidance_for_the_content_of_premarket_notifications_for_esophageal_and_tracheal_prostheses_-_guidance_for_industry.md,pdftotext,9,15709,356,294,46,8,36,0.174,55,orphaned_lines:46(15.6%); garbled_sequences:36
+aria/knowledge/fda/03-guidance/430_procedures_for_class_ii_device_exemptions_from_premarket_notification_guidance_for_industry_and_cdrh_staff.md,pdftotext,6,12928,207,189,1,5,5,0.087,79,garbled_sequences:5
+aria/knowledge/fda/03-guidance/432_convenience_kits_interim_regulatory_guidance.md,pdftotext,13,16819,447,425,3,12,2,0.049,88,
+aria/knowledge/fda/03-guidance/434_reviewers_guidance_checklist_for_orthopedic_external_fixation_devices_version_5.md,pdftotext,15,22976,652,541,47,14,98,0.17,65,garbled_sequences:98
+aria/knowledge/fda/03-guidance/436_third_party_review_guidance_for_phacofragmentation_system_device_premarket_notification_510_k.md,pdftotext,17,34672,633,573,21,16,33,0.095,74,garbled_sequences:33
+aria/knowledge/fda/03-guidance/438_guidance_for_industry_exports_under_the_fda_export_reform_and_enhancement_act_of_1996_guidance_for_industry.md,pdftotext,61,115992,2799,2294,294,87,0,0.18,78,
+aria/knowledge/fda/03-guidance/439_prospective_manufacturers_of_barrier_devices_used_during_oral_sex_for_std_protection.md,pdftotext,19,41164,951,728,84,18,28,0.234,60,garbled_sequences:28
+aria/knowledge/fda/03-guidance/441_emitted_laser_beam_as_emission_indicator_for_class_ii_and_class_iiia_laser_products_laser_notice_49.md,tesseract-ocr,1,2480,77,54,3,0,5,0.299,71,garbled_sequences:5
+aria/knowledge/fda/03-guidance/442_identification_labels_for_certain_class_i_laser_products_laser_notice_48.md,tesseract-ocr,2,3092,96,72,4,0,4,0.25,71,garbled_sequences:4
+aria/knowledge/fda/03-guidance/445_effective_visual_control_of_laser_projections_laser_notice_47.md,tesseract-ocr,3,6646,158,119,1,0,7,0.247,79,garbled_sequences:7
+aria/knowledge/fda/03-guidance/447_medical_device_reporting_for_user_facilities.md,pdftotext,36,57918,1683,1389,88,35,33,0.175,69,garbled_sequences:33
+aria/knowledge/fda/03-guidance/449_hysteroscopes_and_gynecology_laparoscopes_-_submission_guidance_for_a_510_k.md,pdftotext,23,31635,1125,866,197,28,50,0.23,54,orphaned_lines:197(22.7%); garbled_sequences:50
+aria/knowledge/fda/03-guidance/450_all_holders_of_approved_variances_for_laser_light_shows_and_displays_laser_notice_46.md,tesseract-ocr,2,4472,113,95,3,0,3,0.159,80,garbled_sequences:3
+aria/knowledge/fda/03-guidance/452_user_instruction_for_medical_products_laser_notice_44.md,tesseract-ocr,2,4581,124,98,3,0,5,0.21,75,garbled_sequences:5
+aria/knowledge/fda/03-guidance/454_guidance_document_for_the_preparation_of_premarket_notification_510_k_applications_for_exercise_equipment.md,pdftotext,9,19427,431,333,42,8,29,0.227,59,garbled_sequences:29
+aria/knowledge/fda/03-guidance/455_guidance_document_for_the_preparation_of_premarket_notification_510_k_applications_for_heating_and_cooling_devices.md,pdftotext,6,11253,260,194,31,5,28,0.254,55,orphaned_lines:31(16.0%); garbled_sequences:28
+aria/knowledge/fda/03-guidance/456_guidance_document_for_the_preparation_of_premarket_notification_510_k_applications_for_mechanical_and_powered_wheelc.md,pdftotext,7,15400,367,269,48,9,29,0.267,55,orphaned_lines:48(17.8%); garbled_sequences:29
+aria/knowledge/fda/03-guidance/459_guidance_on_the_content_and_organization_of_a_premarket_notification_for_a_medical_laser.md,pdftotext,27,57069,1321,970,132,26,119,0.266,57,garbled_sequences:119
+aria/knowledge/fda/03-guidance/460_guidance_document_for_testing_non-articulating_mechanically_locked_modular_implant_components.md,pdftotext,8,17909,432,350,29,7,131,0.19,66,garbled_sequences:131
+aria/knowledge/fda/03-guidance/467_cpg_sec._345.100_condoms_defects_-_criteria_for_direct_reference_seizure.md,pdftotext,4,6329,134,131,0,3,6,0.022,80,garbled_sequences:6
+aria/knowledge/fda/03-guidance/468_cpg_sec._355.200_electrical_muscle_stimulators.md,pdftotext,1,2603,32,32,0,0,2,0.0,90,
+aria/knowledge/fda/03-guidance/469_cpg_sec._300.400_contamination_of_devices_labeled_as_sterile.md,pdftotext,1,2164,29,29,0,0,3,0.0,85,garbled_sequences:3
+aria/knowledge/fda/03-guidance/475_guidance_document_for_the_preparation_of_premarket_notification_for_ceramic_ball_hip_systems.md,pdftotext,8,14176,410,279,65,7,23,0.32,55,orphaned_lines:65(23.3%); garbled_sequences:23
+aria/knowledge/fda/03-guidance/476_checklist_for_mechanical_lithotripters_and_stone_dislodgers_used_in_gastroenterology_and_urology.md,pdftotext,5,6814,284,211,52,4,0,0.257,75,orphaned_lines:52(24.6%)
+aria/knowledge/fda/03-guidance/479_guidance_for_the_preparation_of_a_premarket_notification_for_extended_laparoscopy_devices_eld.md,pdftotext,3,6668,153,124,18,2,19,0.19,56,garbled_sequences:19
+aria/knowledge/fda/03-guidance/480_points_to_consider_for_cervical_cytology_devices.md,pdftotext,18,31452,855,689,146,17,12,0.194,55,orphaned_lines:146(21.2%); garbled_sequences:12
+aria/knowledge/fda/03-guidance/481_guidance_for_the_content_of_premarket_notifications_for_urine_drainage_bags.md,tesseract-ocr,6,11059,242,168,2,0,5,0.306,78,garbled_sequences:5
+aria/knowledge/fda/03-guidance/482_guidance_document_for_testing_orthopedic_implants_with_modified_metallic_surfaces_apposing_bone_or_bone_cement.md,pdftotext,10,20862,558,396,86,9,10,0.29,55,orphaned_lines:86(21.7%); garbled_sequences:10
+aria/knowledge/fda/03-guidance/483_letter_-_manufacturers_distributors_and_importers_of_condom_products_included_in_condom_packet_398_letter_-_manufact.md,pdftotext,2,2884,57,49,1,1,2,0.14,86,
+aria/knowledge/fda/03-guidance/484_manufacturers_assemblers_of_diagnostic_x-ray_systems_enforcement_policy_for_positive-beam_limitation_pbl_requirement.md,pdftotext,8,10702,325,262,17,7,5,0.194,69,garbled_sequences:5
+aria/knowledge/fda/03-guidance/486_guidance_on_premarket_notification_510_k_submissions_for_automated_endoscope_washers_washer_disinfectors_and_disinfe.md,pdftotext,24,39668,1103,824,150,23,1,0.253,70,orphaned_lines:150(18.2%)
+aria/knowledge/fda/03-guidance/487_guidance_on_premarket_notification_510_k_submissions_for_surgical_gowns_and_surgical_drapes.md,pdftotext,20,26893,978,712,137,19,10,0.272,55,orphaned_lines:137(19.2%); garbled_sequences:10
+aria/knowledge/fda/03-guidance/488_beam_attenuators_and_emission_indicators_for_class_ii_and_iiia_laser_systems_laser_notice_43.md,tesseract-ocr,2,4058,110,82,8,0,4,0.255,64,garbled_sequences:4
+aria/knowledge/fda/03-guidance/489_letter_to_industry_powered_wheelchair_manufacturers_from_rmjohnson.md,tesseract-ocr,2,2611,79,62,5,0,6,0.215,67,garbled_sequences:6
+aria/knowledge/fda/03-guidance/491_guidance_on_premarket_notification_510_k_for_sterilizers_intended_for_use_in_health_care_facilities.md,pdftotext,35,69731,1658,1350,132,34,16,0.186,63,garbled_sequences:16
+aria/knowledge/fda/03-guidance/495_compliance_guide_for_laser_products_fda_86-8260.md,pdftotext,29,71160,1513,1286,181,28,88,0.15,56,garbled_sequences:88
+aria/knowledge/fda/03-guidance/496_review_criteria_for_premarket_approval_of_in_vitro_diagnostic_devices_for_detection_of_antibodies_to_parvovirus_b19.md,pdftotext,14,25759,935,694,111,13,28,0.258,55,orphaned_lines:111(16.0%); garbled_sequences:28
+aria/knowledge/fda/03-guidance/497_cpg_sec._335.800_clinical_thermometer_-_adulteration_misbranding_defects.md,pdftotext,2,2137,37,36,0,1,7,0.027,80,garbled_sequences:7
+aria/knowledge/fda/03-guidance/498_shelf_life_of_medical_devices.md,pdftotext,27,63151,1442,1251,114,26,37,0.132,65,garbled_sequences:37
+aria/knowledge/fda/03-guidance/500_quality_assurance_guidelines_for_hemodialysis_devices.md,pdftotext,245,583911,15531,12550,628,244,611,0.192,71,garbled_sequences:611
+aria/knowledge/fda/03-guidance/501_clarification_of_compliance_requirements_for_certain_manufacturers_who_incorporate_certified_class_i_laser_products_.md,tesseract-ocr,1,2426,71,52,5,0,10,0.268,64,garbled_sequences:10
+aria/knowledge/fda/03-guidance/502_labeling_-_regulatory_requirements_for_medical_devices_fda_89-4203.md,pdftotext,53,131599,3051,2472,334,53,236,0.19,57,garbled_sequences:236
+aria/knowledge/fda/03-guidance/504_clarification_of_radiation_control_regulations_for_diagnostic_x-ray_equipment_part_1.md,tesseract-ocr,26,35374,893,664,89,0,84,0.256,58,garbled_sequences:84
+aria/knowledge/fda/03-guidance/505_clarification_of_radiation_control_regulations_for_diagnostic_x-ray_equipment_part_2.md,tesseract-ocr,28,41914,1070,760,43,1,93,0.29,71,garbled_sequences:93
+aria/knowledge/fda/03-guidance/506_clarification_of_radiation_control_regulations_for_diagnostic_x-ray_equipment_part_3.md,tesseract-ocr,17,28334,633,454,17,0,86,0.283,74,garbled_sequences:86
+aria/knowledge/fda/03-guidance/507_guidance_for_oxygen_conserving_device_510_k_review_73_bzd_868.5905_non-continuous_ventilator_class_ii.md,tesseract-ocr,3,3576,98,68,5,0,3,0.306,73,garbled_sequences:3
+aria/knowledge/fda/03-guidance/509_quality_control_guide_for_sunlamp_products_fda_88-8234.md,pdftotext,36,63880,1987,1608,325,35,134,0.191,55,orphaned_lines:325(20.2%); garbled_sequences:134
+aria/knowledge/fda/03-guidance/510_class_ii_and_iiia_laser_light_show_projectors_and_shows_laser_notice_40.md,tesseract-ocr,4,9541,218,169,6,0,14,0.225,74,garbled_sequences:14
+aria/knowledge/fda/03-guidance/516_user_instructions_-_multi_axis_workstations_laser_notice_39.md,tesseract-ocr,2,4267,107,79,1,0,5,0.262,78,garbled_sequences:5
+aria/knowledge/fda/03-guidance/517_master_files_part_iii_-_guidance_on_scientific_and_technical_information.md,pdftotext,8,14207,297,254,24,7,5,0.145,64,garbled_sequences:5
+aria/knowledge/fda/03-guidance/518_color_additive_petitions_-_medical_devices.md,pdftotext,3,4749,74,63,5,2,3,0.149,71,garbled_sequences:3
+aria/knowledge/fda/03-guidance/519_all_u.s._condom_manufacturers_importers_and_repackagers.md,pdftotext,3,5692,176,121,37,2,1,0.312,70,orphaned_lines:37(30.6%)
+aria/knowledge/fda/03-guidance/520_policy_on_lamp_compatibility_sunlamps.md,pdftotext,2,2766,70,56,5,1,18,0.2,65,garbled_sequences:18
+aria/knowledge/fda/03-guidance/521_walk-in_workstations_laser_notice_37.md,tesseract-ocr,2,3687,100,74,2,1,15,0.26,75,garbled_sequences:15
+aria/knowledge/fda/03-guidance/522_policy_on_maximum_timer_interval_and_exposure_schedule_for_sunlamp_products.md,pdftotext,6,6246,219,179,64,5,24,0.183,55,orphaned_lines:64(35.8%); garbled_sequences:24
+aria/knowledge/fda/03-guidance/523_policy_on_warning_label_required_on_sunlamp_products.md,pdftotext,2,3116,64,55,3,1,13,0.141,71,garbled_sequences:13
+aria/knowledge/fda/03-guidance/524_user_instruction_hazard_warnings_laser_notice_35.md,tesseract-ocr,1,2376,61,45,4,0,8,0.262,65,garbled_sequences:8
+aria/knowledge/fda/03-guidance/525_medical_laser_delivery_system_interlocks_laser_notice_34.md,tesseract-ocr,2,3320,82,64,3,0,14,0.22,72,garbled_sequences:14
+aria/knowledge/fda/03-guidance/527_procedures_for_laboratory_testing_of_microwave_ovens.md,tesseract-ocr,29,28689,1274,841,66,2,150,0.34,67,garbled_sequences:150
+aria/knowledge/fda/03-guidance/528_exemption_from_reporting_and_record_keeping_requirements_for_certain_sunlamp_product_manufacturers.md,pdftotext,1,3079,73,57,7,0,3,0.219,64,garbled_sequences:3
+aria/knowledge/fda/03-guidance/529_investigational_medical_laser_significant_risk_device_laser_notice_31.md,tesseract-ocr,2,4481,122,89,5,0,17,0.27,71,garbled_sequences:17
+aria/knowledge/fda/03-guidance/530_cpg_sec_390.100_definition_of_commerce_-_21_cfr_1000.3_d_2.md,pdftotext,2,3058,53,48,0,1,0,0.094,100,
+aria/knowledge/fda/03-guidance/531_alternate_wording_for_caution_statement_laser_notice_30.md,tesseract-ocr,1,2265,59,44,1,0,13,0.254,76,garbled_sequences:13
+aria/knowledge/fda/03-guidance/532_quality_control_practices_for_compliance_with_the_federal_mercury_vapor_lamp_performance_standard.md,pdftotext,50,78498,2168,1645,394,49,40,0.241,55,orphaned_lines:394(24.0%); garbled_sequences:40
+aria/knowledge/fda/03-guidance/533_open_door_operation_of_microwave_ovens_as_a_result_of_oven_miswiring.md,pdftotext,4,7307,140,113,12,3,8,0.193,62,garbled_sequences:8
+aria/knowledge/fda/03-guidance/534_exemption_of_certain_lasers_used_by_doe_noaa_and_u.s._dept._of_commerce_laser_notice_25.md,tesseract-ocr,2,4337,113,81,1,0,16,0.283,78,garbled_sequences:16
+aria/knowledge/fda/03-guidance/536_guidance_guidelines_for_evaluation_of_hysteroscopic_sterilization_devices.md,pdftotext,8,12979,399,279,67,7,15,0.301,55,orphaned_lines:67(24.0%); garbled_sequences:15
+aria/knowledge/fda/03-guidance/537_laser_light_shows_subject_to_laser_product_performance_standard_laser_notice_22.md,tesseract-ocr,3,6002,135,100,1,0,15,0.259,78,garbled_sequences:15
+aria/knowledge/fda/03-guidance/538_procedures_for_field_testing_microwave_ovens.md,tesseract-ocr,40,77497,1791,1350,66,2,208,0.246,72,garbled_sequences:208
+aria/knowledge/fda/03-guidance/539_warning_labels_for_dye_and_multiple_wavelength_lasers_laser_notice_16.md,tesseract-ocr,2,3159,80,59,2,0,44,0.263,74,garbled_sequences:44
+aria/knowledge/fda/03-guidance/541_lasers_manufactured_and_used_in-house_laser_notice_14.md,tesseract-ocr,1,1994,75,48,2,0,14,0.36,73,garbled_sequences:14
+aria/knowledge/fda/03-guidance/542_manufacture_and_certification_of_laser_kits_laser_notice_13.md,tesseract-ocr,2,3206,73,59,2,0,12,0.192,74,garbled_sequences:12
+aria/knowledge/fda/03-guidance/543_remote_interlock_connectors_laser_notice_11.md,tesseract-ocr,1,2302,51,42,0,0,16,0.176,80,garbled_sequences:16
+aria/knowledge/fda/03-guidance/544_certain_military_lasers_exempt_from_21_cfr_1040.10_.11_laser_notice_9.md,tesseract-ocr,2,3288,79,61,1,0,15,0.228,77,garbled_sequences:15
+aria/knowledge/fda/03-guidance/545_viewing_optics_-_sighting_telescope_laser_notice_8.md,tesseract-ocr,1,2702,57,48,1,0,16,0.158,77,garbled_sequences:16
+aria/knowledge/fda/03-guidance/546_quality_control_practices_for_compliance_with_the_federal_laser_performance_standard.md,tesseract-ocr,25,47999,1072,794,24,0,60,0.259,75,garbled_sequences:60
+aria/knowledge/fda/03-guidance/547_laser_energy_source_laser_notice_2.md,tesseract-ocr,1,1440,39,28,0,0,15,0.282,80,garbled_sequences:15
+aria/knowledge/fda/03-guidance/548_guidance_for_the_submission_of_cabinet_x-ray_system_reports_pursuant_to_21-cfr_1020.40.md,pdftotext,29,42287,1317,923,200,28,38,0.299,55,orphaned_lines:200(21.7%); garbled_sequences:38
+aria/knowledge/fda/03-guidance/549_cpg_sec._335.300_hypnotherapy_devices_-_self-hypnotic_tape_recordings.md,pdftotext,3,5187,70,68,0,2,1,0.029,95,
+aria/knowledge/mfds/01-법령/01-의료기기법/(별표)-의료기기의-생물학적-안전에-관한-공통기준-및-시험방법-제3조-관련-….md,pdftotext,480,614818,21739,17133,1900,748,950,0.212,61,garbled_sequences:950
+aria/knowledge/mfds/01-법령/01-의료기기법/(별표-1)-의료기기-품목-및-품목별-등급-의료기기-품목-및-품목별-등급에-관한-….md,pdftotext,158,273834,22735,12663,367,160,0,0.443,92,
+aria/knowledge/mfds/01-법령/01-의료기기법/(별표-2)-시설과-제조-및-품질관리체계의-기준-제8조제1항-관련-의료기기법-시행규칙.md,pdftotext,3,2828,105,102,5,2,0,0.029,91,
+aria/knowledge/mfds/01-법령/01-의료기기법/(별표-2)-자율주행-전동식-휠체어의-자율주행-기술수준-제2조제5항-관련-의료기기-….md,pdftotext,1,371,97,56,20,0,0,0.423,73,orphaned_lines:20(35.7%)
+aria/knowledge/mfds/01-법령/01-의료기기법/(별표-3)-의료기기-임상시험-관리기준-제24조제1항-관련-의료기기법-시행규칙.md,pdftotext,27,36477,7300,3922,2078,26,0,0.463,70,orphaned_lines:2078(53.0%)
+aria/knowledge/mfds/01-법령/01-의료기기법/(별표-6)-의료기기-유통품질-관리기준-제39조제4호-관련-의료기기법-시행규칙.md,pdftotext,3,2275,79,75,1,2,0,0.051,97,
+aria/knowledge/mfds/01-법령/01-의료기기법/(별표-7)-금지되는-광고의-범위-제45조제1항-관련-의료기기법-시행규칙.md,pdftotext,2,1249,39,36,0,1,0,0.077,100,
+aria/knowledge/mfds/01-법령/01-의료기기법/별표_1_의료기기의_등급분류_및_지정에_관한_기준과_절차제2조_관련의료기기법_시행규칙.md,pdftotext,2,1351,48,46,0,1,0,0.042,100,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-부작용-등-안전성-정보-관리에-관한-규정-식품의약품안전처고시-제….md,pdftotext,4,4308,139,117,9,3,0,0.158,87,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-시판-후-조사에-관한-규정-식품의약품안전처고시-제2023-53호-20230811.md,pdftotext,4,4964,157,135,11,3,0,0.14,86,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-임상시험계획-승인에-관한-규정-식품의약품안전처고시-제2023-12호-20230214.md,pdftotext,6,8150,232,200,14,5,0,0.138,88,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-재평가에-관한-규정-식품의약품안전처고시-제2024-6호-20240125.md,pdftotext,3,3570,107,90,7,2,0,0.159,87,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-제조-및-품질관리-기준-식품의약품안전처고시-제2025-80호-20251209.md,pdftotext,75,82944,3717,3261,355,75,1,0.123,76,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-제조허가등-갱신에-관한-규정-식품의약품안전처고시-제2023-68호-20231026.md,pdftotext,6,9314,249,217,17,5,1,0.129,82,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-표시·기재-등에-관한-규정-식품의약품안전처고시-제2024-77호-20241204.md,pdftotext,32,25356,6056,3319,2003,56,0,0.452,70,orphaned_lines:2003(60.3%)
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기-표준코드의-표시-및-관리요령-식품의약품안전처고시-제2023-67호-20231020.md,pdftotext,3,3810,108,91,7,2,4,0.157,67,garbled_sequences:4
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기법-법률-제20753호-20250801.md,pdftotext,42,82197,2056,1874,111,41,0,0.089,90,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기법-시행규칙-총리령-제02060호-20251031.md,pdftotext,40,74792,1960,1798,109,39,0,0.083,90,
+aria/knowledge/mfds/01-법령/01-의료기기법/의료기기법-시행령-대통령령-제35669호-20250801.md,pdftotext,8,14541,388,354,23,7,0,0.088,89,
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/(별표)-체외진단의료기기-품목-및-품목별-등급-체외진단의료기기-품목-및-품….md,pdftotext,31,47102,2502,1509,36,149,2,0.397,84,
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/별표_1_의료기기의_등급분류_및_지정에_관한_기준과_절차제2조_관련의료기기법_시행규칙.md,pdftotext,2,1351,48,46,0,1,0,0.042,100,
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/체외진단의료기기-임상적-성능시험-계획-승인에-관한-규정-식품의약품안….md,pdftotext,5,7404,208,179,11,4,0,0.139,89,
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/체외진단의료기기-제조-및-품질관리-기준-식품의약품안전처고시-제2025-51호-20250812.md,pdftotext,75,71775,5365,3566,952,74,0,0.335,74,orphaned_lines:952(26.7%)
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/체외진단의료기기-표준품-관리-규정-식품의약품안전처고시-제2020-35호-20200501.md,pdftotext,2,2129,70,58,5,1,0,0.171,85,
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/체외진단의료기기-허가·신고·심사-등에-관한-규정-식품의약품안전처고시-제2026-7….md,pdftotext,50,55867,2781,2036,601,49,4,0.268,54,orphaned_lines:601(29.5%); garbled_sequences:4
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/체외진단의료기기법-법률-제19920호-20260103.md,pdftotext,11,19049,509,458,30,10,0,0.1,89,
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/체외진단의료기기법-시행규칙-총리령-제02083호-20260103.md,pdftotext,15,27348,722,660,38,14,0,0.086,90,
+aria/knowledge/mfds/01-법령/02-체외진단의료기기법/체외진단의료기기법-시행령-대통령령-제33913호-20231212.md,pdftotext,4,5824,158,139,9,3,0,0.12,89,
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료기기-임상시험등-계획-승인-및-실시·관리에-관한-규정-식품의약품안전처고시-제2025-29호-20250424.md,pdftotext,59,62605,10522,5907,2936,67,0,0.439,71,orphaned_lines:2936(49.7%)
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료기기-전자적-침해행위-보안-지침-식품의약품안전처고시-제2025-30호-20250429.md,pdftotext,6,6751,223,185,14,5,0,0.17,87,
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료기기-제조-및-품질관리-기준-식품의약품안전처고시-제2025-28호-20250421.md,pdftotext,101,79379,8426,5154,1785,101,1,0.388,69,orphaned_lines:1785(34.6%)
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품-분류-및-등급-지정-등에-관한-규정-고시-전문.md,pdftotext,15,11354,843,587,129,14,0,0.304,74,orphaned_lines:129(22.0%)
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품-허가·인증·신고·심사-및-평가-등에-관한-규정-식품의약품안전처고시-제2025-25호-20250415.md,pdftotext,42,55091,1896,1550,158,49,4,0.182,62,garbled_sequences:4
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품법-법률-제20139호-20260124.md,pdftotext,19,35444,915,826,49,18,0,0.097,90,
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품법-시행규칙-총리령-제02088호-20260124.md,pdftotext,150,117743,8198,5764,1491,171,0,0.297,74,orphaned_lines:1491(25.9%)
+aria/knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품법-시행령-대통령령-제35230호-20260124.md,pdftotext,8,10759,324,287,25,7,0,0.114,85,
+aria/knowledge/mfds/01-법령/04-공정경쟁규약/의료기기-공정경쟁규약-종합.md,pdftotext,121,178621,10901,7075,776,2247,5,0.351,54,garbled_sequences:5
+aria/knowledge/mfds/02-가이드라인/250728_디지털의료제품-법령-시행에-따른-업무안내서.md,pdftotext,103,53033,3744,2574,402,123,1,0.312,69,orphaned_lines:402(15.6%)
+aria/knowledge/mfds/02-가이드라인/가상융합기술이-적용된-디지털의료기기의-허가·심사-가이드라인-민원인안내서.md,pdftotext,12,13429,1002,617,139,48,0,0.384,73,orphaned_lines:139(22.5%)
+aria/knowledge/mfds/02-가이드라인/독립형-디지털의료기기소프트웨어-사용적합성-허가·심사-가이드라인-민원인-안내서.md,pdftotext,79,54440,4578,3067,806,107,7,0.33,54,orphaned_lines:806(26.3%); garbled_sequences:7
+aria/knowledge/mfds/02-가이드라인/디지털-기술이-적용된-기기를-활용한-임상시험-자료-수집-가이드라인.md,pdftotext,18,13125,568,452,52,52,1,0.204,73,
+aria/knowledge/mfds/02-가이드라인/디지털의료기기-GMP-가이드라인-민원인-안내서-최종.md,pdftotext,309,253185,12448,10518,2247,396,8,0.155,54,orphaned_lines:2247(21.4%); garbled_sequences:8
+aria/knowledge/mfds/02-가이드라인/디지털의료기기-분류-및-등급-지정-등에-관한-가이드라인.md,pdftotext,38,21111,1430,993,179,63,0,0.306,73,orphaned_lines:179(18.0%)
+aria/knowledge/mfds/02-가이드라인/디지털의료기기-사용적합성-허가·심사-질의응답집.md,"ocrmypdf (tesseract kor+eng, 600 DPI)",58,55303,1447,1358,284,10,14,0.062,55,orphaned_lines:284(20.9%); garbled_sequences:14
+aria/knowledge/mfds/02-가이드라인/디지털의료기기-전자적-침해행위-보안지침-가이드라인-최종.md,pdftotext,207,165510,12288,8680,2248,248,34,0.294,54,orphaned_lines:2248(25.9%); garbled_sequences:34
+aria/knowledge/mfds/02-가이드라인/디지털의료기기-표시기재-가이드라인-민원인-안내서.md,pdftotext,47,33177,1487,1191,87,54,3,0.199,72,garbled_sequences:3
+aria/knowledge/mfds/02-가이드라인/디지털의료기기소프트웨어-허가·심사-가이드라인-민원인-안내서.md,pdftotext,25,32263,3069,1856,499,51,0,0.395,74,orphaned_lines:499(26.9%)
+aria/knowledge/mfds/02-가이드라인/디지털치료기기-임상시험-설계-가이드라인-민원인-안내서.md,pdftotext,34,16413,1029,708,153,150,0,0.312,69,orphaned_lines:153(21.6%)
+aria/knowledge/mfds/02-가이드라인/의료기기-임상평가-보고서-작성-가이드라인-안.md,pdftotext,64,35510,2816,1815,435,86,29,0.355,54,orphaned_lines:435(24.0%); garbled_sequences:29
+aria/knowledge/mfds/02-가이드라인/의료기기의-사이버보안-허가·심사-가이드라인-민원인-안내서.md,pdftotext,76,47953,3632,2437,456,101,2,0.329,64,orphaned_lines:456(18.7%)
+aria/knowledge/mfds/02-가이드라인/인공지능기술이-적용된-디지털의료기기-임상시험방법-설계-가이드라인-민원인-안내서.md,pdftotext,13,13420,1096,682,181,20,0,0.378,74,orphaned_lines:181(26.5%)
+aria/knowledge/mfds/02-가이드라인/인공지능기술이-적용된-디지털의료기기의-허가·심사-가이드라인-민원인-안내서.md,pdftotext,17,17806,1332,822,179,24,0,0.383,74,orphaned_lines:179(21.8%)
+aria/knowledge/regulations/eu-mdr-framework.md,unknown,0,38865,780,571,13,0,10,0.268,76,garbled_sequences:10
+aria/knowledge/regulations/fda-framework.md,unknown,0,15193,406,291,8,1,0,0.283,95,
+aria/knowledge/regulations/mfds-framework.md,unknown,0,12099,417,308,8,0,2,0.261,86,
+aria/knowledge/shared/combination-products.md,unknown,0,9024,267,185,4,0,0,0.307,96,
+aria/knowledge/shared/mfds-digital-classification.md,unknown,0,7585,199,144,6,0,1,0.276,88,
+aria/knowledge/shared/samd-classification.md,unknown,0,27599,496,378,10,0,56,0.238,76,garbled_sequences:56
