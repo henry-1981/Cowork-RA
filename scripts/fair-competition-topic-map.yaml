@@ -1,0 +1,239 @@
+# Topic boundary mapping for 공정경쟁규약 KD files
+# Maps 18 topics to line ranges in 3 source files.
+# Lines are 1-indexed, inclusive. Ranges may overlap between topics
+# due to two-column PDF→MD interleaving.
+
+sources:
+  framework: "의료기기-리베이트-예방-및-공정경쟁을-위한-안내서2022-04.md"
+  definitions: "의료기기-리베이트-예방-및-공정거래를-위한-안내서-배포본.md"
+  override: "붙임2-의료기기-공정경쟁규약심의위원회-내부지침-전문24-07-12-개정.md"
+
+base_path: "aria/knowledge/mfds/01-법령/04-공정경쟁규약"
+output_dir: "topics"
+
+artifact_patterns:
+  - '^\d+\s{10,}$'
+  - '^2022 KMDIA 의료기기 리베이트.*$'
+  - '^의료기기 거래에 관한 공정경쟁규약.*개요\s*\d*$'
+
+topics:
+  - id: "00-general"
+    title: "일반 (총칙/개요/기본원칙)"
+    type: GENERAL
+    framework:
+      - [1, 256]       # TOC + overview (목적, 대상, 의의, 기본원칙, 용어정의, 업무프로세스)
+      - [704, 716]     # 제세공과금 적용기준 (cross-cutting)
+      - [767, 1374]    # PART 02 regulation text + FAQ-style material
+      - [1646, 1782]   # PART 03 reference materials
+    definitions:
+      - [1, 63]        # Title + intro + 기본원칙
+      - [750, 759]     # 제세공과금 (cross-cutting)
+      - [833, 834]     # FAQ section header
+    override:
+      - [1, 14]        # Frontmatter + title + first table header
+      - [59, 61]       # Footer note
+
+  - id: "01-용어정의"
+    title: "용어정의 (규약 제3조)"
+    type: DEFINITIONS
+    article: "제3조"
+    framework: null     # Definitions overview embedded in 00-general; formal text in regulation tables
+    definitions:
+      - [64, 186]      # Main body: 용어정의 section
+      - [835, 871]     # FAQ: 제3조
+    override: null
+
+  - id: "02-금품류제공제한"
+    title: "금품류 제공 제한 (규약 제5조)"
+    type: ACTIVITY
+    article: "제5조"
+    operating_standard: "제2조"
+    framework:
+      - [257, 278]     # Activity guide: 1) 금품류 제공 제한
+    definitions:
+      - [192, 277]     # Main body (interleaved with 견본품 from line 188)
+      - [872, 911]     # FAQ: 제5조
+    override: null
+
+  - id: "03-견본품"
+    title: "견본품 (규약 제6조)"
+    type: ACTIVITY
+    article: "제6조"
+    operating_standard: "제3조"
+    framework:
+      - [279, 375]     # Activity guide: 2) 견본품
+    definitions:
+      - [187, 277]     # Main body (incl. "3. 주요내용" header; interleaved with 금품류)
+      - [912, 985]     # FAQ: 제6조
+    override: null
+
+  - id: "04-기부행위"
+    title: "기부행위 (규약 제7조)"
+    type: ACTIVITY
+    article: "제7조"
+    operating_standard: "제4조"
+    framework:
+      - [376, 379]     # Activity guide: 3) 기부행위 (thin due to interleaving)
+    definitions:
+      - [278, 360]     # Main body
+      - [986, 1025]    # FAQ: 제7조
+    override:
+      - [15, 17]       # 기부행위 내부지침 (line 17 shared with 학술대회)
+
+  - id: "05-학술대회개최지원"
+    title: "학술대회 개최·운영 지원 (규약 제8조)"
+    type: ACTIVITY
+    article: "제8조"
+    operating_standard: "제5조"
+    framework:
+      - [380, 454]     # Activity guide: 4) 학술대회 개최·운영 지원
+    definitions:
+      - [361, 400]     # Main body
+      - [1026, 1059]   # FAQ: 제8조
+    override:
+      - [17, 25]       # 학술대회 내부지침 (line 17 shared; lines 23-25 table header restart)
+
+  - id: "06-학술대회참가지원"
+    title: "학술대회 참가지원 (규약 제9조)"
+    type: ACTIVITY
+    article: "제9조"
+    operating_standard: "제6조"
+    framework:
+      - [469, 534]     # Activity guide: 5) 학술대회 참가지원
+    definitions:
+      - [401, 446]     # Main body
+      - [1060, 1101]   # FAQ: 제9조
+    override:
+      - [17, 17]       # Shared line (지원요청기한)
+      - [26, 28]       # 학술대회참가 내부지침 (line 28 shared with 자사제품/교육)
+
+  - id: "07-자사제품설명회"
+    title: "자사제품설명회 (규약 제10조)"
+    type: ACTIVITY
+    article: "제10조"
+    operating_standard: "제7조"
+    framework:
+      - [455, 468]     # Activity guide: 6) 자사제품설명회+교육훈련 (shared with 08)
+    definitions:
+      - [447, 552]     # Main body (combined section with 교육훈련)
+      - [1102, 1301]   # FAQ: 제10조
+    override:
+      - [28, 53]       # 자사제품설명회+교육훈련 내부지침 (shared with 08)
+
+  - id: "08-교육훈련"
+    title: "교육·훈련 (규약 제11조)"
+    type: ACTIVITY
+    article: "제11조"
+    operating_standard: "제8조"
+    framework:
+      - [455, 468]     # Activity guide: shared with 07 (combined section)
+    definitions:
+      - [447, 552]     # Main body (combined section with 자사제품설명회)
+      - [1302, 1375]   # FAQ: 제11조
+    override:
+      - [28, 53]       # Shared with 07
+
+  - id: "09-강연및자문"
+    title: "강연 및 자문 (규약 제12조)"
+    type: ACTIVITY
+    article: "제12조"
+    operating_standard: "제9조"
+    framework:
+      - [546, 553]     # Activity guide: 7) 강연 및 자문
+    definitions:
+      - [553, 587]     # Main body
+      - [1376, 1501]   # FAQ: 제12조
+    override: null
+
+  - id: "10-임상시험지원"
+    title: "임상시험 지원 (규약 제13조)"
+    type: ACTIVITY
+    article: "제13조"
+    framework:
+      - [535, 545]     # Activity guide: 8) 임상시험 지원
+    definitions:
+      - [588, 619]     # Main body (interleaved with 시판후조사)
+      - [1502, 1516]   # FAQ: 제13조
+    override: null
+
+  - id: "11-시장조사"
+    title: "시장조사 (규약 제14조)"
+    type: ACTIVITY
+    article: "제14조"
+    operating_standard: "제10조"
+    framework:
+      - [554, 588]     # Activity guide: 9) 시장조사
+    definitions:
+      - [620, 668]     # Main body
+      - [1517, 1595]   # FAQ: 제14조
+    override: null
+
+  - id: "12-시판후조사"
+    title: "시판 후 조사 (규약 제15조)"
+    type: ACTIVITY
+    article: "제15조"
+    operating_standard: "제11조"
+    framework:
+      - [589, 592]     # Activity guide: 10) 시판 후 조사
+    definitions:
+      - [588, 619]     # Main body (interleaved with 임상시험지원; shared range)
+    override: null
+
+  - id: "13-시판후외임상활동"
+    title: "시판 후 조사 외의 임상활동 (규약 제16조)"
+    type: ACTIVITY
+    article: "제16조"
+    operating_standard: "제12조"
+    framework:
+      - [639, 660]     # Activity guide: 11) 시판 후 조사 외의 임상활동
+    definitions:
+      - [669, 712]     # Main body
+      - [1596, 1653]   # FAQ: 제16조
+    override: null
+
+  - id: "14-전시및광고"
+    title: "전시 및 광고 (규약 제17조)"
+    type: ACTIVITY
+    article: "제17조"
+    operating_standard: "제13조"
+    framework:
+      - [593, 638]     # Activity guide: 12) 전시 및 광고
+    definitions:
+      - [713, 749]     # Main body
+      - [1654, 1816]   # FAQ: 제17조
+    override:
+      - [46, 47]       # 전시광고 내부지침
+      - [54, 57]       # 전시광고 continuation
+
+  - id: "15-규약의공정거래위원회신고"
+    title: "사전·사후 신고사항 (규약 제18조)"
+    type: PROCEDURE
+    article: "제18조"
+    framework:
+      - [661, 703]     # Activity guide: 14) 사전·사후 신고사항
+    definitions:
+      - [760, 771]     # Main body: 사전·사후 신고사항
+    override: null
+
+  - id: "16-공정경쟁규약심의위원회"
+    title: "공정경쟁규약 심의위원회 (규약 제19조)"
+    type: PROCEDURE
+    article: "제19조"
+    framework:
+      - [718, 766]     # Activity guide: 16) 공정경쟁규약 심의위원회 (interleaved with 위반)
+      - [1375, 1645]   # Committee rules + Compliance Checklist
+    definitions:
+      - [789, 832]     # Main body: 심의위원회
+    override: null
+
+  - id: "17-위반시제재사항"
+    title: "위반 시 제재사항 (규약 제20조)"
+    type: PROCEDURE
+    article: "제20조"
+    operating_standard: "제18조"
+    framework:
+      - [717, 766]     # Activity guide: 15) 위반 시 제재사항 (interleaved with 심의위원회)
+    definitions:
+      - [772, 788]     # Main body: 위반조치
+    override:
+      - [58, 58]       # 위반조치 내부지침

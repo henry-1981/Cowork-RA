@@ -5,6 +5,41 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-02-27
+
+### Added
+- 공정경쟁규약 `_index.yaml` — KD 4파일 계층 구조 정의 (framework → override → definitions → precedents)
+- `scripts/split-fair-competition-by-topic.py` — 토픽 기반 KD 분리·통합 스크립트
+- `scripts/fair-competition-topic-map.yaml` — 토픽별 라인 범위 매핑
+
+### Changed
+- compliance 스킬 0.2.0 — 워크플로 재설계:
+  - `references/` 임베딩 → KD 원문 직접 참조
+  - 4단계 판정 → 3단계 안내 (조항 식별 → 규칙 조회+override → 신호등 안내)
+  - 출력: Permitted/Not permitted → GREEN/YELLOW/RED 신호등
+  - 내부지침(24.07.12) override 규칙 명시화
+- 공정경쟁규약 KD: 4파일(소스별) → 18파일(토픽별) 통합 재구성
+  - framework + definitions + override → topics/ 디렉토리에 조항별 통합
+  - 1회 Read로 안내서/배포본/내부지침 모두 접근 (기존 3회 Grep)
+  - 위반사례(precedents)는 별도 유지
+- compliance 스킬 0.3.0 — 토픽 파일 직접 Read 워크플로
+
+### Removed
+- `skills/compliance/references/` (regulation.md, activity-guide.md, faq.md) — KD 직접 참조로 대체
+- 공정경쟁규약 원본 3파일 (topics/로 대체)
+
+## [0.3.9] - 2026-02-27
+
+### Fixed
+- 공정경쟁규약 2개 파일 PDF 추출 아티팩트 정리 (페이지 마커, 깨진 줄바꿈, 중복 헤더 제거)
+  - `공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md` — 깨진 줄바꿈·공백 복원, 불필요 표 삭제
+  - `붙임2-의료기기-공정경쟁규약심의위원회-내부지침-전문24-07-12-개정.md` — 페이지 마커(`- N -`)·중복 `[붙임2]` 헤더 제거
+
+## [0.3.8] - 2026-02-27
+
+### Fixed
+- 리베이트 안내서 garbled 인코딩 제거 (Devanagari/Cyrillic 등 43줄)
+
 ## [0.3.7] - 2026-02-27
 
 ### Added
