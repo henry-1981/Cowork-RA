@@ -1,0 +1,21 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "IVDR"
+  title: "Regulation (EU) 2017/746"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 9"
+  chunk_title: "Common specifications"
+  source_file: "CELEX_32017R0746_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 9
+
+  ### Common specifications
+
+   1. Where no harmonised standards exist or where relevant harmonised standards are not sufficient, or where there is a need to address public health concerns, the Commission, after having consulted the MDCG, may, by means of implementing acts, adopt common specifications (CS) in respect of the general safety and performance requirements set out in Annex I, the technical documentation set out in Annexes II and III, the performance evaluation and PMPF set out in Annex XIII or the requirements regarding performance studies set out in Annex XIII. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 107(3).
+
+   2. Devices that are in conformity with the CS referred to in paragraph 1 shall be presumed to be in conformity with the requirements of this Regulation covered by those CS or the relevant parts of those CS.
+
+   3. Manufacturers shall comply with the CS referred to in paragraph 1 unless they can duly justify that they have adopted solutions that ensure a level of safety and performance that is at least equivalent thereto.

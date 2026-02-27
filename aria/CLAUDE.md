@@ -34,24 +34,29 @@
 
 ### 원문 DB (Primary)
 
-`aria/knowledge/mfds/` — 소스 PDF를 기계적으로 markdown 변환한 원문 DB:
+**MFDS** — `aria/knowledge/mfds/` (51 파일, PDF → MD):
 - `01-법령/01-의료기기법/` — 의료기기법, 시행령, 별표, 고시
 - `01-법령/02-체외진단의료기기법/` — 체외진단법, 시행령, 고시
 - `01-법령/03-디지털의료제품법/` — 디지털의료제품법, 시행령, 고시
 - `02-가이드라인/` — SaMD 위주 허가심사 가이드라인
 
-**원칙**: PDF 원문을 그대로 markdown으로 변환. 요약/재구성/선택적 추출 금지.
+**EU** — `aria/knowledge/eu/` (413 파일, HTML/PDF → MD):
+- `01-regulation/mdr-2017-745/` — MDR 2017/745 원문 (123 Articles + 17 Annexes)
+- `01-regulation/ivdr-2017-746/` — IVDR 2017/746 원문 (113 Articles + 15 Annexes)
+- `02-mdcg/` — MDCG 가이던스 21개 카테고리 (135 파일)
+- `03-meddev/` — MEDDEV 레거시 가이던스 (4 파일)
+
+**원칙**: 원문을 그대로 markdown으로 변환. 요약/재구성/선택적 추출 금지.
 
 ### 레거시 참조 (Secondary — 전환 예정)
 
 `aria/knowledge/` 디렉토리의 기존 파일은 레거시로 보존 중:
 - FDA: `knowledge/regulations/fda-framework.md` (원문 DB 미구축)
-- EU MDR: `knowledge/regulations/eu-mdr-framework.md` (원문 DB 미구축)
 - SaMD: `knowledge/shared/samd-classification.md`
 
-> MFDS 레거시 (`mfds-framework.md`, `mfds-digital-classification.md`)는 스킬 참조에서 제거됨.
+> MFDS/EU 레거시 (`mfds-framework.md`, `mfds-digital-classification.md`, `eu-mdr-framework.md`)는 스킬 참조에서 제거됨.
 > 운영 규칙은 modules/에 인라인 보강 완료. 레거시 파일은 보존만 하고 참조하지 않음.
-> FDA/EU 레거시는 원문 DB 전환 전까지 active 참조로 유지.
+> FDA 레거시는 원문 DB 전환 전까지 active 참조로 유지.
 
 ## 규칙
 - base knowledge로만 규제 질문에 답하지 않는다

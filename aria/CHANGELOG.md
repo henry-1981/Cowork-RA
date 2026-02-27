@@ -5,6 +5,30 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.5] - 2026-02-27
+
+### Added
+- `aria/knowledge/eu/` — EU 원문 Knowledge DB 413파일 구축
+  - `01-regulation/mdr-2017-745/` — MDR 2017/745 원문 (143파일: 123 Articles + 17 Annexes + preamble + recitals + _index.yaml)
+  - `01-regulation/ivdr-2017-746/` — IVDR 2017/746 원문 (131파일: 113 Articles + 15 Annexes + preamble + recitals + _index.yaml)
+  - `02-mdcg/` — MDCG 가이던스 21개 카테고리 (135 MD 파일)
+  - `03-meddev/` — MEDDEV 레거시 가이던스 (4 MD 파일)
+- `scripts/convert-eurlex-html-to-md.py` — EUR-Lex HTML → Article/Annex 단위 MD 청킹 스크립트
+- `scripts/convert-eu-pdfs-to-md.sh` — EU MDCG/MEDDEV PDF → MD 변환 스크립트
+- `verify-knowledge-db.sh` Stage 4 — EU Regulation _index.yaml vs 실제 파일 수 일치 검증
+
+### Changed
+- 스킬 Knowledge 참조를 EU 원문 DB 경로로 갱신 (determination, classification, pathway, knowledge-refresh)
+- `verify-knowledge-db.sh` — `--scope` 매개변수 추가 (mfds|eu|all), EU PDF/HTML 검증 지원
+- CLAUDE.md Knowledge DB 섹션에 EU 원문 DB 추가
+- `eu-mdr-framework.md` 레거시 참조 제거 (파일 보존, 스킬 참조에서만 제거)
+
+### Skill Versions
+- determination: 0.3.3 → 0.3.4
+- classification: 0.3.3 → 0.3.4
+- pathway: 0.3.1 → 0.3.2
+- knowledge-refresh: 0.2.2 → 0.2.3
+
 ## [0.3.4] - 2026-02-27
 
 ### Added

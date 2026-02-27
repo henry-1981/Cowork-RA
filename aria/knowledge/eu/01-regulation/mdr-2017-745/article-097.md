@@ -1,0 +1,21 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 97"
+  chunk_title: "Other non-compliance"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 97
+
+  ### Other non-compliance
+
+   1. Where, having performed an evaluation pursuant to Article 94, the competent authorities of a Member State find that a device does not comply with the requirements laid down in this Regulation but does not present an unacceptable risk to the health or safety of patients, users or other persons, or to other aspects of the protection of public health, they shall require the relevant economic operator to bring the non-compliance concerned to an end within a reasonable period that is clearly defined and communicated to the economic operator and that is proportionate to the non-compliance.
+
+   2. Where the economic operator does not bring the non-compliance to an end within the period referred to in paragraph 1 of this Article, the Member State concerned shall, without delay, take all appropriate measures to restrict or prohibit the product being made available on the market or to ensure that it is recalled or withdrawn from the market. That Member State shall inform the Commission and the other Member States, without delay, of those measures, by means of the electronic system referred to in Article 100.
+
+   3. In order to ensure the uniform application of this Article, the Commission may, by means of implementing acts, specify appropriate measures to be taken by competent authorities to address given types of non-compliance. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 114(3).

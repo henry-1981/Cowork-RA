@@ -1,0 +1,31 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "IVDR"
+  title: "Regulation (EU) 2017/746"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 62"
+  chunk_title: "Performance studies on pregnant or breastfeeding women"
+  source_file: "CELEX_32017R0746_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 62
+
+  ### Performance studies on pregnant or breastfeeding women
+
+  A performance study on pregnant or breastfeeding women may be conducted only where, in addition to the conditions set out in Article 58(5), all of the following conditions are met:
+
+ (a) the performance study has the potential to produce a direct benefit for the pregnant or breastfeeding woman concerned, or her embryo, foetus or child after birth, outweighing the risks and burdens involved;
+
+ (b) if such a performance study has no direct benefit for the pregnant or breastfeeding woman concerned, or her embryo, foetus or child after birth, it can be conducted only if:
+
+ (i) a performance study of comparable effectiveness cannot be carried out on women who are not pregnant or breastfeeding;
+
+ (ii) the performance study contributes to the attainment of results capable of benefitting pregnant or breastfeeding women or other women in relation to reproduction or other embryos, foetuses or children; and
+
+ (iii) the performance study poses a minimal risk to, and imposes a minimal burden on, the pregnant or breastfeeding woman concerned, her embryo, foetus or child after birth;
+
+ (c) where research is undertaken on breastfeeding women, particular care is taken to avoid any adverse impact on the health of the child;
+
+ (d) no incentives or financial inducements are given to subjects, except for compensation for expenses and loss of earnings directly related to the participation in the performance study.

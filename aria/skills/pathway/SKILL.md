@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
   category: "domain"
   status: "active"
   updated: "2026-02-25"
@@ -101,7 +101,10 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
 
 Knowledge DB references (Level 2+):
 - FDA: `../../knowledge/regulations/fda-framework.md`
-- EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
+- EU MDR: `../../knowledge/eu/01-regulation/mdr-2017-745/`
+- EU IVDR: `../../knowledge/eu/01-regulation/ivdr-2017-746/`
+- EU MDCG: `../../knowledge/eu/02-mdcg/`
+- EU MEDDEV: `../../knowledge/eu/03-meddev/`
 - MFDS 의료기기법: `../../knowledge/mfds/01-법령/01-의료기기법/`
 - MFDS 체외진단법: `../../knowledge/mfds/01-법령/02-체외진단의료기기법/`
 - MFDS 디지털의료제품법: `../../knowledge/mfds/01-법령/03-디지털의료제품법/`

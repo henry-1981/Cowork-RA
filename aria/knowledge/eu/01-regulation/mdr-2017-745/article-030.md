@@ -1,0 +1,23 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 30"
+  chunk_title: "Electronic system for registration of economic operators"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 30
+
+  ### Electronic system for registration of economic operators
+
+   1. The Commission, after consulting the MDCG, shall set up and manage an electronic system to create the single registration number referred to in Article 31(2) and to collate and process information that is necessary and proportionate to identify the manufacturer and, where applicable, the authorised representative and the importer. The details regarding the information to be provided to that electronic system by the economic operators are laid down in Section 1 of Part A of Annex VI.
+
+   2. Member States may maintain or introduce national provisions on registration of distributors of devices which have been made available on their territory.
+
+   3. Within two weeks of placing a device, other than a custom-made device, on the market, importers shall verify that the manufacturer or authorised representative has provided to the electronic system the information referred to in paragraph 1.
+
+ Where applicable, importers shall inform the relevant authorised representative or manufacturer if the information referred to in paragraph 1 is not included or is incorrect. Importers shall add their details to the relevant entry/entries.

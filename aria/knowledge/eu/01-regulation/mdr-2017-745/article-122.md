@@ -1,0 +1,31 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 122"
+  chunk_title: "Repeal"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 122
+
+  ### Repeal
+
+  Without prejudice to Articles 120(3) and (4) of this Regulation, and without prejudice to the obligations of the Member States and manufacturers as regards vigilance and to the obligations of manufacturers as regards the making available of documentation, under Directives 90/385/EEC and 93/42/EEC, those Directives are repealed with effect from 26 May 2020, with the exception of:
+
+ — Articles 8 and 10, points (b) and (c) of Article 10b(1), Article 10b(2) and Article 10b(3) of Directive 90/385/EEC, and the obligations relating to vigilance and clinical investigations provided for in the corresponding Annexes, which are repealed with effect from the later of the dates referred to in point (d) of Article 123(3) of this Regulation;
+
+ — Article 10a and point (a) of Article 10b(1) of Directive 90/385/EEC, and the obligations relating to registration of devices and economic operators, and to certificate notifications, provided for in the corresponding Annexes, which are repealed with effect from 18 months after the later of the dates referred to in point (d) of Article 123(3) of this Regulation;
+
+ — Article 10, points (c) and (d) of Article 14a(1), Article 14a(2), Article 14a(3) and Article 15 of Directive 93/42/EEC, and the obligations relating to vigilance and clinical investigations provided for in the corresponding Annexes, which are repealed with effect from the later of the dates referred to in point (d) of Article 123(3) of this Regulation; and
+
+ — Article 14(1) and (2) and points (a) and (b) of Article 14a(1) of Directive 93/42/EEC, and the obligations relating to registration of devices and economic operators, and to certificate notifications, provided for in the corresponding Annexes, which are repealed with effect from 18 months after the later of the dates referred to in point (d) of Article 123(3) of this Regulation.
+
+ As regards the devices referred to in Article 120 (3) and (4) of this Regulation, the Directives referred to in the first paragraph shall continue to apply until 27 May 2025 to the extent necessary for the application of those paragraphs.
+
+ Notwithstanding the first paragraph, Regulations (EU) No 207/2012 and (EU) No 722/2012 shall remain in force and continue to apply unless and until repealed by implementing acts adopted by the Commission pursuant to this Regulation.
+
+ References to the repealed Directives shall be understood as references to this Regulation and shall be read in accordance with the correlation table laid down in Annex XVII to this Regulation.

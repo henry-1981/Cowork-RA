@@ -1,0 +1,23 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 98"
+  chunk_title: "Preventive health protection measures"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 98
+
+  ### Preventive health protection measures
+
+   1. Where a Member State, after having performed an evaluation which indicates a potential risk related to a device or a specific category or group of devices, considers that, in order to protect the health and safety of patients, users or other persons or other aspects of public health, the making available on the market or putting into service of a device or a specific category or group of devices should be prohibited, restricted or made subject to particular requirements or that such device or category or group of devices should be withdrawn from the market or recalled, it may take any necessary and justified measures.
+
+   2. The Member State referred to in paragraph 1 shall immediately notify the Commission and all other Member States, giving the reasons for its decision, by means of the electronic system referred to in Article 100.
+
+   3. The Commission, in consultation with the MDCG and, where necessary, the economic operators concerned, shall assess the national measures taken. The Commission may decide, by means of implementing acts, whether the national measures are justified or not. In the absence of a Commission decision within six months of their notification, the national measures shall be considered to be justified. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 114(3).
+
+   4. Where the assessment referred to in paragraph 3 of this Article demonstrates that the making available on the market or putting into service of a device, specific category or group of devices should be prohibited, restricted or made subject to particular requirements or that such device or category or group of devices should be withdrawn from the market or recalled in all Member States in order to protect the health and safety of patients, users or other persons or other aspects of public health, the Commission may adopt implementing acts to take the necessary and duly justified measures. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 114(3).
