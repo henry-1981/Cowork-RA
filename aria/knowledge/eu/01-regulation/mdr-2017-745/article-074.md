@@ -1,0 +1,19 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 74"
+  chunk_title: "Clinical investigations regarding devices bearing the CE marking"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 74
+
+  ### Clinical investigations regarding devices bearing the CE marking
+
+   1. Where a clinical investigation is to be conducted to further assess, within the scope of its intended purpose, a device which already bears the CE marking in accordance with Article 20(1), (‘PMCF investigation’), and where the investigation would involve submitting subjects to procedures additional to those performed under the normal conditions of use of the device and those additional procedures are invasive or burdensome, the sponsor shall notify the Member States concerned at least 30 days prior to its commencement by means of the electronic system referred to in Article 73. The sponsor shall include the documentation referred to in Chapter II of Annex XV as part of the notification. Points (b) to (k) and (m) of Article 62(4), Article 75, Article 76, Article 77, Article 80(5) and the relevant provisions of Annex XV shall apply to PMCF investigations.
+
+   2. Where a clinical investigation is to be conducted to assess, outside the scope of its intended purpose, a device which already bears the CE marking in accordance with Article 20(1), Articles 62 to 81 shall apply.

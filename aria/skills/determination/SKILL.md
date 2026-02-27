@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.2"
+  version: "0.3.5"
   category: "domain"
   status: "active"
   updated: "2026-02-25"
@@ -138,25 +138,25 @@ Execute each gate and output the result explicitly:
 **Level 3:** 전체 jurisdiction 로드 + modules/ 파일 로드.
 
 Knowledge DB references (Level 2+):
-1. Read `../../knowledge/catalog.yaml`
-2. Filter: jurisdiction={target jurisdiction} AND topics contains "determination"
-3. Read matched chunk paths
+- FDA Statute: `../../knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/` (FD&C Act sections)
+- FDA Regulation: `../../knowledge/fda/02-regulation/21cfr-subchapter-h/` (21 CFR Parts 800-898)
+- FDA Guidance: `../../knowledge/fda/03-guidance/` (494 guidance documents)
+- EU MDR: `../../knowledge/eu/01-regulation/mdr-2017-745/`
+- EU IVDR: `../../knowledge/eu/01-regulation/ivdr-2017-746/`
+- EU MDCG: `../../knowledge/eu/02-mdcg/`
+- EU MEDDEV: `../../knowledge/eu/03-meddev/`
+- MFDS 의료기기법: `../../knowledge/mfds/01-법령/01-의료기기법/`
+- MFDS 체외진단법: `../../knowledge/mfds/01-법령/02-체외진단의료기기법/`
+- MFDS 디지털의료제품법: `../../knowledge/mfds/01-법령/03-디지털의료제품법/`
+- MFDS 가이드라인: `../../knowledge/mfds/02-가이드라인/`
 
-레거시 참조 (catalog 미전환 jurisdiction):
-- FDA: `../../knowledge/regulations/fda-framework.md`
-- EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
-- MFDS 일반: `../../knowledge/regulations/mfds-framework.md`
-
-MFDS 디지털 (catalog 전환 완료):
-- catalog.yaml에서 jurisdiction=mfds 필터 → 해당 청크 로드
-
-**MFDS Digital Knowledge 로드 조건**:
+**MFDS 원문 DB 로드 조건**:
 - 키워드: AI, SW, 소프트웨어, software, IoT, 로봇, robot, VR, AR, 가상, HPC, 디지털, digital, SaMD, 앱, app, 알고리즘, 딥러닝, 머신러닝
 - 또는: 이전 Gate 2 PASS 결과가 context에 있을 때
-- 로드 대상: catalog.yaml → jurisdiction=mfds, topics contains "determination" or "classification"
+- 디지털 기기 → `03-디지털의료제품법/` + 가이드라인, 비디지털 → `01-의료기기법/` 또는 `02-체외진단의료기기법/`
 
 **Knowledge DB 로드 실패 시:**
-catalog.yaml 또는 청크 파일 참조 불가 시: 기본 등급분류 체계(mfds-framework.md)만으로 판단하고, 정확한 4-Gate/Risk Matrix/7-digit 코드 분석은 Knowledge DB 확인 후 가능하다고 안내.
+원문 DB 참조 불가 시: modules/ 인라인 규칙만으로 판단하고, 법적 근거 원문 확인이 필요하다고 안내.
 
 ### Step 1: Use Provided Device Information
 

@@ -1,0 +1,31 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "IVDR"
+  title: "Regulation (EU) 2017/746"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 86"
+  chunk_title: "Implementing acts"
+  source_file: "CELEX_32017R0746_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 86
+
+  ### Implementing acts
+
+  The Commission may, by means of implementing acts, and after consultation of the MDCG, adopt the detailed arrangements and procedural aspects necessary for the implementation of Articles 80 to 85 and 87 as regards the following:
+
+ (a) the typology of serious incidents and field safety corrective actions in relation to specific devices, or categories or groups of devices;
+
+ (b) the reporting of serious incidents and field safety corrective actions and field safety notices, and the provision of periodic summary reports, post-market surveillance reports, PSURs and trend reports by manufacturers as referred to in Articles 80, 81, 82, 83 and 84 respectively;
+
+ (c) standard structured forms for electronic and non-electronic reporting, including a minimum data set for reporting of suspected serious incidents by healthcare professionals, users and patients;
+
+ (d) timelines for the reporting of field safety corrective actions, and for the provision by manufacturers of periodic summary reports and trend reports, taking into account the severity of the incident to be reported as referred to in Article 82;
+
+ (e) harmonised forms for the exchange of information between competent authorities as referred to in Article 84;
+
+ (f) procedures for the designation of a coordinating competent authority; the coordinated evaluation process, including tasks and responsibilities of the coordinating competent authority and involvement of other competent authorities in this process.
+
+ The implementing acts referred to in the first paragraph shall be adopted in accordance with the examination procedure referred to in Article 107(3).

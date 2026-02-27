@@ -5,27 +5,88 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.6] - 2026-02-27
+
+### Added
+- `aria/knowledge/fda/` — FDA 원문 Knowledge DB 648파일 구축
+  - `01-statute/fdc-act-title21-chap9-subchapV/` — FD&C Act (117 sections + _index.yaml)
+  - `02-regulation/21cfr-subchapter-h/` — 21 CFR Parts 800-898 (35 parts incl. Part 820 QSR + QMSR variant + _index.yaml)
+  - `03-guidance/` — 494 FDA guidance documents (pdftotext + tesseract OCR 폴백)
+- `scripts/convert-fda-uscode-to-md.py` — FD&C Act HTML → Section 단위 MD 변환
+- `scripts/convert-fda-cfr-xml-to-md.py` — 21 CFR XML → Part 단위 MD 변환
+- `scripts/convert-fda-guidance-pdfs-to-md.sh` — FDA Guidance PDF → MD (OCR 폴백 포함)
+- `verify-knowledge-db.sh` — FDA scope 추가 (`--scope fda`), Stage 1-4 전수 검증
+
+### Changed
+- 스킬 Knowledge 참조를 FDA 원문 DB 경로로 갱신 (determination, classification, pathway, knowledge-refresh)
+- `fda-framework.md` 레거시 참조 제거 (파일 보존, 스킬 참조에서만 제거)
+
+### Fixed
+- FDA Guidance 33건 이미지 PDF — tesseract OCR 폴백으로 콘텐츠 추출 (기존 빈 파일 → 정상)
+
+### Skill Versions
+- determination: 0.3.4 → 0.3.5
+- classification: 0.3.4 → 0.3.5
+- pathway: 0.3.2 → 0.3.3
+- knowledge-refresh: 0.2.3 → 0.2.4
+
+## [0.3.5] - 2026-02-27
+
+### Added
+- `aria/knowledge/eu/` — EU 원문 Knowledge DB 413파일 구축
+  - `01-regulation/mdr-2017-745/` — MDR 2017/745 원문 (143파일: 123 Articles + 17 Annexes + preamble + recitals + _index.yaml)
+  - `01-regulation/ivdr-2017-746/` — IVDR 2017/746 원문 (131파일: 113 Articles + 15 Annexes + preamble + recitals + _index.yaml)
+  - `02-mdcg/` — MDCG 가이던스 21개 카테고리 (135 MD 파일)
+  - `03-meddev/` — MEDDEV 레거시 가이던스 (4 MD 파일)
+- `scripts/convert-eurlex-html-to-md.py` — EUR-Lex HTML → Article/Annex 단위 MD 청킹 스크립트
+- `scripts/convert-eu-pdfs-to-md.sh` — EU MDCG/MEDDEV PDF → MD 변환 스크립트
+- `verify-knowledge-db.sh` Stage 4 — EU Regulation _index.yaml vs 실제 파일 수 일치 검증
+
+### Changed
+- 스킬 Knowledge 참조를 EU 원문 DB 경로로 갱신 (determination, classification, pathway, knowledge-refresh)
+- `verify-knowledge-db.sh` — `--scope` 매개변수 추가 (mfds|eu|all), EU PDF/HTML 검증 지원
+- CLAUDE.md Knowledge DB 섹션에 EU 원문 DB 추가
+- `eu-mdr-framework.md` 레거시 참조 제거 (파일 보존, 스킬 참조에서만 제거)
+
+### Skill Versions
+- determination: 0.3.3 → 0.3.4
+- classification: 0.3.3 → 0.3.4
+- pathway: 0.3.1 → 0.3.2
+- knowledge-refresh: 0.2.2 → 0.2.3
+
+## [0.3.4] - 2026-02-27
+
+### Added
+- `scripts/verify-knowledge-db.sh` — 3-Agent Knowledge DB 검증 파이프라인
+  - Stage 1 (Extractor): YAML frontmatter + 본문 통계 + 핵심 식별자 추출
+  - Stage 2 (Verifier): 원본 PDF 독립 재추출 diff 대조
+  - Stage 3 (Structural Checker): frontmatter 완결성, 디렉토리-내용 일치, 인코딩 검증
+- 질의응답집 OCR 변환 (벡터 PDF → 600 DPI tesseract kor+eng)
+
+### Changed
+- 스킬 Knowledge 참조를 MFDS 원문 DB 경로로 갱신 (determination, classification, pathway, knowledge-refresh)
+- `mfds-criteria.md` 운영 규칙 인라인 보강 (4-Gate, Risk Matrix, 7-Digit Code)
+- modules/ `Loaded Knowledge` 참조 → `법적 근거` 원문 법률 참조로 변경
+
+### Skill Versions
+- determination: 0.3.1 → 0.3.3
+- classification: 0.3.1 → 0.3.3
+- pathway: 0.3.0 → 0.3.1
+- knowledge-refresh: 0.2.1 → 0.2.2
+
 ## [0.3.3] - 2026-02-26
 
 ### Added
-- `knowledge/catalog.yaml` — Atomic Chunks 카탈로그 인덱스 (전체 청크 검색/선택 로딩)
-- MFDS 파일럿 원문 청크 6건 (PDF 원문 직접인용, 3-Agent 파이프라인 검증 완료):
-  - 디지털의료제품법 제2조 (정의), 제3조 (분류)
-  - 고시 제2025-23호 [별표 3] 제품코드, [별표 4] 등급 지정 세부 기준
-  - 허가심사 가이드라인 III. SW 특성, IV. 안전성 등급
-- `knowledge/README.md` — Atomic Chunks 아키텍처 문서 전면 개정
+- `aria/knowledge/mfds/` — MFDS 원문 DB 50개 파일 (pdftotext 기계적 변환)
+  - `01-법령/01-의료기기법/` — 의료기기법, 시행령, 별표 6종, 고시 8종 (18 파일)
+  - `01-법령/02-체외진단의료기기법/` — 체외진단법, 시행령, 시행규칙, 별표, 고시 (9 파일)
+  - `01-법령/03-디지털의료제품법/` — 디지털의료제품법, 시행령, 시행규칙, 고시 5종 (8 파일)
+  - `02-가이드라인/` — SaMD 허가심사 가이드라인 15종
+- `scripts/convert-pdfs-to-md.sh` — PDF→Markdown 배치 변환 스크립트
 
 ### Changed
-- Knowledge DB 참조 방식: 직접 경로 → catalog.yaml 기반 선택적 로딩
-  - determination SKILL.md + modules/mfds-criteria.md (4곳)
-  - classification SKILL.md + modules/mfds-classification.md (2곳)
-  - CLAUDE.md Knowledge DB 섹션
-- determination version: 0.3.1 → 0.3.2
-- classification version: 0.3.1 → 0.3.2
-
-### Fixed
-- Knowledge DB 할루시네이션 방지 — LLM 요약 방식에서 원문 직접인용(verbatim)으로 전환
-  - Spirokit 케이스에서 발견된 "Guideline Annex 4" 허구 출처 문제 근본 해결
+- CLAUDE.md Knowledge DB 섹션: 원문 DB + 레거시 참조 2계층 구조로 개편
+- 원칙 명시: PDF 원문을 그대로 markdown으로 변환. 요약/재구성/선택적 추출 금지
 
 ## [0.3.2] - 2026-02-26
 

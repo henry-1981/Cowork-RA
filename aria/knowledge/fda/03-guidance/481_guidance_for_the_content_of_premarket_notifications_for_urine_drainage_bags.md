@@ -1,0 +1,254 @@
+---
+source:
+  family: "GUIDANCE"
+  instrument: "FDA Guidance"
+  title: "Guidance for the Content of Premarket Notifications for Urine Drainage Bags"
+  docket: "FDA-2020-D-0957"
+  path: "481_Guidance_for_the_Content_of_Premarket_Notifications_for_Urine_Drainage_Bags.pdf"
+  pages: 6
+  converted: 2026-02-27
+  method: tesseract-ocr
+---
+
+This guidance was written prior to the February 27, 1997 implementation of FDA’s
+Good Guidance Practices, GGP’s. It does not create or confer rights for or on any person
+and does not operate to bind FDA or the public. An alternative approach may be used if
+
+such approach satisfies the requirements of the applicable statute, regulations, or both.
+This guidance will be updated in the nett revision to include the standard elements of GGP’s.
+
+. 01 JUN - 7 1994
+
+ra
+
+DRAFT
+
+GUIDANCE FOR THE CONTENT OF PREMARKET NOTIFICATIONS
+FOR
+Urine Drainage Bags
+
+A urine drainage bag is described in the FDA regulation, 21 CFR 876.5250({a), Urine
+Collector and Accessories, as a "device intended to collect urine. The device and accessories
+consist of tubing, a suitable receptacle, connectors, mechanical Supports, and may include a
+means to prevent backflow of urine or ascent of infection. The two kinds of urine collectors
+are: (1) a urine collector and accessories intended to be connected to an indwelling catheter,
+which includes the urinary drainage collection kit and the closed urine drainage system and
+drainage bag; and (2) a urine collector and accessories not intended to be connected to an
+indwelling catheter, which includes the corrugated rubber sheath, pediatric urine collector, leg
+bag for external use, urosheath type incontinence device, and the paste-on device for
+incontinence." The classification for this device is Class II if used with an indwelling catheter
+or Class I if used with an external catheter as stated in 21 CFR 876.5250(b).
+
+Examples of devices within this generic type include:
+
+Class. Procode _ Device Name
+
+I FAQ Urine Collection Leg Bag for External Use
+
+I FOC Newborn Urine Collection Bag
+
+I EXJ Urosheath Type Incontinence Device
+
+I EXI Paste~On Device for Incontinence
+
+I EYT Corrugated Rubber Sheath for Non-Indwelling Catheter
+II EYZ Closed Urine Drainage System for Indwelling Catheter
+
+II FCN Urinary Drainage Collection Kit for Indwelling Catheter
+II KNX Urine Collector (and Accessories) for Indwelling Catheter
+II FFH Pediatric Urine Collector for Indwelling Catheter
+
+The primary reference for the information required to be in a premarket notification (510(k))
+for a medical device is set forth in 21 CFR 807.87. The purpose of this regulation is to
+provide adequate documented information to determine substantial equivalence to a device in
+commercial distribution. Substantial equivalence is to be established with respect to, but not
+limited to, intended use, design, materials, performance, Safety, effectiveness, labeling, and
+other applicable characteristics.
+
+In addition to the information specified in the DRAERD "Draft Guidance for the Content of
+Premarket Notifications" which is available from the Center for Devices and Radiological
+Health's Division of Small Manufacturers Assistance (DSMA) at (800) 638-2041 or (301)
+443-6597, FDA recommends that each premarket notification for a urine drainage bag and
+accessories include the following information in order to ensure that the submission is complete
+and will permit a determination of substantial equivalence:
+
+Urine Drainage Bags Guidance Page 1 of 5
+
+To: 3015944792 From: CDRH/FDA 6-20-01 12:24pm op. 2 of 6
+
+- JUN ~ 7 (994
+
+L Device Deserioti
+
+The physical description of each urine drainage bag and its accessories to be marketed should
+be provided in the form of a labeled diagram, photograph/ picture, schematic, etc., which
+includes the name and addresses the function of all internal/external, assembled/ unassembled,
+interchangeable, etc., parts of the urine drainage bag and accessories.
+
+The physical description should include the specific fluid volume of the urine drainage bag and (YNNA)
+
+accessories, and the unique features of the bag (i.e., backflow valve - air trap, flutter, one-
+way; built-in urometer; lack of drain; absorbent materials; etc.). The physical description
+should also identify any parts which are disposable.
+
+If the urine drainage bag is sold in a set that includes accessories, these accessories should be ____
+identified and reviewed along with the urine drainage bag and require the same types of
+information as stated above. These accessories might include a secondary drainage bag for
+overnight drainage. Labeling should state whether the accessory is intended for single use and
+disposable or whether it is reusable.
+
+Il. Labeling __
+
+A. A label includes any identification on the urine drainage bag and on the
+package in which it is stored and shipped. The device label should include the
+device name, corporation name, address, and telephone number. The package
+label should include all of the above, as well as sterility status, expiration date,
+disposable/ single use, quantity enclosed, size, etc. The label of the device
+packaging should include the prescription device statement as outlined in 21
+CFR 801.109(b)(1): "CAUTION: Federal law restricts this device to sale by or
+on the order of a physician."
+
+B. Device labeling for the urine drainage bag and its accessories includes the
+intended use, a description of the device, and directions for use.
+
+1. The directions for use should contain comprehensive instructions on
+how to prepare the urine drainage bag for use, how to operate the urine
+drainage bag, and which parts are single use/disposable or reusable. If
+reusable, provide instructions on how to clean, disinfect, and/or sterilize
+the urine drainage bag. If the device does not have a drain, the
+instructions should provide a minimum time between replacements (e.g.,
+at least every 24 hours or when the bag becomes full). The directions
+should address positioning of the urine drainage bag to prevent urine
+backflow (i.e., keep the bag below the level of the patient's bladder).
+
+Urine Drainage Bags Guidance Page 2 of 5
+
+yo! 3015944792 From: CDRH/FDA 6-20-01 12:24pm p. 3 of 6
+
+JUN - 7 1994
+
+2. Applicable contraindications, warnings, and precautions should be
+included in the labeling of the device.
+
+3. All claims should be supported, and claims concerning reduced
+possibility for infection or contamination may need to be supported by
+clinical data.
+
+C. Advertisements or promotional literature for the urine drainage bag should be
+provided. Literature or labeling may not imply approval by FDA in any manner. ____
+Guidance on labeling issues is described in Bluebook Memo G91-1 "Device
+Labeling Guidance (3/18/91)" which is available from DSMA at the telephone
+number referenced above.
+
+Ill. Bench Testing NUDE?
+
+The following studies and results should be provided to demonstrate the substantial
+equivalence of the urine drainage bag with respect to functional performance. _
+
+Typical tests include:
+
+water backflow pressure through the anti-reflux valve;
+
+24-hour inversion leakage test results;
+
+standing column test to examine the drainage efficiency of bag; and
+
+drainage time test to ensure a reasonable length of time until the bag empties.
+
+If the urine drainage bag contains a fluid absorbent material the following tests should be
+conducted:
+
+confirmation of the amount of material in the drainage bag; and
+the maximum amount of fluid the material will absorb.
+
+If the urine drainage bag contains an adhesive, the adhesive should be demonstrated to be
+sufficiently strong to attach the device to the patient yet also readily and safely removable.
+
+IV. Biocompatibility
+
+Biocompatibility information specifically concerning the materials used in the urine drainage
+bag must be addressed. Materials such as adhesives, if used, should have the following tests
+performed;
+
+Urine Drainage Bags Guidance Page 3 of 5
+
+— To: 3015944792 From: CDRH/FDA 6-20-01 12:24pm p. 4 of 6
+: JUN - 7 1994
+
+identification of the chemical composition of the adhesive; and
+
+all appropriate tests identified in the
+Tripartite Biocompatibility Guidance for either:
+
+1) external devices that contact a breached or compromised surface; or ___
+2) an externally communicating device that contacts intact natural ——
+channels, depending on urine drainage bag design and intended use.
+
+Biocompatibility of absorbent materials, if used in the urine collection bag, must also be
+addressed. The complete chemical composition of the absorbent materials should be identified, ___
+and the biocompatibility tests specified in the Tripartite Biocompatibility Guidance for an
+externally communicating device that contacts intact natural channels should be provided.
+
+Complete information regarding urine drainage bags and accessories that are sold sterile should
+be provided. Refer to the DRAERD Premarket Notification 510(k) Screening Checklist and
+accompanying explanation document for details.
+
+In addition, guidance on sterility issues is provided in ODE Bluebook Memo K90-1 "510(k)
+Sterility Review Guidance (2/12/90)" which is available from DSMA at the telephone number
+referenced above.
+
+| NILE?
+
+If the urine drainage bag contains a fluid absorbent material and is intended for use with (NINA)
+indwelling catheters, the 510(k) should address whether the material is sterilized while in the
+
+bag, and whether the sterilization process causes any changes in the chemical composition and
+absorbent properties of the material which could effect device safety.
+
+VI. Modifications
+
+For a device that has undergone a change or modification that could significantly affect the
+safety or effectiveness of the device, or the device is to be marketed for a new or different
+indication for use, the 510(k) should include appropriate Supporting data to show that the
+manufacturer has considered what consequences and effects the change or modification or new
+use might have on the safety and effectiveness of the device, as described in 21 CFR
+807.87(g).
+
+Significant modifications should be supported by a rationale for the modification with
+supporting documentation, possibly including clinical or other valid scientific studies which
+
+Urine Drainage Bags Guidance Page 4 of 5
+
+To: 3015944792 From: CDRH/FDA 6-20-01 12:24pm p.5 of 6
+
+; ° JUN - 7 1994
+
+demonstrate that these differences do not affect Safety and effectiveness, as described in 21
+CFR 807.87(f).
+
+The description of all urine drainage bags and accessories should include any significant
+changes or modifications from the predicate device that could affect safety, effectiveness, or
+intended use. Provide any bench, animal, clinical, functional, in vitro, and/or any other testing
+data to support your claims. Provide certification regarding compliance with voluntary
+standards, if applicable.
+
+Additional guidance concerning device modifications is also available in the draft guidance
+titled, "Deciding When to Submit a 510(k) for Change to an Existing Device (4/8/94)" which is
+available from DSMA at the telephone number referenced above.
+
+For further information contact:
+
+Urology and Lithotripsy Devices Branch
+
+Division of Reproductive, Abdominal, Ear, Nose and Throat,
+and Radiological Devices
+
+Center for Devices and Radiological Health
+
+1390 Piccard Drive (HFZ-470)
+
+Rockville, MD 20850
+
+(301) 594-2194
+
+Urine Drainage Bags Guidance Page 5 of 5

@@ -1,0 +1,37 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 57"
+  chunk_title: "Electronic system on notified bodies and on certificates of conformity"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 57
+
+  ### Electronic system on notified bodies and on certificates of conformity
+
+   1. The Commission, after consulting the MDCG, shall set up and manage an electronic system to collate and process the following information:
+
+ (a) the list of subsidiaries referred to in Article 37(3);
+
+ (b) the list of experts referred to in Article 40(2);
+
+ (c) the information relating to the notification referred to in Article 42(10) and the amended notifications referred to in Article 46(2);
+
+ (d) the list of notified bodies referred to in Article 43(2);
+
+ (e) the summary of the report referred to in Article 44(12);
+
+ (f) the notifications for conformity assessments and certificates referred to in Articles 54(3) and 55(1);
+
+ (g) withdrawal or refusals of applications for the certificates as referred to in Article 53(2) and Section 4.3 of Annex VII;
+
+ (h) the information regarding certificates referred to in Article 56(5);
+
+ (i) the summary of safety and clinical performance referred to in Article 32.
+
+   2. The information collated and processed by the electronic system shall be accessible to the competent authorities of the Member States, to the Commission, where appropriate to the notified bodies and where provided elsewhere in this regulation or in Regulation (EU) 2017/746 to the public.

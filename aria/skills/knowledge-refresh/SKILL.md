@@ -9,7 +9,7 @@ allowed-tools:
   - Bash
 user-invocable: true
 metadata:
-  version: "0.2.1"
+  version: "0.2.4"
   category: "maintenance"
   status: "active"
   updated: "2026-02-26"
@@ -34,12 +34,26 @@ ARIA Knowledge DB의 규제 데이터를 월간 주기로 갱신한다. 각 know
 각 knowledge 파일의 YAML frontmatter에서 `next_review` 날짜를 확인한다:
 
 ```
-knowledge/regulations/fda-framework.md
-knowledge/regulations/eu-mdr-framework.md
-knowledge/regulations/mfds-framework.md
+# FDA 원문 DB (HTML/XML/PDF → MD 변환본)
+knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/
+knowledge/fda/02-regulation/21cfr-subchapter-h/
+knowledge/fda/03-guidance/
+
+# Legacy (보존만, 참조 제거됨)
 knowledge/shared/samd-classification.md
 knowledge/shared/combination-products.md
-knowledge/shared/mfds-digital-classification.md
+
+# EU 원문 DB (HTML/PDF → MD 변환본)
+knowledge/eu/01-regulation/mdr-2017-745/
+knowledge/eu/01-regulation/ivdr-2017-746/
+knowledge/eu/02-mdcg/
+knowledge/eu/03-meddev/
+
+# MFDS 원문 DB (PDF → MD 변환본)
+knowledge/mfds/01-법령/01-의료기기법/
+knowledge/mfds/01-법령/02-체외진단의료기기법/
+knowledge/mfds/01-법령/03-디지털의료제품법/
+knowledge/mfds/02-가이드라인/
 ```
 
 - `next_review` < today → 갱신 대상
@@ -99,12 +113,12 @@ knowledge_base_date: "[current year-month]"
 
 | File | Status | Changes | Sources |
 |------|--------|---------|---------|
-| fda-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
+| fda/ (statute+regulation+guidance) | UPDATED / NO CHANGE | [summary] | [source list] |
 | eu-mdr-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
-| mfds-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | samd-classification.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | combination-products.md | UPDATED / NO CHANGE | [summary] | [source list] |
-| mfds-digital-classification.md | UPDATED / NO CHANGE | [summary] | [source list] |
+| mfds/01-법령/ | UPDATED / NO CHANGE | [summary] | [source list] |
+| mfds/02-가이드라인/ | UPDATED / NO CHANGE | [summary] | [source list] |
 
 **Next Review**: [today + 30 days]
 ```

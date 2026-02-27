@@ -1,0 +1,571 @@
+instrument: MDR
+title: "Regulation (EU) 2017/745"
+source_file: CELEX_32017R0745_EN_TXT.html
+source_url: "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+converted: "2026-02-27"
+total_chunks: 142
+chunks:
+  - file: preamble.md
+    type: PREAMBLE
+  - file: recitals.md
+    type: RECITALS
+  - file: article-001.md
+    type: ARTICLE
+    id: "Article 1"
+    title: "Subject matter and scope"
+  - file: article-002.md
+    type: ARTICLE
+    id: "Article 2"
+    title: "Definitions"
+  - file: article-003.md
+    type: ARTICLE
+    id: "Article 3"
+    title: "Amendment of certain definitions"
+  - file: article-004.md
+    type: ARTICLE
+    id: "Article 4"
+    title: "Regulatory status of products"
+  - file: article-005.md
+    type: ARTICLE
+    id: "Article 5"
+    title: "Placing on the market and putting into service"
+  - file: article-006.md
+    type: ARTICLE
+    id: "Article 6"
+    title: "Distance sales"
+  - file: article-007.md
+    type: ARTICLE
+    id: "Article 7"
+    title: "Claims"
+  - file: article-008.md
+    type: ARTICLE
+    id: "Article 8"
+    title: "Use of harmonised standards"
+  - file: article-009.md
+    type: ARTICLE
+    id: "Article 9"
+    title: "Common specifications"
+  - file: article-010.md
+    type: ARTICLE
+    id: "Article 10"
+    title: "General obligations of manufacturers"
+  - file: article-011.md
+    type: ARTICLE
+    id: "Article 11"
+    title: "Authorised representative"
+  - file: article-012.md
+    type: ARTICLE
+    id: "Article 12"
+    title: "Change of authorised representative"
+  - file: article-013.md
+    type: ARTICLE
+    id: "Article 13"
+    title: "General obligations of importers"
+  - file: article-014.md
+    type: ARTICLE
+    id: "Article 14"
+    title: "General obligations of distributors"
+  - file: article-015.md
+    type: ARTICLE
+    id: "Article 15"
+    title: "Person responsible for regulatory compliance"
+  - file: article-016.md
+    type: ARTICLE
+    id: "Article 16"
+    title: "Cases in which obligations of manufacturers apply to importers, distributors or other persons"
+  - file: article-017.md
+    type: ARTICLE
+    id: "Article 17"
+    title: "Single-use devices and their reprocessing"
+  - file: article-018.md
+    type: ARTICLE
+    id: "Article 18"
+    title: "Implant card and information to be supplied to the patient with an implanted device"
+  - file: article-019.md
+    type: ARTICLE
+    id: "Article 19"
+    title: "EU declaration of conformity"
+  - file: article-020.md
+    type: ARTICLE
+    id: "Article 20"
+    title: "CE marking of conformity"
+  - file: article-021.md
+    type: ARTICLE
+    id: "Article 21"
+    title: "Devices for special purposes"
+  - file: article-022.md
+    type: ARTICLE
+    id: "Article 22"
+    title: "Systems and procedure packs"
+  - file: article-023.md
+    type: ARTICLE
+    id: "Article 23"
+    title: "Parts and components"
+  - file: article-024.md
+    type: ARTICLE
+    id: "Article 24"
+    title: "Free movement"
+  - file: article-025.md
+    type: ARTICLE
+    id: "Article 25"
+    title: "Identification within the supply chain"
+  - file: article-026.md
+    type: ARTICLE
+    id: "Article 26"
+    title: "Medical devices nomenclature"
+  - file: article-027.md
+    type: ARTICLE
+    id: "Article 27"
+    title: "Unique Device Identification system"
+  - file: article-028.md
+    type: ARTICLE
+    id: "Article 28"
+    title: "UDI database"
+  - file: article-029.md
+    type: ARTICLE
+    id: "Article 29"
+    title: "Registration of devices"
+  - file: article-030.md
+    type: ARTICLE
+    id: "Article 30"
+    title: "Electronic system for registration of economic operators"
+  - file: article-031.md
+    type: ARTICLE
+    id: "Article 31"
+    title: "Registration of manufacturers, authorised representatives and importers"
+  - file: article-032.md
+    type: ARTICLE
+    id: "Article 32"
+    title: "Summary of safety and clinical performance"
+  - file: article-033.md
+    type: ARTICLE
+    id: "Article 33"
+    title: "European database on medical devices"
+  - file: article-034.md
+    type: ARTICLE
+    id: "Article 34"
+    title: "Functionality of Eudamed"
+  - file: article-035.md
+    type: ARTICLE
+    id: "Article 35"
+    title: "Authorities responsible for notified bodies"
+  - file: article-036.md
+    type: ARTICLE
+    id: "Article 36"
+    title: "Requirements relating to notified bodies"
+  - file: article-037.md
+    type: ARTICLE
+    id: "Article 37"
+    title: "Subsidiaries and subcontracting"
+  - file: article-038.md
+    type: ARTICLE
+    id: "Article 38"
+    title: "Application by conformity assessment bodies for designation"
+  - file: article-039.md
+    type: ARTICLE
+    id: "Article 39"
+    title: "Assessment of the application"
+  - file: article-040.md
+    type: ARTICLE
+    id: "Article 40"
+    title: "Nomination of experts for joint assessment of applications for notification"
+  - file: article-041.md
+    type: ARTICLE
+    id: "Article 41"
+    title: "Language requirements"
+  - file: article-042.md
+    type: ARTICLE
+    id: "Article 42"
+    title: "Designation and notification procedure"
+  - file: article-043.md
+    type: ARTICLE
+    id: "Article 43"
+    title: "Identification number and list of notified bodies"
+  - file: article-044.md
+    type: ARTICLE
+    id: "Article 44"
+    title: "Monitoring and re-assessment of notified bodies"
+  - file: article-045.md
+    type: ARTICLE
+    id: "Article 45"
+    title: "Review of notified body assessment of technical documentation and clinical evaluation documentation"
+  - file: article-046.md
+    type: ARTICLE
+    id: "Article 46"
+    title: "Changes to designations and notifications"
+  - file: article-047.md
+    type: ARTICLE
+    id: "Article 47"
+    title: "Challenge to the competence of notified bodies"
+  - file: article-048.md
+    type: ARTICLE
+    id: "Article 48"
+    title: "Peer review and exchange of experience between authorities responsible for notified bodies"
+  - file: article-049.md
+    type: ARTICLE
+    id: "Article 49"
+    title: "Coordination of notified bodies"
+  - file: article-050.md
+    type: ARTICLE
+    id: "Article 50"
+    title: "List of standard fees"
+  - file: article-051.md
+    type: ARTICLE
+    id: "Article 51"
+    title: "Classification of devices"
+  - file: article-052.md
+    type: ARTICLE
+    id: "Article 52"
+    title: "Conformity assessment procedures"
+  - file: article-053.md
+    type: ARTICLE
+    id: "Article 53"
+    title: "Involvement of notified bodies in conformity assessment procedures"
+  - file: article-054.md
+    type: ARTICLE
+    id: "Article 54"
+    title: "Clinical evaluation consultation procedure for certain class III and class IIb devices"
+  - file: article-055.md
+    type: ARTICLE
+    id: "Article 55"
+    title: "Mechanism for scrutiny of conformity assessments of certain class III and class IIb devices"
+  - file: article-056.md
+    type: ARTICLE
+    id: "Article 56"
+    title: "Certificates of conformity"
+  - file: article-057.md
+    type: ARTICLE
+    id: "Article 57"
+    title: "Electronic system on notified bodies and on certificates of conformity"
+  - file: article-058.md
+    type: ARTICLE
+    id: "Article 58"
+    title: "Voluntary change of notified body"
+  - file: article-059.md
+    type: ARTICLE
+    id: "Article 59"
+    title: "Derogation from the conformity assessment procedures"
+  - file: article-060.md
+    type: ARTICLE
+    id: "Article 60"
+    title: "Certificate of free sale"
+  - file: article-061.md
+    type: ARTICLE
+    id: "Article 61"
+    title: "Clinical evaluation"
+  - file: article-062.md
+    type: ARTICLE
+    id: "Article 62"
+    title: "General requirements regarding clinical investigations conducted to demonstrate conformity of devices"
+  - file: article-063.md
+    type: ARTICLE
+    id: "Article 63"
+    title: "Informed consent"
+  - file: article-064.md
+    type: ARTICLE
+    id: "Article 64"
+    title: "Clinical investigations on incapacitated subjects"
+  - file: article-065.md
+    type: ARTICLE
+    id: "Article 65"
+    title: "Clinical investigations on minors"
+  - file: article-066.md
+    type: ARTICLE
+    id: "Article 66"
+    title: "Clinical investigations on pregnant or breastfeeding women"
+  - file: article-067.md
+    type: ARTICLE
+    id: "Article 67"
+    title: "Additional national measures"
+  - file: article-068.md
+    type: ARTICLE
+    id: "Article 68"
+    title: "Clinical investigations in emergency situations"
+  - file: article-069.md
+    type: ARTICLE
+    id: "Article 69"
+    title: "Damage compensation"
+  - file: article-070.md
+    type: ARTICLE
+    id: "Article 70"
+    title: "Application for clinical investigations"
+  - file: article-071.md
+    type: ARTICLE
+    id: "Article 71"
+    title: "Assessment by Member States"
+  - file: article-072.md
+    type: ARTICLE
+    id: "Article 72"
+    title: "Conduct of a clinical investigation"
+  - file: article-073.md
+    type: ARTICLE
+    id: "Article 73"
+    title: "Electronic system on clinical investigations"
+  - file: article-074.md
+    type: ARTICLE
+    id: "Article 74"
+    title: "Clinical investigations regarding devices bearing the CE marking"
+  - file: article-075.md
+    type: ARTICLE
+    id: "Article 75"
+    title: "Substantial modifications to clinical investigations"
+  - file: article-076.md
+    type: ARTICLE
+    id: "Article 76"
+    title: "Corrective measures to be taken by Member States and information exchange between Member States"
+  - file: article-077.md
+    type: ARTICLE
+    id: "Article 77"
+    title: "Information from the sponsor at the end of a clinical investigation or in the event of a temporary halt or early termination"
+  - file: article-078.md
+    type: ARTICLE
+    id: "Article 78"
+    title: "Coordinated assessment procedure for clinical investigations"
+  - file: article-079.md
+    type: ARTICLE
+    id: "Article 79"
+    title: "Review of coordinated assessment procedure"
+  - file: article-080.md
+    type: ARTICLE
+    id: "Article 80"
+    title: "Recording and reporting of adverse events that occur during clinical investigations"
+  - file: article-081.md
+    type: ARTICLE
+    id: "Article 81"
+    title: "Implementing acts"
+  - file: article-082.md
+    type: ARTICLE
+    id: "Article 82"
+    title: "Requirements regarding other clinical investigations"
+  - file: article-083.md
+    type: ARTICLE
+    id: "Article 83"
+    title: "Post-market surveillance system of the manufacturer"
+  - file: article-084.md
+    type: ARTICLE
+    id: "Article 84"
+    title: "Post-market surveillance plan"
+  - file: article-085.md
+    type: ARTICLE
+    id: "Article 85"
+    title: "Post-market surveillance report"
+  - file: article-086.md
+    type: ARTICLE
+    id: "Article 86"
+    title: "Periodic safety update report"
+  - file: article-087.md
+    type: ARTICLE
+    id: "Article 87"
+    title: "Reporting of serious incidents and field safety corrective actions"
+  - file: article-088.md
+    type: ARTICLE
+    id: "Article 88"
+    title: "Trend reporting"
+  - file: article-089.md
+    type: ARTICLE
+    id: "Article 89"
+    title: "Analysis of serious incidents and field safety corrective actions"
+  - file: article-090.md
+    type: ARTICLE
+    id: "Article 90"
+    title: "Analysis of vigilance data"
+  - file: article-091.md
+    type: ARTICLE
+    id: "Article 91"
+    title: "Implementing acts"
+  - file: article-092.md
+    type: ARTICLE
+    id: "Article 92"
+    title: "Electronic system on vigilance and on post-market surveillance"
+  - file: article-093.md
+    type: ARTICLE
+    id: "Article 93"
+    title: "Market surveillance activities"
+  - file: article-094.md
+    type: ARTICLE
+    id: "Article 94"
+    title: "Evaluation of devices suspected of presenting an unacceptable risk or other non-compliance"
+  - file: article-095.md
+    type: ARTICLE
+    id: "Article 95"
+    title: "Procedure for dealing with devices presenting an unacceptable risk to health and safety"
+  - file: article-096.md
+    type: ARTICLE
+    id: "Article 96"
+    title: "Procedure for evaluating national measures at Union level"
+  - file: article-097.md
+    type: ARTICLE
+    id: "Article 97"
+    title: "Other non-compliance"
+  - file: article-098.md
+    type: ARTICLE
+    id: "Article 98"
+    title: "Preventive health protection measures"
+  - file: article-099.md
+    type: ARTICLE
+    id: "Article 99"
+    title: "Good administrative practice"
+  - file: article-100.md
+    type: ARTICLE
+    id: "Article 100"
+    title: "Electronic system on market surveillance"
+  - file: article-101.md
+    type: ARTICLE
+    id: "Article 101"
+    title: "Competent authorities"
+  - file: article-102.md
+    type: ARTICLE
+    id: "Article 102"
+    title: "Cooperation"
+  - file: article-103.md
+    type: ARTICLE
+    id: "Article 103"
+    title: "Medical Device Coordination Group"
+  - file: article-104.md
+    type: ARTICLE
+    id: "Article 104"
+    title: "Support by the Commission"
+  - file: article-105.md
+    type: ARTICLE
+    id: "Article 105"
+    title: "Tasks of the MDCG"
+  - file: article-106.md
+    type: ARTICLE
+    id: "Article 106"
+    title: "Provision of scientific, technical and clinical opinions and advice"
+  - file: article-107.md
+    type: ARTICLE
+    id: "Article 107"
+    title: "Conflict of interests"
+  - file: article-108.md
+    type: ARTICLE
+    id: "Article 108"
+    title: "Device registers and databanks"
+  - file: article-109.md
+    type: ARTICLE
+    id: "Article 109"
+    title: "Confidentiality"
+  - file: article-110.md
+    type: ARTICLE
+    id: "Article 110"
+    title: "Data protection"
+  - file: article-111.md
+    type: ARTICLE
+    id: "Article 111"
+    title: "Levying of fees"
+  - file: article-112.md
+    type: ARTICLE
+    id: "Article 112"
+    title: "Funding of activities related to designation and monitoring of notified bodies"
+  - file: article-113.md
+    type: ARTICLE
+    id: "Article 113"
+    title: "Penalties"
+  - file: article-114.md
+    type: ARTICLE
+    id: "Article 114"
+    title: "Committee procedure"
+  - file: article-115.md
+    type: ARTICLE
+    id: "Article 115"
+    title: "Exercise of the delegation"
+  - file: article-116.md
+    type: ARTICLE
+    id: "Article 116"
+    title: "Separate delegated acts for different delegated powers"
+  - file: article-117.md
+    type: ARTICLE
+    id: "Article 117"
+    title: "Amendment to Directive 2001/83/EC"
+  - file: article-118.md
+    type: ARTICLE
+    id: "Article 118"
+    title: "Amendment to Regulation (EC) No 178/2002"
+  - file: article-119.md
+    type: ARTICLE
+    id: "Article 119"
+    title: "Amendment to Regulation (EC) No 1223/2009"
+  - file: article-120.md
+    type: ARTICLE
+    id: "Article 120"
+    title: "Transitional provisions"
+  - file: article-121.md
+    type: ARTICLE
+    id: "Article 121"
+    title: "Evaluation"
+  - file: article-122.md
+    type: ARTICLE
+    id: "Article 122"
+    title: "Repeal"
+  - file: article-123.md
+    type: ARTICLE
+    id: "Article 123"
+    title: "Entry into force and date of application"
+  - file: annex-I.md
+    type: ANNEX
+    id: "Annex I"
+    title: "GENERAL SAFETY AND PERFORMANCE REQUIREMENTS"
+  - file: annex-II.md
+    type: ANNEX
+    id: "Annex II"
+    title: "TECHNICAL DOCUMENTATION"
+  - file: annex-III.md
+    type: ANNEX
+    id: "Annex III"
+    title: "TECHNICAL DOCUMENTATION ON POST-MARKET SURVEILLANCE"
+  - file: annex-IV.md
+    type: ANNEX
+    id: "Annex IV"
+    title: "EU DECLARATION OF CONFORMITY"
+  - file: annex-V.md
+    type: ANNEX
+    id: "Annex V"
+    title: "CE MARKING OF CONFORMITY"
+  - file: annex-VI.md
+    type: ANNEX
+    id: "Annex VI"
+    title: "INFORMATION TO BE SUBMITTED UPON THE REGISTRATION OF DEVICES AND ECONOMIC OPERATORS IN ACCORDANCE WITH ARTICLES 29(4) AND 31, CORE DATA ELEMENTS TO BE PROVIDED TO THE UDI DATABASE TOGETHER WITH THE UDI-DI IN ACCORDANCE WITH ARTICLES 28 AND 29, AND THE UDI SYSTEM"
+  - file: annex-VII.md
+    type: ANNEX
+    id: "Annex VII"
+    title: "REQUIREMENTS TO BE MET BY NOTIFIED BODIES"
+  - file: annex-VIII.md
+    type: ANNEX
+    id: "Annex VIII"
+    title: "CLASSIFICATION RULES"
+  - file: annex-IX.md
+    type: ANNEX
+    id: "Annex IX"
+    title: "CONFORMITY ASSESSMENT BASED ON A QUALITY MANAGEMENT SYSTEM AND ON ASSESSMENT OF TECHNICAL DOCUMENTATION"
+  - file: annex-X.md
+    type: ANNEX
+    id: "Annex X"
+    title: "CONFORMITY ASSESSMENT BASED ON TYPE-EXAMINATION"
+  - file: annex-XI.md
+    type: ANNEX
+    id: "Annex XI"
+    title: "CONFORMITY ASSESSMENT BASED ON PRODUCT CONFORMITY VERIFICATION"
+  - file: annex-XII.md
+    type: ANNEX
+    id: "Annex XII"
+    title: "CERTIFICATES ISSUED BY A NOTIFIED BODY"
+  - file: annex-XIII.md
+    type: ANNEX
+    id: "Annex XIII"
+    title: "PROCEDURE FOR CUSTOM-MADE DEVICES"
+  - file: annex-XIV.md
+    type: ANNEX
+    id: "Annex XIV"
+    title: "CLINICAL EVALUATION AND POST-MARKET CLINICAL FOLLOW-UP"
+  - file: annex-XV.md
+    type: ANNEX
+    id: "Annex XV"
+    title: "CLINICAL INVESTIGATIONS"
+  - file: annex-XVI.md
+    type: ANNEX
+    id: "Annex XVI"
+    title: "LIST OF GROUPS OF PRODUCTS WITHOUT AN INTENDED MEDICAL PURPOSE REFERRED TO IN ARTICLE 1(2)"
+  - file: annex-XVII.md
+    type: ANNEX
+    id: "Annex XVII"
+    title: "CORRELATION TABLE"

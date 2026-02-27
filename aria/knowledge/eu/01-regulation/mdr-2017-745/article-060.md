@@ -1,0 +1,19 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 60"
+  chunk_title: "Certificate of free sale"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 60
+
+  ### Certificate of free sale
+
+   1. For the purpose of export and upon request by a manufacturer or an authorised representative, the Member State in which the manufacturer or the authorised representative has its registered place of business shall issue a certificate of free sale declaring that the manufacturer or the authorised representative, as applicable, has its registered place of business on its territory and that the device in question bearing the CE marking in accordance with this Regulation may be marketed in the Union. The certificate of free sale shall set out the Basic UDI-DI of the device as provided to the UDI database under Article 29. Where a notified body has issued a certificate pursuant to Article 56, the certificate of free sale shall set out the unique number identifying the certificate issued by the notified body, as referred to in Section 3 of Chapter II of Annex XII.
+
+   2. The Commission may, by means of implementing acts, establish a model for certificates of free sale, taking into account international practice as regards the use of certificates of free sale. Those implementing acts shall be adopted in accordance with the advisory procedure referred to in Article 114(2).

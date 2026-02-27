@@ -95,22 +95,154 @@ Tier 3: 비규제 (Non-regulated)
 
 ### Required Input Variables (6 Core Parameters)
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-notice-cls2025-product-code (제품코드 생성 기준 — 입력 변수 정의 포함)
+> **법적 근거**: `../../knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품-분류-및-등급-지정-등에-관한-규정-고시-전문.md`
+
+| Variable | Data Type | Purpose |
+|----------|-----------|---------|
+| Representative Model Name | String | Baseline for multi-model products |
+| Primary Intended Use | Enum | A(검사)~I(융합제품) - determines 1st-2nd code + risk matrix row |
+| Input Data & Processing Principle | String | Defines 2nd digit of product code |
+| Applied Technology Type | Enum | A(독립형SW), B(AI), C(지능형로봇), D(HPC), E(가상융합기술) - determines 3rd-5th code |
+| Base Device Type | Enum | A(의료기기), B(체외진단의료기기), C(융합) - determines 6th code |
+| Hardware Integration Form | Enum | 1(독립형SW), 2(내장형), 3(혼합) - determines 7th code |
 
 ### 4-Gate Decision Logic
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-law-dmp-act-art2 (디지털의료제품법 정의) + 본 모듈 내장 4-Gate 로직
-> 요약: Gate 1(의료기기)→ Gate 2(디지털 기술)→ Gate 3(핵심 기능)→ Gate 4(배제)
+> **법적 근거**: `../../knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품법-법률-제20139호-20260124.md` 제2조, 제3조
+
+#### Gate 1: Medical Device Status
+- **Question**: Does the product meet the definition of medical device under 「의료기기법」 or 「체외진단의료기기법」?
+- **NO** → NOT a digital medical device (EXIT)
+
+#### Gate 2: Technology Applicability
+- **Question**: Does the product apply one or more of the following technologies?
+  - Standalone SW (독립형 SW)
+  - AI (인공지능)
+  - Intelligent Robot (지능형 로봇)
+  - High-Performance Computing (초고성능 컴퓨팅)
+  - Virtual/Fusion Technology (가상융합기술: VR/AR/XR/Metaverse)
+- **NO** → NOT a digital medical device (EXIT)
+
+#### Gate 3: Core Function Impact
+- **Question**: Does the technology affect the intended use through ONE OR MORE of the following?
+  - Control and operation of medical device hardware
+  - Data analysis and processing (embedded or standalone SW)
+  - Accessory (SW) functionality
+- **NO** → NOT a digital medical device (EXIT)
+
+#### Gate 4: Exclusion Principle
+- **Question**: Is the technology limited to ONLY the following?
+  - Simple electronic interface (data transmission only)
+  - Simple component (unrelated to intended use)
+  - Simple infrastructure (generic server, communication device)
+
+  **Exception**: SW performing analysis/processing on cloud infrastructure IS considered embedded/standalone → qualifies as digital medical device
+
+- **YES (limited to simple functions)** → NOT a digital medical device (EXIT)
+- **NO (performs core medical functions)** → Digital medical device (PROCEED to coding)
 
 ### 7-Digit Product Code Generation
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-notice-cls2025-product-code (고시 별표3 제품코드 생성 기준)
-> 요약: [사용목적 2][기술유형 3][기기유형 1][형태 1] 형식
+> **법적 근거**: `../../knowledge/mfds/01-법령/03-디지털의료제품법/디지털의료제품-분류-및-등급-지정-등에-관한-규정-고시-전문.md`
+
+**Format**: `[Primary Use 2 digits][Technology 3 digits][Base Type 1 digit][Form 1 digit]`
+
+#### Digits 1-2: Primary Intended Use
+
+| 1st Digit | 2nd Digit Sub-Classification |
+|-----------|------------------------------|
+| A (검사) | 1:의료영상, 2:생체신호, 3:체외진단지표, 4:기타, 5:2개 이상 |
+| B (진단) | 1:의료영상, 2:생체신호, 3:체외진단지표, 4:기타, 5:2개 이상 |
+| C (치료) | 1:수술/시술지원, 2:치료계획/모의시술, 3:디지털치료기기, 4:기타 |
+| D (임상관리) | 1:의료영상, 2:생체신호, 3:체외진단지표, 4:기타, 5:2개 이상 |
+| E (장애보조) | 1:운동장치, 2:기능보조, 3:기타 |
+| F (정보제공) | 1:의료영상, 2:기타 |
+| G (의약품보조) | 1:복약모니터링, 2:약물주입량 계산, 3:동반진단, 4:병용요법 활용 |
+| H (기타) | 1:마약류 중독 재활, 2:기타 |
+| I (융합제품) | N:주된 사용 목적의 개수 (예: I2 = 2개 목적) |
+
+#### Digits 3-5: Technology Type (Priority Order)
+
+**Priority**: A(독립형SW) > B(AI) > C(지능형로봇) > D(HPC) > E(가상융합기술)
+
+- **1 technology**: `[A/B/C/D/E]XX` (4th-5th = XX)
+- **2 technologies**: `[A/B][B/C/D/E]X` (5th = X)
+- **3 technologies**: `[A/B/C][B/C/D][C/D/E]` (all 3 positions filled)
+- **4+ technologies**: 5th position = `P` (예: ABCP)
+
+#### Digits 6-7: Base Type + Form
+
+- **6th Digit**: A(의료기기), B(체외진단의료기기), C(융합 A+B)
+- **7th Digit**: 1(독립형SW), 2(내장형), 3(혼합 1+2)
+
+**Example**: `B1BXXA2` = Diagnosis using medical imaging + AI technology + Medical Device + Embedded SW
+
+#### 7-Digit Code Self-Verification
+
+```
+Digit 1 (Primary Use): 제품의 주된 사용목적과 일치하는가?
+Digit 2 (Sub-classification): 데이터 유형이 일관되는가? (의료영상→1, 생체신호→2, 체외진단→3)
+Digits 3-5 (Technology): 기술 유형과 개수가 일치하는가? (1개=[X]XX, 2개=[X][Y]X, 3개=[X][Y][Z])
+Digit 6 (Base Type): 의료기기(A) vs 체외진단(B) vs 융합(C) 정확한가?
+Digit 7 (Form): 독립형(1) vs 내장형(2) vs 혼합(3) 정확한가?
+```
+
+**Cross-Check Rules**:
+1. Digit 1=B(진단) + AI → Digit 3=B(AI) 필수 (A=독립형SW만은 불가)
+2. Digit 7=1(독립형) → Digit 6=C(융합)는 비일반적 (IVD+비IVD 기능 공존 시만)
+3. X placeholder 개수 = 3 - 적용 기술 수
 
 ### Risk-Based Classification
 
-> **Loaded Knowledge**: `../../knowledge/catalog.yaml` → id: mfds-notice-cls2025-risk-matrix (고시 별표4 등급 지정 세부 기준)
-> 요약: Medical Impact × Patient Condition → 1~4등급, Malfunction Adjustment 적용
+> **법적 근거**: `../../knowledge/mfds/02-가이드라인/디지털의료기기-분류-및-등급-지정-등에-관한-가이드라인.md` 별표 3, 4
+
+**Classification Process**: Medical Impact (1차) → Patient Condition (2차) → Malfunction Risk Adjustment (최종)
+
+#### Step 1: Medical Impact Classification (제품 기능 기반)
+
+| 제품 코드 | 사용 목적 | Medical Impact |
+|----------|----------|----------------|
+| A(검사) | 검사·측정 | **Treatment/Diagnosis** |
+| B(진단) | 진단 보조 | **Treatment/Diagnosis** |
+| C(치료) | 치료·재활 | **Treatment/Diagnosis** |
+| D(임상관리) | 예측·예방·관리 유도 | **Clinical Management** |
+| E(장애보조) | 재활·보조 | **Treatment/Diagnosis** or **Clinical Management** (사례별 판단) |
+| F(정보제공) | 정보 제공·모니터링 | **Information/Monitoring** |
+| G(의약품보조) | 복약·투약 지원 | **Treatment/Diagnosis** |
+| H(기타) | - | 개별 평가 |
+| I(융합제품) | 복수 목적 | 최고 위험도 목적 기준 |
+
+#### Step 2: Patient Condition Identification (적응증 기반)
+
+| Patient Condition | 판단 기준 | 키워드 |
+|-------------------|----------|--------|
+| **Critical** (위독·치명적) | 24시간 내 사망 위험이 있는 환자 | 중환자, 응급, 생명 위협, ICU, 인공호흡기, 혈액투석, 심정지 |
+| **Serious** (중증 질환) | 중증 질환으로 적절한 치료 없으면 악화 가능 | 중증, 만성 중증, 악화 시 입원, 암, 심부전, 뇌졸중 |
+| **Non-Serious** (기타 질환) | 경증 또는 일반 질환 | 경증, 일반, 외래 관리, 건강관리 |
+
+#### Step 3: Risk Matrix Application (Guideline Annex 4)
+
+| Medical Impact | Critical | Serious | Non-Serious |
+|----------------|----------|---------|-------------|
+| **Treatment/Diagnosis** | **4등급** | **3등급** | **2등급** |
+| **Clinical Management** | **3등급** | **2등급** | **1등급** |
+| **Information/Monitoring** | **2등급** | **1등급** | **1등급** |
+
+#### Step 4: Malfunction Risk Adjustment
+
+| 오작동 시 피해 | 등급 조정 | 비고 |
+|--------------|----------|------|
+| **사망 가능성** | **+1 등급** | 4등급 초과 불가 (최대 4등급) |
+| **부상/악화** | **조정 없음** | Base Grade 유지 |
+| **피해 없음** | **-1 등급** | **단, 2등급 → 1등급 하향 조정 금지** |
+
+**조정 제한 규칙**:
+- 상향: 최대 4등급까지만 가능
+- 하향: 2등급에서 1등급으로 하향 조정 절대 불가 (Ground Truth)
+
+**복합 기능 제품**:
+- Embedded SW: `Max(HW grade, SW function grade)`
+- Multi-function SW: `Max(grade of each function)`
 
 ### Step 2 Output Format
 

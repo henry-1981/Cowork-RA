@@ -6,7 +6,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.0"
+  version: "0.3.3"
   category: "domain"
   status: "active"
   updated: "2026-02-25"
@@ -88,7 +88,7 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
 | 3등급 | 허가 (Approval) | 9-15 months | 의료기기법 제6조 |
 | 4등급 | 허가 + 임상 (Approval+Clinical) | 12-18+ months | 의료기기법 제6조 |
 
-> **Knowledge DB 참조**: 상세 인허가 경로는 `../../knowledge/regulations/mfds-framework.md` Section 3 참조
+> **Knowledge DB 참조**: 상세 인허가 경로는 `../../knowledge/mfds/01-법령/01-의료기기법/` (의료기기법 제6조, 제9조, 제12조) 참조
 
 ---
 
@@ -100,9 +100,17 @@ Identify regulatory submission pathways for FDA, EU MDR, and MFDS based on devic
 **Level 2:** Knowledge DB + modules/ 로드.
 
 Knowledge DB references (Level 2+):
-- FDA: `../../knowledge/regulations/fda-framework.md`
-- EU MDR: `../../knowledge/regulations/eu-mdr-framework.md`
-- MFDS: `../../knowledge/regulations/mfds-framework.md`
+- FDA Statute: `../../knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/` (FD&C Act sections)
+- FDA Regulation: `../../knowledge/fda/02-regulation/21cfr-subchapter-h/` (21 CFR Parts 800-898)
+- FDA Guidance: `../../knowledge/fda/03-guidance/` (494 guidance documents)
+- EU MDR: `../../knowledge/eu/01-regulation/mdr-2017-745/`
+- EU IVDR: `../../knowledge/eu/01-regulation/ivdr-2017-746/`
+- EU MDCG: `../../knowledge/eu/02-mdcg/`
+- EU MEDDEV: `../../knowledge/eu/03-meddev/`
+- MFDS 의료기기법: `../../knowledge/mfds/01-법령/01-의료기기법/`
+- MFDS 체외진단법: `../../knowledge/mfds/01-법령/02-체외진단의료기기법/`
+- MFDS 디지털의료제품법: `../../knowledge/mfds/01-법령/03-디지털의료제품법/`
+- MFDS 가이드라인: `../../knowledge/mfds/02-가이드라인/`
 
 ### Step 1: Receive Classification Data
 

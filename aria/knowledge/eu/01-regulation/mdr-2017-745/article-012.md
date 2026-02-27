@@ -1,0 +1,25 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 12"
+  chunk_title: "Change of authorised representative"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 12
+
+  ### Change of authorised representative
+
+  The detailed arrangements for a change of authorised representative shall be clearly defined in an agreement between the manufacturer, where practicable the outgoing authorised representative, and the incoming authorised representative. That agreement shall address at least the following aspects:
+
+ (a) the date of termination of the mandate of the outgoing authorised representative and date of beginning of the mandate of the incoming authorised representative;
+
+ (b) the date until which the outgoing authorised representative may be indicated in the information supplied by the manufacturer, including any promotional material;
+
+ (c) the transfer of documents, including confidentiality aspects and property rights;
+
+ (d) the obligation of the outgoing authorised representative after the end of the mandate to forward to the manufacturer or incoming authorised representative any complaints or reports from healthcare professionals, patients or users about suspected incidents related to a device for which it had been designated as authorised representative.

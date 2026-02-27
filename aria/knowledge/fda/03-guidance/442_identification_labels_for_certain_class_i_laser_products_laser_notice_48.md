@@ -1,0 +1,108 @@
+---
+source:
+  family: "GUIDANCE"
+  instrument: "FDA Guidance"
+  title: "Identification Labels for Certain Class I Laser Products (Laser Notice 48)"
+  docket: "FDA-2020-D-0957"
+  path: "442_Identification_Labels_for_Certain_Class_I_Laser_Products_Laser_Notice_48.pdf"
+  pages: 2
+  converted: 2026-02-27
+  method: tesseract-ocr
+---
+
+',
+
+en
+
+ABNICEs,
+iS
+
+‘Wasa
+
+DEPARTMENT OF HEALTH & HUMAN SERVICES Public Health Service
+
+Food and Drug Administration
+2098 Gaither Road
+SEP = [906 Rockville MD 20850
+
+To: All Manufacturers of Laser Products
+
+Subject: Identification Labels for Certain Class I
+Laser Products
+
+BACKGROUND AND QUESTION
+
+The regulations for electronic products require each
+electronic product for which a standard has been promulgated
+to be identified with the name and address of the manufacturer
+(21 CFR 1010.3). This identification is to be on a tag or
+label permanently affixed to the product. Identification of
+the product is required so the product may be traced for
+recall in the event there is a defect in the product or the
+product is found to be noncompliant. This requirement is
+applicable to all laser products certified as complying with
+the Federal performance standard for laser products, 21 CFR
+1040.10 and 1040.11.
+
+A manufacturer of certain types of laser products that are
+Class I under all circumstances of operation, maintenance,
+service or failure has requested that its company name not
+appear on the identification label. The products are
+certified and may be, for example, compact disc players or CD
+ROM units that will be integrated into other products such as
+music systems, automobiles, or computers. The manufacturer
+(the integrator) of the music system, automobile or computer
+is intended to be the primary contact for service rather than
+the manufacturer of the laser product. The laser product
+manufacturer wishes to hold large quantities of products as
+ready-to-ship inventory that can be sold to any integrator
+without having to be relabeled. The regulations already
+permit, under 21 CFR 1010.3(a) (1), labeling a certified
+product with a brand name other than that of the manufacturer
+as long as the Center for Devices and Radiological Health
+(CDRH) is advised of the true identity of the affected
+product.
+
+POLICY
+
+The CDRH will not object to the name of the original laser
+product manufacturer not appearing as part of the
+identification label when the following criteria are met:
+
+1. The certified product is not modified in any aspect of
+performance or intended use,
+YS
+
+TEPPER ROE A TSS SEE LER OD
+
+Page 2 - All Manufacturers of Laser Products
+
+2. The level of laser radiation accessible during any
+conditions of operation, maintenance, service or single
+failure does not exceed the accessible emission limits
+of Class I.
+
+3. The identification label required by 21 CFR 1010.3
+contains a code in lieu of the name and address of the
+manufacturer, such as: FDA/CDRH ID: XXxXXx. This code
+will be assigned by the CDRH to the manufacturer of the
+certified product upon application, as permitted under
+21 CFR 1010.3 (b).
+
+Comments are invited and should be addressed to the Electronic
+Products Branch, HFZ 342, Office of Compliance, Division of
+Enforcement III, Center for Devices and Radiological Health,
+2098 Gaither Road, Rockville, MD 20850.
+
+Sincerely yours,
+
+Lilliarf J. Gill
+
+Director
+
+Office of Compliance
+
+Center for Devices and
+Radiological Health
+
+Laser Notice No. 48

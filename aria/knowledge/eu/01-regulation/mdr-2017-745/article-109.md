@@ -1,0 +1,29 @@
+---
+source:
+  family: "REGULATION"
+  instrument: "MDR"
+  title: "Regulation (EU) 2017/745"
+  chunk_type: "ARTICLE"
+  chunk_id: "Article 109"
+  chunk_title: "Confidentiality"
+  source_file: "CELEX_32017R0745_EN_TXT.html"
+  converted: "2026-02-27"
+  method: "beautifulsoup (eli-subdivision parsing)"
+---
+ ## Article 109
+
+  ### Confidentiality
+
+   1. Unless otherwise provided for in this Regulation and without prejudice to existing national provisions and practices in the Member States on confidentiality, all parties involved in the application of this Regulation shall respect the confidentiality of information and data obtained in carrying out their tasks in order to protect the following:
+
+ (a) personal data, in accordance with Article 110;
+
+ (b) commercially confidential information and trade secrets of a natural or legal person, including intellectual property rights; unless disclosure is in the public interest;
+
+ (c) the effective implementation of this Regulation, in particular for the purpose of inspections, investigations or audits.
+
+   2. Without prejudice to paragraph 1, information exchanged on a confidential basis between competent authorities and between competent authorities and the Commission shall not be disclosed without the prior agreement of the originating authority.
+
+   3. Paragraphs 1 and 2 shall not affect the rights and obligations of the Commission, Member States and notified bodies with regard to exchange of information and the dissemination of warnings, nor the obligations of the persons concerned to provide information under criminal law.
+
+   4. The Commission and Member States may exchange confidential information with regulatory authorities of third countries with which they have concluded bilateral or multilateral confidentiality arrangements.
