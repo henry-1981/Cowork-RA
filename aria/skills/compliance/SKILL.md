@@ -77,6 +77,8 @@ Identify the relevant Code article(s) from the user's question or activity descr
    - Prior approval requirements (사전심의/신고)
    - Documentation requirements (증빙서류)
 
+   **Token efficiency rule**: NEVER Read the entire framework file. Use Grep with article keyword (e.g. `제10조`, `Art. 10`) and extract only the matching section with surrounding context. The framework file is 273KB — loading it entirely wastes tokens.
+
 2. **Check override**: Grep the `override` file for the same article or topic.
    - If found: Override content takes precedence. Present both with clear labeling:
      - "안내서(2022.04) 기준: ..."
