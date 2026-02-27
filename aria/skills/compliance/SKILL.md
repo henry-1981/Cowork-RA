@@ -3,17 +3,16 @@ name: aria-compliance
 description: >
   Korean medical device marketing compliance advisor based on KMDIA Fair
   Competition Code (의료기기 거래에 관한 공정경쟁규약). Evaluates marketing
-  activities for regulatory compliance, assesses interactions with healthcare
-  professionals, and determines whether activities comply with Korean
-  anti-kickback regulations. Triggers: medical device compliance, 공정경쟁규약,
-  리베이트, 보건의료인, 마케팅 활동 검토, Sunshine Act Korea, KMDIA
+  activities against the Code and provides traffic-light guidance (GREEN/YELLOW/RED)
+  to help users make informed compliance decisions. Triggers: medical device
+  compliance, 공정경쟁규약, 리베이트, 보건의료인, 마케팅 활동 검토, KMDIA
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   category: "domain"
   status: "active"
-  updated: "2026-02-12"
+  updated: "2026-02-27"
   modularized: "true"
   tags: "compliance, fair-competition, KMDIA, marketing, anti-kickback, Korea"
   knowledge-base-date: "2024-07"
@@ -34,170 +33,147 @@ triggers:
 
 ## Purpose
 
-Evaluate whether medical device marketing activities comply with the KMDIA Fair Competition Code (의료기기 거래에 관한 공정경쟁규약). This is a pure analysis unit that receives activity descriptions and returns structured compliance judgments.
+Evaluate medical device marketing activities against the KMDIA Fair Competition Code and provide **traffic-light guidance** (GREEN/YELLOW/RED) to help users make informed compliance decisions. This skill does NOT make final regulatory determinations — it organizes applicable rules, precedents, and conditions so the user can judge.
 
 **Input**: Marketing activity description, activity type, involved parties
-**Output**: Compliance judgment (Permitted/Not permitted/Conditional/Case-by-case), applicable articles, rationale, related precedents
+**Output**: Traffic-light status (GREEN/YELLOW/RED), applicable articles with source citation, related precedents, action items for user
 **Knowledge Base Date**: 2024-07
+
+---
+
+## Knowledge DB
+
+This skill reads directly from the 공정경쟁규약 Knowledge DB. File hierarchy is defined in `aria/knowledge/mfds/01-법령/04-공정경쟁규약/_index.yaml`.
+
+| Role | File | Usage |
+|------|------|-------|
+| `framework` | 의료기기-리베이트-예방-및-공정경쟁을-위한-안내서2022-04.md | Primary source. Code articles, operating standards, article-by-article commentary |
+| `override` | 붙임2-의료기기-공정경쟁규약심의위원회-내부지침-전문24-07-12-개정.md | Overrides framework when same article exists. Committee internal rules (24.07.12 rev.) |
+| `definitions` | 의료기기-리베이트-예방-및-공정거래를-위한-안내서-배포본.md | Term definitions, concept explanations. Referenced for clarity, not for judgment |
+| `precedents` | 공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md | Real warning cases (23.05.02). Cited for risk reinforcement |
+
+**Override Rule**: When the `override` file contains guidance on the same article/topic as `framework`, the override content takes precedence. Always check override AFTER reading framework.
+
+**KD Base Path**: `aria/knowledge/mfds/01-법령/04-공정경쟁규약/`
 
 ---
 
 ## Assessment Workflow
 
-### Mode 1: Q&A Compliance Judgment
+### Step 1: Article Mapping (조항 식별)
 
-When a user asks whether a specific activity is permitted:
+Identify the relevant Code article(s) from the user's question or activity description.
 
-1. Identify the activity type and map to the relevant regulation article
-2. Read the matching reference file section for detailed rules
-3. Check the "Committee Guidance (2024 revision)" subsections in `references/activity-guide.md` for interpretive guidance
-4. Check "Violation Cases and Precedents" section in `references/faq.md` for similar past cases
-5. Apply the decision framework below
-6. Provide judgment with article citation, rationale, and relevant precedent cases
+1. Classify the subject: HCP (보건의료인) / institution (의료기관) / non-HCP / foreign HCP
+2. Map the activity to a specific article using the Article Index below
+3. If the activity doesn't map to Articles 6-17, default to Article 5 (general prohibition)
+4. **If information is insufficient**: List what's missing and ask the user. Do NOT proceed to Step 2.
 
-### Mode 2: Activity Review Report
+### Step 2: Rule Lookup + Override Check (규칙 조회 + Override 적용)
 
-When a user submits a marketing plan or activity for comprehensive review:
+1. **Read framework**: Grep the `framework` file for the mapped article section. Extract:
+   - Monetary limits (금액 한도)
+   - Frequency limits (횟수 제한)
+   - Prior approval requirements (사전심의/신고)
+   - Documentation requirements (증빙서류)
 
-1. Read the full activity description
-2. Map each element to relevant regulation articles
-3. Read `references/activity-guide.md` for thresholds, checklists, and Committee interpretive guidance
-4. Cross-reference with "Violation Cases and Precedents" in `references/faq.md` for risk patterns
-5. Generate structured compliance report (see Report Template below)
+2. **Check override**: Grep the `override` file for the same article or topic.
+   - If found: Override content takes precedence. Present both with clear labeling:
+     - "안내서(2022.04) 기준: ..."
+     - "**내부지침(24.07.12 개정) 적용**: ..." ← this wins
+   - If not found: Framework content applies as-is.
 
-## Article Index by Activity Type
+3. **Supplement definitions** (optional): If terms need clarification, Grep the `definitions` file.
 
-| Activity | Regulation | Operating Standard | Reference |
-|----------|-----------|-------------------|-----------|
-| Gifts/Benefits restriction | Art. 5 | Art. 2 | references/regulation.md |
-| Samples | Art. 6 | Art. 3 | references/regulation.md |
-| Donations | Art. 7 | Art. 4 | references/regulation.md |
-| Conference hosting support | Art. 8 | Art. 5 | references/regulation.md |
-| Conference attendance support | Art. 9 | Art. 6 | references/regulation.md |
-| Product presentations | Art. 10 | Art. 7 | references/regulation.md |
-| Education/Training | Art. 11 | Art. 8 | references/regulation.md |
-| Lectures/Consulting | Art. 12 | Art. 9 | references/regulation.md |
-| Clinical device provision | Art. 13 | - | references/regulation.md |
-| Market research | Art. 14 | Art. 10 | references/regulation.md |
-| Post-market surveillance | Art. 15 | Art. 11 | references/regulation.md |
-| Clinical activities (non-PMS) | Art. 16 | Art. 12 | references/regulation.md |
-| Exhibition/Advertising | Art. 17 | Art. 13 | references/regulation.md |
-| Penalties | Art. 20 | Art. 18 | references/regulation.md |
+### Step 3: Precedent Reinforcement + Traffic-Light Guidance (사례 보강 + 신호등 안내)
 
-## Decision Framework
+1. **Check precedents**: Grep the `precedents` file for the relevant article or activity pattern.
+   - If matching case exists: cite it with the outcome (경고/경징계/중징계)
 
-Apply this 4-step framework for every compliance question:
+2. **Determine traffic-light status**:
 
-### Step 1: Subject Classification
+   - **GREEN** 🟢: Activity is clearly permitted under the Code. Standard requirements only.
+     - Example: "제10조에 따라 숙박 미제공 제품설명회는 사전심의 불요"
 
-Determine who is involved:
-- Healthcare professional (보건의료인): Regulated under the Code
-- Medical institution (의료기관): Regulated under the Code
-- Non-HCP hospital staff (코디네이터, 구매과 등): Generally NOT covered, but indirect provision rules may apply
-- Foreign HCP (해외 보건의료인): NOT covered unless affiliated with a domestic institution
-- Special relationships (가족, 친인척): Treated as provision to the HCP/institution
+   - **YELLOW** 🟡: Conditionally permitted OR requires additional verification. Must specify WHAT the user needs to confirm.
+     - Example: "내부지침(24.07.12)상 1등급 기기 국외 교육은 추가 필요성 심사 대상. 학회 의견조회 필요."
 
-### Step 2: Activity Mapping
+   - **RED** 🔴: Clearly prohibited OR matches a known violation pattern. Must cite the prohibition or precedent.
+     - Example: "내부지침에 따라 택시비는 대중교통 미간주. 3만원 초과 지급은 위반 사례 있음(23.05.02 마항)"
 
-Map the activity to a specific article. If the activity does not fall under Articles 6-17, it defaults to the general prohibition under Article 5 (restriction on provision of economic benefits).
+3. **Generate output** using the Response Format below.
 
-### Step 3: Threshold Check
+---
 
-Read `references/activity-guide.md` for:
-- Monetary limits (금액 한도)
-- Frequency limits (횟수 제한)
-- Prior approval requirements (사전심의/신고)
-- Documentation requirements (증빙서류)
+## Article Index
 
-### Step 3.5: Committee Guidance and Precedent Check
+| Activity | Code Article | Operating Standard |
+|----------|-------------|-------------------|
+| Gifts/Benefits restriction | Art. 5 | Art. 2 |
+| Samples | Art. 6 | Art. 3 |
+| Donations | Art. 7 | Art. 4 |
+| Conference hosting support | Art. 8 | Art. 5 |
+| Conference attendance support | Art. 9 | Art. 6 |
+| Product presentations | Art. 10 | Art. 7 |
+| Education/Training | Art. 11 | Art. 8 |
+| Lectures/Consulting | Art. 12 | Art. 9 |
+| Clinical device provision | Art. 13 | - |
+| Market research | Art. 14 | Art. 10 |
+| Post-market surveillance | Art. 15 | Art. 11 |
+| Clinical activities (non-PMS) | Art. 16 | Art. 12 |
+| Exhibition/Advertising | Art. 17 | Art. 13 |
+| Penalties | Art. 20 | Art. 18 |
 
-Check "Committee Guidance (2024 revision)" subsections in `references/activity-guide.md` for:
-- Committee interpretive guidance on the relevant article
-- Specific procedural rules beyond the Code text (e.g., simple change exemption table, presenter limits)
-- Additional restrictions or exemptions from internal rules
-
-Check "Violation Cases and Precedents" section in `references/faq.md` for:
-- Similar past violation cases and outcomes
-- Common pitfalls and enforcement patterns
-- Practical risk factors to flag
-
-### Step 4: Judgment
-
-Provide one of these verdicts:
-- Permitted (허용): Clearly within regulation scope with specific article reference
-- Not permitted (불가): Explicitly prohibited or not covered by any exception
-- Case-by-case review required (사안별 개별 검토 요함): Depends on specific circumstances
-- Conditionally permitted (조건부 허용): Permitted if specific conditions are met
+---
 
 ## Response Format
 
 ### Q&A Response
 
-```
-## Judgment: [Permitted/Not permitted/Case-by-case/Conditional]
+The response should be structured as follows, but delivered conversationally (not as raw template):
 
-### Applicable Regulation
-- Code Article: [number and title]
-- Operating Standard Article: [number and title]
+**1. Traffic-Light Status**
+- Status: GREEN 🟢 / YELLOW 🟡 / RED 🔴
+- Applicable article(s) and source
 
-### Rationale
-[Explanation based on regulation text]
+**2. Applicable Rules**
+- Rule summary from framework
+- Override notation if applicable: "내부지침(24.07.12 개정) 적용: ..."
+- Key thresholds and conditions
 
-### Key Conditions (if applicable)
-- [condition 1]
-- [condition 2]
+**3. Related Precedents** (if any)
+- Case summary from precedents file
+- Outcome (경고/경징계/중징계)
 
-### Committee Guidance (if applicable)
-- [relevant interpretive rule from activity-guide.md Committee Guidance sections]
-
-### Related Violation Cases (if applicable)
-- Case [letter-number]: [brief summary from faq.md Violation Cases section]
-
-### Related FAQ
-- FAQ #[number]: [brief summary if a matching FAQ exists]
-```
+**4. Action Items** (for YELLOW/RED)
+- What the user needs to verify or prepare
+- Required documents, approvals, or procedures
 
 ### Activity Review Report
 
-```
-## Compliance Review Report
+For comprehensive review requests, use a table format:
 
-### Activity Summary
-[Brief description of the marketing activity]
+| Item | Article | Status | Source | Notes |
+|------|---------|--------|--------|-------|
+| [item] | Art. X | 🟢/🟡/🔴 | 안내서/내부지침 | [detail] |
 
-### Compliance Assessment
+Followed by:
+- Risk areas with precedent references
+- Required procedures checklist
+- Overall recommendation
 
-| Item | Article | Verdict | Notes |
-|------|---------|---------|-------|
-| [item 1] | Art. X | OK/NG/Review | [detail] |
-| [item 2] | Art. Y | OK/NG/Review | [detail] |
-
-### Risk Areas (cross-referenced with faq.md Violation Cases)
-1. [risk description, similar violation case reference, and mitigation]
-
-### Required Procedures
-- [ ] Prior approval (사전심의)
-- [ ] Post-report (사후신고)
-- [ ] Documentation (증빙서류)
-
-### Recommendation
-[Overall assessment and recommended actions]
-```
+---
 
 ## Key Principles
 
-These overarching principles from Article 2 (Basic Principles) apply to ALL activities:
+From Article 2 (Basic Principles), applicable to ALL activities:
 
-1. Marketing activities must be within the scope of fair trade law and accepted business customs
-2. Scientific/educational information delivery must NOT compromise HCP independence in device selection
+1. Marketing activities must be within fair trade law and accepted business customs
+2. Scientific/educational information delivery must NOT compromise HCP independence
 3. Activities must take place at appropriate venues matching their purpose
 4. All financial records must be accurate, transparent, and properly documented
 
-## References
-
-- `references/regulation.md` - Full text of the Fair Competition Code and Operating Standards (2017.11.10 base), organized by chapter and article
-- `references/activity-guide.md` - Activity-by-activity compliance checklist with monetary limits, frequency limits, procedural requirements, AND "Committee Guidance (2024 revision)" subsections containing the latest KMDIA Review Committee interpretive rules (2024.07.12 revision integrated inline)
-- `references/faq.md` - 70+ official FAQ items from KMDIA 2022 organized by article, PLUS "Violation Cases and Precedents" section with real warning actions and enforcement patterns (2023.05.02 cases integrated, duplicates with existing FAQ removed)
+---
 
 ## Disclaimer
 
