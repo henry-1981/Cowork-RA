@@ -165,13 +165,10 @@ ARIA는 4개 명령어와 6개 스킬을 조합해 규제 의사결정을 지원
 - 금액/빈도/절차(사전심의/사후신고)
 
 주요 출력:
-- 허용/불가/조건부/사안별 판단
+- GREEN/YELLOW/RED 신호등 안내로 사용자 판단 지원
 - 관련 조항, 위반사례, 필수 절차 체크리스트
 
-참조 문서:
-- [`aria/skills/compliance/references/regulation.md`](./skills/compliance/references/regulation.md)
-- [`aria/skills/compliance/references/activity-guide.md`](./skills/compliance/references/activity-guide.md)
-- [`aria/skills/compliance/references/faq.md`](./skills/compliance/references/faq.md)
+참조: `aria/knowledge/mfds/01-법령/04-공정경쟁규약/` (KD 직접 참조, `_index.yaml` 계층 구조)
 
 ## 입력 품질을 높이는 템플릿
 
