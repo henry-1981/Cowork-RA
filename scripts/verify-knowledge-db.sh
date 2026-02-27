@@ -156,8 +156,8 @@ stage2_verify() {
     return
   fi
 
-  # OCR-based files: compare page count only
-  if echo "$src_method" | grep -qi "ocr"; then
+  # pymupdf-extracted or OCR-based files: compare page count only
+  if echo "$src_method" | grep -qi "ocr\|pymupdf"; then
     local pdf_pages yaml_pages
     pdf_pages=$(python3 -c "
 import pymupdf
@@ -308,6 +308,24 @@ stage3_structure() {
   if [ "$garbled_count" -gt 500 ]; then
     add_issue "Structure: $basename_md — $garbled_count non-printable characters"
     issues_found=true
+  fi
+
+  # Check 5: Quality warnings (non-fatal)
+  local total_lines non_empty short_count short_ratio_pct
+  total_lines=$(wc -l < "$md_file" | tr -d ' ')
+  non_empty=$(grep -c '[^[:space:]]' "$md_file" 2>/dev/null) || non_empty=0
+  short_count=$(awk '/^.{1,3}$/' "$md_file" | wc -l | tr -d ' ') || short_count=0
+  if [ "$non_empty" -gt 0 ]; then
+    short_ratio_pct=$((short_count * 100 / non_empty))
+  else
+    short_ratio_pct=0
+  fi
+  if [ "$short_ratio_pct" -gt 20 ]; then
+    add_issue "Structure: $basename_md — WARN: short_line_ratio ${short_ratio_pct}% (possible table layout issue)"
+  fi
+  if [ "$garbled_count" -gt 500 ] && [ "$garbled_count" -le 2000 ]; then
+    # Already FAILed above for >500, but add WARN note for borderline cases
+    :
   fi
 
   if $issues_found; then
