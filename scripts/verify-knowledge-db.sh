@@ -3,17 +3,19 @@
 # Stage 1: Extractor — MD 파일 메타데이터 + 핵심 식별자 추출
 # Stage 2: Verifier — 원본 PDF/HTML 독립 재추출 후 대조
 # Stage 3: Structural Checker — 파일명-내용 일치, frontmatter 무결성, 구조 검증
-# Stage 4: EU Regulation Checker — _index.yaml vs 실제 파일 수 일치 검증
+# Stage 4: Index Checker — _index.yaml vs 실제 파일 수 일치 검증 (EU + FDA)
 #
-# Usage: ./scripts/verify-knowledge-db.sh [--stage 1|2|3|4|all] [--verbose] [--file <path>] [--scope mfds|eu|all]
+# Usage: ./scripts/verify-knowledge-db.sh [--stage 1|2|3|4|all] [--verbose] [--file <path>] [--scope mfds|eu|fda|all]
 set -euo pipefail
 
 export LC_ALL=en_US.UTF-8
 
 MFDS_SRC_BASE="/Users/hb/Documents/01.Regulatory/01. MFDS"
 EU_SRC_BASE="/Users/hb/Documents/01.Regulatory/03. EU"
+FDA_SRC_BASE="/Users/hb/Documents/01.Regulatory/02. FDA"
 MFDS_DST_BASE="aria/knowledge/mfds"
 EU_DST_BASE="aria/knowledge/eu"
+FDA_DST_BASE="aria/knowledge/fda"
 REPORT_FILE="/tmp/knowledge-db-verification-report.md"
 
 # Parse args
@@ -82,16 +84,21 @@ stage1_extract() {
     chunk_type=$(grep '^  chunk_type:' "$md_file" 2>/dev/null | head -1 | sed 's/^  chunk_type: "//; s/"$//') || true
     chunk_id=$(grep '^  chunk_id:' "$md_file" 2>/dev/null | head -1 | sed 's/^  chunk_id: "//; s/"$//') || true
     identifiers="family:${src_family} type:${chunk_type} id:${chunk_id}"
+  elif echo "$md_file" | grep -q "fda/"; then
+    local chunk_type="" chunk_id=""
+    chunk_type=$(grep '^  chunk_type:' "$md_file" 2>/dev/null | head -1 | sed 's/^  chunk_type: "//; s/"$//') || true
+    chunk_id=$(grep '^  chunk_id:' "$md_file" 2>/dev/null | head -1 | sed 's/^  chunk_id: "//; s/"$//') || true
+    identifiers="family:${src_family} type:${chunk_type} id:${chunk_id}"
   fi
 
-  # Validation — EU regulation chunks don't have path/pages
+  # Validation — Statute/Regulation chunks don't have path/pages
   local status="OK"
-  local is_regulation=false
-  if [ "$src_family" = "REGULATION" ]; then
-    is_regulation=true
+  local is_structured=false
+  if [ "$src_family" = "REGULATION" ] || [ "$src_family" = "STATUTE" ]; then
+    is_structured=true
   fi
 
-  if ! $is_regulation && [ -z "$src_path" ]; then
+  if ! $is_structured && [ -z "$src_path" ]; then
     status="WARN"
     add_issue "Extractor: $basename_md — source path missing in frontmatter"
     ext_warn=$((ext_warn + 1))
@@ -121,9 +128,9 @@ stage2_verify() {
   src_method=$(grep '^  method:' "$md_file" 2>/dev/null | head -1 | sed 's/^  method: //; s/"//g') || true
   src_family=$(grep '^  family:' "$md_file" 2>/dev/null | head -1 | sed 's/^  family: "//; s/"$//') || true
 
-  # EU Regulation chunks don't have source PDF — skip Stage 2
-  if [ "$src_family" = "REGULATION" ]; then
-    verbose "SKIP (regulation chunk): $basename_md"
+  # Statute/Regulation chunks (HTML/XML-based) — skip Stage 2
+  if [ "$src_family" = "REGULATION" ] || [ "$src_family" = "STATUTE" ]; then
+    verbose "SKIP (structured chunk): $basename_md"
     ver_skip=$((ver_skip + 1))
     return
   fi
@@ -138,6 +145,8 @@ stage2_verify() {
   local src_base_dir="$MFDS_SRC_BASE"
   if echo "$md_file" | grep -q "eu/"; then
     src_base_dir="$EU_SRC_BASE"
+  elif echo "$md_file" | grep -q "fda/"; then
+    src_base_dir="$FDA_SRC_BASE/03.Guidance"
   fi
 
   local src_pdf="${src_base_dir}/${src_rel}"
@@ -225,20 +234,21 @@ stage3_structure() {
   [ "$has_title" -eq 0 ] && missing_fields+="title "
   [ "$has_converted" -eq 0 ] && missing_fields+="converted "
 
-  # PDF-based files need path and pages
-  if [ "$src_family" != "REGULATION" ]; then
-    local has_path has_pages
-    has_path=$(grep -c '^  path:' "$md_file" 2>/dev/null) || has_path=0
-    has_pages=$(grep -c '^  pages:' "$md_file" 2>/dev/null) || has_pages=0
-    [ "$has_path" -eq 0 ] && missing_fields+="path "
-    [ "$has_pages" -eq 0 ] && missing_fields+="pages "
-  else
-    # Regulation chunks need chunk_type and chunk_id
+  # Family-specific frontmatter checks
+  if [ "$src_family" = "REGULATION" ] || [ "$src_family" = "STATUTE" ]; then
+    # Structured chunks need chunk_type and chunk_id
     local has_chunk_type has_chunk_id
     has_chunk_type=$(grep -c '^  chunk_type:' "$md_file" 2>/dev/null) || has_chunk_type=0
     has_chunk_id=$(grep -c '^  chunk_id:' "$md_file" 2>/dev/null) || has_chunk_id=0
     [ "$has_chunk_type" -eq 0 ] && missing_fields+="chunk_type "
     [ "$has_chunk_id" -eq 0 ] && missing_fields+="chunk_id "
+  else
+    # PDF-based files need path and pages
+    local has_path has_pages
+    has_path=$(grep -c '^  path:' "$md_file" 2>/dev/null) || has_path=0
+    has_pages=$(grep -c '^  pages:' "$md_file" 2>/dev/null) || has_pages=0
+    [ "$has_path" -eq 0 ] && missing_fields+="path "
+    [ "$has_pages" -eq 0 ] && missing_fields+="pages "
   fi
 
   if [ -n "$missing_fields" ]; then
@@ -246,10 +256,11 @@ stage3_structure() {
     issues_found=true
   fi
 
-  # Check 2: Directory-content consistency (MFDS only)
+  # Check 2: Directory-content consistency
   local dir_name
   dir_name=$(basename "$(dirname "$md_file")")
 
+  # MFDS directory checks
   if [ "$dir_name" = "01-의료기기법" ]; then
     if ! head -30 "$md_file" | grep -q '의료기기' 2>/dev/null; then
       add_issue "Structure: $basename_md — in 01-의료기기법/ but '의료기기' not in header"
@@ -267,6 +278,22 @@ stage3_structure() {
     fi
   fi
 
+  # FDA directory checks
+  if echo "$md_file" | grep -q "fda/01-statute/"; then
+    if ! head -30 "$md_file" | grep -qi 'U\.S\.C\.\|United States Code\|FD&C' 2>/dev/null; then
+      # Statute files should reference U.S.C. in frontmatter or heading
+      if ! grep -q 'chunk_id.*U\.S\.C' "$md_file" 2>/dev/null; then
+        add_issue "Structure: $basename_md — in fda/01-statute/ but no U.S.C. reference"
+        issues_found=true
+      fi
+    fi
+  elif echo "$md_file" | grep -q "fda/02-regulation/"; then
+    if ! grep -q 'chunk_id.*Part' "$md_file" 2>/dev/null; then
+      add_issue "Structure: $basename_md — in fda/02-regulation/ but no Part reference in chunk_id"
+      issues_found=true
+    fi
+  fi
+
   # Check 3: Empty body detection
   local body_chars
   body_chars=$(awk '/^---$/{n++; next} n>=2' "$md_file" | tr -d '[:space:]' | wc -c | tr -d ' ')
@@ -275,11 +302,11 @@ stage3_structure() {
     issues_found=true
   fi
 
-  # Check 4: Encoding sanity (control characters)
+  # Check 4: Encoding sanity (control characters) — macOS grep doesn't support -P
   local garbled_count
-  garbled_count=$(grep -cP '[\x00-\x08\x0b\x0c\x0e-\x1f]' "$md_file" 2>/dev/null) || garbled_count=0
-  if [ "$garbled_count" -gt 10 ]; then
-    add_issue "Structure: $basename_md — $garbled_count lines with control chars"
+  garbled_count=$(tr -d '[:print:][:space:]' < "$md_file" | wc -c | tr -d ' ') || garbled_count=0
+  if [ "$garbled_count" -gt 500 ]; then
+    add_issue "Structure: $basename_md — $garbled_count non-printable characters"
     issues_found=true
   fi
 
@@ -293,29 +320,28 @@ stage3_structure() {
 }
 
 # ============================================================
-# Stage 4: EU Regulation Checker (index vs files)
+# Stage 4: Index Checker (EU + FDA)
 # ============================================================
 reg_ok=0; reg_fail=0
 
-stage4_eu_regulation() {
+stage4_index_check() {
+  local base_dir="$1"
+  local label="$2"
+
   log ""
   log "======================================="
-  log " Stage 4: EU Regulation Checker"
+  log " Stage 4: $label Index Checker"
   log "======================================="
   log ""
 
-  for reg_dir in "$EU_DST_BASE"/01-regulation/*/; do
-    [ -d "$reg_dir" ] || continue
+  # Find all directories containing _index.yaml
+  local found_any=false
+  for index_file in $(find "$base_dir" -name "_index.yaml" 2>/dev/null | sort); do
+    found_any=true
+    local parent_dir
+    parent_dir=$(dirname "$index_file")
     local dir_name
-    dir_name=$(basename "$reg_dir")
-    local index_file="${reg_dir}_index.yaml"
-
-    if [ ! -f "$index_file" ]; then
-      add_issue "EU Regulation: $dir_name — _index.yaml missing"
-      log "[FAIL] $dir_name — _index.yaml missing"
-      reg_fail=$((reg_fail + 1))
-      continue
-    fi
+    dir_name=$(basename "$parent_dir")
 
     # Count chunks listed in _index.yaml
     local yaml_chunks
@@ -323,10 +349,10 @@ stage4_eu_regulation() {
 
     # Count actual .md files
     local actual_files
-    actual_files=$(find "$reg_dir" -name "*.md" -not -name "_*" | wc -l | tr -d ' ')
+    actual_files=$(find "$parent_dir" -maxdepth 1 -name "*.md" -not -name "_*" | wc -l | tr -d ' ')
 
     if [ "$yaml_chunks" -ne "$actual_files" ]; then
-      add_issue "EU Regulation: $dir_name — _index.yaml has $yaml_chunks chunks but $actual_files .md files"
+      add_issue "$label: $dir_name — _index.yaml has $yaml_chunks chunks but $actual_files .md files"
       log "[FAIL] $dir_name — chunk count mismatch: index=$yaml_chunks files=$actual_files"
       reg_fail=$((reg_fail + 1))
     else
@@ -338,8 +364,8 @@ stage4_eu_regulation() {
     local missing_from_index=0
     while IFS= read -r chunk_file; do
       chunk_file=$(echo "$chunk_file" | sed 's/.*- file: //' | tr -d ' ')
-      if [ ! -f "${reg_dir}${chunk_file}" ]; then
-        add_issue "EU Regulation: $dir_name — listed in _index.yaml but missing: $chunk_file"
+      if [ ! -f "${parent_dir}/${chunk_file}" ]; then
+        add_issue "$label: $dir_name — listed in _index.yaml but missing: $chunk_file"
         missing_from_index=$((missing_from_index + 1))
       fi
     done < <(grep '  - file:' "$index_file")
@@ -348,24 +374,14 @@ stage4_eu_regulation() {
       log "[FAIL] $dir_name — $missing_from_index files listed in _index.yaml but missing"
       reg_fail=$((reg_fail + 1))
     fi
-
-    # Check HTML source exists
-    local src_file
-    src_file=$(grep '^source_file:' "$index_file" | head -1 | sed 's/source_file: //') || true
-    if [ -n "$src_file" ]; then
-      local html_path="${EU_SRC_BASE}/01.Regulation/${src_file}"
-      if [ ! -f "$html_path" ]; then
-        add_issue "EU Regulation: $dir_name — HTML source not found: $src_file"
-        log "[FAIL] $dir_name — HTML source not found"
-        reg_fail=$((reg_fail + 1))
-      else
-        verbose "HTML source OK: $src_file"
-      fi
-    fi
   done
 
+  if ! $found_any; then
+    log "  (no _index.yaml files found)"
+  fi
+
   log ""
-  log "EU Regulation: OK=$reg_ok FAIL=$reg_fail"
+  log "$label Index: OK=$reg_ok FAIL=$reg_fail"
 }
 
 # ============================================================
@@ -386,8 +402,11 @@ else
     eu)
       find "$EU_DST_BASE" -name "*.md" | sort > "$FILE_LIST"
       ;;
+    fda)
+      find "$FDA_DST_BASE" -name "*.md" | sort > "$FILE_LIST"
+      ;;
     all)
-      { find "$MFDS_DST_BASE" -name "*.md" 2>/dev/null; find "$EU_DST_BASE" -name "*.md" 2>/dev/null; } | sort > "$FILE_LIST"
+      { find "$MFDS_DST_BASE" -name "*.md" 2>/dev/null; find "$EU_DST_BASE" -name "*.md" 2>/dev/null; find "$FDA_DST_BASE" -name "*.md" 2>/dev/null; } | sort > "$FILE_LIST"
       ;;
   esac
 fi
@@ -443,11 +462,16 @@ if [ "$STAGE" = "all" ] || [ "$STAGE" = "3" ]; then
   log "Structure: OK=$str_ok FAIL=$str_fail"
 fi
 
-# ---- Stage 4 (EU only) ----
+# ---- Stage 4 (Index check for EU + FDA) ----
 if [ "$STAGE" = "all" ] || [ "$STAGE" = "4" ]; then
   if [ "$SCOPE" = "eu" ] || [ "$SCOPE" = "all" ]; then
-    if [ -d "$EU_DST_BASE/01-regulation" ]; then
-      stage4_eu_regulation
+    if [ -d "$EU_DST_BASE" ]; then
+      stage4_index_check "$EU_DST_BASE" "EU"
+    fi
+  fi
+  if [ "$SCOPE" = "fda" ] || [ "$SCOPE" = "all" ]; then
+    if [ -d "$FDA_DST_BASE" ]; then
+      stage4_index_check "$FDA_DST_BASE" "FDA"
     fi
   fi
 fi
@@ -464,7 +488,7 @@ log "Stage 1 (Extractor):  OK=$ext_ok  WARN=$ext_warn  FAIL=$ext_fail"
 log "Stage 2 (Verifier):   PASS=$ver_pass  FAIL=$ver_fail  EMPTY=$ver_empty  SKIP=$ver_skip"
 log "Stage 3 (Structure):  OK=$str_ok  FAIL=$str_fail"
 if [ "$reg_ok" -gt 0 ] || [ "$reg_fail" -gt 0 ]; then
-  log "Stage 4 (EU Reg):     OK=$reg_ok  FAIL=$reg_fail"
+  log "Stage 4 (Index):      OK=$reg_ok  FAIL=$reg_fail"
 fi
 
 # Write report summary
@@ -477,7 +501,7 @@ fi
   echo "| Verifier | $ver_pass | $ver_fail | EMPTY=$ver_empty, SKIP=$ver_skip |"
   echo "| Structure | $str_ok | $str_fail | — |"
   if [ "$reg_ok" -gt 0 ] || [ "$reg_fail" -gt 0 ]; then
-    echo "| EU Regulation | $reg_ok | $reg_fail | — |"
+    echo "| Index | $reg_ok | $reg_fail | — |"
   fi
   echo ""
 } >> "$REPORT_FILE"

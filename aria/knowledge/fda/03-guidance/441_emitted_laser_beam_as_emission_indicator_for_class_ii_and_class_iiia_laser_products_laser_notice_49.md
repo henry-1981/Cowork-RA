@@ -1,0 +1,89 @@
+---
+source:
+  family: "GUIDANCE"
+  instrument: "FDA Guidance"
+  title: "Emitted Laser Beam as Emission Indicator for Class II and Class IIIa Laser Products (Laser Notice 49)"
+  docket: "FDA-2020-D-0957"
+  path: "441_Emitted_Laser_Beam_as_Emission_Indicator_for_Class_II_and_Class_IIIa_Laser_Products_Laser_Notice_49.pdf"
+  pages: 1
+  converted: 2026-02-27
+  method: tesseract-ocr
+---
+
+Wnu,
+
+%,
+
+——~  attin,
+¢
+
+“a <
+
+DEPARTMENT OF HEALTH & HUMAN SERVICES Public Health Service
+
+Food and Drug Administration
+2098 Gaither Road
+
+SEP 5 1996 Rockville MD 20850
+
+TO: All Manufacturers and Importers of
+Laser Products
+
+SUBJECT: Emitted Laser Beam as Emission Indicator for
+Class II and Class IIIa Laser Products.
+
+BACKGROUND :
+
+The Federal Performance Standard for Laser Products requires, (21 CFR
+1040.10(f) (5) (i)), that Class II and Class IIIa laser systems incorporate
+an emission indicator that provides a visible or audible signal during
+emission of accessible laser radiation in excess of the accessible emission
+limits of Class I. Paragraph 1040.10(f£) (5) (iv) requires that any visible
+signal used as an emission indicator be clearly visible through protective
+eyewear designated specifically for the wavelength (s) . -
+
+It is often necessary for the operator to observe the emitted beams of
+certain types of visible laser products in order for the products to
+perform their intended functions, i.e. to observe the path of the beam when
+the product is used for leveling, pointing or aiming. It is also believed
+to be very unlikely that laser safety eyewear would be used in conjunction
+with Class II or Class IIIa laser products.
+
+The Center for Devices and Radiological Health (CDRH) has made known that
+it intends to propose amendments to the standard under which neither beam
+attenuators nor emission indicators would be required for laser systems
+that are now classified in Class II or Class IIfa. This proposal would
+bring the CDRH standard into agreement with the standards of the
+International Electrotechnical Commission, IEC 825-1:1994, and the American
+National Standards Institute, ANSI Z136.1:1993, on this requirement. The
+administration of these requirements has been 'a burden to the industry and
+to the CDRH from which..little or no significant protection of the public
+safety results. ae .
+
+POLICY:
+
+The CDRH will not object to the use of the emitted laser beam as the
+indication of emission of visible laser radiation from Class II and
+Class IIIa laser products.
+
+Comments are invited and should be addressed to: Electronic Products
+Devices Branch, HFZ-342, Division of Enforcement III, Office of Compliance,
+Center for Devices and Radiological Health, 2098 Gaither Road, Rockville,
+Maryland 20850. : ;
+
+Sincerely yours,
+
+.
+
+an LL
+
+Lillian Gill.
+
+Director
+
+Office of Compliance
+
+Center for Devices and
+’ Radiological Health
+
+LASER NOTICE NO. 49

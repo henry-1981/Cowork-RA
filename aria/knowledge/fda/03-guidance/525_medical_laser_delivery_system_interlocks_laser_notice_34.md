@@ -1,0 +1,94 @@
+---
+source:
+  family: "GUIDANCE"
+  instrument: "FDA Guidance"
+  title: "Medical Laser Delivery System Interlocks (Laser Notice 34)"
+  docket: "FDA-2020-D-0957"
+  path: "525_Medical_Laser_Delivery_System_Interlocks_Laser_Notice_34.pdf"
+  pages: 2
+  converted: 2026-02-27
+  method: tesseract-ocr
+---
+
+_ HEALY
+4% 44,
+
+Rs
+
+SERVICES
+» Us,
+
+C. DEPARTMENT OF HEALTH & HUMAN SERVICES Public Health Service
+
+mina Food and Drug Administration —
+JAN 30 1985 Rockville MD 20857
+TO: ALL MANUFACTURERS AND POTENTIAL MANUFACTURERS OF MEDICAL,
+
+LASER PRODUCTS
+
+SUBJECT: Delivery System Interlocks for Medical Laser Products
+
+BACKGROUND: Medical laser products deliver laser radiation to patients
+through a wide variety of means. These include various sizes and lengths
+of fiber optic cables, bare fibers, and multi-mirrored articulating arms.
+These may in turn be attached to accessories such as hand pieces, operating
+microscopes, slitlamps, etc. The bare fibers may also be used by insertion
+into endoscopes for treatment internal to the body. Many circumstances
+during a surgical procedure may require that the physician exchange or
+request exchange of accessories or of the delivery system as a whole.
+Clearly, any such exchange involves removal of a part of the protective
+housing, since any accessory is protective housing when in place. A
+question has been raised concerning the need for a safety interlock to
+prevent access to radiation when such protective housing (beam delivery
+accessory) is removed during operation or maintenance.
+
+DISCUSSION: It has been the policy of CDRH to require safety interlocks at
+the laser console-delivery system connection point, if the delivery system
+as a whole may be removed during operation or maintenance. An example of
+such a situation is the fiber delivery system on a surgical Nd:YAG laser
+for which the fiber may often be exchanged during a procedure. In this
+case, safety is enhanced by the interlock since the point of laser
+radiation delivery and the point of disconnection may be physically
+separate, presenting the possibility of accidental exposure due to
+communication errors between the surgeon and attendants. However, the
+presence of safety interlocks for passive accessories attached to the
+distal end of the delivery system and immediate to the surgeon and the
+point of delivery would not significantly enhance safety, providing that
+the surgeon has control of emission by means of a foot switch or other
+control. There should then be little risk of accidental exposure. In
+addition, these accessories may be supplied by other than the laser
+manufacturers so that there is a question of the practicality of universal
+interlock devices.
+
+POLICY: CDRH will not object to the absence of a safety interlock in a
+user removable beam delivery accessory attached to the distal end of its
+delivery system provided the laser product incorporates a means to allow
+the user to positively control and terminate laser radiation emission from
+a point in close proximity to such accessory.
+
+LASER NOTICE NO. 34
+
+Page 2
+
+INVITATION TO COMMENT: We encourage submission of comments on this policy
+from manufacturers and users of medical laser products. In the meantime,
+we also encourage the use of additional safety mechanisms for all laser
+accessories, including the use of "smart" accessories which can disable the
+laser if detached or if a new calibration of the delivered output is
+
+necessary in order to camply with the requirements of 21 CFR 1040.11(a)(1)
+and (2).
+
+Sincerely yours,
+
+\
+‘
+
+“4 pth ‘ ae
+
+\ “-
+
+James S. Benson
+Deputy Director
+Center for Devices
+and Radiological Health

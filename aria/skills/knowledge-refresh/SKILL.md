@@ -9,7 +9,7 @@ allowed-tools:
   - Bash
 user-invocable: true
 metadata:
-  version: "0.2.3"
+  version: "0.2.4"
   category: "maintenance"
   status: "active"
   updated: "2026-02-26"
@@ -34,8 +34,12 @@ ARIA Knowledge DB의 규제 데이터를 월간 주기로 갱신한다. 각 know
 각 knowledge 파일의 YAML frontmatter에서 `next_review` 날짜를 확인한다:
 
 ```
-# Legacy (FDA — 원문 DB 전환 전까지 유지)
-knowledge/regulations/fda-framework.md
+# FDA 원문 DB (HTML/XML/PDF → MD 변환본)
+knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/
+knowledge/fda/02-regulation/21cfr-subchapter-h/
+knowledge/fda/03-guidance/
+
+# Legacy (보존만, 참조 제거됨)
 knowledge/shared/samd-classification.md
 knowledge/shared/combination-products.md
 
@@ -109,7 +113,7 @@ knowledge_base_date: "[current year-month]"
 
 | File | Status | Changes | Sources |
 |------|--------|---------|---------|
-| fda-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
+| fda/ (statute+regulation+guidance) | UPDATED / NO CHANGE | [summary] | [source list] |
 | eu-mdr-framework.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | samd-classification.md | UPDATED / NO CHANGE | [summary] | [source list] |
 | combination-products.md | UPDATED / NO CHANGE | [summary] | [source list] |

@@ -47,17 +47,20 @@
 - `02-mdcg/` — MDCG 가이던스 21개 카테고리 (135 파일)
 - `03-meddev/` — MEDDEV 레거시 가이던스 (4 파일)
 
+**FDA** — `aria/knowledge/fda/` (648 파일, HTML/XML/PDF → MD):
+- `01-statute/fdc-act-title21-chap9-subchapV/` — FD&C Act (117 sections + _index.yaml)
+- `02-regulation/21cfr-subchapter-h/` — 21 CFR Parts 800-898 (35 parts + _index.yaml)
+- `03-guidance/` — FDA Guidance Documents (494 파일, tesseract OCR 폴백 포함)
+
 **원칙**: 원문을 그대로 markdown으로 변환. 요약/재구성/선택적 추출 금지.
 
-### 레거시 참조 (Secondary — 전환 예정)
+### 레거시 참조 (Secondary — 보존만)
 
 `aria/knowledge/` 디렉토리의 기존 파일은 레거시로 보존 중:
-- FDA: `knowledge/regulations/fda-framework.md` (원문 DB 미구축)
 - SaMD: `knowledge/shared/samd-classification.md`
 
-> MFDS/EU 레거시 (`mfds-framework.md`, `mfds-digital-classification.md`, `eu-mdr-framework.md`)는 스킬 참조에서 제거됨.
+> 모든 레거시 (`fda-framework.md`, `mfds-framework.md`, `mfds-digital-classification.md`, `eu-mdr-framework.md`)는 스킬 참조에서 제거됨.
 > 운영 규칙은 modules/에 인라인 보강 완료. 레거시 파일은 보존만 하고 참조하지 않음.
-> FDA 레거시는 원문 DB 전환 전까지 active 참조로 유지.
 
 ## 규칙
 - base knowledge로만 규제 질문에 답하지 않는다

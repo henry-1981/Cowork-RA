@@ -1,0 +1,83 @@
+---
+source:
+  family: "GUIDANCE"
+  instrument: "FDA Guidance"
+  title: "Clarification of Compliance Requirements for Certain Manufacturers Who Incorporate Certified Class I Laser Products into Their Products (Laser Notice 42)"
+  docket: "FDA-2020-D-0957"
+  path: "501_Clarification_of_Compliance_Requirements_for_Certain_Manufacturers_Who_Incorporate_Certified_Class_I_Laser_Products_into_Their_Products_Laser_Notice_42.pdf"
+  pages: 1
+  converted: 2026-02-27
+  method: tesseract-ocr
+---
+
+JERVIC
+senvices
+Sy
+
+%,
+
+« MEALTH,
+i) 4,
+
+C. DEPARTMENT OF HEALTH & HUMAN SERVICES Public Health Service
+
+%
+“na
+hae
+vata
+
+Food and Drug Administration
+1390 Piccard Drive
+Rockville, MD 20850
+
+DEC 18 (980
+TO: ALL MANUFACTURERS AND POTENTIAL MANUFACTURERS OF LASER PRODUCTS
+SUBJECT: Clarification of Compliance Requirements for Certain Manufacturers
+
+Who Incorporate Certified Class I Laser Products into Their Products
+
+BACKGROUND:
+
+Numerous questions have arisen regarding the applicability of 21 CFR 1040.10(i),
+Modification of a Certified Product, in those situations in which a firm
+purchases a certified Class I laser product and incorporates it into another
+product for sale. Examples of this practice include certified Class 1 optical
+disc drive units incorporated into computers, compact disc players installed in
+home entertainment centers, and compact disc players installed in automobiles.
+
+POLICY:
+
+The Center for Devices and Radiological Health (CDRH) will consider firms
+incorporating certified Class I laser products into another product to be
+distributors of laser products certified and reported by other manufacturers
+provided the following conditions are met:
+
+1. No modification of performance or intended use of the certified
+product is made and incorporation of the certified laser product
+results only in concealment of the original manufacturer’s
+certification and identification labels required by Part 1010; and
+
+2. The labeling requirements of 21 CFR 1010 and 1040.10(g) for the
+Class I laser product would be met when the certified product is
+removed from the product into which it had been incorporated; and
+
+3. The labeling requirements of 21 CFR 1040.10(g) for the Class I laser
+product would be met in any service configuration of the certified
+laser product, even when that product could be serviced without
+removal from the incorporating product; and
+
+4. The laser safety information provided by the certifying manufacturer
+is distributed with the final product.
+
+Distributors of laser products must only comply with the recordkeeping
+requirements of Part 1002. Distributors need not submit initial and annual
+reports described in Part 1002 nor apply new certification and identification
+labels to the outside of the final product.
+
+Edwin A. Miller, Director
+Division of Standards Enforcement
+
+Office of Compliance and Surveillance
+Center for Devices and Radiological Heaith
+
+Laser Notice No. 42

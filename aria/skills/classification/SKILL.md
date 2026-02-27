@@ -7,7 +7,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.4"
+  version: "0.3.5"
   category: "domain"
   status: "active"
   updated: "2026-02-25"
@@ -125,7 +125,9 @@ Summary: Classes 1-4. Digital devices: 4-Gate → Risk Matrix. Non-digital: 품�
 **Level 2:** 관련 jurisdiction의 Knowledge DB + 해당 modules/ 로드.
 
 Knowledge DB references (Level 2+, 해당 jurisdiction만):
-- FDA: `../../knowledge/regulations/fda-framework.md`
+- FDA Statute: `../../knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/` (FD&C Act sections)
+- FDA Regulation: `../../knowledge/fda/02-regulation/21cfr-subchapter-h/` (21 CFR Parts 800-898)
+- FDA Guidance: `../../knowledge/fda/03-guidance/` (494 guidance documents)
 - EU MDR: `../../knowledge/eu/01-regulation/mdr-2017-745/`
 - EU IVDR: `../../knowledge/eu/01-regulation/ivdr-2017-746/`
 - EU MDCG: `../../knowledge/eu/02-mdcg/`

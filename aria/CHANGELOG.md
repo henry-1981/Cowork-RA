@@ -5,6 +5,31 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.6] - 2026-02-27
+
+### Added
+- `aria/knowledge/fda/` — FDA 원문 Knowledge DB 648파일 구축
+  - `01-statute/fdc-act-title21-chap9-subchapV/` — FD&C Act (117 sections + _index.yaml)
+  - `02-regulation/21cfr-subchapter-h/` — 21 CFR Parts 800-898 (35 parts incl. Part 820 QSR + QMSR variant + _index.yaml)
+  - `03-guidance/` — 494 FDA guidance documents (pdftotext + tesseract OCR 폴백)
+- `scripts/convert-fda-uscode-to-md.py` — FD&C Act HTML → Section 단위 MD 변환
+- `scripts/convert-fda-cfr-xml-to-md.py` — 21 CFR XML → Part 단위 MD 변환
+- `scripts/convert-fda-guidance-pdfs-to-md.sh` — FDA Guidance PDF → MD (OCR 폴백 포함)
+- `verify-knowledge-db.sh` — FDA scope 추가 (`--scope fda`), Stage 1-4 전수 검증
+
+### Changed
+- 스킬 Knowledge 참조를 FDA 원문 DB 경로로 갱신 (determination, classification, pathway, knowledge-refresh)
+- `fda-framework.md` 레거시 참조 제거 (파일 보존, 스킬 참조에서만 제거)
+
+### Fixed
+- FDA Guidance 33건 이미지 PDF — tesseract OCR 폴백으로 콘텐츠 추출 (기존 빈 파일 → 정상)
+
+### Skill Versions
+- determination: 0.3.4 → 0.3.5
+- classification: 0.3.4 → 0.3.5
+- pathway: 0.3.2 → 0.3.3
+- knowledge-refresh: 0.2.3 → 0.2.4
+
 ## [0.3.5] - 2026-02-27
 
 ### Added
