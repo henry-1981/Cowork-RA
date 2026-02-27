@@ -155,34 +155,43 @@ def reextract_file(md_path, source_base, mode="auto", dry_run=False):
     if not src_path_rel:
         return None, "no source path in frontmatter", None
 
-    # Find source PDF
-    src_pdf = source_base / src_path_rel
-    if not src_pdf.exists():
-        return None, f"source PDF not found: {src_pdf}", None
+    # Handle multi-file sources (path is directory + files list)
+    src_files = source.get("files", [])
+    src_path = source_base / src_path_rel
 
-    if dry_run:
-        return True, f"would re-extract: {mode}", None
+    if src_files and src_path.is_dir():
+        # Multi-file source: concatenate all PDFs
+        pdf_paths = [src_path / f for f in src_files]
+        missing = [p for p in pdf_paths if not p.exists()]
+        if missing:
+            return None, f"missing PDFs: {[str(m) for m in missing]}", None
+        if dry_run:
+            return True, f"would re-extract (multi-file, {len(pdf_paths)} PDFs): {mode}", None
+        docs = [pymupdf.open(str(p)) for p in pdf_paths]
+    elif src_path.is_file():
+        if dry_run:
+            return True, f"would re-extract: {mode}", None
+        docs = [pymupdf.open(str(src_path))]
+    else:
+        return None, f"source not found: {src_path}", None
 
-    # Open PDF
-    doc = pymupdf.open(str(src_pdf))
-
-    # Detect mode if auto
+    # Detect mode if auto (check first page of first doc)
     if mode == "auto":
-        # Check first page for text
-        first_text = doc[0].get_text("text").strip()
+        first_text = docs[0][0].get_text("text").strip()
         if len(first_text) < 50:
             mode = "ocr"
         else:
             mode = "table"
 
-    # Extract all pages
+    # Extract all pages from all docs
     new_parts = []
-    for page in doc:
-        if mode == "ocr":
-            new_parts.append(extract_page_ocr(page))
-        else:
-            new_parts.append(extract_page_with_tables(page))
-    doc.close()
+    for doc in docs:
+        for page in doc:
+            if mode == "ocr":
+                new_parts.append(extract_page_ocr(page))
+            else:
+                new_parts.append(extract_page_with_tables(page))
+        doc.close()
 
     new_body = "\n\n".join(new_parts)
 
@@ -201,6 +210,18 @@ def reextract_file(md_path, source_base, mode="auto", dry_run=False):
     return True, f"{old_method} → {new_method}", new_body
 
 
+def resolve_source_base(md_path, source_base=None, source_map=None):
+    """Resolve the source base directory for a given MD file path."""
+    if source_map:
+        md_str = str(md_path)
+        for prefix, base in source_map.items():
+            if md_str.startswith(prefix):
+                return Path(base)
+    if source_base:
+        return Path(source_base)
+    return None
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Re-extract Knowledge DB files with pymupdf"
@@ -217,14 +238,35 @@ def main():
         "--mode", choices=["auto", "table", "ocr"], default="auto"
     )
     parser.add_argument(
-        "--source-base", required=True, help="Base directory for source PDFs"
+        "--source-base", help="Base directory for source PDFs (single jurisdiction)"
+    )
+    parser.add_argument(
+        "--source-map",
+        nargs="+",
+        help="Jurisdiction mappings: prefix=base_dir (e.g. aria/knowledge/fda/=/path/to/fda)",
+    )
+    parser.add_argument(
+        "--exclude-methods",
+        nargs="+",
+        default=[],
+        help="Skip files with these extraction methods",
     )
     parser.add_argument(
         "--dry-run", action="store_true", help="Report only, don't modify files"
     )
     args = parser.parse_args()
 
-    source_base = Path(args.source_base)
+    # Parse source map
+    source_map = {}
+    if args.source_map:
+        for mapping in args.source_map:
+            prefix, base = mapping.split("=", 1)
+            source_map[prefix] = base
+
+    if not args.source_base and not source_map:
+        print("ERROR: --source-base or --source-map required")
+        sys.exit(1)
+
     targets = []
 
     if args.files:
@@ -235,6 +277,8 @@ def main():
         with open(args.csv) as f:
             for row in csv_mod.DictReader(f):
                 if int(row["score"]) < args.score_below:
+                    if args.exclude_methods and row["method"] in args.exclude_methods:
+                        continue
                     targets.append(Path(row["file"]))
 
     if not targets:
@@ -249,8 +293,14 @@ def main():
 
     success = 0
     failed = 0
+    skipped = 0
     for md_path in targets:
-        ok, info, _ = reextract_file(md_path, source_base, args.mode, args.dry_run)
+        base = resolve_source_base(md_path, args.source_base, source_map)
+        if not base:
+            print(f"  [SKIP] {md_path.name}: no source base mapped")
+            skipped += 1
+            continue
+        ok, info, _ = reextract_file(md_path, base, args.mode, args.dry_run)
         status = "OK" if ok else "FAIL"
         print(f"  [{status}] {md_path.name}: {info}")
         if ok:
@@ -258,7 +308,7 @@ def main():
         else:
             failed += 1
 
-    print(f"\nDone: {success} success, {failed} failed")
+    print(f"\nDone: {success} success, {failed} failed, {skipped} skipped")
 
 
 if __name__ == "__main__":
