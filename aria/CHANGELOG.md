@@ -5,6 +5,26 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.7] - 2026-02-27
+
+### Added
+- `scripts/audit-knowledge-quality.py` — Knowledge DB 전수 품질 감사 스크립트 (파일별 가독성 점수)
+- `scripts/reextract-with-pymupdf.py` — pymupdf 기반 재추출 스크립트 (테이블 감지 + OCR)
+
+### Fixed
+- Knowledge DB 271개 파일 pymupdf 기반 재추출로 품질 개선 (Degraded 345→256건)
+  - FDA 213개: pdftotext/tesseract-ocr → pymupdf-table/pymupdf-ocr
+  - EU 44개: pdftotext → pymupdf-table
+  - MFDS 14개: pdftotext/ocrmypdf → pymupdf-table/pymupdf-ocr
+- 공정경쟁규약: 4PDF 합본 → 4개 개별 MD로 분리 (테이블 가독성 개선)
+
+### Removed
+- 사용적합성 질의응답집 삭제 (OCR 품질 한계, 비핵심 문서)
+
+### Changed
+- `verify-knowledge-db.sh` Stage 2: pymupdf method 인식 추가
+- `verify-knowledge-db.sh` Stage 3: short_line_ratio 품질 경고 추가
+
 ## [0.3.6] - 2026-02-27
 
 ### Added
