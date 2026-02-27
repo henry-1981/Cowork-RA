@@ -1,1086 +1,1401 @@
 ---
 source:
-  family: "GUIDANCE"
-  instrument: "FDA Guidance"
-  title: "Considerations for Long-Term Clinical Neurodevelopmental Safety Studies in Neonatal Product Development:  Guidance for Industry"
-  docket: "FDA-2022-D-0112"
-  path: "027_Considerations_for_Long-Term_Clinical_Neurodevelopmental_Safety_Studies_in_Neonatal_Product_Development_Guidance_for_Industry.pdf"
-  pages: 15
   converted: 2026-02-27
-  method: pdftotext
+  docket: FDA-2022-D-0112
+  family: GUIDANCE
+  instrument: FDA Guidance
+  method: pymupdf-table
+  pages: 15
+  path: 027_Considerations_for_Long-Term_Clinical_Neurodevelopmental_Safety_Studies_in_Neonatal_Product_Development_Guidance_for_Industry.pdf
+  title: 'Considerations for Long-Term Clinical Neurodevelopmental Safety Studies
+    in Neonatal Product Development:  Guidance for Industry'
 ---
 
-Considerations for
-Long-Term Clinical
-Neurodevelopmental
-Safety Studies in
-Neonatal Product
-Development
-Guidance for Industry
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Considerations for 
+Long-Term Clinical 
+Neurodevelopmental 
+Safety Studies in 
+Neonatal Product 
+Development 
+Guidance for Industry 
+ 
+U.S. Department of Health and Human Services 
+Food and Drug Administration 
+Office of Pediatric Therapeutics (OPT)  
+Center for Drug Evaluation and Research (CDER) 
+Center for Biologics Evaluation and Research (CBER)  
+Center for Devices and Radiological Health (CDRH) 
+ 
+October 2024 
+Clinical/Medical 
 
-U.S. Department of Health and Human Services
-Food and Drug Administration
-Office of Pediatric Therapeutics (OPT)
-Center for Drug Evaluation and Research (CDER)
-Center for Biologics Evaluation and Research (CBER)
-Center for Devices and Radiological Health (CDRH)
-October 2024
-Clinical/Medical
 
-Considerations for
-Long-Term Clinical
-Neurodevelopmental
-Safety Studies in
-Neonatal Product
-Development
-Guidance for Industry
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Considerations for 
+Long-Term Clinical 
+Neurodevelopmental 
+Safety Studies in 
+Neonatal Product 
+Development 
+Guidance for Industry 
 
-Additional copies are available from:
-Office of Pediatric Therapeutics,
-Office of Clinical Policy and Programs,
-Office of the Commissioner
-Food and Drug Administration
-10903 New Hampshire Avenue
-Silver Spring, MD 20993
-Phone: (240) 402-2865
-and/or
-Office of Communications, Division of Drug Information
-Center for Drug Evaluation and Research
-Food and Drug Administration
-10001 New Hampshire Ave., Hillandale Bldg., 4th Floor
-Silver Spring, MD 20993-0002
-Phone: 855-543-3784 or 301-796-3400; Fax: 301-431-6353
-Email: druginfo@fda.hhs.gov
 
-https://www.fda.gov/drugs/guidance-compliance-regulatory-information/guidances-drugs
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+     
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+Additional copies are available from: 
+Office of Pediatric Therapeutics, 
+Office of Clinical Policy and Programs, 
+Office of the Commissioner 
+Food and Drug Administration 
+10903 New Hampshire Avenue 
+Silver Spring, MD 20993 
+Phone: (240) 402-2865 
+and/or 
+Office of Communications, Division of Drug Information 
+Center for Drug Evaluation and Research 
+Food and Drug Administration 
+10001 New Hampshire Ave., Hillandale Bldg., 4th Floor 
+Silver Spring, MD 20993-0002 
+Phone: 855-543-3784 or 301-796-3400; Fax: 301-431-6353 
+Email: druginfo@fda.hhs.gov 
+https://www.fda.gov/drugs/guidance-compliance-regulatory-information/guidances-drugs 
+and/or 
+Office of Communication, Outreach and Development 
+Center for Biologics Evaluation and Research 
+Food and Drug Administration 
+10903 New Hampshire Ave., Bldg. 71, Room 3128 
+Silver Spring, MD 20993-0002 
+Phone: 800-835-4709 or 240-402-8010 
+Email: ocod@fda.hhs.gov 
+https://www.fda.gov/vaccines-blood-biologics/guidance-compliance-regulatory-information-biologics/biologics-guidances 
+and/or 
+Office of Policy 
+Center for Devices and Radiological Health 
+Food and Drug Administration 
+10903 New Hampshire Ave., Bldg. 66, Room 5431 
+Silver Spring, MD 20993-0002 
+Email: CDRH-Guidance@fda.hhs.gov 
+https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/guidance-documents-medical-devices­
+and-radiation-emitting-products 
+U.S. Department of Health and Human Services 
+Food and Drug Administration 
+Office of Pediatric Therapeutics (OPT)  
+Center for Drug Evaluation and Research (CDER) 
+Center for Biologics Evaluation and Research (CBER)  
+Center for Devices and Radiological Health (CDRH)   
+October 2024 
+Clinical/Medical 
 
-and/or
-Office of Communication, Outreach and Development
-Center for Biologics Evaluation and Research
-Food and Drug Administration
-10903 New Hampshire Ave., Bldg. 71, Room 3128
-Silver Spring, MD 20993-0002
-Phone: 800-835-4709 or 240-402-8010
-Email: ocod@fda.hhs.gov
 
-https://www.fda.gov/vaccines-blood-biologics/guidance-compliance-regulatory-information-biologics/biologics-guidances
+ 
+Contains Nonbinding Recommendations 
+ 
+TABLE OF CONTENTS 
+ 
+ 
+I. 
+INTRODUCTION............................................................................................................. 1 
+II. 
+BACKGROUND ............................................................................................................... 2 
+III. 
+NEURODEVELOPMENTAL FOLLOW-UP FOR PRODUCT DEVELOPMENT 
+PROGRAMS THAT INCLUDE NEONATES .......................................................................... 3 
+A. 
+Determining the Need for Long-term Neurodevelopmental Safety Evaluations ..................... 3 
+1. General Considerations ................................................................................................................... 3 
+2. Patient and Population-specific Considerations ............................................................................. 4 
+3. Product-specific Considerations ...................................................................................................... 4 
+B. 
+Factors to Consider When Developing a Plan to Evaluate Long-term Neurodevelopmental 
+Safety ....................................................................................................................................................... 5 
+1. General Considerations ................................................................................................................... 6 
+2. Patient/Population-specific Considerations .................................................................................... 7 
+3. Product-specific Considerations ...................................................................................................... 8 
+C. 
+What to Measure, When and For How Long? ............................................................................ 8 
+1. Timing of Safety Evaluations ........................................................................................................... 8 
+2. Key Characteristics of Measurement Tools ..................................................................................... 9 
+3. Domains of Assessment .................................................................................................................. 10 
+4. Relevant Covariates ....................................................................................................................... 10 
+5. Adjunctive Assessments (i.e., Biomarkers of Neurodevelopmental Outcome) ............................... 10 
+ 
+ 
+i 
 
-and/or
-Office of Policy
-Center for Devices and Radiological Health
-Food and Drug Administration
-10903 New Hampshire Ave., Bldg. 66, Room 5431
-Silver Spring, MD 20993-0002
-Email: CDRH-Guidance@fda.hhs.gov
 
-https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/guidance-documents-medical-devicesand-radiation-emitting-products
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+1 
+Considerations for Long-Term Clinical Neurodevelopmental Safety 
+2 
+Studies in Neonatal Product Development: Guidance for Industry1  
+3 
+ 
+4 
+ 
+5 
+This guidance represents the current thinking of the Food and Drug Administration (FDA or Agency) on 
+6 
+this topic.  It does not establish any rights for any person and is not binding on FDA or the public.  You 
+7 
+can use an alternative approach if it satisfies the requirements of the applicable statutes and regulations.  
+8 
+To discuss an alternative approach, contact the FDA office responsible for this guidance as listed on the 
+9 
+title page.   
+10 
+ 
+11 
+ 
+12 
+ 
+13 
+ 
+14 
+I. 
+INTRODUCTION  
+15 
+ 
+16 
+The purpose of this guidance is to provide a framework for considering whether and what type of 
+17 
+long-term neurologic, sensory and developmental evaluations could be useful to support a 
+18 
+determination of safety of a “medical product” (i.e., drug, biological product, or device) for use 
+19 
+in neonates2, and if so, which domains of neurodevelopment may be most applicable. 
+20 
+ 
+21 
+This guidance will not specifically address effectiveness, safety or benefit/risk assessments for 
+22 
+products primarily intended to improve neurologic outcomes, e.g., neuroprotective agents. This 
+23 
+guidance is focused on long-term evaluations of neurodevelopmental safety. Although 
+24 
+assessments of specific toxicities to other tissues and organs may also be warranted in neonatal 
+25 
+medical product development, the approach to those assessments is outside the scope of this 
+26 
+guidance. 
+27 
+ 
+28 
+Pertinent information on planning clinical pharmacology studies in neonates3 and pediatric 
+29 
+patients4 can be found in existing guidance documents.5  This guidance does not focus on 
+30 
+nonclinical safety studies to support clinical studies in neonates, nor does it address clinical study 
+ 
+1  This guidance has been prepared by the Food and Drug Administration: Office of Pediatric Therapeutics in the 
+Office of the Commissioner; the Division of Pediatric and Maternal Health, the Division of Antivirals, the Office of 
+Surveillance and Epidemiology, and the Office of Neuroscience in the Center for Drug Evaluation and Research; the 
+Office of Vaccines Research and Review in the Center for Biologics Evaluation and Review; and the Center for 
+Devices and Radiological Health.  
+2  The neonatal period is defined in the Addendum to ICH E11: Clinical Investigation of Medicinal Products in the 
+Pediatric Population E11 (R1) (2017) as including term, post-term, and preterm newborn infants. The neonatal 
+period for term and post-term infants is the day of birth plus 27 days. For preterm infants, the neonatal period is 
+defined as the day of birth through the expected age of delivery plus 27 days. These same definitions will apply for 
+purposes of this guidance. 
+3  See the FDA Guidance for Industry, General Clinical Pharmacology Considerations for Neonatal Studies for 
+Drugs and Biological Products; July 2022. 
+4  See the FDA Draft Guidance for Industry, General Clinical Pharmacology Considerations for Pediatric Studies of 
+Drugs, Including Biological Products; September 2022. When finalized, this guidance will r epresent t he Agency’s 
+current thinking. 
+5  FDA updates guidances periodically. For the most recent version of a guidance, check the FDA guidance web page 
+at https://www.fda.gov/RegulatoryInformation/Guidances/default.htm. 
+1 
 
-U.S. Department of Health and Human Services
-Food and Drug Administration
-Office of Pediatric Therapeutics (OPT)
-Center for Drug Evaluation and Research (CDER)
-Center for Biologics Evaluation and Research (CBER)
-Center for Devices and Radiological Health (CDRH)
-October 2024
-Clinical/Medical
 
-Contains Nonbinding Recommendations
-TABLE OF CONTENTS
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Contains Nonbinding Recommendations 
+31 
+design in neonatology. This guidance also does not address neonatal or pediatric safety 
+32 
+assessments following studies conducted during pregnancy,6 nor gene therapies or similar 
+33 
+genomic medicine interventions.7 
+34 
+35 
+In general, FDA’s guidance documents do not establish legally enforceable responsibilities. 
+36 
+Instead, guidances describe the Agency’s current thinking on a topic and should be viewed only 
+37 
+as recommendations, unless specific regulatory or statutory requirements are cited.  The use of 
+38 
+the word should in Agency guidances means that something is suggested or recommended, but 
+39 
+not required. 
+40 
+41 
+42 
+II. 
+BACKGROUND 
+43 
+44 
+In 2012, the Best Pharmaceuticals for Children Act (BPCA) and the Pediatric Research Equity 
+45 
+Act (PREA) were made permanent under Title V of the Food and Drug Administration Safety 
+46 
+and Innovation Act (FDASIA).8 FDASIA contained several provisions to encourage medical 
+47 
+product development in neonates. 
+48 
+49 
+Treatment with medical products during the neonatal period coincides with a time of critical 
+50 
+growth and physiologic development. Short-term safety evaluations typical for adults or other 
+51 
+populations may fail to identify important adverse effects in the neonatal population, as latent 
+52 
+effects may follow early-life exposures. Historically, most medical products used to treat 
+53 
+neonates and young infants were not approved for use in this population for the relevant 
+54 
+indications, and thus, long-term effects were rarely systematically evaluated. 
+55 
+56 
+Clinical investigators and sponsors9 of neonatal studies should consider and assess potential 
+57 
+short-term and long-term effects of an investigational therapy, whether the therapy is novel or 
+58 
+previously developed for a different indication or population. Short-term clinical improvement, 
+59 
+such as that observed after high-dose corticosteroids for infants with bronchopulmonary 
+60 
+dysplasia, may be followed by unexpected long-term harm.10 While adjunctive neurological 
+61 
+assessments (e.g., neuroimaging, electroencephalography) may provide information on early 
+62 
+safety concerns, they cannot replace clinical assessments of long-term functional outcomes. 
+63 
+64 
+Although there is no universal definition of “long-term,” for the purpose of this guidance, the 
+65 
+time frame can be generally thought of as at least 2 years of age or at such time when relevant 
+66 
+clinical neurodevelopmental parameters can be reasonably assessed (refer to sections IIIB2a and 
+6 For additional information, see the FDA Draft Guidance for Industry, Pregnant Women: Scientific and Ethical 
+Considerations for Inclusion in Clinical Studies; April 2018. When finalized, this guidance will represent the 
+Agency’s current thinking. 
+7 See the FDA’s Guidance for Industry, Long Term Follow-up After Administration of Human Gene Therapy 
+Products; January 2020. 
+8 Title V Sec 501(a) of FDASIA can be found at https://www.congress.gov/112/plaws/publ144/PLAW­
+112publ144.pdf. 
+9 For the purposes of this guidance, “sponsor” refers to commercial sponsors and academic investigators who may 
+plan and carry out neonatal clinical studies. 
+10 Committee on Fetus and Newborn. Postnatal corticosteroids to prevent or treat bronchopulmonary dysplasia. 
+Pediatrics. 2010;126:800-808. 
+2 
 
-I.
 
-INTRODUCTION............................................................................................................. 1
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+67 
+IIIC1); the minimum duration of follow-up will depend on different population- and product-
+68 
+specific factors as discussed in this guidance. Prospectively designed long-term follow-up is 
+69 
+often important to understand medical product safety in neonates. 
+70 
+ 
+71 
+Neonates should have access to medical products adequately evaluated for safety, effectiveness, 
+72 
+and, when appropriate, dosing for that population. There are conditions unique to term or 
+73 
+preterm neonates, such as necrotizing enterocolitis and retinopathy of prematurity, that will not 
+74 
+have analogous development programs in older populations. As new medical products are 
+75 
+developed for these and other unique neonatal conditions, novel development programs and first-
+76 
+in-human studies may be initiated in neonates, and these development programs should also 
+77 
+demonstrate long-term neurologic, sensory, and developmental safety. Neonates should also be 
+78 
+enrolled in clinical studies for medical products and diagnostic tools initially developed for 
+79 
+indications in other populations that will be used for neonates. Inclusion of neonates in such 
+80 
+studies may be useful to establish dosing, safety, and efficacy or effectiveness, and these studies 
+81 
+may also warrant long-term safety evaluations. 
+82 
+ 
+83 
+III. 
+NEURODEVELOPMENTAL FOLLOW-UP FOR PRODUCT DEVELOPMENT 
+84 
+PROGRAMS THAT INCLUDE NEONATES 
+85 
+ 
+86 
+Long-term neurodevelopmental safety should be considered as part of neonatal product 
+87 
+development plans. Sponsors should communicate as early as possible with the relevant FDA 
+88 
+review division to reach alignment on an appropriate approach for long-term safety evaluations. 
+89 
+ 
+90 
+A. Determining the Need for Long-term Neurodevelopmental Safety Evaluations 
+91 
+Sponsors should assess whether a long-term neurodevelopmental safety evaluation 
+92 
+for neonates enrolled in clinical studies should be conducted. This assessment should 
+93 
+be initiated early in product development and should be reevaluated as new 
+94 
+information becomes available. 
+95 
+ 
+96 
+1. General Considerations 
+97 
+a. Central Nervous System (CNS) Exposure: Any route of administration may 
+98 
+result in a systemic exposure. The degree of systemic exposure, which should 
+99 
+be quantified in early pharmacokinetic or animal studies if possible, may 
+100 
+inform the need for long-term safety assessment. In general, higher levels of 
+101 
+systemic exposure may be associated with higher CNS exposure and potential 
+102 
+risk for long-term sequelae. The degree of CNS exposure may vary 
+103 
+independently of systemic exposure. 
+104 
+b. Timing of Exposure: The timing of exposure to a drug, biological product, or 
+105 
+device relative to a particularly vulnerable stage of organ and tissue 
+106 
+development may inform the need for and the type of long-term safety 
+107 
+assessment. 
+108 
+c. Duration of Exposure: Repeated dosing, prolonged exposure and medical 
+109 
+products with persistent effects may be associated with higher risk for long-
+110 
+term sequelae; however, long-term safety assessments may also be required 
+3 
 
-II.
 
-BACKGROUND ............................................................................................................... 2
+ 
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+111 
+after single doses or short durations of investigational therapies, based on the 
+112 
+other considerations described in this guidance. 
+113 
+ 
+114 
+2. Patient and Population-specific Considerations 
+115 
+a. Neurodevelopmental vulnerability: While neuroplasticity and resilience may 
+116 
+impact tolerance to toxicity, the anticipated rates of developmental, 
+117 
+behavioral, and sensory impairments are generally inversely related to 
+118 
+gestational age and birth weight and differ significantly across various 
+119 
+congenital or acquired conditions. Sponsors should seek the most current data 
+120 
+to understand background rates of specific long-term neurodevelopmental 
+121 
+outcomes in the population of interest. 
+122 
+b. Disease state characteristics: The disease or pathophysiology of the condition 
+123 
+under study (e.g., metabolic processes or conditions associated with 
+124 
+compromised blood-brain barrier integrity or altered cerebral blood flow such 
+125 
+as meningitis, hypoxic-ischemic encephalopathy or perinatal arterial ischemic 
+126 
+stroke) may increase the risk for adverse neurodevelopmental outcomes. 
+127 
+Sponsors should address disease-specific vulnerabilities in the proposed 
+128 
+evaluation of neurodevelopmental safety. 
+129 
+ 
+130 
+3. Product-specific Considerations 
+131 
+a. Nonclinical toxicity: Nonclinical studies conducted to specifically evaluate the 
+132 
+potential adverse effects of an investigational medical product on the 
+133 
+developing CNS of neonates and young infants should include pre- and 
+134 
+postnatal development studies, and, if warranted, embryo-fetal development 
+135 
+and/or dedicated juvenile animal studies testing the investigational medical 
+136 
+product in very young animals at critical and comparable stages of brain 
+137 
+development.11   These studies can test both the intended effects of an 
+138 
+investigational product and also can identify unintended or off-target effects. 
+139 
+These data can and should be used to inform risk assessments for neonates 
+140 
+and young infants and can also inform the design of clinical studies (e.g., 
+141 
+inclusion of specific endpoints, identification of potential windows of 
+142 
+developmental vulnerability). However, because CNS development and 
+143 
+maturation are extremely complex, extrapolation of data regarding 
+144 
+development across species is challenging. Nonclinical studies generally 
+145 
+cannot test all potential neurological effects of a medical product, and the lack 
+146 
+of adverse effects in nonclinical studies alone does not necessarily exclude the 
+147 
+possibility of adverse effects in neonates. To date, the Agency has limited 
+148 
+experience with alternative assays to characterize neurodevelopmental 
+149 
+toxicity. However, the Agency fully supports the principles of the 3Rs 
+150 
+(replace/reduce/refine) for animal use testing when feasible and encourages 
+151 
+sponsors to consult with review divisions when considering non-animal 
+11  See the ICH Guidance for Industry, S11 Nonclinical Safety Testing in Support of Development of Pediatric 
+Pharmaceuticals; May 2021. 
+4 
 
-III.
-NEURODEVELOPMENTAL FOLLOW-UP FOR PRODUCT DEVELOPMENT
-PROGRAMS THAT INCLUDE NEONATES .......................................................................... 3
-A.
 
-Determining the Need for Long-term Neurodevelopmental Safety Evaluations ..................... 3
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+152 
+testing methods, including methods that attempt to characterize 
+153 
+neurodevelopmental toxicity. 
+154 
+b. Clinical pharmacology: The mechanism of action, target organ or tissue, 
+155 
+disposition and tissue distribution of the product, and/or accumulation of 
+156 
+metabolites (and ontogeny of these factors) may evoke concerns about long- 
+157 
+term neurodevelopmental safety. For example, drugs and biological products 
+158 
+thought to penetrate the CNS of neonates are likely to warrant long-term 
+159 
+safety assessment. Exposures may also be affected by developmental changes 
+160 
+in the activity of drug metabolizing enzymes, transporters, and the ontogeny 
+161 
+of renal function in the neonatal period.12  
+162 
+c. Clinical experience: Data from use of a medical product in other populations 
+163 
+may be incorporated into the discussion about potential toxicities and need for 
+164 
+follow-up after neonatal studies. Neurologic safety signals identified in older 
+165 
+pediatric and adult patients should be carefully evaluated in neonates. It is 
+166 
+important to note that the absence of a safety signal in older populations may 
+167 
+not preclude adverse effects in neonates. Novel medical products developed 
+168 
+for conditions that occur only in neonates may not have available safety data 
+169 
+from other populations and a comprehensive neurodevelopmental safety 
+170 
+evaluation may be useful in these situations (see section IIIC3). 
+171 
+d. Route of administration: The potential impact of method of product delivery 
+172 
+should be considered. For example, for products that require repeated 
+173 
+intramuscular or subcutaneous injections, the impact of pain on 
+174 
+neurodevelopment should be considered. 
+175 
+e. Product components: Both the active pharmaceutical ingredient and all 
+176 
+excipients (e.g., ethyl alcohol and benzyl alcohol) and impurities (e.g., heavy 
+177 
+metals and trace elements) should be considered when assessing the potential 
+178 
+of a drug to cause neurodevelopmental toxicity. For devices that directly or 
+179 
+indirectly contact human tissues, a biocompatibility evaluation should be 
+180 
+conducted to assess for the potential for adverse responses resulting from 
+181 
+contact of the component materials with the body.13  
+182 
+ 
+183 
+B. Factors to Consider When Developing a Plan to Evaluate Long-term 
+184 
+Neurodevelopmental Safety 
+185 
+If, after conducting the assessment described in section IIIA, a sponsor determines 
+186 
+that a long-term neurodevelopmental safety evaluation should be conducted, the 
+187 
+sponsor should justify and design such an evaluation based on sound scientific 
+188 
+rationale. A controlled study design is recommended, whenever feasible. Although a 
+189 
+single-arm study may be useful for collecting some types of safety information, the 
+190 
+absence of a concurrent control arm (placebo or active comparator) will generally 
+191 
+make clear interpretation of the results difficult, if not impossible. A control group 
+192 
+allows for easier discrimination of medical product-related patient outcomes from 
+ 
+12  See the FDA Guidance for Industry, General Clinical Pharmacology Considerations for Neonatal Studies for 
+Drugs and Biological Products; July 2022. 
+13  See the FDA Guidance for Industry and Food and Drug Administration Staff, Use of International Standard ISO 
+10993-1, “Biological e valuation of medical devices – Part 1: Evaluation and testing within a risk management 
+process”; Sept. 2020. 
+5 
 
-1. General Considerations ................................................................................................................... 3
-2. Patient and Population-specific Considerations ............................................................................. 4
-3. Product-specific Considerations ...................................................................................................... 4
-B. Factors to Consider When Developing a Plan to Evaluate Long-term Neurodevelopmental
-Safety ....................................................................................................................................................... 5
-1. General Considerations ................................................................................................................... 6
-2. Patient/Population-specific Considerations .................................................................................... 7
-3. Product-specific Considerations ...................................................................................................... 8
-C. What to Measure, When and For How Long? ............................................................................ 8
-1. Timing of Safety Evaluations ........................................................................................................... 8
-2. Key Characteristics of Measurement Tools ..................................................................................... 9
-3. Domains of Assessment .................................................................................................................. 10
-4. Relevant Covariates ....................................................................................................................... 10
-5. Adjunctive Assessments (i.e., Biomarkers of Neurodevelopmental Outcome) ............................... 10
 
-i
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+193 
+outcomes caused by other factors, including underlying disease and developmental 
+194 
+progression, especially if the natural history of the condition in the patient population 
+195 
+is not well-established. 
+196 
+ 
+197 
+1. 
+General Considerations 
+198 
+a. Standardization: Sponsors should ensure reliability of administration and 
+199 
+scoring of evaluations across sites and examiners, including consistency in the 
+200 
+study instruments used and the age at follow-up. 
+201 
+b. Community acceptance and inclusivity: Development of a long-term safety 
+202 
+study plan should include an assessment of family perceptions and early 
+203 
+identification of barriers to study participation, including potential mistrust. 
+204 
+Engagement of patient families and community leaders at the protocol 
+205 
+development stage may help promote participation of historically 
+206 
+underrepresented communities and improve overall study recruitment and 
+207 
+retention. 
+208 
+c. Multidisciplinary input: Sponsors may identify and address challenges and 
+209 
+opportunities in study development through engagement of key interested 
+210 
+parties. Interested parties may include, but are not limited to patient survivors, 
+211 
+parents, caregivers, health care providers, educators, community leaders, and 
+212 
+developmental specialists. These parties are instrumental in identifying 
+213 
+clinically meaningful outcomes and assessing the acceptability and feasibility 
+214 
+of the study design. 
+215 
+d. Patient recruitment and retention: Ideally, sponsors should obtain consent for 
+216 
+long-term follow-up evaluation during initial study enrollment. Although this 
+217 
+will not eliminate the risk of missing data, early recruitment will reinforce the 
+218 
+importance of the long-term safety evaluation. Loss of patients over time 
+219 
+threatens the integrity of long-term neurodevelopmental safety studies. There 
+220 
+should be appropriate plans in place to keep families engaged and to collect 
+221 
+relevant contact information (e.g., home and mobile phone numbers, email 
+222 
+addresses, other messaging modalities) as needed to encourage retention of 
+223 
+study participants and important data. Study participants may relocate during 
+224 
+the follow-up period and maintaining contact is an important means to reduce 
+225 
+the risk of missing patient information. 
+226 
+e. Patient burden: Sponsors developing long-term safety evaluations should 
+227 
+consider and mitigate barriers to follow-up study enrollment as well as 
+228 
+minimize the short-term and long-term burdens of study participation to the 
+229 
+subjects and their family. Sponsors may consider and propose a strategy for 
+230 
+integrating data from community-level services and providers involved in 
+231 
+routine neurodevelopmental evaluations and tracking (e.g., early intervention 
+232 
+and Child Find programs) and pediatric evaluations during usual care (see 
+233 
+maintaining data quality considerations below, Section B1c). Additional 
+234 
+strategies may include use of mobile technology for information collection 
+235 
+and transfer. 
+236 
+f. Data quality: While some information can be reasonably gathered through 
+237 
+evaluations in usual clinical practice, general developmental screening 
+238 
+performed during routine care is rarely a reliable substitute for a formal 
+6 
 
-Contains Nonbinding Recommendations
 
-Considerations for Long-Term Clinical Neurodevelopmental Safety
-Studies in Neonatal Product Development: Guidance for Industry1
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+239 
+diagnostic neurodevelopmental evaluation, when such an evaluation is 
+240 
+warranted. In addition, some neurodevelopmental evaluations require 
+241 
+specialist evaluation. A sponsor may be able to rely on certain objective 
+242 
+developmental measures with established reference standards (e.g., growth, 
+243 
+vision, and hearing screening) captured during routine care where the sponsor 
+244 
+can ensure they are collected reliably. 
+245 
+g. Plan for clinical referral as indicated: The protocol should include a plan for 
+246 
+clinical referral and support services if any developmental problems are 
+247 
+identified in the course of research-related follow-up. 
+248 
+ 
+249 
+2. 
+Patient/Population-specific Considerations 
+250 
+a. Timing and duration: For the evaluation of neurodevelopmental safety, 
+251 
+outcomes should be evaluated up to at least 2 years of age, adjusted for 
+252 
+prematurity,14  if appropriate. The duration and frequency of follow-up 
+253 
+assessments should be supported by scientific data and sound rationale. 
+254 
+Considerations may include the static or dynamic nature of the 
+255 
+neurodevelopmental outcome(s) being evaluated. The follow-up plan also 
+256 
+should consider the ages at which the outcomes of interest can be reasonably 
+257 
+measured. For example, some learning difficulties or neurologic disorders 
+258 
+may not present or be reasonably discernable with available assessment tools 
+259 
+until after 2 years adjusted age. 
+260 
+b. Related factors: Sponsors should consider how other factors that relate to and        
+261 
+affect neurodevelopmental outcomes may influence the interpretability of 
+262 
+study results and should collect relevant covariate data accordingly. 
+263 
+i. Comorbidities (e.g., prematurity, congenital heart disease) 
+264 
+ii. Socioeconomic factors (e.g., food insecurity, social stressors, parental 
+265 
+education level) 
+266 
+iii. Perinatal factors (e.g., substance use during pregnancy, depression) 
+267 
+iv. Regional differences in health care systems and accepted standards of 
+268 
+medical practice 
+269 
+v. Environmental factors (e.g., lead or chemical exposure) 
+270 
+vi. Intercurrent events (e.g., illness, injury, therapies [such as early 
+271 
+intervention], and other medications) 
+272 
+c. Developmental domains: In most cases, a general assessment of all the key 
+273 
+neurodevelopmental domains is recommended. (See Section C3, below). If 
+274 
+specific domains of vulnerability are known or suspected in the study 
+275 
+population based on product characteristics, then sponsors should identify the 
+276 
+existing validated, age-appropriate tools to carefully measure relevant 
+277 
+outcomes within those domains. 
+278 
+d. Feasibility: There may be population or study-specific issues that affect the 
+279 
+feasibility of planned long-term follow-up studies. Sponsors should assess 
+280 
+feasibility early in drug or device development and provide study plans for 
+ 
+14  Adjusted age, (also called “corrected age” or “post-menstrual age”) is defined as the chronological age reduced by 
+the number of weeks born before 40 weeks of gestation. Refs: AAP Committee on Fetus and Newborn. “Age 
+terminology during the perinatal period;” Pediatrics 2004;114(5):1362-4 and E11: Clinical Investigation of 
+Medicinal Products in the Pediatric Population; International Council for Harmonization, 2000. 
+7 
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
+
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+281 
+Agency review. This may include alternate strategies (e.g., patient registries, 
+282 
+observational studies) if needed. 
+283 
+ 
+284 
+3. 
+Product-specific Considerations 
+285 
+a. 
+Tissue specificity: Sponsors should determine whether the product has 
+286 
+effects on organ systems that may impact neurodevelopment. Medical 
+287 
+products may have direct and/or indirect effects on the developing CNS. 
+288 
+Understanding these effects can help determine not only the extent of 
+289 
+long- term follow-up but also the type of assessment needed. 
+290 
+b. 
+Ontogeny of therapeutic target: Sponsors should determine whether a 
+291 
+medical product’s target changes in distribution or function throughout 
+292 
+maturation. The extent of medical product exposure in relation to known 
+293 
+target tissue developmental changes should be considered when designing 
+294 
+the plan for neurodevelopmental safety evaluation. 
+295 
+ 
+296 
+C. What to Measure, When and For How Long? 
+297 
+The most useful type of neurodevelopmental safety evaluation will depend upon 
+298 
+whether it is determined (based on considerations discussed in sections IIIA. and IIIB. 
+299 
+above) that a comprehensive neurodevelopmental evaluation is appropriate and/or 
+300 
+whether there are specific developmental domains of concern that warrant targeted 
+301 
+evaluations (see section IIIC3). As sponsors are planning long-term 
+302 
+neurodevelopmental evaluations, they should consider what assessment tools to use, 
+303 
+at what time point(s), and for how long. Neurodevelopmental safety evaluations 
+304 
+should include validated tools, when available, to ensure rigor and should provide 
+305 
+broad-ranging assessments of neurologic function, including relevant clinical 
+306 
+outcome assessment (COA) tools. The protocol should specify whether assessments 
+307 
+are conducted as part of standard clinical care or for research-related purposes only.  
+308 
+For research-related interventions, the benefit-risk determination should be performed 
+309 
+to ensure that the procedure is ethically permissible.15   Note that general 
+310 
+developmental screening and formalized assessments of neurodevelopment are not 
+311 
+interchangeable. 
+312 
+ 
+313 
+1. 
+Timing of Safety Evaluations 
+314 
+In general, outcomes should be evaluated at a minimum of 2 years adjusted age. 
+315 
+Earlier and/or later evaluations also may be warranted. 
+316 
+a. Evaluations that can be reliably performed during the first 2 years (adjusted 
+317 
+age) of life and require longitudinal monitoring, including head growth, 
+318 
+hearing and vision testing, neurologic exam, and developmental milestones, 
+319 
+provide important information and may be appropriate. 
+320 
+b. Comprehensive neurodevelopmental outcomes should be evaluated at a 
+321 
+minimum at 2 years adjusted age. 
+322 
+c. Assessment of more subtle, but important cognitive, language, behavioral, and 
+323 
+other outcomes may require children to be followed until later in childhood. 
+ 
+15  See the FDA Draft Guidance for Industry, Sponsors, and IRBs, Ethical Considerations for Clinical Investigations 
+of Medical Products Involving Children; September 2022. When finalized, this guidance will represent the 
+Agency’s current thinking. 
+8 
+
+
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+324 
+Problems in these areas may not be clearly discernable or adequately assessed 
+325 
+in the ﬁrst 4–6 years of life. Depending on the specific domains of concern, 
+326 
+longer follow-up may be useful even if there are no neurodevelopmental 
+327 
+concerns observed at the initial 2-year assessment. 
+328 
+ 
+329 
+2. 
+Key Characteristics of Measurement Tools 
+330 
+Long-term safety evaluations should be based on well-defined and reliable COAs. 
+331 
+Specifically, COAs should assess clearly defined concepts of interest with 
+332 
+appropriate justification to support their use in neonatal long-term safety 
+333 
+evaluations.16   Assessments should include those that measure how a subject is 
+334 
+functioning in daily life. Key considerations relevant to long-term safety 
+335 
+assessment after neonatal studies include: 
+336 
+a. Minimizing participant burden and avoiding duplication can increase pediatric 
+337 
+patient testing compliance and reduce behavioral interference (e.g., refusal to 
+338 
+participate in testing). T
+ his approach can help avoid the confounding or 
+339 
+invalidation of test scores, and also can reduce missing data and increase the 
+340 
+feasibility for administration across large cohort studies. 
+341 
+b. Identifying and accounting for potential confounding factors that may 
+342 
+compromise the validity of an assessment and score interpretability is 
+343 
+important when devising a plan for analyzing test scores. For example, a 
+344 
+cognitive assessment that depends on patients having typical fine motor 
+345 
+functioning (e.g., a time-limited block design task) may yield unreliable 
+346 
+scores for children with fine motor impairments. 
+347 
+c. Carefully considering the type of score to utilize within neurodevelopmental 
+348 
+assessments is important, given that some COAs may generate several types 
+349 
+of scores (e.g., standardized norm-referenced scores, raw scores). S
+ electing 
+350 
+several types of scores from the same COA may be appropriate, especially for 
+351 
+patient populations that may be at the greatest risk of impairment. For 
+352 
+example, some scores (e.g., norm-referenced standardized scores) may 
+353 
+demonstrate floor effects in severely impaired children and ceiling effects in 
+354 
+children with developmentally advanced skills. 
+355 
+d. Selecting COAs that are methodologically sound with well-established 
+356 
+psychometric properties is important, particularly to ensure validity across 
+357 
+multicenter studies. 
+358 
+e. Ensuring that selected COAs have demonstrated reliability across the 
+359 
+demographic groups included in the study, including availability in languages 
+360 
+appropriate for global sites, is key to support generalizability of study results. 
+361 
+Consider, for example, that a language assessment developed for U.S. English 
+362 
+speakers may yield uninterpretable scores when used with patients at non-U.S. 
+363 
+English speaking sites. Selected COAs should be developed to assess term and 
+364 
+preterm infants (i.e., based on a large representative population). 
+365 
+ 
+ 
+16  See the Draft Guidance for Industry, Food and Drug Administration Staff and Other Stakeholders, Patient-focused 
+Drug Development: Selecting, Developing or Modifying Fit-for-Purpose Clinical Outcome Assessments; June 2022, 
+for further discussion of these characteristics. When finalized, this guidance will represent the Agency’s current 
+thinking. 
+9 
+
+
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+366 
+3. 
+Domains of Assessment 
+367 
+When a comprehensive neurodevelopmental evaluation is needed, it should also 
+368 
+include evaluation of physical, mental, and social health. The assessment may 
+369 
+include the following domains: 
+370 
+a. General 
+371 
+i. Physical Health—including ongoing health conditions (e.g., seizure 
+372 
+disorder, pulmonary conditions, renal impairment), feeding problems, 
+373 
+somatic growth (height, weight, and head circumference)17, sleep 
+374 
+ii.  Quality of life and global function in daily life 
+375 
+iii. Receipt of developmental interventions and educational services 
+376 
+b. Neurodevelopment 
+377 
+i. Sensory (e.g., hearing, vision) 
+378 
+ii. Motor 
+379 
+iii. Cognition18   
+380 
+iv. Emotional and Behavioral Health 
+381 
+v. Communication/Language 
+382 
+vi. Social Functioning 
+383 
+vii. Adaptive Functioning 
+384 
+ 
+385 
+4. 
+Relevant Covariates 
+386 
+Relevant covariates such as demographic variables and other factors that may 
+387 
+change over time should be assessed longitudinally and systematic data collection 
+388 
+of these factors should be incorporated into the proposed follow-up plan. (See 
+389 
+Section IIIB2b.) 
+390 
+ 
+391 
+5. 
+Adjunctive Assessments (i.e., Biomarkers of Neurodevelopmental Outcome) 
+392 
+In general, adjunctive assessments and biomarker measures may not provide as 
+393 
+meaningful information as long-term functional outcomes assessments and may 
+394 
+not substitute for the above evaluations. However, adjunctive assessments may 
+395 
+have clinical utility and may be useful to support the evaluation of 
+396 
+neurodevelopmental safety, especially when following a known signal of concern 
+397 
+from nonclinical studies, studies in a different population, or known effects of 
+398 
+medical products from a similar pharmacological or therapeutic class. Thus, how 
+399 
+useful an adjunctive assessment could be is typically product-specific and should 
+400 
+be discussed with the appropriate review division at the time of protocol 
+401 
+development. 
+402 
+ 
+403 
+a. Neuroimaging studies may be used to assess anatomical evidence of toxicity 
+404 
+(e.g., brain MRI to assess disruptions in myelination) but should typically 
+405 
+have clinical correlation. 
+406 
+b. Neurophysiologic testing may also be used to evaluate a specific safety signal 
+407 
+and may include (not a comprehensive list): 
+ 
+17  See the Draft Guidance, Measuring Growth and Evaluating Pubertal Development in Pediatric Clinical Trials: 
+Guidance for Industry for information on measuring growth parameters; October 2022. When finalized, this 
+guidance will represent the Agency’s current thinking. 
+18  Cognition also includes executive function, attention, working memory, and processing speed. 
 10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
 
-This guidance represents the current thinking of the Food and Drug Administration (FDA or Agency) on
-this topic. It does not establish any rights for any person and is not binding on FDA or the public. You
-can use an alternative approach if it satisfies the requirements of the applicable statutes and regulations.
-To discuss an alternative approach, contact the FDA office responsible for this guidance as listed on the
-title page.
 
-I.
-
-INTRODUCTION
-
-The purpose of this guidance is to provide a framework for considering whether and what type of
-long-term neurologic, sensory and developmental evaluations could be useful to support a
-determination of safety of a “medical product” (i.e., drug, biological product, or device) for use
-in neonates 2, and if so, which domains of neurodevelopment may be most applicable.
-This guidance will not specifically address effectiveness, safety or benefit/risk assessments for
-products primarily intended to improve neurologic outcomes, e.g., neuroprotective agents. This
-guidance is focused on long-term evaluations of neurodevelopmental safety. Although
-assessments of specific toxicities to other tissues and organs may also be warranted in neonatal
-medical product development, the approach to those assessments is outside the scope of this
-guidance.
-Pertinent information on planning clinical pharmacology studies in neonates 3 and pediatric
-patients 4 can be found in existing guidance documents. 5 This guidance does not focus on
-nonclinical safety studies to support clinical studies in neonates, nor does it address clinical study
-This guidance has been prepared by the Food and Drug Administration: Office of Pediatric Therapeutics in the
-Office of the Commissioner; the Division of Pediatric and Maternal Health, the Division of Antivirals, the Office of
-Surveillance and Epidemiology, and the Office of Neuroscience in the Center for Drug Evaluation and Research; the
-Office of Vaccines Research and Review in the Center for Biologics Evaluation and Review; and the Center for
-Devices and Radiological Health.
-2
-The neonatal period is defined in the Addendum to ICH E11: Clinical Investigation of Medicinal Products in the
-Pediatric Population E11 (R1) (2017) as including term, post-term, and preterm newborn infants. The neonatal
-period for term and post-term infants is the day of birth plus 27 days. For preterm infants, the neonatal period is
-defined as the day of birth through the expected age of delivery plus 27 days. These same definitions will apply for
-purposes of this guidance.
-3
-See the FDA Guidance for Industry, General Clinical Pharmacology Considerations for Neonatal Studies for
-Drugs and Biological Products; July 2022.
-4
-See the FDA Draft Guidance for Industry, General Clinical Pharmacology Considerations for Pediatric Studies of
-Drugs, Including Biological Products; September 2022. When finalized, this guidance will represent the Agency’s
-current thinking.
-5
-FDA updates guidances periodically. For the most recent version of a guidance, check the FDA guidance web page
-at https://www.fda.gov/RegulatoryInformation/Guidances/default.htm.
-1
-
-1
-
-Contains Nonbinding Recommendations
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-
-design in neonatology. This guidance also does not address neonatal or pediatric safety
-assessments following studies conducted during pregnancy, 6 nor gene therapies or similar
-genomic medicine interventions. 7
-In general, FDA’s guidance documents do not establish legally enforceable responsibilities.
-Instead, guidances describe the Agency’s current thinking on a topic and should be viewed only
-as recommendations, unless specific regulatory or statutory requirements are cited. The use of
-the word should in Agency guidances means that something is suggested or recommended, but
-not required.
-II.
-
-BACKGROUND
-
-In 2012, the Best Pharmaceuticals for Children Act (BPCA) and the Pediatric Research Equity
-Act (PREA) were made permanent under Title V of the Food and Drug Administration Safety
-and Innovation Act (FDASIA). 8 FDASIA contained several provisions to encourage medical
-product development in neonates.
-Treatment with medical products during the neonatal period coincides with a time of critical
-growth and physiologic development. Short-term safety evaluations typical for adults or other
-populations may fail to identify important adverse effects in the neonatal population, as latent
-effects may follow early-life exposures. Historically, most medical products used to treat
-neonates and young infants were not approved for use in this population for the relevant
-indications, and thus, long-term effects were rarely systematically evaluated.
-Clinical investigators and sponsors 9 of neonatal studies should consider and assess potential
-short-term and long-term effects of an investigational therapy, whether the therapy is novel or
-previously developed for a different indication or population. Short-term clinical improvement,
-such as that observed after high-dose corticosteroids for infants with bronchopulmonary
-dysplasia, may be followed by unexpected long-term harm. 10 While adjunctive neurological
-assessments (e.g., neuroimaging, electroencephalography) may provide information on early
-safety concerns, they cannot replace clinical assessments of long-term functional outcomes.
-Although there is no universal definition of “long-term,” for the purpose of this guidance, the
-time frame can be generally thought of as at least 2 years of age or at such time when relevant
-clinical neurodevelopmental parameters can be reasonably assessed (refer to sections IIIB2a and
-For additional information, see the FDA Draft Guidance for Industry, Pregnant Women: Scientific and Ethical
-Considerations for Inclusion in Clinical Studies; April 2018. When finalized, this guidance will represent the
-Agency’s current thinking.
-7
-See the FDA’s Guidance for Industry, Long Term Follow-up After Administration of Human Gene Therapy
-Products; January 2020.
-8
-Title V Sec 501(a) of FDASIA can be found at https://www.congress.gov/112/plaws/publ144/PLAW112publ144.pdf.
-9
-For the purposes of this guidance, “sponsor” refers to commercial sponsors and academic investigators who may
-plan and carry out neonatal clinical studies.
-10
-Committee on Fetus and Newborn. Postnatal corticosteroids to prevent or treat bronchopulmonary dysplasia.
-Pediatrics. 2010;126:800-808.
-6
-
-2
-
-Contains Nonbinding Recommendations
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-
-IIIC1); the minimum duration of follow-up will depend on different population- and productspecific factors as discussed in this guidance. Prospectively designed long-term follow-up is
-often important to understand medical product safety in neonates.
-Neonates should have access to medical products adequately evaluated for safety, effectiveness,
-and, when appropriate, dosing for that population. There are conditions unique to term or
-preterm neonates, such as necrotizing enterocolitis and retinopathy of prematurity, that will not
-have analogous development programs in older populations. As new medical products are
-developed for these and other unique neonatal conditions, novel development programs and firstin-human studies may be initiated in neonates, and these development programs should also
-demonstrate long-term neurologic, sensory, and developmental safety. Neonates should also be
-enrolled in clinical studies for medical products and diagnostic tools initially developed for
-indications in other populations that will be used for neonates. Inclusion of neonates in such
-studies may be useful to establish dosing, safety, and efficacy or effectiveness, and these studies
-may also warrant long-term safety evaluations.
-III.
-NEURODEVELOPMENTAL FOLLOW-UP FOR PRODUCT DEVELOPMENT
-PROGRAMS THAT INCLUDE NEONATES
-Long-term neurodevelopmental safety should be considered as part of neonatal product
-development plans. Sponsors should communicate as early as possible with the relevant FDA
-review division to reach alignment on an appropriate approach for long-term safety evaluations.
-A. Determining the Need for Long-term Neurodevelopmental Safety Evaluations
-Sponsors should assess whether a long-term neurodevelopmental safety evaluation
-for neonates enrolled in clinical studies should be conducted. This assessment should
-be initiated early in product development and should be reevaluated as new
-information becomes available.
-1. General Considerations
-a. Central Nervous System (CNS) Exposure: Any route of administration may
-result in a systemic exposure. The degree of systemic exposure, which should
-be quantified in early pharmacokinetic or animal studies if possible, may
-inform the need for long-term safety assessment. In general, higher levels of
-systemic exposure may be associated with higher CNS exposure and potential
-risk for long-term sequelae. The degree of CNS exposure may vary
-independently of systemic exposure.
-b. Timing of Exposure: The timing of exposure to a drug, biological product, or
-device relative to a particularly vulnerable stage of organ and tissue
-development may inform the need for and the type of long-term safety
-assessment.
-c. Duration of Exposure: Repeated dosing, prolonged exposure and medical
-products with persistent effects may be associated with higher risk for longterm sequelae; however, long-term safety assessments may also be required
-
-3
-
-Contains Nonbinding Recommendations
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-
-after single doses or short durations of investigational therapies, based on the
-other considerations described in this guidance.
-2. Patient and Population-specific Considerations
-a. Neurodevelopmental vulnerability: While neuroplasticity and resilience may
-impact tolerance to toxicity, the anticipated rates of developmental,
-behavioral, and sensory impairments are generally inversely related to
-gestational age and birth weight and differ significantly across various
-congenital or acquired conditions. Sponsors should seek the most current data
-to understand background rates of specific long-term neurodevelopmental
-outcomes in the population of interest.
-b. Disease state characteristics: The disease or pathophysiology of the condition
-under study (e.g., metabolic processes or conditions associated with
-compromised blood-brain barrier integrity or altered cerebral blood flow such
-as meningitis, hypoxic-ischemic encephalopathy or perinatal arterial ischemic
-stroke) may increase the risk for adverse neurodevelopmental outcomes.
-Sponsors should address disease-specific vulnerabilities in the proposed
-evaluation of neurodevelopmental safety.
-3. Product-specific Considerations
-a. Nonclinical toxicity: Nonclinical studies conducted to specifically evaluate the
-potential adverse effects of an investigational medical product on the
-developing CNS of neonates and young infants should include pre- and
-postnatal development studies, and, if warranted, embryo-fetal development
-and/or dedicated juvenile animal studies testing the investigational medical
-product in very young animals at critical and comparable stages of brain
-development. 11 These studies can test both the intended effects of an
-investigational product and also can identify unintended or off-target effects.
-These data can and should be used to inform risk assessments for neonates
-and young infants and can also inform the design of clinical studies (e.g.,
-inclusion of specific endpoints, identification of potential windows of
-developmental vulnerability). However, because CNS development and
-maturation are extremely complex, extrapolation of data regarding
-development across species is challenging. Nonclinical studies generally
-cannot test all potential neurological effects of a medical product, and the lack
-of adverse effects in nonclinical studies alone does not necessarily exclude the
-possibility of adverse effects in neonates. To date, the Agency has limited
-experience with alternative assays to characterize neurodevelopmental
-toxicity. However, the Agency fully supports the principles of the 3Rs
-(replace/reduce/refine) for animal use testing when feasible and encourages
-sponsors to consult with review divisions when considering non-animal
-
-See the ICH Guidance for Industry, S11 Nonclinical Safety Testing in Support of Development of Pediatric
-Pharmaceuticals; May 2021.
+ 
+ 
+Contains Nonbinding Recommendations 
+ 
+408 
+i. 
+Visual-evoked-response 
+409 
+ii. 
+Somatosensory evoked potentials to facilitate differentiation between 
+410 
+peripheral and central nervous system insults 
+411 
+iii. 
+Auditory brainstem-evoked response 
+412 
+iv. 
+Electromyography with or without nerve-conduction studies 
+413 
+v. 
+Electroencephalography 
+414 
+ 
 11
 
-4
-
-Contains Nonbinding Recommendations
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-
-b.
-
-c.
-
-d.
-
-e.
-
-testing methods, including methods that attempt to characterize
-neurodevelopmental toxicity.
-Clinical pharmacology: The mechanism of action, target organ or tissue,
-disposition and tissue distribution of the product, and/or accumulation of
-metabolites (and ontogeny of these factors) may evoke concerns about longterm neurodevelopmental safety. For example, drugs and biological products
-thought to penetrate the CNS of neonates are likely to warrant long-term
-safety assessment. Exposures may also be affected by developmental changes
-in the activity of drug metabolizing enzymes, transporters, and the ontogeny
-of renal function in the neonatal period. 12
-Clinical experience: Data from use of a medical product in other populations
-may be incorporated into the discussion about potential toxicities and need for
-follow-up after neonatal studies. Neurologic safety signals identified in older
-pediatric and adult patients should be carefully evaluated in neonates. It is
-important to note that the absence of a safety signal in older populations may
-not preclude adverse effects in neonates. Novel medical products developed
-for conditions that occur only in neonates may not have available safety data
-from other populations and a comprehensive neurodevelopmental safety
-evaluation may be useful in these situations (see section IIIC3).
-Route of administration: The potential impact of method of product delivery
-should be considered. For example, for products that require repeated
-intramuscular or subcutaneous injections, the impact of pain on
-neurodevelopment should be considered.
-Product components: Both the active pharmaceutical ingredient and all
-excipients (e.g., ethyl alcohol and benzyl alcohol) and impurities (e.g., heavy
-metals and trace elements) should be considered when assessing the potential
-of a drug to cause neurodevelopmental toxicity. For devices that directly or
-indirectly contact human tissues, a biocompatibility evaluation should be
-conducted to assess for the potential for adverse responses resulting from
-contact of the component materials with the body. 13
-
-B. Factors to Consider When Developing a Plan to Evaluate Long-term
-Neurodevelopmental Safety
-If, after conducting the assessment described in section IIIA, a sponsor determines
-that a long-term neurodevelopmental safety evaluation should be conducted, the
-sponsor should justify and design such an evaluation based on sound scientific
-rationale. A controlled study design is recommended, whenever feasible. Although a
-single-arm study may be useful for collecting some types of safety information, the
-absence of a concurrent control arm (placebo or active comparator) will generally
-make clear interpretation of the results difficult, if not impossible. A control group
-allows for easier discrimination of medical product-related patient outcomes from
-See the FDA Guidance for Industry, General Clinical Pharmacology Considerations for Neonatal Studies for
-Drugs and Biological Products; July 2022.
-13
-See the FDA Guidance for Industry and Food and Drug Administration Staff, Use of International Standard ISO
-10993-1, “Biological evaluation of medical devices – Part 1: Evaluation and testing within a risk management
-process”; Sept. 2020.
-12
-
-5
-
-Contains Nonbinding Recommendations
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-
-outcomes caused by other factors, including underlying disease and developmental
-progression, especially if the natural history of the condition in the patient population
-is not well-established.
-1.
-
-General Considerations
-a. Standardization: Sponsors should ensure reliability of administration and
-scoring of evaluations across sites and examiners, including consistency in the
-study instruments used and the age at follow-up.
-b. Community acceptance and inclusivity: Development of a long-term safety
-study plan should include an assessment of family perceptions and early
-identification of barriers to study participation, including potential mistrust.
-Engagement of patient families and community leaders at the protocol
-development stage may help promote participation of historically
-underrepresented communities and improve overall study recruitment and
-retention.
-c. Multidisciplinary input: Sponsors may identify and address challenges and
-opportunities in study development through engagement of key interested
-parties. Interested parties may include, but are not limited to patient survivors,
-parents, caregivers, health care providers, educators, community leaders, and
-developmental specialists. These parties are instrumental in identifying
-clinically meaningful outcomes and assessing the acceptability and feasibility
-of the study design.
-d. Patient recruitment and retention: Ideally, sponsors should obtain consent for
-long-term follow-up evaluation during initial study enrollment. Although this
-will not eliminate the risk of missing data, early recruitment will reinforce the
-importance of the long-term safety evaluation. Loss of patients over time
-threatens the integrity of long-term neurodevelopmental safety studies. There
-should be appropriate plans in place to keep families engaged and to collect
-relevant contact information (e.g., home and mobile phone numbers, email
-addresses, other messaging modalities) as needed to encourage retention of
-study participants and important data. Study participants may relocate during
-the follow-up period and maintaining contact is an important means to reduce
-the risk of missing patient information.
-e. Patient burden: Sponsors developing long-term safety evaluations should
-consider and mitigate barriers to follow-up study enrollment as well as
-minimize the short-term and long-term burdens of study participation to the
-subjects and their family. Sponsors may consider and propose a strategy for
-integrating data from community-level services and providers involved in
-routine neurodevelopmental evaluations and tracking (e.g., early intervention
-and Child Find programs) and pediatric evaluations during usual care (see
-maintaining data quality considerations below, Section B1c). Additional
-strategies may include use of mobile technology for information collection
-and transfer.
-f. Data quality: While some information can be reasonably gathered through
-evaluations in usual clinical practice, general developmental screening
-performed during routine care is rarely a reliable substitute for a formal
-
-6
-
-Contains Nonbinding Recommendations
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-
-diagnostic neurodevelopmental evaluation, when such an evaluation is
-warranted. In addition, some neurodevelopmental evaluations require
-specialist evaluation. A sponsor may be able to rely on certain objective
-developmental measures with established reference standards (e.g., growth,
-vision, and hearing screening) captured during routine care where the sponsor
-can ensure they are collected reliably.
-g. Plan for clinical referral as indicated: The protocol should include a plan for
-clinical referral and support services if any developmental problems are
-identified in the course of research-related follow-up.
-2.
-
-Patient/Population-specific Considerations
-a. Timing and duration: For the evaluation of neurodevelopmental safety,
-outcomes should be evaluated up to at least 2 years of age, adjusted for
-prematurity, 14 if appropriate. The duration and frequency of follow-up
-assessments should be supported by scientific data and sound rationale.
-Considerations may include the static or dynamic nature of the
-neurodevelopmental outcome(s) being evaluated. The follow-up plan also
-should consider the ages at which the outcomes of interest can be reasonably
-measured. For example, some learning difficulties or neurologic disorders
-may not present or be reasonably discernable with available assessment tools
-until after 2 years adjusted age.
-b. Related factors: Sponsors should consider how other factors that relate to and
-affect neurodevelopmental outcomes may influence the interpretability of
-study results and should collect relevant covariate data accordingly.
-i. Comorbidities (e.g., prematurity, congenital heart disease)
-ii. Socioeconomic factors (e.g., food insecurity, social stressors, parental
-education level)
-iii. Perinatal factors (e.g., substance use during pregnancy, depression)
-iv. Regional differences in health care systems and accepted standards of
-medical practice
-v. Environmental factors (e.g., lead or chemical exposure)
-vi. Intercurrent events (e.g., illness, injury, therapies [such as early
-intervention], and other medications)
-c. Developmental domains: In most cases, a general assessment of all the key
-neurodevelopmental domains is recommended. (See Section C3, below). If
-specific domains of vulnerability are known or suspected in the study
-population based on product characteristics, then sponsors should identify the
-existing validated, age-appropriate tools to carefully measure relevant
-outcomes within those domains.
-d. Feasibility: There may be population or study-specific issues that affect the
-feasibility of planned long-term follow-up studies. Sponsors should assess
-feasibility early in drug or device development and provide study plans for
-
-Adjusted age, (also called “corrected age” or “post-menstrual age”) is defined as the chronological age reduced by
-the number of weeks born before 40 weeks of gestation. Refs: AAP Committee on Fetus and Newborn. “Age
-terminology during the perinatal period;” Pediatrics 2004;114(5):1362-4 and E11: Clinical Investigation of
-Medicinal Products in the Pediatric Population; International Council for Harmonization, 2000.
-
-14
-
-7
-
-Contains Nonbinding Recommendations
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323
-
-Agency review. This may include alternate strategies (e.g., patient registries,
-observational studies) if needed.
-3.
-
-Product-specific Considerations
-a.
-Tissue specificity: Sponsors should determine whether the product has
-effects on organ systems that may impact neurodevelopment. Medical
-products may have direct and/or indirect effects on the developing CNS.
-Understanding these effects can help determine not only the extent of
-long- term follow-up but also the type of assessment needed.
-b.
-Ontogeny of therapeutic target: Sponsors should determine whether a
-medical product’s target changes in distribution or function throughout
-maturation. The extent of medical product exposure in relation to known
-target tissue developmental changes should be considered when designing
-the plan for neurodevelopmental safety evaluation.
-
-C. What to Measure, When and For How Long?
-The most useful type of neurodevelopmental safety evaluation will depend upon
-whether it is determined (based on considerations discussed in sections IIIA. and IIIB.
-above) that a comprehensive neurodevelopmental evaluation is appropriate and/or
-whether there are specific developmental domains of concern that warrant targeted
-evaluations (see section IIIC3). As sponsors are planning long-term
-neurodevelopmental evaluations, they should consider what assessment tools to use,
-at what time point(s), and for how long. Neurodevelopmental safety evaluations
-should include validated tools, when available, to ensure rigor and should provide
-broad-ranging assessments of neurologic function, including relevant clinical
-outcome assessment (COA) tools. The protocol should specify whether assessments
-are conducted as part of standard clinical care or for research-related purposes only.
-For research-related interventions, the benefit-risk determination should be performed
-to ensure that the procedure is ethically permissible. 15 Note that general
-developmental screening and formalized assessments of neurodevelopment are not
-interchangeable.
-1.
-
-Timing of Safety Evaluations
-In general, outcomes should be evaluated at a minimum of 2 years adjusted age.
-Earlier and/or later evaluations also may be warranted.
-a. Evaluations that can be reliably performed during the first 2 years (adjusted
-age) of life and require longitudinal monitoring, including head growth,
-hearing and vision testing, neurologic exam, and developmental milestones,
-provide important information and may be appropriate.
-b. Comprehensive neurodevelopmental outcomes should be evaluated at a
-minimum at 2 years adjusted age.
-c. Assessment of more subtle, but important cognitive, language, behavioral, and
-other outcomes may require children to be followed until later in childhood.
-
-See the FDA Draft Guidance for Industry, Sponsors, and IRBs, Ethical Considerations for Clinical Investigations
-of Medical Products Involving Children; September 2022. When finalized, this guidance will represent the
-Agency’s current thinking.
-
-15
-
-8
-
-Contains Nonbinding Recommendations
-324
-325
-326
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365
-
-Problems in these areas may not be clearly discernable or adequately assessed
-in the ﬁrst 4–6 years of life. Depending on the specific domains of concern,
-longer follow-up may be useful even if there are no neurodevelopmental
-concerns observed at the initial 2-year assessment.
-2.
-
-Key Characteristics of Measurement Tools
-Long-term safety evaluations should be based on well-defined and reliable COAs.
-Specifically, COAs should assess clearly defined concepts of interest with
-appropriate justification to support their use in neonatal long-term safety
-evaluations. 16 Assessments should include those that measure how a subject is
-functioning in daily life. Key considerations relevant to long-term safety
-assessment after neonatal studies include:
-a. Minimizing participant burden and avoiding duplication can increase pediatric
-patient testing compliance and reduce behavioral interference (e.g., refusal to
-participate in testing). This approach can help avoid the confounding or
-invalidation of test scores, and also can reduce missing data and increase the
-feasibility for administration across large cohort studies.
-b. Identifying and accounting for potential confounding factors that may
-compromise the validity of an assessment and score interpretability is
-important when devising a plan for analyzing test scores. For example, a
-cognitive assessment that depends on patients having typical fine motor
-functioning (e.g., a time-limited block design task) may yield unreliable
-scores for children with fine motor impairments.
-c. Carefully considering the type of score to utilize within neurodevelopmental
-assessments is important, given that some COAs may generate several types
-of scores (e.g., standardized norm-referenced scores, raw scores). Selecting
-several types of scores from the same COA may be appropriate, especially for
-patient populations that may be at the greatest risk of impairment. For
-example, some scores (e.g., norm-referenced standardized scores) may
-demonstrate floor effects in severely impaired children and ceiling effects in
-children with developmentally advanced skills.
-d. Selecting COAs that are methodologically sound with well-established
-psychometric properties is important, particularly to ensure validity across
-multicenter studies.
-e. Ensuring that selected COAs have demonstrated reliability across the
-demographic groups included in the study, including availability in languages
-appropriate for global sites, is key to support generalizability of study results.
-Consider, for example, that a language assessment developed for U.S. English
-speakers may yield uninterpretable scores when used with patients at non-U.S.
-English speaking sites. Selected COAs should be developed to assess term and
-preterm infants (i.e., based on a large representative population).
-
-See the Draft Guidance for Industry, Food and Drug Administration Staff and Other Stakeholders, Patient-focused
-Drug Development: Selecting, Developing or Modifying Fit-for-Purpose Clinical Outcome Assessments; June 2022,
-for further discussion of these characteristics. When finalized, this guidance will represent the Agency’s current
-thinking.
-16
-
-9
-
-Contains Nonbinding Recommendations
-366
-367
-368
-369
-370
-371
-372
-373
-374
-375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-
-3.
-
-Domains of Assessment
-When a comprehensive neurodevelopmental evaluation is needed, it should also
-include evaluation of physical, mental, and social health. The assessment may
-include the following domains:
-a. General
-i. Physical Health—including ongoing health conditions (e.g., seizure
-disorder, pulmonary conditions, renal impairment), feeding problems,
-somatic growth (height, weight, and head circumference) 17, sleep
-ii. Quality of life and global function in daily life
-iii. Receipt of developmental interventions and educational services
-b. Neurodevelopment
-i. Sensory (e.g., hearing, vision)
-ii. Motor
-iii. Cognition 18
-iv. Emotional and Behavioral Health
-v. Communication/Language
-vi. Social Functioning
-vii. Adaptive Functioning
-
-4.
-
-Relevant Covariates
-Relevant covariates such as demographic variables and other factors that may
-change over time should be assessed longitudinally and systematic data collection
-of these factors should be incorporated into the proposed follow-up plan. (See
-Section IIIB2b.)
-
-5.
-
-Adjunctive Assessments (i.e., Biomarkers of Neurodevelopmental Outcome)
-In general, adjunctive assessments and biomarker measures may not provide as
-meaningful information as long-term functional outcomes assessments and may
-not substitute for the above evaluations. However, adjunctive assessments may
-have clinical utility and may be useful to support the evaluation of
-neurodevelopmental safety, especially when following a known signal of concern
-from nonclinical studies, studies in a different population, or known effects of
-medical products from a similar pharmacological or therapeutic class. Thus, how
-useful an adjunctive assessment could be is typically product-specific and should
-be discussed with the appropriate review division at the time of protocol
-development.
-a. Neuroimaging studies may be used to assess anatomical evidence of toxicity
-(e.g., brain MRI to assess disruptions in myelination) but should typically
-have clinical correlation.
-b. Neurophysiologic testing may also be used to evaluate a specific safety signal
-and may include (not a comprehensive list):
-
-See the Draft Guidance, Measuring Growth and Evaluating Pubertal Development in Pediatric Clinical Trials:
-Guidance for Industry for information on measuring growth parameters; October 2022. When finalized, this
-guidance will represent the Agency’s current thinking.
-18
-Cognition also includes executive function, attention, working memory, and processing speed.
-17
-
-10
-
-Contains Nonbinding Recommendations
-408
-409
-410
-411
-412
-413
-414
-
-i.
-ii.
-iii.
-iv.
-v.
-
-Visual-evoked-response
-Somatosensory evoked potentials to facilitate differentiation between
-peripheral and central nervous system insults
-Auditory brainstem-evoked response
-Electromyography with or without nerve-conduction studies
-Electroencephalography
-
-11
-
-

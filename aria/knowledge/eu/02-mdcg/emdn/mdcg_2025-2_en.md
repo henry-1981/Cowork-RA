@@ -1,1411 +1,543 @@
 ---
 source:
-  family: "MDCG"
-  title: "mdcg_2025-2_en"
-  path: "02.MDCG/European Medical Device Nomenclature (EMDN)/mdcg_2025-2_en.pdf"
-  pages: 27
   converted: 2026-02-27
-  method: pdftotext
+  family: MDCG
+  method: pymupdf-table
+  pages: 27
+  path: 02.MDCG/European Medical Device Nomenclature (EMDN)/mdcg_2025-2_en.pdf
+  title: mdcg_2025-2_en
 ---
 
-MDCG 2025-2
-EMDN UPDATE SUBMISSIONS FROM 2024
-PUBLIC CONSULTATION AND THE MDCG
-NOMENCLATURE WORKING GROUP
-
 1
+MDCG 2025-2 
+EMDN UPDATE SUBMISSIONS FROM 2024 
+PUBLIC CONSULTATION AND THE MDCG 
+NOMENCLATURE WORKING GROUP  
 
-OUTCOME OF THE ANALYSIS OF SUBMISSIONS
-1. ACCEPTED
+
+2
+OUTCOME OF THE ANALYSIS OF SUBMISSIONS
+1. ACCEPTED  
 2. PARTIALLY ACCEPTED
 Eg. the request for a new code is accepted but not in the level proposed by the submitter.
 3. NOT ACCEPTED
 Eg.
-✓ request not integrated/integrated with no sufficient information/technical details for the technical
+request not integrated/integrated with no sufficient information/technical details for the technical 
 evaluation;
-✓ request to insert an existing level;
-✓ request to insert a new level/edit an existing level not compliance with the nomenclature structure.
+request to insert an existing level;
+request to insert a new level/edit an existing level not compliance with the nomenclature structure.
 
-2
 
-1.Not accepted submissions from 2024 public
-consultation and the MDCG Nomenclature working
+1.Not accepted submissions from 2024 public 
+consultation and the MDCG Nomenclature working 
 group
-
 3
 
-OUTCOME: NOT ACCEPTED - INSUFFICIENT INFORMATION
-TYPE OF
-REQUEST
 
-CODE
+OUTCOME: NOT ACCEPTED  - INSUFFICIENT INFORMATION
 
-SUPPORT INFO
-
-INSERT
-
-H010101020101
-
-INSERT
-
-V
-
-INSERT
-
-Q0190
-
-New code Q019009 - Intraoral Camera
-Intraoral cameras are necessary for accurate diagnosis and treatment.
-
-UPDATE
-
-T0399
-
--
-
--
-
-Visual timer that can be used by therapists, schools, people with special needs, and home use.
-
-RATIONAL
-Request not integrated/integrated
-with no sufficient
-information/technical details.
-Request not integrated/integrated
-with no sufficient
-information/technical details.
-Request not integrated/integrated
-with no sufficient
-information/technical details.
-Request not integrated/integrated
-with no sufficient
-information/technical details.
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | H010101020101 | - | Request not integrated/integrated with no sufficient information/technical details. |
+| INSERT | V | Visual timer that can be used by therapists, schools, people with special needs, and home use. | Request not integrated/integrated with no sufficient information/technical details. |
+| INSERT | Q0190 | New code Q019009 - Intraoral Camera Intraoral cameras are necessary for accurate diagnosis and treatment. | Request not integrated/integrated with no sufficient information/technical details. |
+| UPDATE | T0399 | - | Request not integrated/integrated with no sufficient information/technical details. |
 
 4
 
-OUTCOME: NOT ACCEPTED - OUT OF SCOPE OF EMDN UPDATE
-TYPE OF
-REQUEST
+OUTCOME: NOT ACCEPTED  - OUT OF SCOPE OF EMDN UPDATE
 
-CODE
-
-INSERT
-
-C
-
-INSERT
-
-C
-
-INSERT
-
-C
-
-SUPPORT INFO
-
-RATIONAL
-
-C010404 NEUROVASCULAR ANGIOGRAPHY DEVICES
-C01040402 NEUROVASCULAR ANGIOGRAPHY THERAPEUTIC DEVICES
-C0104040204 NEUROVASCULAR ANGIOGRAPHY GUIDE CATHETERS
-
-The inclusion of new levels is planned to include types
-of devices not present in the current version of the
-EMDN (refer to the level C0104020204
-PERIPHERAL ANGIOGRAPHY GUIDE CATHETERS).
-is intended as a conduit device for the intravascular introduction of interventional/ diagnostic According to the structure of nomenclature peripheral
-devices to the neuro vasculature.
-devices include devices for neurovascular scope.
-The inclusion of new levels is planned to include types
-C010404 NEUROVASCULAR ANGIOGRAPHY DEVICES,
-of devices not present in the current version of the
-C01040402 NEUROVASCULAR ANGIOGRAPHY THERAPEUTIC DEVICES
-EMDN (refer to the existing level C0104020202
-C0104040202 NEUROVASCULAR EMBOLISATION CATHETERS AND MICROCATHETERS
-PERIPHERAL EMBOLISATION CATHETERS AND
-MICROCATHETERS). According to the structure of
-is intended as a conduit for endovascular use during diagnostic and/or interventional
-nomenclature peripheral devices include devices for
-procedures in the peripheral and neuro vasculature.
-neurovascular scope.
-The inclusion of new levels is planned to include types
-C010404 NEUROVASCULAR ANGIOGRAPHY DEVICES
-of devices not present in the current version of the
-C01040402 NEUROVASCULAR ANGIOGRAPHY THERAPEUTIC DEVICES
-EMDN (refer to C0104020203 EMBOLISATION DEVICES
-C0104040203 EMBOLISATION DEVICES
-and the bottom level C010402020301 EMBOLISATION
-C010404020301 EMBOLISATION COILS
-COILS). According to the structure of nomenclature
-peripheral devices include devices for neurovascular
-is intended for endovascular embolization in the neurovasculature
-scope.
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | C | C010404 NEUROVASCULAR ANGIOGRAPHY DEVICES C01040402 NEUROVASCULAR ANGIOGRAPHY THERAPEUTIC DEVICES C0104040204 NEUROVASCULAR ANGIOGRAPHY GUIDE CATHETERS is intended as a conduit device for the intravascular introduction of interventional/ diagnostic devices to the neuro vasculature. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to the level C0104020204 PERIPHERAL ANGIOGRAPHY GUIDE CATHETERS). According to the structure of nomenclature peripheral devices include devices for neurovascular scope. |
+| INSERT | C | C010404 NEUROVASCULAR ANGIOGRAPHY DEVICES, C01040402 NEUROVASCULAR ANGIOGRAPHY THERAPEUTIC DEVICES C0104040202 NEUROVASCULAR EMBOLISATION CATHETERS AND MICROCATHETERS is intended as a conduit for endovascular use during diagnostic and/or interventional procedures in the peripheral and neuro vasculature. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to the existing level C0104020202 PERIPHERAL EMBOLISATION CATHETERS AND MICROCATHETERS). According to the structure of nomenclature peripheral devices include devices for neurovascular scope. |
+| INSERT | C | C010404 NEUROVASCULAR ANGIOGRAPHY DEVICES C01040402 NEUROVASCULAR ANGIOGRAPHY THERAPEUTIC DEVICES C0104040203 EMBOLISATION DEVICES C010404020301 EMBOLISATION COILS is intended for endovascular embolization in the neurovasculature | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to C0104020203 EMBOLISATION DEVICES and the bottom level C010402020301 EMBOLISATION COILS). According to the structure of nomenclature peripheral devices include devices for neurovascular scope. |
 
 5
 
-OUTCOME: NOT ACCEPTED - OUT OF SCOPE OF EMDN UPDATE
-TYPE OF
-REQUEST
+OUTCOME: NOT ACCEPTED  - OUT OF SCOPE OF EMDN UPDATE
 
-CODE
-
-INSERT
-
-C
-
-INSERT
-
-C
-
-INSERT
-
-C
-
-SUPPORT INFO
-
-RATIONAL
-
-C0403 NEURO VASCULAR GUIDEWIRES
-C040301 NEURO VASCULAR DIAGNOSTIC GUIDEWIRES
-C04030101 NEURO VASCULAR DIAGNOSTIC GUIDEWIRES, HYDROPHILIC
-
-The inclusion of new levels is planned to include types of
-devices not present in the current version of the EMDN
-(refer to C040201 PERIPHERAL VASCULAR DIAGNOSTIC
-GUIDEWIRES and related bottom levels). According to the
-intended to navigate vessels to access a lesion or vessel segment for selective placement structure of nomenclature peripheral guidewires include
-of microcatheters and other neurovascular devices.
-guidewires for neurovascular scope.
-C0403 NEURO VASCULAR GUIDEWIRES
-The inclusion of new levels is planned to include types of
-C040302 NEURO VASCULAR THERAPEUTIC GUIDEWIRES
-devices not present in the current version of the EMDN
-C04030201 NEURO VASCULAR THERAPEUTIC GUIDEWIRES, HYDROPHILIC
-(refer to C040202 PERIPHERAL VASCULAR THERAPEUTIC
-GUIDEWIRES and related bottom levels). According to the
-intended to navigate vessels to access a lesion or vessel segment for selective placement structure of nomenclature peripheral guidewires include
-of microcatheters and other neurovascular devices.
-guidewires for neurovascular scope.
-C07-NEUROVASCULAR SYSTEMS DEVICES
-C0701-NEUROVASCULAR THROMBECTOMY SYSTEM DEVICES
-The inclusion of new levels is planned to include types of
-C0702-NEUROVASCULAR MICROCATHETERS
-devices not present in the current version of the EMDN
-C0703-NEUROVASCULAR COILS
-(refer to C010402 PERIPHERAL ANGIOGRAPHY DEVICES and
-C0704-NEUROVASCULAR ASPIRATION CATHETERS
-C0402 PERIPHERAL VASCULAR GUIDEWIRES and related
-C0705-NEUROVASCULAR GUIDEWIRE SYSTEM DEVICES
-bottom levels). According to the structure of nomenclature
-peripheral devices include devices with neurovascular
-Neurovascular devices are used in neurovasculature, therefore, within cardiocirculatory scope.
-system. Currently there are no existing codes for neurovascular devices.
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | C | C0403 NEURO VASCULAR GUIDEWIRES C040301 NEURO VASCULAR DIAGNOSTIC GUIDEWIRES C04030101 NEURO VASCULAR DIAGNOSTIC GUIDEWIRES, HYDROPHILIC intended to navigate vessels to access a lesion or vessel segment for selective placement of microcatheters and other neurovascular devices. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to C040201 PERIPHERAL VASCULAR DIAGNOSTIC GUIDEWIRES and related bottom levels). According to the structure of nomenclature peripheral guidewires include guidewires for neurovascular scope. |
+| INSERT | C | C0403 NEURO VASCULAR GUIDEWIRES C040302 NEURO VASCULAR THERAPEUTIC GUIDEWIRES C04030201 NEURO VASCULAR THERAPEUTIC GUIDEWIRES, HYDROPHILIC intended to navigate vessels to access a lesion or vessel segment for selective placement of microcatheters and other neurovascular devices. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to C040202 PERIPHERAL VASCULAR THERAPEUTIC GUIDEWIRES and related bottom levels). According to the structure of nomenclature peripheral guidewires include guidewires for neurovascular scope. |
+| INSERT | C | C07-NEUROVASCULAR SYSTEMS DEVICES C0701-NEUROVASCULAR THROMBECTOMY SYSTEM DEVICES C0702-NEUROVASCULAR MICROCATHETERS C0703-NEUROVASCULAR COILS C0704-NEUROVASCULAR ASPIRATION CATHETERS C0705-NEUROVASCULAR GUIDEWIRE SYSTEM DEVICES Neurovascular devices are used in neurovasculature, therefore, within cardiocirculatory system. Currently there are no existing codes for neurovascular devices. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to C010402 PERIPHERAL ANGIOGRAPHY DEVICES and C0402 PERIPHERAL VASCULAR GUIDEWIRES and related bottom levels). According to the structure of nomenclature peripheral devices include devices with neurovascular scope. |
 
 6
 
-OUTCOME: NOT ACCEPTED - OUT OF SCOPE OF EMDN UPDATE
-TYPE OF
-REQUEST
+OUTCOME: NOT ACCEPTED  - OUT OF SCOPE OF EMDN UPDATE
 
-CODE
-
-SUPPORT INFO
-
-INSERT
-
-H03010106 - REUSABLE MULTIPLE CLIP
-APPLIERS FOR OPEN SURGERY (consider using: intended to deliver and close metallic ligating clips
-H03010103)
-
-INSERT
-
-K01010106 - TROCAR ABDOMINAL, SINGLE-USE intended to establish a path for minimally invasive instruments.
-
-UPDATE
-
-K020180 - Single- and bipolar device accessories)
-
-Change is necessary as there is no existing code for reusable
-accessories. For example power cables.
-
-RATIONAL
-The inclusion of new levels is planned to include types
-of devices not present in the current version of the
-EMDN (refer to the level L020801 - MULTIPLE CLIPS
-APPLICATORS FOR OPEN SURGERY, REUSABLE).
-The inclusion of new levels is planned to include types
-of devices not present in the current version of the
-EMDN (refer to the level K01010101 - TROCAR
-STANDARD, SINGLE-USE).
-The feature of single-use refers to SINGLE- AND
-BIPOLAR DEVICES. Accessories of single- and bipolar
-devices can be both single-use and reusable.
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | H03010106 - REUSABLE MULTIPLE CLIP APPLIERS FOR OPEN SURGERY (consider using: H03010103) | intended to deliver and close metallic ligating clips | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to the level L020801 - MULTIPLE CLIPS APPLICATORS FOR OPEN SURGERY, REUSABLE). |
+| INSERT | K01010106 - TROCAR ABDOMINAL, SINGLE-USE | intended to establish a path for minimally invasive instruments. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to the level K01010101 - TROCAR STANDARD, SINGLE-USE). |
+| UPDATE | K020180 - Single- and bipolar device - accessories) | Change is necessary as there is no existing code for reusable accessories. For example power cables. | The feature of single-use refers to SINGLE- AND BIPOLAR DEVICES. Accessories of single- and bipolar devices can be both single-use and reusable. |
 
 7
 
-OUTCOME: NOT ACCEPTED - OUT OF SCOPE OF EMDN UPDATE
-TYPE OF
-REQUEST
+OUTCOME: NOT ACCEPTED  - OUT OF SCOPE OF EMDN UPDATE
 
-CODE
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | P09080408 – HIP PROSTHESIS ADAPTERS | a new code and term for the EMDN date base (P09080408 – HIP PROSTHESIS ADAPTERS). Any kind of adapters in femoral hip arthroplasty could be currently just listed under P9088004 – HIP PROSTHESIS ADAPTERS. However this code is listed under P90880 - HIP PROTHESIS - ACCESSORIES. The affected device however is a class III implantable, surgically invasive medical device intended for longterm- use according to rule 8, indent 8 of Annex VIII of the MDR. Therefore it cannot be classified as accessory and would need an own EMDN code please. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to P9088004 – HIP PROSTHESIS ADAPTERS). |
+| INSERT | P9006 - Cranial resinous compounds | Intended purpose: intended for the repair of cranial defects. Description: a two-component (powder and liquid) radiopaque, polymethylmethacrylate (PMMA) acrylic resin. The resin components are designed for mixing together at the point of use to form a cement which can be manually molded to fill a cranial defect providing brain protection. Sterile and single use. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to P9004 STRUCTURES FILLING, REPLACEMENT AND RECONSTRUCTION DEVICES and related bottom levels). |
+| INSERT | P9005 - CUSTOM MADE CRANIAL IMPLANTS | Intended purpose: designed individually for each patient to correct trauma and/or defects in cranial bones. Description: made of cured PMMA resin or PMMA with the addition of gentamicin or PMMA with the addition gentamicin and vancomycin The shape of the device is designed each time, patient for patient, on the basis of the request of the surgeon that supplies to “Manufacturer Name" a digital image (CT scan) of the cranial defect. Each custom-made "Device Name" is provided in duplicate: one copy is for implant and the other is a backup copy in case the first one is damaged or looses sterility. These devices are supplied sterile and for single use. | Based on the documentation provided by the user (statement according to Annex XIII and QMS certificate) the device is a custom made device (CMD). CMDs are not required to be registered in the UDI-DI module in EUDAMED. Therefore, an EMDN code is not necessary. |
 
-INSERT
-
-P09080408 – HIP
-PROSTHESIS ADAPTERS
-
-INSERT
-
-P9006 - Cranial resinous
-compounds
-
-INSERT
-
-P9005 - CUSTOM MADE
-CRANIAL IMPLANTS
-
-SUPPORT INFO
-
-RATIONAL
-
-a new code and term for the EMDN date base (P09080408 – HIP PROSTHESIS ADAPTERS).
-Any kind of adapters in femoral hip arthroplasty could be currently just listed under P9088004 – HIP
-PROSTHESIS ADAPTERS. However this code is listed under P90880 - HIP PROTHESIS - ACCESSORIES.
-The affected device however is a class III implantable, surgically invasive medical device intended for longtermuse according to rule 8, indent 8 of Annex VIII of the MDR.
-Therefore it cannot be classified as accessory and would need an own EMDN code please.
-
-The inclusion of new levels is
-planned to include types of
-devices not present in the
-current version of the EMDN
-(refer to P9088004 – HIP
-PROSTHESIS ADAPTERS).
-The inclusion of new levels is
-planned to include types of
-Intended purpose: intended for the repair of cranial defects.
-devices not present in the
-Description: a two-component (powder and liquid) radiopaque, polymethylmethacrylate (PMMA) acrylic resin.
-current version of the EMDN
-The resin components are designed for mixing together at the point of use to form a cement which can be
-(refer to P9004 STRUCTURES
-manually molded to fill a cranial defect providing brain protection. Sterile and single use.
-FILLING, REPLACEMENT AND
-RECONSTRUCTION DEVICES and
-related bottom levels).
-Based on the documentation
-provided by the user (statement
-Intended purpose: designed individually for each patient to correct trauma and/or defects in cranial bones.
-according to Annex XIII and
-Description: made of cured PMMA resin or PMMA with the addition of gentamicin or PMMA with the addition
-QMS certificate) the device is a
-gentamicin and vancomycin The shape of the device is designed each time, patient for patient, on the basis of
-custom made device (CMD).
-the request of the surgeon that supplies to “Manufacturer Name" a digital image (CT scan) of the cranial defect.
-CMDs are not required to be
-Each custom-made "Device Name" is provided in duplicate: one copy is for implant and the other is a backup
-registered in the UDI-DI module
-copy in case the first one is damaged or looses sterility. These devices are supplied sterile and for single use.
-in EUDAMED. Therefore, an
-EMDN code is not necessary.
 8
 
-OUTCOME: NOT ACCEPTED - OUT OF SCOPE OF EMDN UPDATE
-TYPE OF
-REQUEST
+OUTCOME: NOT ACCEPTED  - OUT OF SCOPE OF EMDN UPDATE
 
-CODE
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | Q010104 SINGLE-USE SURGICAL INSTRUMENTS | There is the code L for reusable instruments but not one for single-use instruments. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to Q0105 INSTRUMENTS FOR DENTISTRY, SINGLE-USE and related bottom levels). |
+| UPDATE | Q010507 - ENDODONTIC INSTRUMENTS (CANAL ENLARGERS, FILES, RASPS, ETC.) | Not all endodontic instruments on the market are single-use. It would be better if the code Q010507 did not indicate the number of uses. | Refer to L15 ODONTOSTOMATOLOGY INSTRUMENTS, REUSABLE and related bottom levels. |
 
-SUPPORT INFO
-
-RATIONAL
-The inclusion of new levels is planned to
-include types of devices not present in the
-current version of the EMDN (refer to Q0105
-INSTRUMENTS FOR DENTISTRY, SINGLE-USE
-and related bottom levels).
-
-INSERT
-
-Q010104 SINGLE-USE SURGICAL INSTRUMENTS
-
-There is the code L for reusable instruments but not one for
-single-use instruments.
-
-UPDATE
-
-Q010507 - ENDODONTIC INSTRUMENTS (CANAL
-ENLARGERS, FILES, RASPS, ETC.)
-
-Not all endodontic instruments on the market are single-use. It
-Refer to L15 ODONTOSTOMATOLOGY
-would be better if the code Q010507 did not indicate the
-INSTRUMENTS, REUSABLE and related bottom
-number of uses.
-levels.
-
+INSTRUMENTS, REUSABLE and related bottom 
 9
 
-OUTCOME: NOT ACCEPTED - OUT OF SCOPE OF EMDN UPDATE
-TYPE OF
-REQUEST
+OUTCOME: NOT ACCEPTED  - OUT OF SCOPE OF EMDN UPDATE
 
-CODE
-U0904 - UROGENITAL
-ENDOSCOPIC SHEATH
-
-INSERT
-
-U090401 - UROGENITAL
-ENDOSCOPIC INNER
-SHEATH
-U090402- UROGENITAL
-ENDOSCOPIC OUTER
-SHEATH
-
-SUPPORT INFO
-
-RATIONAL
-
-intended to establish a path for minimally invasive instruments.
-Intended use: the products are used to supply irrigation fluid and to hold working
-elements and working inserts.
-Intended use: the products are used to access the surgical area and to remove
-irrigation fluid and resected tissue.
-
-The inclusion of new levels is planned to include types of
-devices not present in the current version of the EMDN (refer
-to L060407 ENDOSCOPIC UROLOGY SHEATHS REUSABLE and
-Z120207 GENITOURINARY ENDOSCOPY INSTRUMENTS
-and related bottom levels).
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | U0904 - UROGENITAL ENDOSCOPIC SHEATH | intended to establish a path for minimally invasive instruments. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN (refer to L060407 ENDOSCOPIC UROLOGY SHEATHS REUSABLE and Z120207 GENITOURINARY ENDOSCOPY INSTRUMENTS and related bottom levels). |
+|  | U090401 - UROGENITAL ENDOSCOPIC INNER SHEATH | Intended use: the products are used to supply irrigation fluid and to hold working elements and working inserts. |  |
+|  | U090402- UROGENITAL ENDOSCOPIC OUTER SHEATH | Intended use: the products are used to access the surgical area and to remove irrigation fluid and resected tissue. |  |
 
 10
 
-OUTCOME: NOT ACCEPTED - OUT OF SCOPE OF EMDN UPDATE
-TYPE OF
-REQUEST
+OUTCOME: NOT ACCEPTED  - OUT OF SCOPE OF EMDN UPDATE
 
-INSERT
-
-MOVING
-
-CODE
-
-SUPPORT INFO
-
-RATIONAL
-
-The inclusion of new levels is
-planned to include types of
-There are endoscopes that can be used for different applications. The choice is made by the surgeon. These
-devices not present in the
-Z120298 - ENDOSCOPE - products cannot yet be assigned an EMDN code, as several EMDN codes are applicable for one device. For example,
-current version of the EMDN.
-OTHER
-there are endoscopes that can be used for both laparoscopy and thorascopy due to their design. For this reason, a
-If relevant, multiple codes can
-generic EMDN code for endoscopes should be added.
-be assigned to the same UDIDI.
-The request is not aimed to
-Move "Z120306 - VITAL SIGNS TELEMETRY INSTRUMENTS (ECG, NIPB, EtCO2, SpO2, RESPIRATION,...)" and its
-correct an improper place of
-underlying levels below "Z120302 - Vital Signs Monitoring Instruments"“
-an existing level and related
-Z120306 - VITAL SIGNS
-bottom levels. The current
-TELEMETRY INSTRUMENTS
-"Z120306 - VITAL SIGNS TELEMETRY INSTRUMENTS (ECG, NIPB, EtCO2, SpO2, RESPIRATION,...)" creates a group for version of EMDN provides the
-(ECG, NIPB, EtCO2, SpO2,
-telemetry devices. However, through the current hierarchy it is not connected with the code group "Z120302 - Vital codes necessary to register
-RESPIRATION,...)
-Signs Monitoring Instruments" which includes products related to vital signs monitoring (such as bedside or
-different kinds of devices
-portable patient monitors which share a very similar intended purpose to vital signs telemetry devices).
-intended to monitor vital
-signs.
+| TYPE OF REQUEST | CODE | SUPPORT INFO | RATIONAL |
+| --- | --- | --- | --- |
+| INSERT | Z120298 - ENDOSCOPE - OTHER | There are endoscopes that can be used for different applications. The choice is made by the surgeon. These products cannot yet be assigned an EMDN code, as several EMDN codes are applicable for one device. For example, there are endoscopes that can be used for both laparoscopy and thorascopy due to their design. For this reason, a generic EMDN code for endoscopes should be added. | The inclusion of new levels is planned to include types of devices not present in the current version of the EMDN. If relevant, multiple codes can be assigned to the same UDI- DI. |
+| MOVING | Z120306 - VITAL SIGNS TELEMETRY INSTRUMENTS (ECG, NIPB, EtCO2, SpO2, RESPIRATION,...) | Move "Z120306 - VITAL SIGNS TELEMETRY INSTRUMENTS (ECG, NIPB, EtCO2, SpO2, RESPIRATION,...)" and its underlying levels below "Z120302 - Vital Signs Monitoring Instruments"“ "Z120306 - VITAL SIGNS TELEMETRY INSTRUMENTS (ECG, NIPB, EtCO2, SpO2, RESPIRATION,...)" creates a group for telemetry devices. However, through the current hierarchy it is not connected with the code group "Z120302 - Vital Signs Monitoring Instruments" which includes products related to vital signs monitoring (such as bedside or portable patient monitors which share a very similar intended purpose to vital signs telemetry devices). | The request is not aimed to correct an improper place of an existing level and related bottom levels. The current version of EMDN provides the codes necessary to register different kinds of devices intended to monitor vital signs. |
 
 11
 
-2.Accepted and partially accepted submissions from
-2024 public consultation and the MDCG Nomenclature
+2.Accepted and partially accepted submissions from 
+2024 public consultation and the MDCG Nomenclature 
 working group
 Updates coming from accepted and partially accepted requests are reported in different colours, as following:
 • green for added levels;
 • red for deleted levels;
 • light blue for term editing;
-
 12
 
-ENDOSCOPIC APPLICATOR
-REQUEST: INSERT
-•
-•
 
+ENDOSCOPIC APPLICATOR
+REQUEST:
+ INSERT
+•
 A0305 ADMINISTRATION DEVICES G0601 - REUSABLE STOMAL DILATORS FOR HOME CARE THERAPY
+•
 A030501 ENDOSCOPIC APPLICATOR
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-A
-A01
-…
-A12
-A13
-A99
-
-TERM
-DEVICES FOR ADMINISTRATION, WITHDRAWAL AND COLLECTION
-NEEDLES
-…
-SAMPLE COLLECTION SPATULAS
-APPLICATORS FOR DRUGS AND MEDICAL DEVICES NOT PRESENT IN OTHER CLASSES
-DEVICES FOR ADMINISTRATION, WITHDRAWAL AND COLLECTION - OTHER
-
-LEVEL
-1
-2
-…
-2
-2
-2
-
-TERMINAL LEVEL
-N
-N
-…
-Y
-Y
-Y
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| A | DEVICES FOR ADMINISTRATION, WITHDRAWAL AND COLLECTION | 1 | N |
+| A01 | NEEDLES | 2 | N |
+| … | … | … | … |
+| A12 | SAMPLE COLLECTION SPATULAS | 2 | Y |
+| A13 | APPLICATORS FOR DRUGS AND MEDICAL DEVICES NOT PRESENT IN OTHER CLASSES | 2 | Y |
+| A99 | DEVICES FOR ADMINISTRATION, WITHDRAWAL AND COLLECTION - OTHER | 2 | Y |
 
 13
 
-REUSABLE GASTROINTESTINAL DILATORS FOR HOME CARE THERAPY
-REQUEST: INSERT
+REUSABLE GASTROINTESTINAL DILATORS FOR HOME CARE THERAPY
+REQUEST:
+ INSERT
 •
-•
-•
-
 G06 - REUSABLE GASTROINTESTINAL DILATORS FOR HOME CARE THERAPY
+•
 G0601 - REUSABLE STOMAL DILATORS FOR HOME CARE THERAPY
+•
 G0602 - REUSABLE ANAL DILATORS FOR HOME CARE THERAPY
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-G
-G01
-…
-G06
-G99
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| G | GASTROINTESTINAL DEVICES | 1 | N |
+| G01 | ORO-OESOPHAGEAL TUBES | 2 | N |
+| … | … | 2 | Y |
+| G06 | ANAL DILATORS | 2 | Y |
+| G99 | GASTROINTESTINAL DEVICES - OTHER | 2 | Y |
 
-TERM
-GASTROINTESTINAL DEVICES
-ORO-OESOPHAGEAL TUBES
-…
-ANAL DILATORS
-GASTROINTESTINAL DEVICES - OTHER
 
-LEVEL
-1
-2
-2
-2
-2
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| A | DEVICES FOR ADMINISTRATION, WITHDRAWAL AND COLLECTION | 1 | N |
+| … | … | … | … |
+| A10 | ABDOMINAL OSTOMY DEVICES | 2 | N |
+| A1001 | ONE PIECE ABDOMINAL OSTOMY DEVICES | 3 | N |
+| … | … | … | … |
+| A1080 | ABDOMINAL OSTOMY DEVICES - ACCESSORIES | 3 | N |
+| A108001 | RINGS / BEZELS / PLATES FOR PERISTOMAL SKIN | 4 | Y |
+| … | … | … | … |
+| A108009 | ABDOMINAL OSTOMY DILATORS | 4 | Y |
+| A108099 | ACCESSORY DEVICES FOR ABDOMINAL OSTOMY - OTHER | 4 | Y |
 
-TERMINAL LEVEL
-N
-N
-Y
-Y
-Y
-
-CODE
-A
-…
-A10
-A1001
-…
-A1080
-A108001
-…
-A108009
-A108099
-
-TERM
-DEVICES FOR ADMINISTRATION, WITHDRAWAL AND COLLECTION
-…
-ABDOMINAL OSTOMY DEVICES
-ONE PIECE ABDOMINAL OSTOMY DEVICES
-…
-ABDOMINAL OSTOMY DEVICES - ACCESSORIES
-RINGS / BEZELS / PLATES FOR PERISTOMAL SKIN
-…
-ABDOMINAL OSTOMY DILATORS
-ACCESSORY DEVICES FOR ABDOMINAL OSTOMY - OTHER
-
-LEVEL
-1
-…
-2
-3
-…
-3
-4
-…
-4
-4
-
-TERMINAL LEVEL
-N
-…
-N
-N
-…
-N
-Y
-…
-Y
-Y
 14
 
-ARRHYTHMOLOGY LEADS
-REQUEST: EDIT THE FOLLOWING TERMS BY CHANGHING “ ELECTROCATHETERS " TO “ LEAD "
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-C020101
-C020102
-C020103
-C020104
-C02010401
-C02010402
-C02010403
-C02010499
-C020105
+ARRHYTHMOLOGY LEADS 
+REQUEST:
+ EDIT THE FOLLOWING TERMS BY CHANGHING “ ELECTROCATHETERS " TO “ LEAD "
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-TERM
-ARRHYTHMOLOGY BIPOLAR LEADS
-ARRHYTHMOLOGY TRIPOLAR LEADS
-ARRHYTHMOLOGY TETRAPOLAR LEADS
-ARRHYTHMOLOGY MULTIPOLAR LEADS
-ARRHYTHMOLOGY MULTIPOLAR LEADS, CONVENTIONAL
-ARRHYTHMOLOGY MULTIPOLAR LEADS, BASKET TYPE
-ARRHYTHMOLOGY MULTIPOLAR LEADS, ADJUSTABLE
-ARRHYTHMOLOGY MULTIPOLAR LEADS – OTHER
-NON-CONVENTIONAL MAPPING (CONTACT AND NON-CONTACT) THREE-DIMENSIONAL LEADS
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| C020101 | ARRHYTHMOLOGY BIPOLAR LEADS | 4 | Y |
+| C020102 | ARRHYTHMOLOGY TRIPOLAR LEADS | 4 | Y |
+| C020103 | ARRHYTHMOLOGY TETRAPOLAR LEADS | 4 | Y |
+| C020104 | ARRHYTHMOLOGY MULTIPOLAR LEADS | 4 | N |
+| C02010401 | ARRHYTHMOLOGY MULTIPOLAR LEADS, CONVENTIONAL | 5 | Y |
+| C02010402 | ARRHYTHMOLOGY MULTIPOLAR LEADS, BASKET TYPE | 5 | Y |
+| C02010403 | ARRHYTHMOLOGY MULTIPOLAR LEADS, ADJUSTABLE | 5 | Y |
+| C02010499 | ARRHYTHMOLOGY MULTIPOLAR LEADS – OTHER | 5 | Y |
+| C020105 | NON-CONVENTIONAL MAPPING (CONTACT AND NON-CONTACT) THREE-DIMENSIONAL LEADS | 4 | Y |
 
-LEVEL
-4
-4
-4
-4
-5
-5
-5
-5
-4
 
-TERMINAL LEVEL
-Y
-Y
-Y
-N
-Y
-Y
-Y
-Y
-Y
-
-CODE
-C020101
-C020102
-C020103
-C020104
-C02010401
-C02010402
-C02010403
-C02010499
-C020105
-
-TERM
-ARRHYTHMOLOGY BIPOLAR DIAGNOSTIC CATHETERS
-ARRHYTHMOLOGY TRIPOLAR DIAGNOSTIC CATHETERS
-ARRHYTHMOLOGY TETRAPOLAR DIAGNOSTIC CATHETERS
-ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS
-ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS, CONVENTIONAL
-ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS, BASKET TYPE
-ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS, ADJUSTABLE
-ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS – OTHER
-NON-CONVENTIONAL MAPPING (CONTACT AND NON-CONTACT) THREE-DIMENSIONAL DIAGNOSTIC CATHETERS
-
-LEVEL
-4
-4
-4
-4
-5
-5
-5
-5
-
-TERMINAL LEVEL
-Y
-Y
-Y
-N
-Y
-Y
-Y
-Y
-
-4
-
-Y
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| C020101 | ARRHYTHMOLOGY BIPOLAR DIAGNOSTIC CATHETERS | 4 | Y |
+| C020102 | ARRHYTHMOLOGY TRIPOLAR DIAGNOSTIC CATHETERS | 4 | Y |
+| C020103 | ARRHYTHMOLOGY TETRAPOLAR DIAGNOSTIC CATHETERS | 4 | Y |
+| C020104 | ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS | 4 | N |
+| C02010401 | ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS, CONVENTIONAL | 5 | Y |
+| C02010402 | ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS, BASKET TYPE | 5 | Y |
+| C02010403 | ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS, ADJUSTABLE | 5 | Y |
+| C02010499 | ARRHYTHMOLOGY MULTIPOLAR DIAGNOSTIC CATHETERS – OTHER | 5 | Y |
+| C020105 | NON-CONVENTIONAL MAPPING (CONTACT AND NON-CONTACT) THREE-DIMENSIONAL DIAGNOSTIC CATHETERS | 4 | Y |
 
 15
 
-ARRHYTHMOGENIC FOCI ABLATION DEVICES
+ARRHYTHMOGENIC FOCI ABLATION DEVICES 
 REQUEST:
 •
-
 EDIT THE TERMS FOR ARRHYTHMOGENIC FOCI ABLATION DEVICES BY CHANGING THE “ELECTROCHATETERS TO "LEADS
-
 •
-
 INSERT C020304 ARRHYTHMOGENIC FOCI ABLATION DEVICES VIA PULSED FIELD ENERGY
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-C
-…
-C02
-C0203
-C020301
-C020302
-C020303
-C020304
-C020305
-C020380
-C020399
-
-TERM
-CARDIOCIRCULATORY SYSTEM DEVICES
-…
-ARRHYTHMOLOGY DEVICES
-CARDIAC TISSUE ABLATION DEVICES
-ARRHYTHMOGENIC FOCI RADIOFREQUENCY ABLATION CATHETERS
-ARRHYTHMOGENIC FOCI CRYOENERGY ABLATION CATHETERS
-ARRHYTHMOGENIC FOCI ABLATION LEADS VIA OTHER ENERGY SOURCES
-ARRHYTHMOGENIC FOCI PULSED FIELD ABLATION CATHETERS
-ARRHYTHMOGENIC FOCI LASER ABLATION CATHETERS
-ABLATION OF ARRHYTHMOGENIC FOCUS DEVICES - ACCESSORIES
-CARDIAC TISSUE ABLATION DEVICES - OTHER
-
-LEVEL
-1
-…
-2
-3
-4
-4
-4
-4
-4
-4
-4
-
-TERMINAL LEVEL
-N
-…
-N
-N
-Y
-Y
-Y
-Y
-Y
-Y
-Y
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| C | CARDIOCIRCULATORY SYSTEM DEVICES | 1 | N |
+| … | … | … | … |
+| C02 | ARRHYTHMOLOGY DEVICES | 2 | N |
+| C0203 | CARDIAC TISSUE ABLATION DEVICES | 3 | N |
+| C020301 | ARRHYTHMOGENIC FOCI RADIOFREQUENCY ABLATION CATHETERS | 4 | Y |
+| C020302 | ARRHYTHMOGENIC FOCI CRYOENERGY ABLATION CATHETERS | 4 | Y |
+| C020303 | ARRHYTHMOGENIC FOCI ABLATION LEADS VIA OTHER ENERGY SOURCES | 4 | Y |
+| C020304 | ARRHYTHMOGENIC FOCI PULSED FIELD ABLATION CATHETERS | 4 | Y |
+| C020305 | ARRHYTHMOGENIC FOCI LASER ABLATION CATHETERS | 4 | Y |
+| C020380 | ABLATION OF ARRHYTHMOGENIC FOCUS DEVICES - ACCESSORIES | 4 | Y |
+| C020399 | CARDIAC TISSUE ABLATION DEVICES - OTHER | 4 | Y |
 
 16
 
-PHONATION VALVES
+PHONATION VALVES
 REQUEST:
 •
-
 DELETE R900601 PHONATION VALVES FOR TRACHEOSTOMIC CANNULA
-
 •
-
 INSERT R900603 - PHONATION VALVES FOR VENTILATOR USE
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-OUTCOME: PARTIALLY ACCEPTED
-
-CODE
-R90
-…
-R9006
-R900601
-R900602
-R90060201
-R90060202
-R900680
-…
-R9099
-
-TERM
-RESPIRATORY AND ANAESTHESIA DEVICES - VARIOUS
-…
-PHONATION VALVES
-PHONATION VALVES FOR TRACHEOSTOMIC CANNULA
-PHONATION VALVES FOR TRACHEOSTOMY
-PHONATORY VALVES FOR TRACHEOSTOMY FOR VENTILATOR USE
-PHONATORY VALVES FOR TRACHEOSTOMY NOT FOR VENTILATOR USE
-PHONATION VALVES - ACCESSORIES
-….
-RESPIRATORY AND ANAESTHESIA DEVICES - OTHER
-
-LEVEL
-2
-…
-3
-4
-4
-5
-5
-4
-…
-3
-
-TERMINAL LEVEL
-N
-…
-N
-Y
-Y
-Y
-Y
-Y
-…
-Y
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| R90 | RESPIRATORY AND ANAESTHESIA DEVICES - VARIOUS | 2 | N |
+| … | … | … | … |
+| R9006 | PHONATION VALVES | 3 | N |
+| R900601 | PHONATION VALVES FOR TRACHEOSTOMIC CANNULA | 4 | Y |
+| R900602 | PHONATION VALVES FOR TRACHEOSTOMY | 4 | Y |
+| R90060201 | PHONATORY VALVES FOR TRACHEOSTOMY FOR VENTILATOR USE | 5 | Y |
+| R90060202 | PHONATORY VALVES FOR TRACHEOSTOMY NOT FOR VENTILATOR USE | 5 | Y |
+| R900680 | PHONATION VALVES - ACCESSORIES | 4 | Y |
+| … | …. | … | … |
+| R9099 | RESPIRATORY AND ANAESTHESIA DEVICES - OTHER | 3 | Y |
 
 17
 
-UROLOGY IMPLANT INSTRUMENTS - REUSABLE
-REQUEST: INSERT L0612 UROLOGY IMPLANT INSTRUMENTS, REUSABLE
+UROLOGY IMPLANT INSTRUMENTS - REUSABLE 
+REQUEST:
+ INSERT L0612 UROLOGY IMPLANT INSTRUMENTS, REUSABLE
+OUTCOME:
+ ACCEPTED
 
-OUTCOME: ACCEPTED
-CODE
-L06
-L0604
-L0605
-L0606
-L0607
-L0608
-L0609
-L0610
-L0611
-L0612
-L0699
-
-TERM
-UROLOGY INSTRUMENTS, REUSABLE
-ENDOSCOPIC UROLOGY INSTRUMENTS, REUSABLE
-NON-ENDOSCOPIC UROLOGY DILATORS AND SPREADERS, REUSABLE
-NON-ENDOSCOPIC UROLOGY FORCEPS, REUSABLE
-SUPRAPUBIC ACCESS HANDPIECES, REUSABLE
-NON-ENDOSCOPIC URINARY TRACT SURGICAL MANIPULATORS, REUSABLE
-UROLOGICAL SURGERY INSTRUMENT KITS, REUSABLE
-NON-ENDOSCOPIC UROLOGICAL SURGERY SPATULAS, REUSABLE
-NON-ENDOSCOPIC UROLOGY NEEDLES, REUSABLE
-UROLOGY PROSTHETIC INSTRUMENTS AND KIT, REUSABLE
-UROLOGY INSTRUMENTS, REUSABLE - OTHER
-
-LEVEL
-2
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-
-TERMINAL LEVEL
-N
-N
-N
-N
-Y
-Y
-Y
-Y
-Y
-Y
-Y
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| L06 | UROLOGY INSTRUMENTS, REUSABLE | 2 | N |
+| L0604 | ENDOSCOPIC UROLOGY INSTRUMENTS, REUSABLE | 3 | N |
+| L0605 | NON-ENDOSCOPIC UROLOGY DILATORS AND SPREADERS, REUSABLE | 3 | N |
+| L0606 | NON-ENDOSCOPIC UROLOGY FORCEPS, REUSABLE | 3 | N |
+| L0607 | SUPRAPUBIC ACCESS HANDPIECES, REUSABLE | 3 | Y |
+| L0608 | NON-ENDOSCOPIC URINARY TRACT SURGICAL MANIPULATORS, REUSABLE | 3 | Y |
+| L0609 | UROLOGICAL SURGERY INSTRUMENT KITS, REUSABLE | 3 | Y |
+| L0610 | NON-ENDOSCOPIC UROLOGICAL SURGERY SPATULAS, REUSABLE | 3 | Y |
+| L0611 | NON-ENDOSCOPIC UROLOGY NEEDLES, REUSABLE | 3 | Y |
+| L0612 | UROLOGY PROSTHETIC INSTRUMENTS AND KIT, REUSABLE | 3 | Y |
+| L0699 | UROLOGY INSTRUMENTS, REUSABLE - OTHER | 3 | Y |
 
 18
 
-ELECTROSURGERY PADS AND CABLES, REUSABLE
-REQUEST: INSERT
+ELECTROSURGERY PADS AND CABLES, REUSABLE
+REQUEST:
+ INSERT
 •
-•
-
 K04- ELECTROSURGERY DEVICES, REUSABLE
+•
 K04xxxx ELECTROSURGERY PADS (NEUTRAL ELECTRODES) AND CABLES, REUSABLE
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-L
-…
-L18
-…
-L1810
-L181001
-L181002
-L181003
-…
-
-TERM
-REUSABLE SURGICAL INSTRUMENTS
-…
-ELECTROSURGERY INSTRUMENTS, REUSABLE
-…
-ELECTROSURGERY PADS (NEUTRAL ELECTRODES) AND CABLES, REUSABLE
-ELECTROSURGERY SINGLE PATIENT PADS (NEUTRAL ELECTRODES), REUSABLE
-ELECTROSURGERY DUAL PATIENT PADS (NEUTRAL ELECTRODES), REUSABLE
-ELECTROSURGERY CONNECTION CABLES, REUSABLE
-
-LEVEL
-1
-…
-2
-…
-3
-4
-4
-4
-…
-
-TERMINAL LEVEL
-N
-…
-N
-…
-N
-Y
-Y
-Y
-…
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| L | REUSABLE SURGICAL INSTRUMENTS | 1 | N |
+| … | … | … | … |
+| L18 | ELECTROSURGERY INSTRUMENTS, REUSABLE | 2 | N |
+| … | … | … | … |
+| L1810 | ELECTROSURGERY PADS (NEUTRAL ELECTRODES) AND CABLES, REUSABLE | 3 | N |
+| L181001 | ELECTROSURGERY SINGLE PATIENT PADS (NEUTRAL ELECTRODES), REUSABLE | 4 | Y |
+| L181002 | ELECTROSURGERY DUAL PATIENT PADS (NEUTRAL ELECTRODES), REUSABLE | 4 | Y |
+| L181003 | ELECTROSURGERY CONNECTION CABLES, REUSABLE | 4 | Y |
+| … |  | … | … |
 
 19
 
-ARTHROSCOPIC SURGERY INSTRUMENTS
-REQUEST: INSERT
+ARTHROSCOPIC SURGERY INSTRUMENTS
+REQUEST:
+ INSERT
 •
-•
-•
-
 L1919 - ARTHROSCOPIC SURGERY MICROFRACTOR REUSABLE
+•
 L1920 - ARTHROSCOPIC SURGERY PUNCH, REUSABLE
+•
 L1921 - ARTHROSCOPIC SURGERY CURETTE, REUSABLE
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-L19
-L1901
-…
-L1904
-…
-L1909
-L1910
-…
-L1917
-L1918
-L1919
-L1920
-L1921
-L1980
-L1999
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| L19 | ARTHROSCOPIC SURGERY INSTRUMENTS, REUSABLE | 2 | N |
+| L1901 | ARTHROSCOPIC SURGERY DISSECTORS, REUSABLE | 3 | Y |
+| … | … | … | … |
+| L1904 | ARTHROSCOPIC SURGERY FORCEPS AND PUNCHES, REUSABLE | 3 | Y |
+| … | … |  |  |
+| L1909 | ARTHROSCOPIC SURGERY SCALPELS, MENISCOTOMES AND KNIVES REUSABLE | 3 | Y |
+| L1910 | ARTHROSCOPIC SURGERY HOOKS, REUSABLE | 3 | Y |
+| … | … |  |  |
+| L1917 | ARTHROSCOPY ADAPTERS AND CONNECTORS, REUSABLE | 3 | Y |
+| L1918 | MICROFRACTORS FOR BONE STIMULATION, REUSABLE | 3 | Y |
+| L1919 | ARTHROSCOPIC SURGERY SPOONS AND CURETTES, REUSABLE | 3 | Y |
+| L1920 | ARTHROSCOPIC SURGERY FILES AND RASPS, REUSABLE | 3 | Y |
+| L1921 | ARTHROSCOPIC SURGERY PROBES, REUSABLE | 3 | Y |
+| L1980 | ARTHROSCOPIC SURGERY INSTRUMENTS, REUSABLE - ACCESSORIES | 3 | Y |
+| L1999 | ARTHROSCOPIC SURGERY INSTRUMENTS, REUSABLE - OTHER | 3 | Y |
 
-TERM
-ARTHROSCOPIC SURGERY INSTRUMENTS, REUSABLE
-ARTHROSCOPIC SURGERY DISSECTORS, REUSABLE
-…
-ARTHROSCOPIC SURGERY FORCEPS AND PUNCHES, REUSABLE
-…
-ARTHROSCOPIC SURGERY SCALPELS, MENISCOTOMES AND KNIVES REUSABLE
-ARTHROSCOPIC SURGERY HOOKS, REUSABLE
-…
-ARTHROSCOPY ADAPTERS AND CONNECTORS, REUSABLE
-MICROFRACTORS FOR BONE STIMULATION, REUSABLE
-ARTHROSCOPIC SURGERY SPOONS AND CURETTES, REUSABLE
-ARTHROSCOPIC SURGERY FILES AND RASPS, REUSABLE
-ARTHROSCOPIC SURGERY PROBES, REUSABLE
-ARTHROSCOPIC SURGERY INSTRUMENTS, REUSABLE - ACCESSORIES
-ARTHROSCOPIC SURGERY INSTRUMENTS, REUSABLE - OTHER
-
-LEVEL
-2
-3
-…
-3
-
-TERMINAL LEVEL
-N
-Y
-…
-Y
-
-3
-3
-
-Y
-Y
-
-3
-3
-3
-3
-3
-3
-3
-
-Y
-Y
-Y
-Y
-Y
-Y
-Y
 20
 
-UROLOGICAL IMPLANT (NON-PROSTHETIC), FOR RADIATION
-REQUEST: INSERT U1401 - UROLOGICAL IMPLANT (NON-PROSTHETIC), FOR RADIATION
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-P
-…
-P90
-P9001
-…
-P9004
-P9005
-P9099
+UROLOGICAL IMPLANT (NON-PROSTHETIC), FOR RADIATION
+REQUEST:
+ INSERT U1401 - UROLOGICAL IMPLANT (NON-PROSTHETIC), FOR RADIATION
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-TERM
-IMPLANTABLE PROSTHETIC AND OSTEOSYNTHESIS DEVICES
-…
-IMPLANTABLE PROSTHETIC AND OSTEOSYNTHESIS DEVICES - VARIOUS
-TEMPORARY TISSUE EXPANDERS
-…
-STRUCTURES FILLING, REPLACEMENT AND RECONSTRUCTION DEVICES
-IMPLANTABLE SPACERS FOR PROTECTION DURING RADIATION THERAPY
-IMPLANTABLE PROSTHETIC DEVICES - OTHER
-
-LEVEL
-2
-…
-2
-3
-…
-3
-3
-3
-
-TERMINAL LEVEL
-N
-…
-N
-N
-…
-N
-Y
-N
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| P | IMPLANTABLE PROSTHETIC AND OSTEOSYNTHESIS DEVICES | 2 | N |
+| … | … | … | … |
+| P90 | IMPLANTABLE PROSTHETIC AND OSTEOSYNTHESIS DEVICES - VARIOUS | 2 | N |
+| P9001 | TEMPORARY TISSUE EXPANDERS | 3 | N |
+| … | … | … | … |
+| P9004 | STRUCTURES FILLING, REPLACEMENT AND RECONSTRUCTION DEVICES | 3 | N |
+| P9005 | IMPLANTABLE SPACERS FOR PROTECTION DURING RADIATION THERAPY | 3 | Y |
+| P9099 | IMPLANTABLE PROSTHETIC DEVICES - OTHER | 3 | N |
 
 21
 
-PREPARED MEDIA IN BOTTLES (BACTERIOLOGY)
-REQUEST: INSERT SUBLEVEL FOR NOT DEHYDRATED MEDIA IN BOTTLES
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-W01
-…
-W0104
-…
-W010401
-W01040101
-W01040102
-W01040103
-W0104010306
-W01040104
-…
-
-TERM
-REAGENTS
-…
-MICROBIOLOGY (CULTURE)
-…
-BACTERIOLOGY - CULTURE MEDIA
-DEHYDRATED CULTURE MEDIA (DCM - BACTERIOLOGY))
-PREPARED MEDIA IN TUBES (BACTERIOLOGY)
 PREPARED MEDIA IN BOTTLES (BACTERIOLOGY)
-ALL DEHYDRATED CULTURE MEDIA IN BOTTLES
-PREPARED MEDIA IN PLATES (BACTERIOLOGY)
-…
+REQUEST:
+ INSERT SUBLEVEL FOR NOT DEHYDRATED MEDIA IN BOTTLES
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-LEVEL
-2
-…
-3
-…
-4
-5
-5
-5
-6
-5
-…
-
-TERMINAL LEVEL
-N
-…
-N
-…
-N
-N
-N
-N
-Y
-N
-…
+|  | C | ODE |  |  | TERM |  | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| W01 |  |  |  | REAGENTS |  |  | 2 | N |
+| … |  |  |  | … |  |  | … | … |
+| W0104 |  |  |  | MICROBIOLOGY (CULTURE) |  |  | 3 | N |
+| … |  |  |  | … |  |  | … | … |
+| W010401 |  |  |  | BACTERIOLOGY - CULTURE MEDIA |  |  | 4 | N |
+| W01040101 |  |  |  | DEHYDRATED CULTURE MEDIA (DCM - BACTERIOLOGY)) |  |  | 5 | N |
+| W01040102 |  |  |  | PREPARED MEDIA IN TUBES (BACTERIOLOGY) |  |  | 5 | N |
+| W01040103 |  |  |  | PREPARED MEDIA IN BOTTLES (BACTERIOLOGY) |  |  | 5 | N |
+| W0104010306 |  |  |  | ALL DEHYDRATED CULTURE MEDIA IN BOTTLES |  |  | 6 | Y |
+| W01040104 |  |  |  | PREPARED MEDIA IN PLATES (BACTERIOLOGY) |  |  | 5 | N |
+| … |  |  |  | … |  |  | … | … |
 
 22
 
-CANDIDA AURIS
-REQUEST: INSERT W0105060404 - CANDIDA AURIS - NA REAGENTS
-OUTCOME: ACCEPTED
-CODE
-W01
-…
-W0105
-…
-W010506
-…
-W01050604
-W0105060401
-W0105060402
-W0105060403
-W0105060404
-W0105060499
+CANDIDA AURIS
+REQUEST:
+ INSERT W0105060404 - CANDIDA AURIS - NA REAGENTS
+OUTCOME:
+ ACCEPTED
 
-TERM
-REAGENTS
-…
-INFECTIOUS DISEASES
-…
-MYCOLOGY (INFECT. IMMUNOLOGY/NAT)
-…
-MYCOLOGY - NA REAGENTS
-ASPERGILLUS - NA REAGENTS
-CANDIDA ALBICANS - NA REAGENTS
-CRYPTOCOCCUS - NA REAGENTS
-CANDIDA AURIS - NA REAGENTS
-MYCOLOGY NA REAGENTS - OTHER
-
-LEVEL
-2
-…
-3
-…
-4
-…
-5
-6
-6
-6
-6
-6
-
-TERMINAL LEVEL
-N
-…
-N
-…
-N
-…
-N
-Y
-Y
-Y
-Y
-Y
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| W01 | REAGENTS | 2 | N |
+| … | … | … | … |
+| W0105 | INFECTIOUS DISEASES | 3 | N |
+| … | … | … | … |
+| W010506 | MYCOLOGY (INFECT. IMMUNOLOGY/NAT) | 4 | N |
+| … | … | … | … |
+| W01050604 | MYCOLOGY - NA REAGENTS | 5 | N |
+| W0105060401 | ASPERGILLUS - NA REAGENTS | 6 | Y |
+| W0105060402 | CANDIDA ALBICANS - NA REAGENTS | 6 | Y |
+| W0105060403 | CRYPTOCOCCUS - NA REAGENTS | 6 | Y |
+| W0105060404 | CANDIDA AURIS - NA REAGENTS | 6 | Y |
+| W0105060499 | MYCOLOGY NA REAGENTS - OTHER | 6 | Y |
 
 23
 
-ROLLATORS
-REQUEST: INSERT Y120669 - WALKING FRAMES WITH CHAIR, 4 WHEELS, MOTORIZED or Y120669 - WALKING FRAMES WITH
+ROLLATORS
+REQUEST:
+ 
+INSERT
+ 
+Y120669
+ 
+-
+ 
+WALKING
+ 
+FRAMES
+ 
+WITH
+ 
+CHAIR,
+ 
+4
+ 
+WHEELS,
+ 
+MOTORIZED
+ 
+or
+ 
+Y120669
+ 
+-
+ 
+WALKING
+ 
+FRAMES
+ 
+WITH
 CHAIR, 4 WHEELS, POWER-ASSISTED
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-Y12
-…
-Y1206
-…
-Y120606
-Y120609
-Y120612
-Y120615
-…
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-TERM
-PERSONAL MOBILITY DEVICES
-…
-WALKING DEVICES, TWO-HANDED OPERATION
-…
-WHEELED WALKER
-WALKING FRAMES WITH CHAIR, 4 WHEELS
-WALKING TROLLEYS
-POWER ASSISTED MOBILITY ROLLATORS
-…
-
-LEVEL
-2
-…
-3
-…
-4
-4
-4
-4
-…
-
-TERMINAL LEVEL
-N
-…
-N
-…
-Y
-Y
-Y
-Y
-…
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| Y12 | PERSONAL MOBILITY DEVICES | 2 | N |
+| … | … | … | … |
+| Y1206 | WALKING DEVICES, TWO-HANDED OPERATION | 3 | N |
+| … | … | … | … |
+| Y120606 | WHEELED WALKER | 4 | Y |
+| Y120609 | WALKING FRAMES WITH CHAIR, 4 WHEELS | 4 | Y |
+| Y120612 | WALKING TROLLEYS | 4 | Y |
+| Y120615 | POWER ASSISTED MOBILITY ROLLATORS | 4 | Y |
+| … | … | … | … |
 
 24
 
-MAGNETOENCEPHALOGRAPHY INSTRUMENTS
-REQUEST: INSERT
-•
-•
-
-Z12101X - MAGNETOENCEPHALOGRAPHY (MEG) INSTRUMENTS
-Z12101x01 MAGNETOENCEPHALOGRAPHY (MEG) SYSTEMS
-
-OUTCOME: ACCEPTED
-CODE
-Z12
-…
-Z1210
-…
-Z121012
-Z12101201
-Z12101280
-Z12101282
-Z12101285
-Z12101292
-Z121090
-
-TERM
-FUNCTIONALITY EXPLORING AND TREATMENT INSTRUMENTS
-…
-NEUROLOGY AND NEUROSURGERY INSTRUMENTS
 MAGNETOENCEPHALOGRAPHY INSTRUMENTS
-MAGNETOENCEPHALOGRAPHY SYSTEMS
-MAGNETOENCEPHALOGRAPHY INSTRUMENTS – HARDWARE ACCESSORIES
-MAGNETOENCEPHALOGRAPHY INSTRUMENTS – SOFTWARE ACCESSORIES
-MAGNETOENCEPHALOGRAPHY INSTRUMENTS - CONSUMABLES
-MAGNETOENCEPHALOGRAPHY INSTRUMENTS – MEDICAL DEVICE SOFTWARE
-VARIOUS NEUROLOGIC AND NEUROSURGERY INSTRUMENTS
+REQUEST:
+ INSERT
+•
+Z12101X - MAGNETOENCEPHALOGRAPHY (MEG) INSTRUMENTS
+•
+Z12101x01 MAGNETOENCEPHALOGRAPHY (MEG) SYSTEMS
+OUTCOME:
+ ACCEPTED
 
-LEVEL
-2
-
-TERMINAL LEVEL
-N
-
-3
-4
-4
-5
-5
-5
-5
-5
-4
-
-N
-Y
-N
-Y
-Y
-Y
-Y
-Y
-N
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| Z12 | FUNCTIONALITY EXPLORING AND TREATMENT INSTRUMENTS | 2 | N |
+| … | … |  |  |
+| Z1210 | NEUROLOGY AND NEUROSURGERY INSTRUMENTS | 3 | N |
+| … |  | 4 | Y |
+| Z121012 | MAGNETOENCEPHALOGRAPHY INSTRUMENTS | 4 | N |
+| Z12101201 | MAGNETOENCEPHALOGRAPHY SYSTEMS | 5 | Y |
+| Z12101280 | MAGNETOENCEPHALOGRAPHY INSTRUMENTS – HARDWARE ACCESSORIES | 5 | Y |
+| Z12101282 | MAGNETOENCEPHALOGRAPHY INSTRUMENTS – SOFTWARE ACCESSORIES | 5 | Y |
+| Z12101285 | MAGNETOENCEPHALOGRAPHY INSTRUMENTS - CONSUMABLES | 5 | Y |
+| Z12101292 | MAGNETOENCEPHALOGRAPHY INSTRUMENTS – MEDICAL DEVICE SOFTWARE | 5 | Y |
+| Z121090 | VARIOUS NEUROLOGIC AND NEUROSURGERY INSTRUMENTS | 4 | N |
 
 25
 
-TENS INSTRUMENTS (Transcutaneous Electrical Nerve Stimulation)
-REQUEST: UPDATE Z120622 from MUSCLE STIMULATORS to MUSCLE AND NERVE STIMULATORS (TENS)
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-Z1206
-Z120601
-…
-Z120604
-…
-Z120622
-…
+TENS INSTRUMENTS 
+(Transcutaneous Electrical Nerve Stimulation)
+REQUEST:
+ UPDATE Z120622 from MUSCLE STIMULATORS to MUSCLE AND NERVE STIMULATORS (TENS)
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-TERM
-PHYSIOTHERAPY AND REHABILITATION INSTRUMENTS
-ELECTROTHERAPY EQUIPMENT
-…
-IONTOPHORESIS EQUIPMENT
-…
-MUSCLE STIMULATORS
-…
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| Z1206 | PHYSIOTHERAPY AND REHABILITATION INSTRUMENTS | 3 | N |
+| Z120601 | ELECTROTHERAPY EQUIPMENT | 4 | N |
+| … | … | … | … |
+| Z120604 | IONTOPHORESIS EQUIPMENT | 4 | Y |
+| … | … | … | … |
+| Z120622 | MUSCLE STIMULATORS | 4 | Y |
+| … | … | … | … |
 
-LEVEL
-3
-4
-…
-4
-…
-4
-…
 
-TERMINAL LEVEL
-N
-N
-…
-Y
-…
-Y
-…
-
-CODE
-Z1206
-Z120601
-…
-Z120604
-…
-Z120622
-…
-
-TERM
-PHYSIOTHERAPY AND REHABILITATION INSTRUMENTS
-ELECTROTHERAPY EQUIPMENT (INCLUDED TENS)
-…
-IONTOPHORESIS EQUIPMENT
-…
-MUSCLE STIMULATORS
-…
-
-LEVEL
-3
-4
-…
-4
-…
-4
-…
-
-TERMINAL LEVEL
-N
-N
-…
-Y
-…
-Y
-…
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| Z1206 | PHYSIOTHERAPY AND REHABILITATION INSTRUMENTS | 3 | N |
+| Z120601 | ELECTROTHERAPY EQUIPMENT (INCLUDED TENS) | 4 | N |
+| … | … | … | … |
+| Z120604 | IONTOPHORESIS EQUIPMENT | 4 | Y |
+| … | … | … | … |
+| Z120622 | MUSCLE STIMULATORS | 4 | Y |
+| … | … | … | … |
 
 26
 
-RADIOFREQUENCY NEURAL TISSUE ABLATION GENERATORS
-REQUEST: INSERT Z121012 - RADIOFREQUENCY NEURAL TISSUE ABLATION GENERATORS
-OUTCOME: PARTIALLY ACCEPTED
-CODE
-Z12
-…
-Z1210
-Z121001
-Z121002
-Z121003
-…
+RADIOFREQUENCY NEURAL TISSUE ABLATION GENERATORS
+REQUEST:
+ INSERT Z121012 - RADIOFREQUENCY NEURAL TISSUE ABLATION GENERATORS
+OUTCOME:
+ PARTIALLY ACCEPTED
 
-TERM
-INSTRUMENTS FOR FUNCTIONAL EXPLORATIONS AND THERAPEUTIC INTERVENTIONS
-…
-NEUROLOGY AND NEUROSURGERY INSTRUMENTS
-RADIOFREQUENCY INTRA-CEREBRAL LESION GENERATORS
-NERVOUS SYSTEM MONITORING SYSTEMS
-ELECTROENCEPHALOGRAPHY INSTRUMENTS
-…
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| Z12 | INSTRUMENTS FOR FUNCTIONAL EXPLORATIONS AND THERAPEUTIC INTERVENTIONS | 2 | N |
+| … | … | … | … |
+| Z1210 | NEUROLOGY AND NEUROSURGERY INSTRUMENTS | 3 | N |
+| Z121001 | RADIOFREQUENCY INTRA-CEREBRAL LESION GENERATORS | 4 | Y |
+| Z121002 | NERVOUS SYSTEM MONITORING SYSTEMS | 4 | Y |
+| Z121003 | ELECTROENCEPHALOGRAPHY INSTRUMENTS | 4 | Y |
+| … | … | … | … |
 
-LEVEL
-2
-…
-3
-4
-4
-4
-…
 
-TERMINAL LEVEL
-N
-…
-N
-Y
-Y
-Y
-…
+| CODE | TERM | LEVEL | TERMINAL LEVEL |
+| --- | --- | --- | --- |
+| Z12 | INSTRUMENTS FOR FUNCTIONAL EXPLORATIONS AND THERAPEUTIC INTERVENTIONS | 2 | N |
+| … | … | … | … |
+| Z1210 | NEUROLOGY AND NEUROSURGERY INSTRUMENTS | 3 | N |
+| Z121001 | RADIOFREQUENCY NERVOUS TISSUE ABLATION INSTRUMENTS | 4 | Y |
+| Z121002 | NERVOUS SYSTEM MONITORING SYSTEMS | 4 | Y |
+| Z121003 | ELECTROENCEPHALOGRAPHY INSTRUMENTS | 4 | Y |
+| … | … | … | … |
 
-CODE
-Z12
-…
-Z1210
-Z121001
-Z121002
-Z121003
-…
-
-TERM
-INSTRUMENTS FOR FUNCTIONAL EXPLORATIONS AND THERAPEUTIC INTERVENTIONS
-…
-NEUROLOGY AND NEUROSURGERY INSTRUMENTS
-RADIOFREQUENCY NERVOUS TISSUE ABLATION INSTRUMENTS
-NERVOUS SYSTEM MONITORING SYSTEMS
-ELECTROENCEPHALOGRAPHY INSTRUMENTS
-…
-
-LEVEL
-2
-…
-3
-4
-4
-4
-…
-
-TERMINAL LEVEL
-N
-…
-N
-Y
-Y
-Y
-…
 27
-
-
