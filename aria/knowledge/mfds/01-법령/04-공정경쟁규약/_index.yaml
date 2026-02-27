@@ -1,29 +1,116 @@
 title: 의료기기 공정경쟁규약
 description: >
-  KMDIA 의료기기 거래에 관한 공정경쟁규약 원문 Knowledge DB.
-  4개 파일이 계층적 우선순위를 가짐.
+  KMDIA 의료기기 거래에 관한 공정경쟁규약 Knowledge DB.
+  토픽(조항)별 18개 통합 파일 + 위반사례 1개 파일.
 
-hierarchy:
-  - role: framework
-    file: 의료기기-리베이트-예방-및-공정경쟁을-위한-안내서2022-04.md
-    description: >
-      최상위 프레임워크. 규약 전문(Art. 1-20) + 세부운용기준 + 조항별 해설.
-      2022.04 기준. 다른 role에서 동일 조항이 없으면 이 문서가 기본 소스.
+structure: topic-based
+topic_dir: topics/
 
-  - role: override
-    file: 붙임2-의료기기-공정경쟁규약심의위원회-내부지침-전문24-07-12-개정.md
-    description: >
-      심의위원회 내부지침 (24.07.12 개정). framework와 동일 조항이 존재하면
-      이 문서의 내용이 우선 적용(override). 택시비 기준, 재심의 기준 등 포함.
+topics:
+  - id: "00-general"
+    type: GENERAL
+    title: "일반 (총칙/개요/기본원칙)"
 
-  - role: definitions
-    file: 의료기기-리베이트-예방-및-공정거래를-위한-안내서-배포본.md
-    description: >
-      배포본. 용어 정의, 개념 설명, 실무 체크리스트 용도.
-      판정 근거로는 사용하지 않고, 용어/개념 보충 시에만 참조.
+  - id: "01-용어정의"
+    type: DEFINITIONS
+    article: "제3조"
+    title: "용어정의"
 
-  - role: precedents
-    file: 공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md
-    description: >
-      실제 경고조치 사례 (23.05.02). 위반유형별 사례와 결과.
-      신호등 판단 시 유사 사례 인용 및 리스크 보강 용도.
+  - id: "02-금품류제공제한"
+    type: ACTIVITY
+    article: "제5조"
+    operating_standard: "제2조"
+    title: "금품류 제공 제한"
+
+  - id: "03-견본품"
+    type: ACTIVITY
+    article: "제6조"
+    operating_standard: "제3조"
+    title: "견본품"
+
+  - id: "04-기부행위"
+    type: ACTIVITY
+    article: "제7조"
+    operating_standard: "제4조"
+    title: "기부행위"
+
+  - id: "05-학술대회개최지원"
+    type: ACTIVITY
+    article: "제8조"
+    operating_standard: "제5조"
+    title: "학술대회 개최·운영 지원"
+
+  - id: "06-학술대회참가지원"
+    type: ACTIVITY
+    article: "제9조"
+    operating_standard: "제6조"
+    title: "학술대회 참가지원"
+
+  - id: "07-자사제품설명회"
+    type: ACTIVITY
+    article: "제10조"
+    operating_standard: "제7조"
+    title: "자사제품설명회"
+
+  - id: "08-교육훈련"
+    type: ACTIVITY
+    article: "제11조"
+    operating_standard: "제8조"
+    title: "교육·훈련"
+
+  - id: "09-강연및자문"
+    type: ACTIVITY
+    article: "제12조"
+    operating_standard: "제9조"
+    title: "강연 및 자문"
+
+  - id: "10-임상시험지원"
+    type: ACTIVITY
+    article: "제13조"
+    title: "임상시험 지원"
+
+  - id: "11-시장조사"
+    type: ACTIVITY
+    article: "제14조"
+    operating_standard: "제10조"
+    title: "시장조사"
+
+  - id: "12-시판후조사"
+    type: ACTIVITY
+    article: "제15조"
+    operating_standard: "제11조"
+    title: "시판 후 조사"
+
+  - id: "13-시판후외임상활동"
+    type: ACTIVITY
+    article: "제16조"
+    operating_standard: "제12조"
+    title: "시판 후 조사 외의 임상활동"
+
+  - id: "14-전시및광고"
+    type: ACTIVITY
+    article: "제17조"
+    operating_standard: "제13조"
+    title: "전시 및 광고"
+
+  - id: "15-규약의공정거래위원회신고"
+    type: PROCEDURE
+    article: "제18조"
+    title: "사전·사후 신고사항"
+
+  - id: "16-공정경쟁규약심의위원회"
+    type: PROCEDURE
+    article: "제19조"
+    title: "공정경쟁규약 심의위원회"
+
+  - id: "17-위반시제재사항"
+    type: PROCEDURE
+    article: "제20조"
+    operating_standard: "제18조"
+    title: "위반 시 제재사항"
+
+precedents:
+  file: 공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md
+  description: >
+    실제 경고조치 사례 (23.05.02). 위반유형별 사례와 결과.
+    신호등 판단 시 유사 사례 인용 및 리스크 보강 용도.
