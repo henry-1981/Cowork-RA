@@ -5,6 +5,18 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.9] - 2026-02-27
+
+### Fixed
+- 공정경쟁규약 2개 파일 PDF 추출 아티팩트 정리 (페이지 마커, 깨진 줄바꿈, 중복 헤더 제거)
+  - `공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md` — 깨진 줄바꿈·공백 복원, 불필요 표 삭제
+  - `붙임2-의료기기-공정경쟁규약심의위원회-내부지침-전문24-07-12-개정.md` — 페이지 마커(`- N -`)·중복 `[붙임2]` 헤더 제거
+
+## [0.3.8] - 2026-02-27
+
+### Fixed
+- 리베이트 안내서 garbled 인코딩 제거 (Devanagari/Cyrillic 등 43줄)
+
 ## [0.3.7] - 2026-02-27
 
 ### Added
