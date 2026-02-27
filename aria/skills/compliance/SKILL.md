@@ -9,7 +9,7 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   category: "domain"
   status: "active"
   updated: "2026-02-27"
@@ -43,16 +43,17 @@ Evaluate medical device marketing activities against the KMDIA Fair Competition 
 
 ## Knowledge DB
 
-This skill reads directly from the 공정경쟁규약 Knowledge DB. File hierarchy is defined in `aria/knowledge/mfds/01-법령/04-공정경쟁규약/_index.yaml`.
+This skill reads from the topic-based 공정경쟁규약 Knowledge DB at `aria/knowledge/mfds/01-법령/04-공정경쟁규약/topics/`.
 
-| Role | File | Usage |
-|------|------|-------|
-| `framework` | 의료기기-리베이트-예방-및-공정경쟁을-위한-안내서2022-04.md | Primary source. Code articles, operating standards, article-by-article commentary |
-| `override` | 붙임2-의료기기-공정경쟁규약심의위원회-내부지침-전문24-07-12-개정.md | Overrides framework when same article exists. Committee internal rules (24.07.12 rev.) |
-| `definitions` | 의료기기-리베이트-예방-및-공정거래를-위한-안내서-배포본.md | Term definitions, concept explanations. Referenced for clarity, not for judgment |
-| `precedents` | 공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md | Real warning cases (23.05.02). Cited for risk reinforcement |
+Each topic file contains ALL relevant content from 3 sources (안내서, 배포본, 내부지침) merged by article:
 
-**Override Rule**: When the `override` file contains guidance on the same article/topic as `framework`, the override content takes precedence. Always check override AFTER reading framework.
+| Source Section | Content |
+|---------------|---------|
+| `## 안내서 (2022.04)` | 규약 본문 + 세부운용기준 + 조항별 해설 |
+| `## 배포본 해설` | 용어 정의 + 개념 설명 + 실무 체크리스트 + FAQ |
+| `## 내부지침 (24.07.12 개정)` | 심의위원회 override 규칙 (해당 시) |
+
+**Precedents** (별도 파일): `공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md` — 위반유형별 실제 경고조치 사례
 
 **KD Base Path**: `aria/knowledge/mfds/01-법령/04-공정경쟁규약/`
 
@@ -69,23 +70,17 @@ Identify the relevant Code article(s) from the user's question or activity descr
 3. If the activity doesn't map to Articles 6-17, default to Article 5 (general prohibition)
 4. **If information is insufficient**: List what's missing and ask the user. Do NOT proceed to Step 2.
 
-### Step 2: Rule Lookup + Override Check (규칙 조회 + Override 적용)
+### Step 2: Rule Lookup (규칙 조회)
 
-1. **Read framework**: Grep the `framework` file for the mapped article section. Extract:
+1. **Read the topic file**: Use the Article Index below to find the file path. Read the entire topic file.
+   - The file contains 안내서 규칙, 배포본 해설, and 내부지침 override (if applicable) in one document.
+   - When 내부지침 section exists for the same article, its content takes precedence.
+
+2. **Extract applicable rules**:
    - Monetary limits (금액 한도)
    - Frequency limits (횟수 제한)
    - Prior approval requirements (사전심의/신고)
    - Documentation requirements (증빙서류)
-
-   **Token efficiency rule**: NEVER Read the entire framework file. Use Grep with article keyword (e.g. `제10조`, `Art. 10`) and extract only the matching section with surrounding context. The framework file is 273KB — loading it entirely wastes tokens.
-
-2. **Check override**: Grep the `override` file for the same article or topic.
-   - If found: Override content takes precedence. Present both with clear labeling:
-     - "안내서(2022.04) 기준: ..."
-     - "**내부지침(24.07.12 개정) 적용**: ..." ← this wins
-   - If not found: Framework content applies as-is.
-
-3. **Supplement definitions** (optional): If terms need clarification, Grep the `definitions` file.
 
 ### Step 3: Precedent Reinforcement + Traffic-Light Guidance (사례 보강 + 신호등 안내)
 
@@ -109,22 +104,22 @@ Identify the relevant Code article(s) from the user's question or activity descr
 
 ## Article Index
 
-| Activity | Code Article | Operating Standard |
-|----------|-------------|-------------------|
-| Gifts/Benefits restriction | Art. 5 | Art. 2 |
-| Samples | Art. 6 | Art. 3 |
-| Donations | Art. 7 | Art. 4 |
-| Conference hosting support | Art. 8 | Art. 5 |
-| Conference attendance support | Art. 9 | Art. 6 |
-| Product presentations | Art. 10 | Art. 7 |
-| Education/Training | Art. 11 | Art. 8 |
-| Lectures/Consulting | Art. 12 | Art. 9 |
-| Clinical device provision | Art. 13 | - |
-| Market research | Art. 14 | Art. 10 |
-| Post-market surveillance | Art. 15 | Art. 11 |
-| Clinical activities (non-PMS) | Art. 16 | Art. 12 |
-| Exhibition/Advertising | Art. 17 | Art. 13 |
-| Penalties | Art. 20 | Art. 18 |
+| Activity | Code Article | Operating Standard | File |
+|----------|-------------|-------------------|------|
+| Gifts/Benefits restriction | Art. 5 | Art. 2 | topics/02-금품류제공제한.md |
+| Samples | Art. 6 | Art. 3 | topics/03-견본품.md |
+| Donations | Art. 7 | Art. 4 | topics/04-기부행위.md |
+| Conference hosting support | Art. 8 | Art. 5 | topics/05-학술대회개최지원.md |
+| Conference attendance support | Art. 9 | Art. 6 | topics/06-학술대회참가지원.md |
+| Product presentations | Art. 10 | Art. 7 | topics/07-자사제품설명회.md |
+| Education/Training | Art. 11 | Art. 8 | topics/08-교육훈련.md |
+| Lectures/Consulting | Art. 12 | Art. 9 | topics/09-강연및자문.md |
+| Clinical device provision | Art. 13 | - | topics/10-임상시험지원.md |
+| Market research | Art. 14 | Art. 10 | topics/11-시장조사.md |
+| Post-market surveillance | Art. 15 | Art. 11 | topics/12-시판후조사.md |
+| Clinical activities (non-PMS) | Art. 16 | Art. 12 | topics/13-시판후외임상활동.md |
+| Exhibition/Advertising | Art. 17 | Art. 13 | topics/14-전시및광고.md |
+| Penalties | Art. 20 | Art. 18 | topics/17-위반시제재사항.md |
 
 ---
 
