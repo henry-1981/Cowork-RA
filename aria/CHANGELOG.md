@@ -5,6 +5,26 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-02-28
+
+### Added
+- **Mode 3: Interactive Compliance Check** — 대화형 체크리스트 기반 컴플라이언스 심의
+  - 활동유형 자동 분류 (다중 매핑 지원)
+  - 맥락별 판정 (기획검토/신고준비/사후확인)
+  - GREEN/YELLOW/RED 판정 매트릭스 (맥락별 의미 차등)
+  - Cowork 폴더 연동 서류 검토 (검색→확인→검토)
+  - Mode 1→3→2 자연스러운 전환 흐름
+- **Compliance Checklist** — 안내서 원문 9개 활동유형 체크리스트 토픽 파일에 verbatim 통합
+- **지출보고서 가이드라인** — 전 활동 공통 절차 참조 파일 (이미지 기반 본문은 후속 OCR 예정)
+- **_index.yaml 확장** — checklist_meta, procedure_required, common_procedures 메타데이터
+
+### Changed
+- 토픽 파일 섹션 헤더 4-계층 표준화 (규정/심의위원회 내부지침/규정 해설/Compliance Checklist)
+- compliance 스킬 0.4.0 — Mode 3 추가, 판정 매트릭스, 서류 검토, Article Index topics/ 참조
+
+### Removed
+- 배포본(요약판) 파일 — 원본 안내서 + 토픽 파일로 대체
+
 ## [0.4.0] - 2026-02-27
 
 ### Added
