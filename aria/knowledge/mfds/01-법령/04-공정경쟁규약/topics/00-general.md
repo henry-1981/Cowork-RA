@@ -7,7 +7,7 @@ sources: [framework, definitions, override]
 
 # 일반 (총칙/개요/기본원칙)
 
-## 안내서 (2022.04)
+## 규정 (Regulation)
 
 ---
 source:
@@ -913,7 +913,7 @@ PART 03
 공정거래를 위한 안내서
 
 
-## 배포본 해설
+## 규정 해설 (FAQ/Interpretation)
 
 ---
 source:
@@ -991,7 +991,7 @@ source:
 7. 공정경쟁규약 FAQ 
 외국 국적을 가진 보건의료인도 규약 적용 대상이 되는지?
 
-## 내부지침 (24.07.12 개정)
+## 심의위원회 내부지침 (Committee Guidance)
 
 ---
 source:
