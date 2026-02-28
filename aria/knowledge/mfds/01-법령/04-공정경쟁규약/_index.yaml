@@ -1,113 +1,253 @@
-title: 의료기기 공정경쟁규약
+title: 의료기기 거래에 관한 공정경쟁규약
 description: >
   KMDIA 의료기기 거래에 관한 공정경쟁규약 Knowledge DB.
-  토픽(조항)별 18개 통합 파일 + 위반사례 1개 파일.
+  토픽(조항)별 18개 통합 파일 + 지출보고서 가이드라인 + 위반사례 1개 파일.
 
 structure: topic-based
 topic_dir: topics/
 
+source_documents:
+  - 의료기기-리베이트-예방-및-공정경쟁을-위한-안내서2022-04
+  - 붙임2-의료기기-공정경쟁규약심의위원회-내부지침-전문24-07-12-개정
+  - 공정경쟁규약-주요-위반유형-및-사례23-5-2-1
+
+sections:
+  regulation: "## 규정 (Regulation)"
+  committee_guidance: "## 심의위원회 내부지침 (Committee Guidance)"
+  interpretation: "## 규정 해설 (FAQ/Interpretation)"
+  checklist: "## Compliance Checklist"
+
 topics:
   - id: "00-general"
+    file: topics/00-general.md
     type: GENERAL
-    title: "일반 (총칙/개요/기본원칙)"
+    title: "총칙 (목적, 기본원칙, 정의)"
+    articles: [1, 2, 3, 4]
+    has_checklist: false
 
   - id: "01-용어정의"
+    file: topics/01-용어정의.md
     type: DEFINITIONS
-    article: "제3조"
-    title: "용어정의"
+    title: "용어 정의"
+    articles: [3]
+    has_checklist: false
 
   - id: "02-금품류제공제한"
+    file: topics/02-금품류제공제한.md
     type: ACTIVITY
-    article: "제5조"
-    operating_standard: "제2조"
     title: "금품류 제공 제한"
+    articles: [5]
+    operating_standard: [2]
+    has_checklist: false
+    procedure_required: [지출보고서]
 
   - id: "03-견본품"
+    file: topics/03-견본품.md
     type: ACTIVITY
-    article: "제6조"
-    operating_standard: "제3조"
     title: "견본품"
+    articles: [6]
+    operating_standard: [3]
+    has_checklist: true
+    faq_range: [7, 12]
+    procedure_required: [지출보고서, 견본품수불대장]
+    checklist_meta:
+      total_questions: 11
+      critical_questions: [1, 3]
+      evidence_required:
+        - "견본품 제공 신청서"
+        - "수불대장"
 
   - id: "04-기부행위"
+    file: topics/04-기부행위.md
     type: ACTIVITY
-    article: "제7조"
-    operating_standard: "제4조"
     title: "기부행위"
+    articles: [7]
+    operating_standard: [4]
+    has_checklist: true
+    faq_range: [13, 21]
+    procedure_required: [지출보고서, 사전심의]
+    checklist_meta:
+      total_questions: 8
+      critical_questions: [1, 2]
+      evidence_required:
+        - "기부 신청서"
+        - "사전심의 결과서"
 
   - id: "05-학술대회개최지원"
+    file: topics/05-학술대회개최지원.md
     type: ACTIVITY
-    article: "제8조"
-    operating_standard: "제5조"
     title: "학술대회 개최·운영 지원"
+    articles: [8]
+    operating_standard: [5]
+    has_checklist: true
+    faq_range: [22, 24]
+    procedure_required: [사전심의, 지출보고서]
+    checklist_meta:
+      total_questions: 7
+      critical_questions: [1, 3]
+      evidence_required:
+        - "사전심의 신청서"
+        - "행사 프로그램"
+        - "참가자 명단"
+        - "비용 집행 내역서"
 
   - id: "06-학술대회참가지원"
+    file: topics/06-학술대회참가지원.md
     type: ACTIVITY
-    article: "제9조"
-    operating_standard: "제6조"
-    title: "학술대회 참가지원"
+    title: "학술대회 참가 지원"
+    articles: [9]
+    operating_standard: [6]
+    has_checklist: true
+    faq_range: [25, 27]
+    procedure_required: [사전심의, 지출보고서]
+    checklist_meta:
+      total_questions: 14
+      critical_questions: [1, 4]
+      evidence_required:
+        - "사전심의 신청서"
+        - "참가 신청서"
+        - "비용 집행 내역서"
 
   - id: "07-자사제품설명회"
+    file: topics/07-자사제품설명회.md
     type: ACTIVITY
-    article: "제10조"
-    operating_standard: "제7조"
     title: "자사제품설명회"
+    articles: [10]
+    operating_standard: [7]
+    has_checklist: true
+    faq_range: [28, 46]
+    procedure_required: [사전심의, 지출보고서]
+    checklist_meta:
+      total_questions: 20
+      critical_questions: [1, 3, 7]
+      evidence_required:
+        - "사전심의 신청서 사본"
+        - "참가자 명단"
+        - "비용 집행 내역서"
 
   - id: "08-교육훈련"
+    file: topics/08-교육훈련.md
     type: ACTIVITY
-    article: "제11조"
-    operating_standard: "제8조"
     title: "교육·훈련"
+    articles: [11]
+    operating_standard: [8]
+    has_checklist: true
+    faq_range: [48, 51]
+    procedure_required: [사전심의, 지출보고서]
+    checklist_meta:
+      total_questions: 20
+      critical_questions: [1, 2, 5]
+      evidence_required:
+        - "교육 계획서"
+        - "참석자 명단"
+        - "비용 집행 내역서"
 
   - id: "09-강연및자문"
+    file: topics/09-강연및자문.md
     type: ACTIVITY
-    article: "제12조"
-    operating_standard: "제9조"
     title: "강연 및 자문"
+    articles: [12]
+    operating_standard: [9]
+    has_checklist: true
+    faq_range: [54, 66]
+    procedure_required: [사전심의, 지출보고서]
+    checklist_meta:
+      total_questions: 8
+      critical_questions: [1, 3]
+      evidence_required:
+        - "강연/자문 계약서"
+        - "대가 산정 근거"
 
   - id: "10-임상시험지원"
+    file: topics/10-임상시험지원.md
     type: ACTIVITY
-    article: "제13조"
     title: "임상시험 지원"
+    articles: [13]
+    has_checklist: true
+    faq_range: [67, 67]
+    procedure_required: [지출보고서]
+    checklist_meta:
+      total_questions: 13
+      critical_questions: [1, 2]
+      evidence_required:
+        - "임상시험 계약서"
+        - "IRB 승인서"
 
   - id: "11-시장조사"
+    file: topics/11-시장조사.md
     type: ACTIVITY
-    article: "제14조"
-    operating_standard: "제10조"
     title: "시장조사"
+    articles: [14]
+    operating_standard: [10]
+    has_checklist: false
+    faq_range: [70, 73]
+    procedure_required: [지출보고서]
 
   - id: "12-시판후조사"
+    file: topics/12-시판후조사.md
     type: ACTIVITY
-    article: "제15조"
-    operating_standard: "제11조"
-    title: "시판 후 조사"
+    title: "시판후 조사"
+    articles: [15]
+    operating_standard: [11]
+    has_checklist: true
+    faq_range: [74, 74]
+    procedure_required: [지출보고서]
+    checklist_meta:
+      total_questions: 13
+      critical_questions: [1, 3]
+      evidence_required:
+        - "시판후조사 계획서"
+        - "식약처 승인서"
+        - "증례보고서 양식"
 
   - id: "13-시판후외임상활동"
+    file: topics/13-시판후외임상활동.md
     type: ACTIVITY
-    article: "제16조"
-    operating_standard: "제12조"
     title: "시판 후 조사 외의 임상활동"
+    articles: [16]
+    operating_standard: [12]
+    has_checklist: false
+    procedure_required: [지출보고서]
 
   - id: "14-전시및광고"
+    file: topics/14-전시및광고.md
     type: ACTIVITY
-    article: "제17조"
-    operating_standard: "제13조"
     title: "전시 및 광고"
+    articles: [17]
+    operating_standard: [13]
+    has_checklist: false
+    procedure_required: [지출보고서]
 
   - id: "15-규약의공정거래위원회신고"
+    file: topics/15-규약의공정거래위원회신고.md
     type: PROCEDURE
-    article: "제18조"
-    title: "사전·사후 신고사항"
+    title: "규약의 공정거래위원회 신고"
+    articles: [18]
+    has_checklist: false
 
   - id: "16-공정경쟁규약심의위원회"
+    file: topics/16-공정경쟁규약심의위원회.md
     type: PROCEDURE
-    article: "제19조"
     title: "공정경쟁규약 심의위원회"
+    articles: [19]
+    has_checklist: false
 
   - id: "17-위반시제재사항"
+    file: topics/17-위반시제재사항.md
     type: PROCEDURE
-    article: "제20조"
-    operating_standard: "제18조"
     title: "위반 시 제재사항"
+    articles: [20]
+    operating_standard: [18]
+    has_checklist: false
+
+common_procedures:
+  - name: 지출보고서
+    guide: topics/공통-지출보고서-가이드라인.md
+    description: "경제적 이익 제공에 따른 지출보고서 (전 활동 공통)"
+  - name: 사전심의
+    description: "심의위원회 사전심의 신청"
+  - name: 사후신고
+    description: "활동 완료 후 사후신고"
 
 precedents:
   file: 공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md
