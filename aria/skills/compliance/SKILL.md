@@ -9,26 +9,13 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   category: "domain"
   status: "active"
-  updated: "2026-02-28"
+  updated: "2026-03-02"
   modularized: "true"
   tags: "compliance, fair-competition, KMDIA, marketing, anti-kickback, Korea"
   knowledge-base-date: "2024-07"
-
-# MoAI Extension: Progressive Disclosure
-progressive_disclosure:
-  enabled: true
-  level1_tokens: 100
-  level2_tokens: 4000
-
-# MoAI Extension: Triggers
-triggers:
-  keywords: ["compliance", "fair competition", "KMDIA", "리베이트", "공정경쟁규약",
-             "마케팅 컴플라이언스", "심의 체크", "컴플라이언스 체크", "사전심의",
-             "사후신고 준비", "활동 검토", "compliance check"]
-  phases: ["run"]
 ---
 
 # Medical Device Marketing Compliance Skill
@@ -47,24 +34,43 @@ Evaluate medical device marketing activities against the KMDIA Fair Competition 
 
 This skill reads from the topic-based 공정경쟁규약 Knowledge DB at `aria/knowledge/mfds/01-법령/04-공정경쟁규약/`.
 
-**Topic files** (`topics/`): Each topic file contains ALL relevant content for one article, with standardized section structure:
+### Topic File Hierarchy
 
-| Section Header | Content |
-|---------------|---------|
-| `## 공정경쟁규약` | 공정경쟁규약 본문 조항 (verbatim) |
-| `## 공정경쟁규약 세부지침` | 세부운용기준 조항 (verbatim) |
-| `## 공정경쟁규약 심의위원회 내부규정 주요 내부지침` | 심의위 override 규칙 (해당 시) |
-| `## FAQ` | 토픽별 FAQ (verbatim) |
-| `## 배포본 해설` | 안내서 배포본의 해설 요약 (해당 시) |
-| `## 의료기기 공정경쟁규약 심의 Compliance Checklist` | 안내서 원문 체크리스트 표 (해당 활동만) |
+Each topic file contains ALL relevant content for one article. Sections follow an **authority hierarchy** — upper layers override lower layers:
 
-**Metadata** (`_index.yaml`): Topic-level metadata including `has_checklist`, `checklist_meta` (critical questions, evidence required), `procedure_required`, `common_procedures`.
+| Layer | Section Header | Role | Usage |
+|-------|---------------|------|-------|
+| 규정 | `## 공정경쟁규약` + `## 공정경쟁규약 세부지침` | 법적 근거 | 판정의 1차 근거. 금액·횟수 한도, 요건 |
+| 보완 | `## 공정경쟁규약 심의위원회 내부규정 주요 내부지침` | 규정 해석/override | 해당 시 규정보다 우선 적용 |
+| 실무 | `## 배포본 해설` | workflow + 실무 요약 | 활동 맥락 파악, 실무 절차 이해 |
+| 해석 | `## FAQ` | 규정급 적용 예시 | edge case 판단, 시정 방향 근거 |
+| 참고 | `## 의료기기 공정경쟁규약 심의 Compliance Checklist` | 안내서 원문 체크리스트 (해당 활동만) | 최종 출력에 매핑하는 참고 자료 |
 
-**Precedents** (별도 파일): `공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md` — 위반유형별 실제 경고조치 사례
+> **Checklist 활용 원칙**: Checklist는 대화를 드라이브하는 도구가 아님. 규정/내부지침/FAQ 기반으로 대화를 진행하고, 확인된 내용을 최종 출력 시 체크리스트에 매핑하여 참고로 제공.
 
-**Common Procedures**: `topics/공통-지출보고서-가이드라인.md` — 경제적 이익 제공에 따른 지출보고서 작성 가이드라인 Ⅱ판
+### Metadata (`_index.yaml`)
 
-**KD Base Path**: `aria/knowledge/mfds/01-법령/04-공정경쟁규약/`
+Mode 3 시작 시 1회 Read:
+- `has_checklist` — 최종 출력에 체크리스트 참고 표 포함 여부
+- `checklist_meta.evidence_required` — 서류 검토 시 보조 참고 (1차 출처는 15-신고)
+- `procedure_required` — 해당 활동의 필수 절차
+
+### Cross-cutting Topics (전 활동 공통 참조)
+
+| Topic | File | Role |
+|-------|------|------|
+| **사전·사후 신고사항** | `topics/15-규약의공정거래위원회신고.md` | 핵심 실무 허브: 활동별 사전신고 여부·기한·서류, 사후신고 여부·기한·서류 |
+| 지출보고서 가이드라인 | `topics/공통-지출보고서-가이드라인.md` | 전 활동 공통 지출보고서 작성 기준 (가이드라인 Ⅱ판) |
+
+> **15-신고**: 실무자에게 가장 유용한 토픽. Mode 3 Step 5(후속 절차) + Step 6(서류 검토)에서 반드시 참조. 활동별 필요 서류 목록의 1차 출처.
+
+### Precedents
+
+`공정경쟁규약-주요-위반유형-및-사례23-5-2-1.md` — 위반유형별 실제 경고조치 사례
+
+### KD Base Path
+
+`aria/knowledge/mfds/01-법령/04-공정경쟁규약/`
 
 ---
 
@@ -76,7 +82,7 @@ Three operating modes based on user intent:
 |------|---------|----------|
 | **Mode 1: Q&A** | 규정 질문, 특정 활동 허용 여부 | 단일 질문 → 즉시 답변 |
 | **Mode 2: Activity Review Report** | "검토해줘", "보고서", 복수 항목 종합 평가 | 복수 항목 테이블 형식 보고서 |
-| **Mode 3: Interactive Compliance Check** | "심의 체크", "컴플라이언스 체크", "사전심의 준비", "활동 검토" | 대화형 체크리스트 순차 진행 → 판정 → 서류 검토 |
+| **Mode 3: Interactive Compliance Check** | "심의 체크", "컴플라이언스 체크", "사전심의 준비", "활동 검토" | 규정 기반 대화형 검토 → 판정 → 서류 검토 |
 
 ---
 
@@ -94,8 +100,9 @@ Identify the relevant Code article(s) from the user's question or activity descr
 ### Step 2: Rule Lookup (규칙 조회)
 
 1. **Read the topic file**: Use the Article Index below to find the file path. Read the entire topic file.
-   - The file contains regulation, committee guidance, FAQ/interpretation, and checklist in one document.
-   - When 심의위원회 내부지침 section exists for the same article, its content takes precedence.
+   - The file contains 5 layers: 규정(규약+세부지침), 내부지침, 배포본 해설, FAQ, Checklist.
+   - **Authority chain**: 내부지침 > 규정 > 배포본 해설 > FAQ (해당 섹션 존재 시)
+   - FAQ는 예시 형식이지만 규정급 해석 권위를 가짐 — edge case 판단 시 적극 활용
 
 2. **Extract applicable rules**:
    - Monetary limits (금액 한도)
@@ -112,7 +119,7 @@ Identify the relevant Code article(s) from the user's question or activity descr
 
 3. **Generate output** using Mode 1 Response Format.
 
-4. **Offer Mode 3 transition**: "정확한 판단을 위해 체크리스트를 진행하시겠습니까?"
+4. **Offer Mode 3 transition**: "상세 검토를 위해 대화형 컴플라이언스 체크를 진행하시겠습니까?"
 
 ---
 
@@ -154,85 +161,115 @@ Ask the user:
 > (B) 신고/심의 준비 중 — 제출 전 최종 점검
 > (C) 이미 진행한 활동 — 사후 적정성 확인
 
-The context determines judgment meaning (see Decision Matrix).
+The context determines judgment meaning (see Decision Framework).
 
-### Step 3: Topic File Read (토픽 파일 조회)
+### Step 3: Knowledge Load (지식 로드)
 
-Read the matching topic file(s) from Knowledge DB:
-- Path: `aria/knowledge/mfds/01-법령/04-공정경쟁규약/topics/{topic-file}.md`
-- Focus on the `## 의료기기 공정경쟁규약 심의 Compliance Checklist` section for checklist questions
-- Also extract key rules from `## 공정경쟁규약` and `## 공정경쟁규약 세부지침` for citation during the checklist
+Read the following in order:
 
-If multi-mapping: Read each topic file sequentially before proceeding to its checklist.
+1. **`_index.yaml`** — 해당 토픽의 메타데이터 추출:
+   - `has_checklist`, `procedure_required`, `checklist_meta`
 
-### Step 4: Sequential Checklist (체크리스트 순차 진행)
+2. **Topic file** — Article Index로 경로 확인 후 전체 Read:
+   - 규정 + 세부지침 → 핵심 요건 추출
+   - 내부지침 → override 규칙 확인
+   - 배포본 해설 → workflow 맥락 파악
+   - FAQ → 적용 예시 참조
 
-Walk through the Compliance Checklist questions from the topic file:
+3. **`topics/15-규약의공정거래위원회신고.md`** — 해당 활동의:
+   - 사전신고 여부 + 기한 + 필요 서류
+   - 사후신고 여부 + 기한 + 필요 서류
 
-1. Present **1-2 questions at a time**
-2. For each question, provide the regulation citation (Article number + section reference)
-3. Answer options for each question:
-   - **Yes**: Requirement met
-   - **No**: Requirement not met
-   - **확인필요** (needs confirmation): User is unsure, will verify later
-4. On **No** answer: Immediately flag the violation risk and suggest correction direction
+4. **`topics/공통-지출보고서-가이드라인.md`** — 전 활동 공통 지출보고서 작성 기준
+
+If multi-mapping: `_index.yaml`, `15-신고`, `지출보고서 가이드라인`은 세션 1회만 Read. Topic file만 매핑별 반복 Read.
+
+### Step 4: Regulation-Based Review (규정 기반 핵심 요건 확인)
+
+Based on the loaded knowledge, conduct an interactive review:
+
+1. **Extract key requirements** from 규정 + 세부지침 + 내부지침:
+   - 금액 한도 (monetary limits)
+   - 횟수/기간 제한 (frequency/duration limits)
+   - 대상 제한 (eligible recipients)
+   - 사전 승인/심의 요건 (prior approval requirements)
+   - 서류/증빙 요건 (documentation requirements)
+
+2. **Verify each requirement conversationally**:
+   - Present 1-2 key requirements at a time
+   - For each, cite the regulation source (Article number + section)
+   - User answers: Yes (충족) / No (미충족) / 확인필요 (미확인)
+
+3. **On No answer**: Flag the risk immediately
    - Cite the specific regulation clause
-   - Indicate severity: whether this is a critical violation or a correctable issue
-5. On **확인필요**: Note it and continue. This affects the final judgment (auto-YELLOW)
-6. Continue until all checklist questions are answered
+   - Reference FAQ if a similar case exists — suggest correction direction
+   - Indicate severity: critical violation vs correctable issue
 
-### Step 5: Judgment Determination (판정)
+4. **On 확인필요**: Note it and continue. Affects final judgment (auto-YELLOW)
 
-After all checklist questions are answered, apply the Decision Matrix:
+5. **Use 배포본 해설** for workflow context when guiding the user through practical steps
 
-1. Count Yes / No / 확인필요 answers
-2. Check if any No answers are on critical questions (from `_index.yaml` `checklist_meta.critical_questions`)
-3. Verify evidence requirements (from `_index.yaml` `checklist_meta.evidence_required`)
-4. Determine GREEN / YELLOW / RED using the Decision Matrix conditions
-5. Apply context-specific meaning based on the user's context (A/B/C from Step 2)
-
-### Step 6: Follow-up Procedures (후속 절차 안내)
+### Step 5: Follow-up Procedures (후속 절차 안내)
 
 Present required follow-up procedures:
 
-1. **Common procedure** (all activities): 지출보고서 작성
+1. **사전/사후 신고** (from `topics/15-규약의공정거래위원회신고.md`):
+   - 사전신고 필요 여부, 기한, 필요 서류
+   - 사후신고 필요 여부, 기한, 필요 서류
+
+2. **지출보고서** (all activities):
    - Reference: `topics/공통-지출보고서-가이드라인.md`
-   - Read this file and summarize key requirements
+   - Summarize key requirements
 
-2. **Activity-specific procedures** (from `_index.yaml` `procedure_required`):
-   - 사전심의 신청 (if listed)
-   - 사후신고 (if applicable)
-   - Activity-specific documents (evidence_required from checklist_meta)
+3. **Activity-specific procedures** (from `_index.yaml` `procedure_required`):
+   - Additional procedures beyond 신고 and 지출보고서
 
-### Step 7: Document Review (서류 검토) — Optional
+### Step 6: Document Review (서류 검토) — Optional
 
-Offer to review relevant documents:
+Derive required document list from Step 3 knowledge load:
+- **Primary source**: `15-신고` topic — 사전/사후 신고 서류 목록
+- **Secondary source**: `_index.yaml` `checklist_meta.evidence_required` (if exists)
+- **Common**: 지출보고서
 
-1. **Search current folder** using Glob for relevant document patterns:
-   - Filenames containing: 심의, 신청서, 보고서, 계획서, 명단, 내역서, 계약서
+For each required document:
+
+1. **Search current folder** using Glob:
+   - Match against the derived document list
    - Common extensions: .xlsx, .docx, .pdf, .hwp
 
-2. **If documents found**: Present the filename(s) to the user
-   - "이 파일이 맞나요? [filename]"
+2. **If found**: "이 파일이 맞나요? [filename]"
    - **User confirmation is mandatory** — never auto-review without explicit confirmation
 
-3. **If user confirms**: Read the file and perform basic review:
+3. **If confirmed**: Read and perform basic review:
    - Required field completeness (필수 항목 누락 여부)
    - Amount limits compliance (금액 한도 초과 여부)
    - Form completion (양식 완성도 — 주요 필드 기입 확인)
 
-4. **If no documents found**: "해당 서류를 업로드해 주세요" or user can skip ("나중에")
+4. **If not found**: "해당 서류를 업로드해 주세요" or user can skip ("나중에")
 
-5. **If user declines**: Mark as "미검토" in the final summary
+5. **If declined**: Mark as "미검토" in the final summary
+
+### Step 7: Judgment Determination (판정)
+
+After the interactive review and procedure check:
+
+1. Assess confirmed requirements vs violations from Step 4
+2. Factor in unresolved items (확인필요)
+3. Factor in 신고/서류 준비 상태 from Steps 5-6
+4. Determine GREEN / YELLOW / RED using the Decision Framework
+5. Apply context-specific meaning based on the user's context (A/B/C from Step 2)
+
+**Multi-mapping 판정 통합**: 토픽별로 개별 판정 후, 전체 판정은 가장 심각한 결과를 따름 (RED > YELLOW > GREEN). 각 토픽별 판정도 최종 요약에 표시.
 
 ### Step 8: Final Summary (최종 요약)
 
 Generate the complete compliance check result using Mode 3 Response Format:
 - Judgment with context-specific meaning
-- Checklist results table
+- Key findings from the review
 - Required improvements (if any)
-- Follow-up procedures with completion status
-- Document review status
+- Follow-up procedures with 신고 기한
+- Document status
+- If `has_checklist: true`: Compliance Checklist reference table — map confirmed items from the conversation to checklist questions (참고용)
 
 ### Step 9: Mode 2 Transition Offer
 
@@ -248,15 +285,16 @@ If the user accepts, transition to Mode 2 to generate a formal Activity Review R
 
 ### Traffic-Light Conditions
 
-Apply these conditions to determine the judgment in Mode 1, 2, and 3:
+Apply these conditions based on the interactive review findings (Mode 1, 2, and 3):
 
-**GREEN** 🟢 — 체크리스트상 명백한 위반 사항 없음
+**GREEN** 🟢 — 확인된 범위 내 명백한 위반 사항 없음
 
 All of the following must be true:
-- All required checklist questions answered **Yes**
-- All required evidence confirmed (by user report)
+- All key regulatory requirements confirmed as met
+- Required evidence confirmed (by user report)
 - Activity classification confidence **HIGH**
 - Zero **확인필요** answers
+- 필수 신고 절차 확인됨 (사전신고 완료 또는 기한 내)
 
 **YELLOW** 🟡 — 조건부: 추가 확인 또는 보완 조치 필요
 
@@ -264,14 +302,17 @@ Any of the following:
 - One or more **확인필요** answers
 - OR unconfirmed required evidence
 - OR activity classification confidence **MED** (multi-mapping)
-- OR **No** answers with severity: warning (correctable, non-critical)
+- OR requirement violations that are correctable (non-critical)
+- OR 필수 서류 미확보 (준비 가능한 상태)
+- OR 신고기한 임박 (보완 후 제출 가능)
 
 **RED** 🔴 — 위반 가능성: 진행 전 재검토 필요
 
 Any of the following:
-- **No** answer on a critical question (per `_index.yaml` `checklist_meta.critical_questions`)
-- OR 3+ **No** answers total
+- Critical regulatory requirement violated (금액 한도 초과, 대상 제한 위반 등)
+- OR 3+ requirement violations total
 - OR activity classification confidence **LOW** and unresolved
+- OR 신고기한 경과 (사전신고 필수 활동에서 미신고 상태로 진행)
 
 ### Context-Specific Judgment Meaning (Mode 3)
 
@@ -285,10 +326,10 @@ Any of the following:
 
 ## Mode Interconnection
 
-- **Mode 1 → Mode 3**: "정확한 판단을 위해 체크리스트를 진행하시겠습니까?"
+- **Mode 1 → Mode 3**: "상세 검토를 위해 대화형 컴플라이언스 체크를 진행하시겠습니까?"
 - **Mode 3 → Mode 2**: "내부 보고용 문서를 생성해 드릴까요?"
 
-Common judgment engine (Decision Framework) + mode-specific UX. Mode 3 collects facts through interactive dialogue, Mode 1 provides quick answers, Mode 2 generates formal reports.
+Common judgment engine (Decision Framework) + mode-specific UX. Mode 3 collects facts through regulation-based interactive dialogue, Mode 1 provides quick answers, Mode 2 generates formal reports.
 
 ---
 
@@ -309,7 +350,8 @@ Common judgment engine (Decision Framework) + mode-specific UX. Mode 3 collects 
 | Post-market surveillance | Art. 15 | Art. 11 | topics/12-시판후조사.md |
 | Clinical activities (non-PMS) | Art. 16 | Art. 12 | topics/13-시판후외임상활동.md |
 | Exhibition/Advertising | Art. 17 | Art. 13 | topics/14-전시및광고.md |
-| Penalties | Art. 19-20 | Art. 18 | topics/16-위반시제재사항.md |
+| Prior/post filing requirements | Art. 18 | — | topics/15-규약의공정거래위원회신고.md |
+| Penalties + Committee | Art. 19-20 | Art. 18 | topics/16-위반시제재사항.md |
 
 ---
 
@@ -359,27 +401,37 @@ Followed by:
 
 ### 판정: [GREEN/YELLOW/RED] — [맥락별 의미]
 
-### 체크 결과
-| # | 항목 | 답변 | 상태 |
-|---|------|------|------|
-| 1 | [질문] | Yes/No/확인필요 | OK/위반/주의 |
-| ... | ... | ... | ... |
+### 핵심 확인 사항
+| # | 요건 | 근거 | 확인 결과 | 비고 |
+|---|------|------|----------|------|
+| 1 | [규정 요건] | Art.N §M | 충족/미충족/확인필요 | [상세] |
 
 ### 보완 사항 (YELLOW/RED인 경우)
 1. [보완 필요 항목] (Art.N §M)
    → [시정 방향 또는 안내]
 
-### 후속 절차
-- [ ] / [x] [절차명] — [상태/안내]
+### 후속 절차 + 신고
+| 절차 | 기한 | 서류 | 상태 |
+|------|------|------|------|
+| 사전신고 | [기한] | [서류 목록] | 완료/미완료/미해당 |
+| 사후신고 | [기한] | [서류 목록] | 해당/미해당 |
+| 지출보고서 | — | 가이드라인 Ⅱ판 기준 | 완료/미완료 |
 
 ### 서류 상태
 | 서류 | 상태 | 비고 |
 |------|------|------|
 | [서류명] | 확인완료/미검토/미제출 | [비고] |
 
+### Compliance Checklist 참고 (해당 시)
+> 아래는 안내서 원문 체크리스트에 대화 확인 내용을 매핑한 참고 자료입니다.
+
+| # | 체크리스트 항목 | 확인 결과 |
+|---|---------------|----------|
+| 1 | [질문] | ✓/✗/— |
+
 ### Disclaimer
 본 결과는 정보 제공 목적이며, 법적 효력이 없습니다.
-GREEN 판정은 "체크리스트상 명백한 위반 사항 없음"을 의미하며, 법적 승인이 아닙니다.
+GREEN 판정은 "확인된 범위 내 명백한 위반 사항 없음"을 의미하며, 법적 승인이 아닙니다.
 최종 결정은 사내 컴플라이언스 책임자의 검토를 거쳐야 합니다.
 ```
 
@@ -398,4 +450,4 @@ From Article 2 (Basic Principles), applicable to ALL activities:
 
 ## Disclaimer
 
-This skill provides AI-generated reference information only and does not constitute regulatory advice, legal guidance, or official regulatory determination. All compliance decisions must be validated by qualified regulatory affairs professionals. GREEN judgment means "no apparent violation found on the checklist" — it is NOT legal approval.
+This skill provides AI-generated reference information only and does not constitute regulatory advice, legal guidance, or official regulatory determination. All compliance decisions must be validated by qualified regulatory affairs professionals. GREEN judgment means "no apparent violation found within confirmed scope" — it is NOT legal approval.
