@@ -1,5 +1,5 @@
 # Topic boundary mapping for 공정경쟁규약 KD files
-# Maps 18 topics to line ranges in 3 source files.
+# Maps 17 topics to line ranges in 3 source files.
 # Lines are 1-indexed, inclusive. Ranges may overlap between topics
 # due to two-column PDF→MD interleaving.
 
@@ -215,25 +215,20 @@ topics:
       - [760, 771]     # Main body: 사전·사후 신고사항
     override: null
 
-  - id: "16-공정경쟁규약심의위원회"
-    title: "공정경쟁규약 심의위원회 (규약 제19조)"
-    type: PROCEDURE
-    article: "제19조"
-    framework:
-      - [718, 766]     # Activity guide: 16) 공정경쟁규약 심의위원회 (interleaved with 위반)
-      - [1375, 1645]   # Committee rules + Compliance Checklist
-    definitions:
-      - [789, 832]     # Main body: 심의위원회
-    override: null
+  # [MERGED] 16-공정경쟁규약심의위원회 → 16-위반시제재사항으로 통합 (2026-03-02)
+  # 원본 line ranges 보존:
+  #   framework: [718, 766] (심의위원회, interleaved), [1375, 1645] (Committee rules + Checklist)
+  #   definitions: [789, 832] (심의위원회 main body)
 
-  - id: "17-위반시제재사항"
-    title: "위반 시 제재사항 (규약 제20조)"
+  - id: "16-위반시제재사항"
+    title: "위반 시 제재사항 + 심의위원회 (규약 제19-20조)"
     type: PROCEDURE
-    article: "제20조"
+    article: "제19조, 제20조"
     operating_standard: "제18조"
     framework:
-      - [717, 766]     # Activity guide: 15) 위반 시 제재사항 (interleaved with 심의위원회)
+      - [717, 766]     # Activity guide: 15-16) 위반 + 심의위원회 (interleaved)
+      - [1375, 1645]   # Committee rules + Compliance Checklist
     definitions:
-      - [772, 788]     # Main body: 위반조치
+      - [772, 832]     # Main body: 위반조치 + 심의위원회
     override:
       - [58, 58]       # 위반조치 내부지침

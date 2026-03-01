@@ -51,10 +51,12 @@ This skill reads from the topic-based 공정경쟁규약 Knowledge DB at `aria/k
 
 | Section Header | Content |
 |---------------|---------|
-| `## 규정 (Regulation)` | 공정경쟁규약 본문 + 세부운용기준 (verbatim) |
-| `## 심의위원회 내부지침 (Committee Guidance)` | 심의위 override 규칙 (해당 시) |
-| `## 규정 해설 (FAQ/Interpretation)` | 토픽별 FAQ (verbatim) |
-| `## Compliance Checklist` | 안내서 원문 체크리스트 표 (해당 활동만) |
+| `## 공정경쟁규약` | 공정경쟁규약 본문 조항 (verbatim) |
+| `## 공정경쟁규약 세부지침` | 세부운용기준 조항 (verbatim) |
+| `## 공정경쟁규약 심의위원회 내부규정 주요 내부지침` | 심의위 override 규칙 (해당 시) |
+| `## FAQ` | 토픽별 FAQ (verbatim) |
+| `## 배포본 해설` | 안내서 배포본의 해설 요약 (해당 시) |
+| `## 의료기기 공정경쟁규약 심의 Compliance Checklist` | 안내서 원문 체크리스트 표 (해당 활동만) |
 
 **Metadata** (`_index.yaml`): Topic-level metadata including `has_checklist`, `checklist_meta` (critical questions, evidence required), `procedure_required`, `common_procedures`.
 
@@ -158,8 +160,8 @@ The context determines judgment meaning (see Decision Matrix).
 
 Read the matching topic file(s) from Knowledge DB:
 - Path: `aria/knowledge/mfds/01-법령/04-공정경쟁규약/topics/{topic-file}.md`
-- Focus on the `## Compliance Checklist` section for checklist questions
-- Also extract key rules from `## 규정 (Regulation)` for citation during the checklist
+- Focus on the `## 의료기기 공정경쟁규약 심의 Compliance Checklist` section for checklist questions
+- Also extract key rules from `## 공정경쟁규약` and `## 공정경쟁규약 세부지침` for citation during the checklist
 
 If multi-mapping: Read each topic file sequentially before proceeding to its checklist.
 
@@ -307,7 +309,7 @@ Common judgment engine (Decision Framework) + mode-specific UX. Mode 3 collects 
 | Post-market surveillance | Art. 15 | Art. 11 | topics/12-시판후조사.md |
 | Clinical activities (non-PMS) | Art. 16 | Art. 12 | topics/13-시판후외임상활동.md |
 | Exhibition/Advertising | Art. 17 | Art. 13 | topics/14-전시및광고.md |
-| Penalties | Art. 20 | Art. 18 | topics/17-위반시제재사항.md |
+| Penalties | Art. 19-20 | Art. 18 | topics/16-위반시제재사항.md |
 
 ---
 

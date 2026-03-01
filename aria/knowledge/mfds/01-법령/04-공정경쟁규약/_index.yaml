@@ -1,7 +1,7 @@
 title: 의료기기 거래에 관한 공정경쟁규약
 description: >
   KMDIA 의료기기 거래에 관한 공정경쟁규약 Knowledge DB.
-  토픽(조항)별 18개 통합 파일 + 지출보고서 가이드라인 + 위반사례 1개 파일.
+  토픽(조항)별 17개 통합 파일 + 지출보고서 가이드라인 + 위반사례 1개 파일.
 
 structure: topic-based
 topic_dir: topics/
@@ -12,10 +12,12 @@ source_documents:
   - 공정경쟁규약-주요-위반유형-및-사례23-5-2-1
 
 sections:
-  regulation: "## 규정 (Regulation)"
-  committee_guidance: "## 심의위원회 내부지침 (Committee Guidance)"
-  interpretation: "## 규정 해설 (FAQ/Interpretation)"
-  checklist: "## Compliance Checklist"
+  regulation: "## 공정경쟁규약"
+  detailed_standards: "## 공정경쟁규약 세부지침"
+  committee_guidance: "## 공정경쟁규약 심의위원회 내부규정 주요 내부지침"
+  faq: "## FAQ"
+  commentary: "## 배포본 해설"
+  checklist: "## 의료기기 공정경쟁규약 심의 Compliance Checklist"
 
 topics:
   - id: "00-general"
@@ -63,15 +65,9 @@ topics:
     title: "기부행위"
     articles: [7]
     operating_standard: [4]
-    has_checklist: true
+    has_checklist: false
     faq_range: [13, 21]
     procedure_required: [지출보고서, 사전심의]
-    checklist_meta:
-      total_questions: 8
-      critical_questions: [1, 2]
-      evidence_required:
-        - "기부 신청서"
-        - "사전심의 결과서"
 
   - id: "05-학술대회개최지원"
     file: topics/05-학술대회개최지원.md
@@ -114,16 +110,9 @@ topics:
     title: "자사제품설명회"
     articles: [10]
     operating_standard: [7]
-    has_checklist: true
+    has_checklist: false
     faq_range: [28, 46]
     procedure_required: [사전심의, 지출보고서]
-    checklist_meta:
-      total_questions: 20
-      critical_questions: [1, 3, 7]
-      evidence_required:
-        - "사전심의 신청서 사본"
-        - "참가자 명단"
-        - "비용 집행 내역서"
 
   - id: "08-교육훈련"
     file: topics/08-교육훈련.md
@@ -131,16 +120,9 @@ topics:
     title: "교육·훈련"
     articles: [11]
     operating_standard: [8]
-    has_checklist: true
+    has_checklist: false
     faq_range: [48, 51]
     procedure_required: [사전심의, 지출보고서]
-    checklist_meta:
-      total_questions: 20
-      critical_questions: [1, 2, 5]
-      evidence_required:
-        - "교육 계획서"
-        - "참석자 명단"
-        - "비용 집행 내역서"
 
   - id: "09-강연및자문"
     file: topics/09-강연및자문.md
@@ -225,18 +207,11 @@ topics:
     articles: [18]
     has_checklist: false
 
-  - id: "16-공정경쟁규약심의위원회"
-    file: topics/16-공정경쟁규약심의위원회.md
+  - id: "16-위반시제재사항"
+    file: topics/16-위반시제재사항.md
     type: PROCEDURE
-    title: "공정경쟁규약 심의위원회"
-    articles: [19]
-    has_checklist: false
-
-  - id: "17-위반시제재사항"
-    file: topics/17-위반시제재사항.md
-    type: PROCEDURE
-    title: "위반 시 제재사항"
-    articles: [20]
+    title: "위반 시 제재사항 + 심의위원회"
+    articles: [19, 20]
     operating_standard: [18]
     has_checklist: false
 
