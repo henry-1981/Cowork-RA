@@ -65,9 +65,16 @@ topics:
     title: "기부행위"
     articles: [7]
     operating_standard: [4]
-    has_checklist: false
+    has_checklist: true
     faq_range: [13, 21]
     procedure_required: [지출보고서, 사전심의]
+    checklist_meta:
+      total_questions: 8
+      critical_questions: [1, 3]
+      evidence_required:
+        - "기부요청서"
+        - "단체 적합성 서류"
+        - "사업계획서"
 
   - id: "05-학술대회개최지원"
     file: topics/05-학술대회개최지원.md
@@ -110,9 +117,16 @@ topics:
     title: "자사제품설명회"
     articles: [10]
     operating_standard: [7]
-    has_checklist: false
+    has_checklist: true
     faq_range: [28, 46]
     procedure_required: [사전심의, 지출보고서]
+    checklist_meta:
+      total_questions: 19
+      critical_questions: [1, 3]
+      evidence_required:
+        - "아젠다"
+        - "참석자명단"
+        - "예산안"
 
   - id: "08-교육훈련"
     file: topics/08-교육훈련.md
@@ -120,9 +134,16 @@ topics:
     title: "교육·훈련"
     articles: [11]
     operating_standard: [8]
-    has_checklist: false
+    has_checklist: true
     faq_range: [48, 51]
     procedure_required: [사전심의, 지출보고서]
+    checklist_meta:
+      total_questions: 21
+      critical_questions: [1, 3]
+      evidence_required:
+        - "아젠다"
+        - "참석자명단"
+        - "예산안"
 
   - id: "09-강연및자문"
     file: topics/09-강연및자문.md
@@ -149,7 +170,7 @@ topics:
     faq_range: [67, 67]
     procedure_required: [지출보고서]
     checklist_meta:
-      total_questions: 13
+      total_questions: 12
       critical_questions: [1, 2]
       evidence_required:
         - "임상시험 계약서"
@@ -175,7 +196,7 @@ topics:
     faq_range: [74, 74]
     procedure_required: [지출보고서]
     checklist_meta:
-      total_questions: 13
+      total_questions: 18
       critical_questions: [1, 3]
       evidence_required:
         - "시판후조사 계획서"
@@ -197,8 +218,15 @@ topics:
     title: "전시 및 광고"
     articles: [17]
     operating_standard: [13]
-    has_checklist: false
+    has_checklist: true
     procedure_required: [지출보고서]
+    checklist_meta:
+      total_questions: 10
+      critical_questions: [1, 3]
+      evidence_required:
+        - "지급증빙"
+        - "학회 공문"
+        - "참가 신청서"
 
   - id: "15-규약의공정거래위원회신고"
     file: topics/15-규약의공정거래위원회신고.md
