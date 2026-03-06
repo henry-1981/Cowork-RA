@@ -228,6 +228,11 @@ aria/.mcp.json
 archive/legacy-bench/
 
 # ===========================================
+# Local Archive (deprecated skills/commands/KD)
+# ===========================================
+_archive/
+
+# ===========================================
 # Git Worktrees (isolated development workspaces)
 # ===========================================
 .worktrees/
