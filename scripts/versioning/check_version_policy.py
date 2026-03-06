@@ -278,7 +278,12 @@ def main() -> int:
 
         missing_command_versions = changed_commands - set(current_commands.keys())
         for command_name in sorted(missing_command_versions):
-            errors.append(f"command:{command_name}: missing version entry in {COMMAND_VERSIONS_REL}")
+            # Deleted commands won't have version entries — that's expected
+            cmd_path = ROOT / f"aria/commands/{command_name}.md"
+            if not cmd_path.exists():
+                warnings.append(f"command:{command_name}: removed command detected; version entry removed.")
+            else:
+                errors.append(f"command:{command_name}: missing version entry in {COMMAND_VERSIONS_REL}")
 
         if base_commands is None:
             warnings.append(f"bootstrap: '{COMMAND_VERSIONS_REL}' missing at base commit, command delta check skipped.")

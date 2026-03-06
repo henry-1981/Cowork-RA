@@ -1,12 +1,12 @@
 {
   "name": "aria",
-  "version": "0.5.0",
-  "description": "AI Regulatory Intelligence Assistant - Medical device regulatory compliance for US FDA, EU MDR, and Korea MFDS",
+  "version": "1.0.0",
+  "description": "AI Regulatory Intelligence Assistant - Medical device determination and fair competition compliance",
   "author": {
     "name": "ARIA Team"
   },
   "homepage": "https://github.com/henry-1981/Cowork-RA",
   "repository": "https://github.com/henry-1981/Cowork-RA.git",
   "license": "Apache-2.0",
-  "keywords": ["medical-device", "regulatory", "FDA", "EU-MDR", "MFDS", "compliance", "fair-competition", "KMDIA"]
+  "keywords": ["medical-device", "determination", "fair-competition", "KMDIA", "compliance"]
 }

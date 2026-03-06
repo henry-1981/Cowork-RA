@@ -5,6 +5,24 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-03-06
+
+### Changed
+- **Major restructure**: 9 skills → 2 (determination, fair-competition), 4 commands → 1 (assist)
+- Renamed `chat` command → `assist` (single entry point)
+- Renamed `compliance` skill → `fair-competition`
+- Knowledge DB: full archive → per-skill references/ subset bundle
+- Removed shared/ directory (skills are fully independent)
+
+### Archived (local only, .gitignored)
+- Skills: classification, pathway, estimation, planning, knowledge-refresh, humanized-writing, using-aria
+- Commands: assess, project, report
+- Knowledge DB: full 1111-file corpus (mfds/, eu/, fda/, shared/, regulations/)
+
+### Skill Versions
+- determination: 0.3.5 (unchanged, Phase 2 for KD subset selection)
+- fair-competition: 0.5.0 → 1.0.0 (renamed from compliance, Phase 2 for drafting redesign)
+
 ## [0.5.0] - 2026-02-28
 
 ### Added

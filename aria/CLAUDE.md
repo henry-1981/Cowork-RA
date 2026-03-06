@@ -1,8 +1,8 @@
 # ARIA — AI Regulatory Intelligence Assistant
 
-의료기기 규제(FDA, EU MDR, MFDS) 질문에 대해 ARIA 스킬을 사용한다.
+의료기기 판정(determination)과 공정경쟁규약 기안 작성(fair-competition) 2개 스킬을 제공한다.
 
-## 설계 원칙 (SPEC-ARIA-003)
+## 설계 원칙
 
 1. **대화 우선**: 구조는 뒤에. 사용자에게 "Step 1, 2, 3"을 보여주지 않는다
 2. **점진적 정보 축적**: 대화 중 자연스럽게 제품 정보를 파악한다
@@ -11,12 +11,9 @@
 
 ## 스킬 사용 규칙
 
-규제 질문 감지 시:
-1. **먼저 determination만 실행** — 의료기기 해당 여부만 간결하게 답변
-2. 분류/경로는 **사용자가 요청할 때만** 추가 실행
-3. 한 번에 전체 스킬 체인을 자동 실행하지 않는다
-4. "상세 분석", "심화 수준" 등 depth 키워드는 **응답 깊이만 변경** — 스킬 체이닝을 트리거하지 않는다
-5. "전체 분석" 요청 시 → 사용자 확인 후 순차 실행 (각 단계에서 중단 가능)
+1. **determination**: 의료기기 해당 여부 판단. Confidence Gate 통과 후 실행
+2. **fair-competition**: 공정경쟁규약 기반 기안 문서 작성 지원 (사전심의, 지출보고서 등)
+3. 두 스킬은 완전 독립 — 공유 코드/데이터 없음
 
 ## 응답 형식
 
@@ -24,47 +21,19 @@
 - MANDATORY OUTPUT FORMAT은 사용자가 상세 분석을 요청할 때만 사용
 - 항상 "더 알아볼까요?" 또는 구체적 다음 옵션을 제시
 
-## Bench/JSON 모드 감지
-
-프롬프트에 "Return ONLY valid JSON" 또는 "Output Format (JSON only)"가 포함되면:
-- Progressive disclosure를 해제하고 바로 구조화 JSON 출력
-- 대화형 질문 없이 전체 분석 제공
-
 ## Knowledge DB
 
-### 원문 DB (Primary)
+각 스킬이 필요한 KD subset을 자체 references/에 번들:
 
-**MFDS** — `aria/knowledge/mfds/` (52 파일, PDF → MD):
-- `01-법령/01-의료기기법/` — 의료기기법, 시행령, 별표, 고시
-- `01-법령/02-체외진단의료기기법/` — 체외진단법, 시행령, 고시
-- `01-법령/03-디지털의료제품법/` — 디지털의료제품법, 시행령, 고시
-- `01-법령/04-공정경쟁규약/` — 공정경쟁규약 17개 토픽별 통합 파일 (6-계층: 규약/세부지침/내부규정/FAQ/배포본해설/체크리스트) + 지출보고서 가이드라인 + 위반사례
-- `02-가이드라인/` — SaMD 위주 허가심사 가이드라인
+- **determination**: `aria/skills/determination/references/` (Phase 2에서 배치 예정)
+  - modules/에 판정 로직 인라인 보강 완료 (6개 모듈)
+- **fair-competition**: `aria/skills/fair-competition/references/`
+  - 공정경쟁규약 17개 토픽별 통합 파일 + 지출보고서 가이드라인 + 위반사례
 
-**EU** — `aria/knowledge/eu/` (413 파일, HTML/PDF → MD):
-- `01-regulation/mdr-2017-745/` — MDR 2017/745 원문 (123 Articles + 17 Annexes)
-- `01-regulation/ivdr-2017-746/` — IVDR 2017/746 원문 (113 Articles + 15 Annexes)
-- `02-mdcg/` — MDCG 가이던스 21개 카테고리 (135 파일)
-- `03-meddev/` — MEDDEV 레거시 가이던스 (4 파일)
-
-**FDA** — `aria/knowledge/fda/` (648 파일, HTML/XML/PDF → MD):
-- `01-statute/fdc-act-title21-chap9-subchapV/` — FD&C Act (117 sections + _index.yaml)
-- `02-regulation/21cfr-subchapter-h/` — 21 CFR Parts 800-898 (35 parts + _index.yaml)
-- `03-guidance/` — FDA Guidance Documents (494 파일, tesseract OCR 폴백 포함)
-
-**원칙**: 원문을 그대로 markdown으로 변환. 요약/재구성/선택적 추출 금지.
-
-### 레거시 참조 (Secondary — 보존만)
-
-`aria/knowledge/` 디렉토리의 기존 파일은 레거시로 보존 중:
-- SaMD: `knowledge/shared/samd-classification.md`
-
-> 모든 레거시 (`fda-framework.md`, `mfds-framework.md`, `mfds-digital-classification.md`, `eu-mdr-framework.md`)는 스킬 참조에서 제거됨.
-> 운영 규칙은 modules/에 인라인 보강 완료. 레거시 파일은 보존만 하고 참조하지 않음.
+전체 원문 KD (1111 파일)는 `_archive/knowledge/`에 로컬 보존 (.gitignored)
 
 ## 규칙
 - base knowledge로만 규제 질문에 답하지 않는다
-- 각 스킬의 MANDATORY OUTPUT FORMAT 블록은 상세 분석 요청 시에만 출력에 포함한다
 - 정보 부족 시 스킬이 정의한 insufficiency 절차를 따른다
 
 ## Cowork 플랫폼 연동
@@ -73,14 +42,12 @@ Cowork의 '의도 질문' 기능과 ARIA의 내부 Gate는 역할이 다르다:
 - **Cowork**: 어떤 에이전트/스킬로 라우팅할지 결정 (외부 라우팅)
 - **ARIA Gate**: 스킬 실행에 필요한 정보가 충분한지 판단 (내부 게이트)
 
-Cowork에서 의도가 선택되었더라도 ARIA의 Gate 2(Mandatory Confidence Gate)는 항상 평가된다. 외부 라우팅이 내부 게이트를 우회하지 않는다.
+Cowork에서 의도가 선택되었더라도 ARIA의 Confidence Gate는 항상 평가된다.
 
 ## PR 완성도 체크리스트
 
 ARIA 변경 시 커밋/PR 전에 반드시 확인:
 
-1. **버전 동기화**: `plugin.json`, `marketplace.json`, `versions.json`, 스킬 SKILL.md metadata — 변경된 파일에 해당하는 버전을 patch bump
-2. **버전 정책 검증**: `python3 scripts/versioning/check_version_policy.py --base-ref origin/main` 통과 확인
-3. **CHANGELOG.md**: 새 버전 엔트리 추가 (`aria/CHANGELOG.md`)
-4. **README 반영**: 사용자 대면 동작이 변경되면 `aria/README.md` (파워유저 가이드) 업데이트
-5. **스킬 버전 규칙**: 스킬은 플러그인 버전과 독립. fix → patch bump, 새 기능 → PR에 `allow-major-minor` 라벨 필요
+1. **버전 동기화**: `plugin.json`, `versions.json`, 스킬 SKILL.md metadata
+2. **CHANGELOG.md**: 새 버전 엔트리 추가
+3. **README 반영**: 사용자 대면 동작 변경 시 업데이트
