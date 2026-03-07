@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Cleaned the shipped v1 surface so README, power-user guide, command spec, and skill docs describe only `assist` plus the two active skills
 - Archived legacy plan docs, one-off fair-competition migration scripts, and the old token-budget usability test to local `_archive/`
-- Archived the remaining tracked knowledge-audit reports and legacy knowledge-build scripts to local `_archive/`, leaving only version-policy automation under `scripts/`
 - Aligned current skill metadata and routing names with the shipped command surface
 
 ### Skill Versions
