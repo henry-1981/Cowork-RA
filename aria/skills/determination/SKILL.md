@@ -7,10 +7,10 @@ description: >
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.3.5"
+  version: "0.3.6"
   category: "domain"
   status: "active"
-  updated: "2026-02-25"
+  updated: "2026-03-07"
   modularized: "true"
   tags: "medical-device, determination, FDA, EU-MDR, MFDS, regulatory"
   knowledge-base-date: "2026-01"
@@ -67,8 +67,8 @@ When determination is **CONDITIONAL** for any jurisdiction, the following fields
 |-------|-------------|---------|
 | **Uncertainty Basis** | Specific regulatory boundary being straddled | "FDA General Wellness Policy boundary: respiratory monitoring features may exceed wellness scope" |
 | **Resolution Conditions** | What information or decision would resolve to YES or NO | "Intended use claims limited to wellness → NO; Any diagnostic/screening claim → YES" |
-| **If YES Scenario** | Classification and pathway assuming device status | "Class II, De Novo/510(k)" |
-| **If NO Scenario** | Regulatory status assuming non-device | "Not subject to FDA regulation as medical device" |
+| **If YES Scenario** | Likely regulatory next step assuming device status | "Proceed with device-specific regulatory assessment" |
+| **If NO Scenario** | Regulatory status assuming non-device | "Not subject to medical-device regulation on the current facts" |
 
 **CONDITIONAL triggers** (non-exhaustive):
 1. Wellness/medical device boundary (FDA General Wellness Policy, MFDS 건강지원제품)
@@ -123,7 +123,7 @@ Execute each gate and output the result explicitly:
 - **Result**: [디지털의료기기 해당 / Gate 2 EXIT (비디지털) / 비해당]
 ```
 
-- **4-Gate 통과 (디지털의료기기)**: Include in determination output, classification will use for risk grading
+- **4-Gate 통과 (디지털의료기기)**: Include in determination output and explain the digital-device significance
 - **Gate 2 EXIT (비디지털)**: State explicitly — device is medical device but not digital medical device
 - **Gate 1 FAIL**: Device is not a medical device → determination NO
 
@@ -133,30 +133,20 @@ Execute each gate and output the result explicitly:
 
 ### Step 0 (pre-analysis)
 
-**Level 1 (기본):** Knowledge DB 로드하지 않음. 위 Decision Framework (21 CFR 201(h), Article 2(1), 의료기기법 정의)만으로 판단.
-**Level 2:** 사용자가 명시한 jurisdiction의 Knowledge DB만 로드. 명시 없으면 가장 관련성 높은 1개.
-**Level 3:** 전체 jurisdiction 로드 + modules/ 파일 로드.
+**Level 1 (기본):** 외부 reference 로드 없이 위 Decision Framework와 현재 스킬 본문만으로 판단.
+**Level 2:** 가장 관련성 높은 jurisdiction의 `modules/` 파일만 로드해 판단을 보강.
+**Level 3:** 관련 `modules/`를 조합해 다지역 비교와 심화 판단을 수행.
 
-Knowledge DB references (Level 2+):
-- FDA Statute: `../../knowledge/fda/01-statute/fdc-act-title21-chap9-subchapV/` (FD&C Act sections)
-- FDA Regulation: `../../knowledge/fda/02-regulation/21cfr-subchapter-h/` (21 CFR Parts 800-898)
-- FDA Guidance: `../../knowledge/fda/03-guidance/` (494 guidance documents)
-- EU MDR: `../../knowledge/eu/01-regulation/mdr-2017-745/`
-- EU IVDR: `../../knowledge/eu/01-regulation/ivdr-2017-746/`
-- EU MDCG: `../../knowledge/eu/02-mdcg/`
-- EU MEDDEV: `../../knowledge/eu/03-meddev/`
-- MFDS 의료기기법: `../../knowledge/mfds/01-법령/01-의료기기법/`
-- MFDS 체외진단법: `../../knowledge/mfds/01-법령/02-체외진단의료기기법/`
-- MFDS 디지털의료제품법: `../../knowledge/mfds/01-법령/03-디지털의료제품법/`
-- MFDS 가이드라인: `../../knowledge/mfds/02-가이드라인/`
+Current v1.0 source of truth:
+- this `SKILL.md`
+- `modules/fda-criteria.md`
+- `modules/eu-mdr-criteria.md`
+- `modules/mfds-criteria.md`
+- `modules/combination-detection.md`
+- `modules/annex-xvi-detection.md`
 
-**MFDS 원문 DB 로드 조건**:
-- 키워드: AI, SW, 소프트웨어, software, IoT, 로봇, robot, VR, AR, 가상, HPC, 디지털, digital, SaMD, 앱, app, 알고리즘, 딥러닝, 머신러닝
-- 또는: 이전 Gate 2 PASS 결과가 context에 있을 때
-- 디지털 기기 → `03-디지털의료제품법/` + 가이드라인, 비디지털 → `01-의료기기법/` 또는 `02-체외진단의료기기법/`
-
-**Knowledge DB 로드 실패 시:**
-원문 DB 참조 불가 시: modules/ 인라인 규칙만으로 판단하고, 법적 근거 원문 확인이 필요하다고 안내.
+Removed global knowledge trees are not part of the shipped v1.0 surface.
+If a precise citation cannot be supported from the bundled skill logic, say that regulatory database verification is required.
 
 ### Step 1: Use Provided Device Information
 
@@ -177,7 +167,7 @@ Before issuing deterministic multi-region determination output (YES/NO/CONDITION
 5. Target market scope (FDA / EU MDR / MFDS, or subset)
 
 If any critical input above is missing or contradictory:
-- do not output deterministic determination/classification/pathway conclusions
+- do not output deterministic determination conclusions
 - return an insufficiency rationale
 
 **Interactive mode** (conversational context):
@@ -185,14 +175,8 @@ If any critical input above is missing or contradictory:
 
 **Batch/JSON-output mode** (when prompt requests strict JSON output):
 - do NOT add extra keys to the JSON (e.g., `insufficient`, `missing_fields` are FORBIDDEN)
-- express insufficiency within the allowed schema fields only:
-  ```
-  "determination": "INSUFFICIENT - [reason: e.g., product falls under EU IVDR not EU MDR]",
-  "classification": "INSUFFICIENT - see determination",
-  "pathway": "INSUFFICIENT - see determination",
-  "evidence_urls": []
-  ```
-- the output must remain schema-valid (no keys beyond those defined in the prompt's output format)
+- express insufficiency only through the keys already defined by the caller's schema
+- keep the output schema-valid and determination-focused
 
 ### Step 2: Apply Multi-Region Criteria
 

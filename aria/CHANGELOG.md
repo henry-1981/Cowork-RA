@@ -5,6 +5,17 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-03-07
+
+### Changed
+- Cleaned the shipped v1 surface so README, power-user guide, command spec, and skill docs describe only `assist` plus the two active skills
+- Archived legacy plan docs, one-off fair-competition migration scripts, and the old token-budget usability test to local `_archive/`
+- Aligned current skill metadata and routing names with the shipped command surface
+
+### Skill Versions
+- determination: 0.3.5 -> 0.3.6
+- fair-competition: 0.5.0 -> 0.5.1
+
 ## [1.0.0] - 2026-03-06
 
 ### Changed
@@ -21,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Skill Versions
 - determination: 0.3.5 (unchanged, Phase 2 for KD subset selection)
-- fair-competition: 0.5.0 → 1.0.0 (renamed from compliance, Phase 2 for drafting redesign)
+- fair-competition: 0.5.0 (renamed from compliance, Phase 2 for drafting redesign)
 
 ## [0.5.0] - 2026-02-28
 
