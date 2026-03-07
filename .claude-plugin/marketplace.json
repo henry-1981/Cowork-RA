@@ -9,6 +9,7 @@
       "source": "./aria",
       "description": "AI Regulatory Intelligence Assistant - Medical device determination and fair competition compliance",
       "version": "1.0.0",
+      "version": "1.0.2",
       "category": "life-sciences",
       "keywords": ["medical-device", "determination", "fair-competition", "KMDIA", "compliance"]
     }
