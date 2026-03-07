@@ -1,28 +1,28 @@
 ---
-name: aria-compliance
+name: aria-fair-competition
 description: >
-  Korean medical device marketing compliance advisor based on KMDIA Fair
-  Competition Code (의료기기 거래에 관한 공정경쟁규약). Evaluates marketing
-  activities against the Code and provides traffic-light guidance (GREEN/YELLOW/RED)
-  to help users make informed compliance decisions. Supports Q&A (Mode 1),
-  Report generation (Mode 2), and Interactive Compliance Check (Mode 3).
+  Korean medical device fair-competition review and drafting skill based on
+  the KMDIA Fair Competition Code (의료기기 거래에 관한 공정경쟁규약).
+  Evaluates activities against the Code, provides traffic-light guidance
+  (GREEN/YELLOW/RED), and supports review or drafting output for internal
+  approval workflows.
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
-  version: "0.5.0"
+  version: "0.5.1"
   category: "domain"
   status: "active"
-  updated: "2026-03-02"
+  updated: "2026-03-07"
   modularized: "true"
-  tags: "compliance, fair-competition, KMDIA, marketing, anti-kickback, Korea"
+  tags: "fair-competition, KMDIA, marketing, anti-kickback, Korea"
   knowledge-base-date: "2024-07"
 ---
 
-# Medical Device Marketing Compliance Skill
+# Medical Device Fair Competition Skill
 
 ## Purpose
 
-Evaluate medical device marketing activities against the KMDIA Fair Competition Code and provide **traffic-light guidance** (GREEN/YELLOW/RED) to help users make informed compliance decisions. This skill does NOT make final regulatory determinations — it organizes applicable rules, precedents, and conditions so the user can judge.
+Evaluate medical device marketing activities against the KMDIA Fair Competition Code and provide **traffic-light guidance** (GREEN/YELLOW/RED) to help users make informed decisions. This skill does NOT make final regulatory determinations. It organizes applicable rules, precedents, and drafting-relevant conditions for internal review workflows.
 
 **Input**: Marketing activity description, activity type, involved parties
 **Output**: Traffic-light status (GREEN/YELLOW/RED), applicable articles with source citation, related precedents, action items for user
@@ -32,7 +32,7 @@ Evaluate medical device marketing activities against the KMDIA Fair Competition 
 
 ## Knowledge DB
 
-This skill reads from the topic-based 공정경쟁규약 Knowledge DB at `aria/knowledge/mfds/01-법령/04-공정경쟁규약/`.
+This skill reads from the bundled topic-based 공정경쟁규약 reference set at `aria/skills/fair-competition/references/`.
 
 ### Topic File Hierarchy
 
@@ -70,7 +70,7 @@ Mode 3 시작 시 1회 Read:
 
 ### KD Base Path
 
-`aria/knowledge/mfds/01-법령/04-공정경쟁규약/`
+`aria/skills/fair-competition/references/`
 
 ---
 
