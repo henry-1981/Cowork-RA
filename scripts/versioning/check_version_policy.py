@@ -65,9 +65,29 @@ def resolve_base_commit(base_ref: str) -> str:
     return result.stdout.strip()
 
 
+# Paths that do not require a plugin version bump when changed
+VERSION_EXEMPT_PREFIXES = (
+    ".github/",
+    "docs/",
+    "tasks/",
+    "scripts/",
+    ".claude/",
+    "CLAUDE.md",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    ".gitignore",
+)
+
+
 def changed_files(base_commit: str) -> list[str]:
     result = run_git(["diff", "--name-only", base_commit, "--"])
     return [line.strip() for line in result.stdout.splitlines() if line.strip()]
+
+
+def plugin_relevant_changes(changed: list[str]) -> list[str]:
+    """Filter changed files to only those that require a plugin version bump."""
+    return [f for f in changed if not f.startswith(VERSION_EXEMPT_PREFIXES)]
 
 
 def load_json_file(rel_path: str) -> dict:
@@ -271,7 +291,7 @@ def main() -> int:
                 label="plugin",
                 old=old_plugin,
                 new=current_plugin,
-                should_have_changed=bool(changed),
+                should_have_changed=bool(plugin_relevant_changes(changed)),
                 allow_major_minor=args.allow_major_minor,
                 errors=errors,
             )
