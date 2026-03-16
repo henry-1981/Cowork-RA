@@ -11,11 +11,13 @@ const server = new McpServer({
 });
 
 // Tool 1: read_document
-server.tool(
+server.registerTool(
   "read_document",
-  "Read the full text content of a Google Doc",
   {
-    docId: z.string().describe("Google Doc ID or URL (extracts ID automatically)"),
+    description: "Read the full text content of a Google Doc",
+    inputSchema: {
+      docId: z.string().describe("Google Doc ID or URL (extracts ID automatically)"),
+    },
   },
   async ({ docId }) => {
     try {
@@ -59,11 +61,13 @@ server.tool(
 );
 
 // Tool 2: inspect_template
-server.tool(
+server.registerTool(
   "inspect_template",
-  "Extract all {{placeholder}} field names from a Google Docs template",
   {
-    docId: z.string().describe("Template Google Doc ID"),
+    description: "Extract all {{placeholder}} field names from a Google Docs template",
+    inputSchema: {
+      docId: z.string().describe("Template Google Doc ID"),
+    },
   },
   async ({ docId }) => {
     try {
@@ -98,13 +102,15 @@ server.tool(
 );
 
 // Tool 3: copy_template
-server.tool(
+server.registerTool(
   "copy_template",
-  "Copy a Google Docs template to create a new document",
   {
-    templateDocId: z.string().describe("Source template Google Doc ID"),
-    title: z.string().describe("Title for the new document"),
-    folderId: z.string().optional().describe("Target Drive folder ID"),
+    description: "Copy a Google Docs template to create a new document",
+    inputSchema: {
+      templateDocId: z.string().describe("Source template Google Doc ID"),
+      title: z.string().describe("Title for the new document"),
+      folderId: z.string().optional().describe("Target Drive folder ID"),
+    },
   },
   async ({ templateDocId, title, folderId }) => {
     try {
@@ -130,14 +136,16 @@ server.tool(
 );
 
 // Tool 4: fill_fields (with unfilled placeholder detection)
-server.tool(
+server.registerTool(
   "fill_fields",
-  "Fill {{placeholder}} fields in a Google Doc and report any unfilled placeholders",
   {
-    docId: z.string().describe("Google Doc ID to fill"),
-    fields: z
-      .record(z.string(), z.string())
-      .describe('Map of field names to values, e.g. {"활동유형": "자사제품설명회"}'),
+    description: "Fill {{placeholder}} fields in a Google Doc and report any unfilled placeholders",
+    inputSchema: {
+      docId: z.string().describe("Google Doc ID to fill"),
+      fields: z
+        .record(z.string(), z.string())
+        .describe('Map of field names to values, e.g. {"활동유형": "자사제품설명회"}'),
+    },
   },
   async ({ docId, fields }) => {
     try {
@@ -187,19 +195,21 @@ server.tool(
 );
 
 // Tool 5: get_share_link (with GOOGLE_DOMAIN fallback)
-server.tool(
+server.registerTool(
   "get_share_link",
-  "Set sharing permissions and return the share link for a Google Doc",
   {
-    docId: z.string().describe("Google Doc ID"),
-    access: z
-      .enum(["anyone", "domain"])
-      .default("domain")
-      .describe("Share scope: 'anyone' for public link, 'domain' for org-only"),
-    role: z
-      .enum(["reader", "commenter", "writer"])
-      .default("reader")
-      .describe("Permission role"),
+    description: "Set sharing permissions and return the share link for a Google Doc",
+    inputSchema: {
+      docId: z.string().describe("Google Doc ID"),
+      access: z
+        .enum(["anyone", "domain"])
+        .default("domain")
+        .describe("Share scope: 'anyone' for public link, 'domain' for org-only"),
+      role: z
+        .enum(["reader", "commenter", "writer"])
+        .default("reader")
+        .describe("Permission role"),
+    },
   },
   async ({ docId, access, role }) => {
     try {
