@@ -9,7 +9,7 @@ description: >
 allowed-tools: Read Grep Glob google-workspace:setup google-workspace:read_document google-workspace:inspect_template google-workspace:copy_template google-workspace:fill_fields google-workspace:get_share_link
 user-invocable: false
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   category: "domain"
   status: "active"
   updated: "2026-03-16"
