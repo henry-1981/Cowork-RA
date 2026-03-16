@@ -5,6 +5,19 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-03-16
+
+### Changed
+- MCP 백엔드: googleapis/OAuth → Google Apps Script 웹앱 전환
+  - Cloud Console/OAuth 불필요, 도메인 내 접근 제어
+  - `setOwner()`로 문서 소유권 사용자에게 자동 이전
+  - `setup` 도구 추가 (Apps Script URL + 이메일 1회 설정)
+- `scripts/deploy.sh`: clasp 기반 원클릭 배포 스크립트
+- `apps-script/Code.gs`: 서버사이드 문서 조작 로직
+
+### Skill Versions
+- fair-competition: 1.0.0 → 1.0.1
+
 ## [1.1.0] - 2026-03-16
 
 ### Added
