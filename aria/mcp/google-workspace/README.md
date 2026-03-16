@@ -1,66 +1,44 @@
 # Google Workspace MCP 서버
 
 ARIA 플러그인의 Google Docs 연동을 위한 MCP 서버.
+Google Apps Script를 백엔드로 사용하여 Cloud Console 설정 없이 동작합니다.
+
+## 구조
+
+```
+MCP 서버 (Node.js, 로컬) → HTTP POST → Google Apps Script (웹앱) → Docs/Drive
+```
 
 ## 도구 목록
 
 | 도구 | 설명 |
 |------|------|
-| `auth_google` | Google 인증 (최초 1회 브라우저 로그인) |
-| `read_document` | Google Docs 본문 텍스트 읽기 (URL/ID 자동 파싱) |
-| `inspect_template` | 템플릿 내 `{{placeholder}}` 필드 목록 추출 |
-| `copy_template` | 템플릿 복사로 새 문서 생성 |
-| `fill_fields` | `{{placeholder}}` 치환 + 미치환 필드 감지 |
+| `setup` | 최초 설정 (Apps Script URL + 사용자 이메일) |
+| `read_document` | Google Docs 본문 읽기 |
+| `inspect_template` | 템플릿 `{{placeholder}}` 필드 목록 추출 |
+| `copy_template` | 템플릿 복사 → 새 문서 생성 (소유권 자동 이전) |
+| `fill_fields` | 필드 자동 채움 + 미치환 감지 |
 | `get_share_link` | 공유 권한 설정 + 링크 반환 |
 
 ## 설정
 
-### 1. Google Cloud OAuth Client 생성 (관리자 1회)
+### 관리자 (1회)
 
-1. [Google Cloud Console](https://console.cloud.google.com/) > APIs & Services > Credentials
-2. "Create Credentials" > "OAuth client ID"
-3. Application type: **Desktop app**
-4. 생성 후 JSON 다운로드 → `oauth-client.json`으로 저장
-5. `aria/mcp/google-workspace/` 디렉토리에 배치
+1. Google Drive에서 **새로 만들기 → Google Apps Script** 클릭
+2. `apps-script/Code.gs`의 전체 내용을 복사-붙여넣기
+3. **배포 → 새 배포 → 웹 앱** 선택:
+   - 실행 계정: **나**
+   - 액세스 권한: **[회사 도메인] 내 누구나**
+4. **배포** 클릭 → 웹앱 URL 복사
 
-### 2. API 활성화 (관리자 1회)
+### 사용자 (1회)
 
-Google Cloud Console에서 다음 API를 활성화:
-- Google Docs API
-- Google Drive API
+ARIA에서 처음 사용 시 `setup` 도구가 호출됩니다:
+- Apps Script 웹앱 URL 입력 (관리자에게 받음)
+- 본인 회사 이메일 입력
+- 끝. 이후 자동으로 동작합니다.
 
-### 3. `.mcp.json` 등록
-
-프로젝트 루트의 `.mcp.json`에 추가:
-
-```json
-"google-workspace": {
-  "$comment": "Google Workspace integration (MVP: Docs)",
-  "command": "node",
-  "args": ["aria/mcp/google-workspace/dist/index.js"],
-  "env": {
-    "GOOGLE_DOMAIN": ""
-  }
-}
-```
-
-### 4. 사용자 인증 (각 사용자 1회)
-
-ARIA를 통해 `auth_google` 도구가 호출되면:
-1. 브라우저에서 Google 로그인 URL이 열림
-2. Google 계정으로 로그인 + 권한 허용
-3. "인증 완료" 페이지 확인 → 끝
-
-토큰은 `~/.config/google-workspace-mcp/tokens.json`에 자동 저장됩니다.
-이후 자동 갱신되므로 재로그인 불필요.
-
-### 환경변수 (선택)
-
-| 변수 | 설명 | 기본값 |
-|------|------|--------|
-| `GOOGLE_CLIENT_ID` | OAuth Client ID (oauth-client.json 대체) | — |
-| `GOOGLE_CLIENT_SECRET` | OAuth Client Secret | — |
-| `GOOGLE_DOMAIN` | 조직 도메인 (domain 공유 시) | 빈 문자열 (미설정 시 `anyone` 공유) |
+설정은 `~/.config/google-workspace-mcp/config.json`에 저장됩니다.
 
 ## 빌드
 
@@ -70,10 +48,9 @@ npm install
 npm run build
 ```
 
-## Service Account vs OAuth
+## 동작 원리
 
-이 서버는 **OAuth 2.0**을 사용합니다:
-- 사용자 본인의 Google 계정으로 인증
-- 생성된 파일이 사용자 소유 (Drive에 직접 표시)
-- 별도의 템플릿 공유 설정 불필요
-- 관리자는 OAuth Client 1회 생성만 하면 됨
+- Apps Script가 **관리자 계정으로** 문서를 생성합니다
+- 생성 즉시 `setOwner(userEmail)`로 **사용자에게 소유권 이전**
+- 사용자의 Google Drive에 문서가 나타납니다
+- 같은 Google Workspace 도메인 내에서만 동작합니다
