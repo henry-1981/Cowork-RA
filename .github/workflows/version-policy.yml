@@ -39,7 +39,10 @@ jobs:
       - name: Validate version policy
         run: |
           EXTRA_FLAGS=""
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            # main push는 이미 PR에서 검증됨 — major/minor 허용
+            EXTRA_FLAGS="--allow-major-minor"
+          elif [[ "${{ github.event_name }}" == "pull_request" ]]; then
             LABELS='${{ toJSON(github.event.pull_request.labels.*.name) }}'
             if echo "$LABELS" | grep -q "allow-major-minor"; then
               EXTRA_FLAGS="--allow-major-minor"
