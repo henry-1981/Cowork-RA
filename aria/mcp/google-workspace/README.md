@@ -22,14 +22,26 @@ MCP 서버 (Node.js, 로컬) → HTTP POST → Google Apps Script (웹앱) → D
 
 ## 설정
 
-### 관리자 (1회)
+### 관리자 (1회, 2분)
 
-1. Google Drive에서 **새로 만들기 → Google Apps Script** 클릭
-2. `apps-script/Code.gs`의 전체 내용을 복사-붙여넣기
-3. **배포 → 새 배포 → 웹 앱** 선택:
+**자동 배포 (권장):**
+
+```bash
+# 사전 준비: https://script.google.com/home/usersettings → Apps Script API "사용"
+cd aria/mcp/google-workspace
+bash scripts/deploy.sh
+```
+
+스크립트가 브라우저 로그인 → 프로젝트 생성 → 코드 업로드 → 배포까지 자동 처리합니다.
+
+**수동 배포:**
+
+1. Google Drive → **새로 만들기 → Google Apps Script**
+2. `apps-script/Code.gs` 전체 내용 복사-붙여넣기
+3. **배포 → 새 배포 → 웹 앱**:
    - 실행 계정: **나**
    - 액세스 권한: **[회사 도메인] 내 누구나**
-4. **배포** 클릭 → 웹앱 URL 복사
+4. 배포 URL 복사
 
 ### 사용자 (1회)
 
