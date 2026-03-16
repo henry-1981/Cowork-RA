@@ -4,11 +4,51 @@ import { z } from "zod";
 import { getDocsClient } from "./services/docs.js";
 import { getDriveClient } from "./services/drive.js";
 import { formatError } from "./errors.js";
+import { isAuthenticated, authenticate } from "./auth.js";
 
 const server = new McpServer({
   name: "google-workspace",
-  version: "0.1.0",
+  version: "0.2.0",
 });
+
+// Tool 0: auth_google
+server.registerTool(
+  "auth_google",
+  {
+    description: "Authenticate with Google. Returns a URL to open in browser for first-time login. Subsequent calls check auth status.",
+    inputSchema: {},
+  },
+  async () => {
+    try {
+      if (isAuthenticated()) {
+        return {
+          content: [{
+            type: "text" as const,
+            text: JSON.stringify({ authenticated: true, message: "이미 Google 인증이 완료되어 있습니다." }),
+          }],
+        };
+      }
+
+      const { authUrl, waitForCallback } = await authenticate();
+
+      // Start waiting for callback in background
+      waitForCallback().catch(() => {});
+
+      return {
+        content: [{
+          type: "text" as const,
+          text: JSON.stringify({
+            authenticated: false,
+            authUrl,
+            message: "아래 URL을 브라우저에서 열어 Google 로그인을 완료해주세요. 로그인 후 자동으로 인증됩니다.",
+          }),
+        }],
+      };
+    } catch (error) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: formatError(error) }) }], isError: true };
+    }
+  }
+);
 
 // Tool 1: read_document
 server.registerTool(
