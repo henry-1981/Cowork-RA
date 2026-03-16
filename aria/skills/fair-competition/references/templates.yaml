@@ -1,0 +1,27 @@
+# Template mapping for Draft Mode Google Docs output
+# field values are filled by the skill during interactive information gathering
+# doc_id and fields are populated after reviewing actual Google Docs templates
+
+templates:
+  사전심의요청서:
+    doc_id: ""  # HB to fill
+    fields: []  # HB to fill — inspect_template으로 자동 추출 가능
+  지출보고서:
+    doc_id: ""
+    fields: []
+
+# Which templates apply to each topic
+topic_templates:
+  "04-기부행위": [사전심의요청서, 지출보고서]
+  "05-학술대회개최지원": [사전심의요청서, 지출보고서]
+  "06-학술대회참가지원": [사전심의요청서, 지출보고서]
+  "07-자사제품설명회": [사전심의요청서, 지출보고서]
+  "08-교육훈련": [사전심의요청서, 지출보고서]
+  "09-강연및자문": [사전심의요청서, 지출보고서]
+  "02-금품류제공제한": [지출보고서]
+  "03-견본품": [지출보고서]
+  "10-임상시험지원": [지출보고서]
+  "11-시장조사": [지출보고서]
+  "12-시판후조사": [지출보고서]
+  "13-시판후외임상활동": [지출보고서]
+  "14-전시및광고": [지출보고서]
