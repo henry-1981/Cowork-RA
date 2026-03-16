@@ -22,8 +22,10 @@ ARIA는 단일 명령 `assist` 아래에서 `determination`과 `fair-competition
    - 의료기기 해당 여부 판단
    - 기본 근거는 `SKILL.md`와 `modules/`
 2. `fair-competition`
-   - 공정경쟁규약 검토와 내부 승인용 기안 지원
+   - Draft Mode: 사업팀 대상 Q&A + 기안 작성 (Google Docs 자동 생성)
+   - Review Mode: 법무정책실/RA팀 대상 규정 적합성 검토 + 판정
    - 번들 reference는 `aria/skills/fair-competition/references/`
+   - Google Docs 연동: `aria/mcp/google-workspace/` MCP 서버 (5개 도구)
 3. 두 스킬은 독립적이다. 삭제된 전역 knowledge 트리를 현재 shipped 개념으로 설명하지 않는다.
 
 ## 응답 형식
@@ -34,7 +36,7 @@ ARIA는 단일 명령 `assist` 아래에서 `determination`과 `fair-competition
 
 ## Repository Policy
 
-- repo에는 현재 v1.0에 필요한 파일만 남긴다.
+- repo에는 현재 v1.1에 필요한 파일만 남긴다.
 - 과거 설계 문서, 일회성 변환 스크립트, 실험용 테스트는 로컬 `_archive/`에만 둔다.
 - `_archive/`는 shipped surface가 아니다.
 

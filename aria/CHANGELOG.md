@@ -5,6 +5,26 @@ All notable changes to the ARIA plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-03-16
+
+### Added
+- Google Workspace MCP 서버 (MVP: Docs) — `aria/mcp/google-workspace/`
+  - `read_document`: Google Docs 본문 읽기
+  - `inspect_template`: 템플릿 필드 목록 추출
+  - `copy_template`: 템플릿 복사
+  - `fill_fields`: 필드 자동 채움 + 미치환 감지
+  - `get_share_link`: 공유 링크 반환
+- `templates.yaml`: 토픽별 Google Docs 템플릿 매핑
+
+### Changed
+- fair-competition 스킬 v1.0.0: 3-Mode → Draft/Review 2-Mode 재설계
+  - Draft Mode (사업팀): Q&A + 기안 작성 → Google Docs 자동 생성
+  - Review Mode (법무정책실/RA팀): 기안 문서 읽기 + 규정 적합성 검토 + 판정
+- assist 커맨드: Fair Competition 라우팅에 Draft/Review 분기 추가
+
+### Skill Versions
+- fair-competition: 0.5.1 → 1.0.0
+
 ## [1.0.2] - 2026-03-07
 
 ### Changed
