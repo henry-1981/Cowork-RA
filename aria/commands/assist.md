@@ -56,9 +56,17 @@ If the inputs are sufficient, invoke `Skill("aria-determination")`.
 
 ### 3. Fair Competition Flow
 
-- Identify the activity type or drafting need from the user request
-- Invoke `Skill("aria-fair-competition")`
-- Return a short answer first, then offer deeper review or drafting output if needed
+Detect whether the user needs Draft (기안) or Review (리뷰):
+
+**Draft Intent** (사업팀)
+- Keywords: 기안, 작성, 사전심의 준비, 지출보고서, "이거 해도 돼?", 활동 기획
+- Route to: `Skill("aria-fair-competition")` → Draft Mode
+
+**Review Intent** (법무정책실/RA팀)
+- Keywords: 검토, 리뷰, 적합성 확인, 규정 위반, 체크
+- Route to: `Skill("aria-fair-competition")` → Review Mode
+
+**Ambiguous**: Ask "기안 작성(사업팀)과 규정 검토(법무/RA) 중 어느 쪽이 필요하신가요?"
 
 ## Output Contract
 
